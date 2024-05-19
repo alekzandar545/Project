@@ -9,38 +9,46 @@ public:
         MEDIUM_DENSITY = 3,
         LOW_DENSITY = 4
     };
+    //getters
+    unsigned GetWidth() const{return this->width;}
+    unsigned GetHeight() const{return this->height;}
+    unsigned GetPlayerX() const{return this->playerX;}
+    unsigned GetPlayerY() const{return this->playerY;}
+    std::vector<std::vector<char>>& GetMap() {return this->matrix;}
+    //setters
+    void SetWidth(const unsigned width){this->width = width;}
+    void SetHeight(const unsigned height){this->height = height;}
+    void SetPlayerX(const unsigned playerX){this->playerX = playerX;}
+    void SetPlayerY(const unsigned playerY){this->playerY = playerY;}
     //Big4
     Map();
     Map(const unsigned width, const unsigned height, const unsigned monsterCount,const unsigned treasureCount);
     Map(const Map& other);
     Map& operator=(const Map& other);
     ~Map();
-    //Rendering
+    //creation
     void Initialize();
-    void RenderMap();
-    void RenderChunk(const unsigned* ChunkCoords);
-    void RenderPosition();
-    void RenderTile(char c);
     void CreatePath(const int i, const int j);
     int countVisitedNeighbor(const int i, const int j) const;
     void GenerateMap();
-    //functionality
     void CreateTreasure();
     void CreateMonsters();
     void CreatePlayer();
     void CreateExit();
+    //functionality
     void MovePlayer(const int x, const int y);
     //events
     void TreasureEvent();
     void MonsterEvent();
     void NextFloor();
 private:
+    friend class Renderer;
     unsigned width, height;
     unsigned playerX, playerY;
     unsigned treasureCount, monsterCount;
     unsigned floor;//not adding it in the constructors, because when creating a
     // map it should be always 0 and when using operator= it should always be trasferred
-    std::vector<std::vector<char>> map;
+    std::vector<std::vector<char>> matrix;
 };
 
 struct Point{

@@ -3,6 +3,9 @@
 class Entity{
 public:
 
-private:
-    unsigned str, mana, hp, armor;
+protected:
+    unsigned str;
+    unsigned mana;
+    unsigned hp;
+    unsigned armor;
 };
