@@ -1,5 +1,6 @@
 #pragma once
 #include "vector"
+#include "../Entities/player.h"
 
 class Map{
 public:
@@ -21,8 +22,8 @@ public:
     void SetPlayerX(const unsigned playerX){this->playerX = playerX;}
     void SetPlayerY(const unsigned playerY){this->playerY = playerY;}
     //Big4
-    Map();
-    Map(const unsigned width, const unsigned height, const unsigned monsterCount,const unsigned treasureCount);
+    Map(Player* player);
+    Map(const unsigned width, const unsigned height, const unsigned monsterCount,const unsigned treasureCount, Player* player);
     Map(const Map& other);
     Map& operator=(const Map& other);
     ~Map();
@@ -49,6 +50,8 @@ private:
     unsigned floor;//not adding it in the constructors, because when creating a
     // map it should be always 0 and when using operator= it should always be trasferred
     std::vector<std::vector<char>> matrix;
+    //store info for the player
+    Player* player;
 };
 
 struct Point{

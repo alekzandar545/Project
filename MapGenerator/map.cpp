@@ -5,6 +5,10 @@
 #include <windows.h>
 #include "map.h"
 #include "constants.h"
+#include "../UI/selectionUI.h"
+#include "../UI/battleUI.h"
+#include "../Entities/player.h"
+#include "../Entities/monster.h"
 
 //auxiliary functions //outta class in cpp file
 void Swap(unsigned& a, unsigned& b){
@@ -33,15 +37,16 @@ unsigned Fib(unsigned a, unsigned b, unsigned n){
 }
 
 //big4
-Map::Map(){
+Map::Map(Player* player){
     width = 0;
     height = 0;
     playerX = 0;
     playerY = 0;
     floor = 0;
+    this->player = player;
 }
 //don't think i need this when i have the constants :)
-Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount){
+Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount, Player* player){
     this->width = width;
     this->height = height;
     this->monsterCount = monsterCount;
@@ -49,6 +54,7 @@ Map::Map(const unsigned width, const unsigned height, const unsigned monsterCoun
     playerX = 0;
     playerY = 0;
     floor = 0;
+    this->player = player;
 }
 Map::Map(const Map& other){
     matrix = other.matrix;
@@ -59,6 +65,7 @@ Map::Map(const Map& other){
     playerX = other.playerX;
     playerY = other.playerY;
     floor = other.floor;
+    player = other.player;
 }
 Map& Map::operator=(const Map& other){
     if(&other == this)
@@ -70,6 +77,7 @@ Map& Map::operator=(const Map& other){
     treasureCount = other.treasureCount;
     playerX = other.playerX;
     playerY = other.playerY;
+    player = other.player;
     //floor = other.floor;
     return *this;
 }
@@ -201,11 +209,54 @@ void Map::MovePlayer(int x, int y){
 }
 //events --> event handler?
 void Map::TreasureEvent(){}
-void Map::MonsterEvent(){}
+
+
+
+void BattleUserInput(BattleUI& ui) 
+{ 
+    // Checks if a key is pressed or not 
+    if (_kbhit()) { 
+        // Getting the pressed key 
+        int ch = _getch(); 
+        if (ch == 0 || ch == 224) { //arrow key is special key so we check for that here
+            ch = _getch(); // Get the actual key code
+            switch (ch) { 
+                case 72: //up arrow
+                    ui.MoveSeleciton(0);
+                    break; 
+                case 80: //down arrow
+                    ui.MoveSeleciton(1);
+                    break; 
+                case 'e':
+                    switch (ui.GetSelectionIndex())
+                    {
+                    case 0: //add enum for those
+                        ui.getPlayer()->MeleeAttack(*ui.getMonster());
+                        break;
+                    case 1:
+                        ui.getPlayer()->SpellAttack(*ui.getMonster());
+                        break;
+                    }
+                    break;
+                    ui.Render();
+            } 
+        }
+    } 
+} 
+void Map::MonsterEvent(){
+    system("cls");
+    Monster m(floor); //monsters get stronger on each floor
+    BattleUI battle(*player, m);
+    battle.SetOptions({"Melee attack", "Spell attack", "Potion", "Evade"});
+    battle.Render();
+    while(true){
+        BattleUserInput(battle);
+    }
+}
 void Map::NextFloor(){
     floor++;
     Map newMap(Fib(STARTING_WIDTH[0],STARTING_WIDTH[1],floor),Fib(STARTING_HEIGHT[0],STARTING_HEIGHT[1],floor),
-    Fib(STARTING_MONSTERS[0],STARTING_MONSTERS[1],floor),Fib(STARTING_TREASURE[0],STARTING_TREASURE[1], floor));
+    Fib(STARTING_MONSTERS[0],STARTING_MONSTERS[1],floor),Fib(STARTING_TREASURE[0],STARTING_TREASURE[1], floor), player);
     *this = newMap;
     playerX = 0;
     playerY = 0;

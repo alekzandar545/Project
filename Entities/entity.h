@@ -2,10 +2,13 @@
 
 class Entity{
 public:
-
-protected:
+    void TakeHit(unsigned dmg){
+        maxHP -= dmg - dmg*armor;
+    }
+//public:
     unsigned str;
     unsigned mana;
-    unsigned hp;
+    unsigned maxHP;
+    unsigned HP;
     unsigned armor;
 };

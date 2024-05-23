@@ -16,6 +16,25 @@ unsigned Min(const unsigned a, const unsigned b){
         return b;
 }
 
+void ClearConsoleLines(int startLine, int endLine) {
+    //HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    COORD coord;
+    DWORD written;
+    // Get the current screen buffer info
+    if (!GetConsoleScreenBufferInfo(CURR_HANDLE, &csbi)) {
+        return;
+    }
+    // Calculate the width of the console
+    int consoleWidth = csbi.dwSize.X;
+    for (int line = startLine; line <= endLine; ++line) {
+        coord.X = 0;
+        coord.Y = line;
+        FillConsoleOutputCharacter(CURR_HANDLE, ' ', consoleWidth, coord, &written);
+        FillConsoleOutputAttribute(CURR_HANDLE, csbi.wAttributes, consoleWidth, coord, &written);
+    }
+}
+
 //singleton pattern
 Renderer* Renderer::instancePtr = nullptr;
 Map* Renderer::map;
@@ -62,8 +81,7 @@ void Renderer::RenderTile(char c) const{
 }
 
 void Renderer::RenderChunk(const unsigned* ChunkCoords) const{ //should drop the parameter probably
-    system("cls");
-    
+    ClearConsoleLines(1,12); // deletes map without the stats
     unsigned chunkX = ChunkCoords[0];
     unsigned chunkY = ChunkCoords[1];
     unsigned chunkHeight = CHUNK_SIZE[1];
@@ -203,27 +221,27 @@ void Renderer::RenderPosition() const{
         CHUNK_COORDS[1] += CHUNK_SIZE[1];
         RenderChunk(CHUNK_COORDS); 
     }
-    
-    COORD startCoord = GetConsoleCursorPosition(CURR_HANDLE);
+    short offsetX = 1 - CHUNK_COORDS[0]; //wall
+    short offsetY = 2 - CHUNK_COORDS[1]; // wall and stats
     //should adjust for chnk offset //also shouldnt render at the ends of chunks
     //move validation to setters
-    SetConsoleCursorPosition(CURR_HANDLE, {(short)(map->playerX+1-CHUNK_COORDS[0]), (short)(map->playerY+1-CHUNK_COORDS[1])});//center
+    SetConsoleCursorPosition(CURR_HANDLE, {(short)(map->playerX+offsetX), (short)(map->playerY+offsetY)});//center
     RenderTile(map->matrix[map->playerY][map->playerX]);
     if(map->playerX > 0 && map->playerX != CHUNK_COORDS[0]){
-        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX-CHUNK_COORDS[0]), (short)(map->playerY+1-CHUNK_COORDS[1])});//left
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+offsetX-1), (short)(map->playerY+offsetY)});//left
         RenderTile(map->matrix[map->playerY][map->playerX-1]);
     }
     if(map->playerX+1 < map->width && map->playerX+1 != CHUNK_COORDS[0] + CHUNK_SIZE[0]){
-        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+2-CHUNK_COORDS[0]), (short)(map->playerY+1-CHUNK_COORDS[1])});//right
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+offsetX+1), (short)(map->playerY+offsetY)});//right
         RenderTile(map->matrix[map->playerY][map->playerX+1]);
     }
     if(map->playerY > 0 && map->playerY != CHUNK_COORDS[1]){
-        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+1-CHUNK_COORDS[0]), (short)(map->playerY-CHUNK_COORDS[1])});//down
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+offsetX), (short)(map->playerY+offsetY-1)});//down
         RenderTile(map->matrix[map->playerY-1][map->playerX]);
     }
     if(map->playerY+1 < map->height && map->playerY+1 != CHUNK_COORDS[1] + CHUNK_SIZE[1]){
-        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+1-CHUNK_COORDS[0]), (short)(map->playerY+2-CHUNK_COORDS[1])});//up
+        SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(map->playerX+offsetX), (short)(map->playerY+offsetY+1)});//up
         RenderTile(map->matrix[map->playerY+1][map->playerX]);
     }
-    SetConsoleCursorPosition(CURR_HANDLE, startCoord);
+    SetConsoleCursorPosition(CURR_HANDLE, {0,0});
 }

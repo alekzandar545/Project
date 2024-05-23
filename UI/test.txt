@@ -1,0 +1,42 @@
+#include <iostream>
+#include "selectionUI.h"
+#include "startMenuUI.h"
+#include "battleUI.h"
+#include "../Entities/player.h"
+#include "../Entities/monster.h"
+
+void UserInput(SelectionUI& ui) 
+{ 
+    // Checks if a key is pressed or not 
+    if (_kbhit()) { 
+        // Getting the pressed key 
+        int ch = _getch(); 
+        if (ch == 0 || ch == 224) { //arrow key is special key so we check for that here
+            ch = _getch(); // Get the actual key code
+            switch (ch) { 
+                case 72: //up arrow
+                    ui.MoveSeleciton(0);
+                    break; 
+                case 80: //down arrow
+                    ui.MoveSeleciton(1);
+                    break; 
+            } 
+        }
+    } 
+} 
+
+int main(){
+    system("cls");
+    Player p1(Player::PlayerRace::Berserk);
+    Monster m1(1);
+    BattleUI battle({18,1}, p1,m1);
+    battle.SetOptions({"Melee attack", "Spell attack", "Potion", "Evade"});
+    battle.Render();
+    //system("cls");
+    //StartMenuUI menu({1,1});
+    //menu.SetOptions({"New Game", "Load Game", "Exit Game"});
+    //menu.Render();
+    while(true){
+        UserInput(battle);
+    }
+}
