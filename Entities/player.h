@@ -13,13 +13,14 @@ public:
         Berserk,
         Sorcerrer
     };
-    Player(PlayerRace race);
+    //constructors
+    Player(PlayerRace race, std::string name);
     //leveling
     void LevelUp();
-    void SetXp(unsigned xp);
+    void AddXP(unsigned xp);
     //combat
-    void MeleeAttack(Monster& monster) const;
-    void SpellAttack(Monster& monster) const;
+    bool MeleeAttack(Monster& monster) const;
+    bool SpellAttack(Monster& monster) const;
     //item management
     void EquipItem(unsigned index){//index will be decided from ui placement
         Item* newItem = &inventory[index];
@@ -44,11 +45,18 @@ public:
     void AddItem(Item item){
         inventory.push_back(item);
     }
+    void AddGold(const unsigned gold){
+        this->gold+=gold;
+    }
+
+    //getters
+    std::string GetName() const{return this->name;}
 //private:
     unsigned level;
     unsigned xp;
     unsigned requiredXp;
     unsigned gold;
+    std::string name;
     std::vector<Item> inventory;
     Item spell;
     Item weapon;

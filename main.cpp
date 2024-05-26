@@ -1,4 +1,4 @@
-#include "vector"
+#include <vector>
 #include <iostream>
 #include <windows.h>
 #include <stdio.h>
@@ -6,20 +6,21 @@
 #include "MapGenerator/renderer.h"
 #include "MapGenerator/map.h"
 #include "Entities/player.h"
+#include "UI/startMenuUI.h"
+#include "UI/inventoryUI.h"
 
 //enum Directions { STOP = 0, LEFT, RIGHT, UP, DOWN }; //gotta use those i think>>?
 bool isGameOver = false; 
-HANDLE mainHandle = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
 
 //render stats and level etc later on
-void Render(Map& map, Player& p){
-    SetConsoleCursorPosition(mainHandle, {0,0});
-    std::cout << "Gold: " << p.gold << "   " << "XP: " << p.xp << '/' << p.requiredXp << '\n';
-    Renderer* renderer = Renderer::GetInstance(&map); 
-    renderer->RenderPosition();
-    //std::cout << map.GetPlayerX() << map.GetPlayerY();
+void Render(Map& map){
+    map.RenderStats();
+    map.RenderPosition();
+}
+void IntitialRender(Map& map){
+    map.RenderAll();
 }
 
 void UserInput(Map& map, Player& p) 
@@ -30,20 +31,25 @@ void UserInput(Map& map, Player& p)
         switch (_getch()) { 
         case 'a': 
             map.MovePlayer(-1, 0);
-            Render(map, p);
+            Render(map);
             break; 
         case 'd': 
             map.MovePlayer(1, 0);
-            Render(map, p);
+            Render(map);
             break; 
         case 'w': 
             map.MovePlayer(0, -1);
-            Render(map, p);
+            Render(map);
             break; 
         case 's': 
             map.MovePlayer(0, 1);
-            Render(map, p);
+            Render(map);
             break; 
+        case 'i':{
+            InventoryUI ui({0,0}, p);
+            ui.Render();
+            break;
+        }
         case 'x': 
             isGameOver = true; 
             break; 
@@ -59,10 +65,10 @@ int main()
     //3)Visualize map
     system("cls");
     srand(time(0));
-    Player p(Player::PlayerRace::Berserk);
+    Player p(Player::PlayerRace::Berserk, "Pesho");
 	Map map1(10,10,2,2,&p);
     map1.GenerateMap();
-    Render(map1, p);
+    IntitialRender(map1);
     while(!isGameOver){
         UserInput(map1, p);
     }

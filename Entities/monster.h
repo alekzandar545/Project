@@ -7,6 +7,6 @@ public:
     Monster(unsigned level);
     //combat
     unsigned ChooseAttack() const;
-    void Attack(Entity* pl) const;
+    bool Attack(Entity* pl) const;
 private:
 };

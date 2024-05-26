@@ -9,6 +9,7 @@
 #include "../UI/battleUI.h"
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
+#include <sstream> //move to events later
 
 //auxiliary functions //outta class in cpp file
 void Swap(unsigned& a, unsigned& b){
@@ -78,6 +79,7 @@ Map& Map::operator=(const Map& other){
     playerX = other.playerX;
     playerY = other.playerY;
     player = other.player;
+    //renderer = other.renderer;
     //floor = other.floor;
     return *this;
 }
@@ -185,6 +187,16 @@ void Map::CreateExit(){ //it is guaranteed that every internal blcok has at leas
 }
 void Map::CreatePlayer(){matrix[0][0] = PLAYER;}
 
+
+//rendering
+void Map::RenderAll() const{renderer.RenderAll(height, width, matrix, player);};
+void Map::RenderStats() const{renderer.RenderStats(height, width, player);}
+void Map::RenderMap() const{renderer.RenderMap(height, width, matrix);};
+void Map::RenderChunk() const{renderer.RenderChunk(height, width, matrix);};
+void Map::RenderPosition(){renderer.RenderPosition(height, width, playerX, playerY, matrix);};
+void Map::RenderTile(char c) const{renderer.RenderTile(c);};
+
+
 //functionality
 void Map::MovePlayer(int x, int y){
     int newX = playerX + x;
@@ -192,7 +204,7 @@ void Map::MovePlayer(int x, int y){
     if(newX < 0 || newY < 0 || newX > width-1 || newY > height-1)
         return;
     else if(matrix[newY][newX] == WALL){
-        return;
+        return; 
     }
     //should not render those cases //maybe throw an exception
     else if(matrix[newY][newX] == TREASURE)
@@ -210,37 +222,82 @@ void Map::MovePlayer(int x, int y){
 //events --> event handler?
 void Map::TreasureEvent(){}
 
+void Map::Alert(std::ostringstream& msg) const{
+    std::string padding = "                    ";
+    std::cout <<'\n' << msg.str();
+    _getch();
+}
+void Map::BattleAlert(std::ostringstream& msg) const{
+    std::string padding = "                    ";
+    std::cout << '\n' << msg.str() << padding;
+}
 
+void Map::GameOver() const{
+   system("cls"); 
+   std::cout << "";
+}
 
-void BattleUserInput(BattleUI& ui) 
+void Map::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& evaded) 
 { 
     // Checks if a key is pressed or not 
     if (_kbhit()) { 
         // Getting the pressed key 
         int ch = _getch(); 
-        if (ch == 0 || ch == 224) { //arrow key is special key so we check for that here
-            ch = _getch(); // Get the actual key code
-            switch (ch) { 
-                case 72: //up arrow
-                    ui.MoveSeleciton(0);
-                    break; 
-                case 80: //down arrow
-                    ui.MoveSeleciton(1);
-                    break; 
-                case 'e':
-                    switch (ui.GetSelectionIndex())
-                    {
-                    case 0: //add enum for those
-                        ui.getPlayer()->MeleeAttack(*ui.getMonster());
-                        break;
-                    case 1:
-                        ui.getPlayer()->SpellAttack(*ui.getMonster());
-                        break;
+        switch (ch) { 
+            case 'w': //up arrow
+                ui.MoveSeleciton(0);
+                break; 
+            case 's': //down arrow
+                ui.MoveSeleciton(1);
+                break; 
+            case 'e':
+                switch (ui.GetSelectionIndex())
+                {
+                case 0: //add enum for those
+                    if(ui.getPlayer()->MeleeAttack(*ui.getMonster())){
+                        ui.Render(); 
+                        std::ostringstream msg;
+                        msg << ui.getPlayer()->GetName() << " has slain the dragon"<<
+                                                            " and has earned " << std::to_string(5+floor)  
+                                                            << " gold and " << std::to_string(25+floor*3) 
+                                                            << " xp" << '\n' << "Press any key to continue";
+                        Alert(msg);
+                        monsterIsDead = true;
+                        return;
+                    }
+                    else{
+                        ui.Render(); 
+                        std::ostringstream msg; 
+                        msg << ui.getPlayer()->GetName() << " hit the dragon with a " << ui.getPlayer()->weapon.GetName();
+                        BattleAlert(msg);
                     }
                     break;
-                    ui.Render();
-            } 
-        }
+                case 1:
+                    if(ui.getPlayer()->SpellAttack(*ui.getMonster())){
+                        ui.Render(); 
+                        std::ostringstream msg;
+                        msg << ui.getPlayer()->GetName() << " has slain the dragon";
+                        Alert(msg);
+                        monsterIsDead = true;
+                        return;
+                    }
+                    else{
+                        ui.Render(); 
+                        std::ostringstream msg; 
+                        msg << ui.getPlayer()->GetName() << " cast a " << ui.getPlayer()->spell.GetName() << " on the dragon!";
+                        BattleAlert(msg);
+                    }
+                    break;
+                case 2:
+                    //potion logic
+                    break;
+                case 3:
+                    evaded = true;
+                    break;
+                }
+                break;
+                ui.Render();
+        } 
     } 
 } 
 void Map::MonsterEvent(){
@@ -249,18 +306,38 @@ void Map::MonsterEvent(){
     BattleUI battle(*player, m);
     battle.SetOptions({"Melee attack", "Spell attack", "Potion", "Evade"});
     battle.Render();
-    while(true){
-        BattleUserInput(battle);
+    bool playerIsDead = 0;
+    bool monsterIsDead = 0;
+    bool evaded = 0;
+    while(!playerIsDead && !monsterIsDead && !evaded){
+        BattleUserInput(battle, playerIsDead, monsterIsDead, evaded);
     }
+    if(playerIsDead){
+        GameOver();
+        return;
+    }
+    else if(monsterIsDead){
+        player->AddGold(5+floor); // more gold on each floor
+        player->AddXP(25+floor*3); //more xp on each floor
+        //player->AddItem(GetRandomItem(floor)); //stronger items on each floor
+    }
+    system("cls");
+    RenderAll();
 }
+
+
 void Map::NextFloor(){
+    system("cls");
     floor++;
     Map newMap(Fib(STARTING_WIDTH[0],STARTING_WIDTH[1],floor),Fib(STARTING_HEIGHT[0],STARTING_HEIGHT[1],floor),
     Fib(STARTING_MONSTERS[0],STARTING_MONSTERS[1],floor),Fib(STARTING_TREASURE[0],STARTING_TREASURE[1], floor), player);
+    newMap.GenerateMap();
     *this = newMap;
     playerX = 0;
     playerY = 0;
-    GenerateMap();
+    renderer.SetChunkX(0); //maybe problematic later
+    renderer.SetChunkY(0); 
+    RenderAll();
 }
 
 

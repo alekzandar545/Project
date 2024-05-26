@@ -14,6 +14,9 @@ public:
     void SetOptions(std::vector<std::string> options){
         this->options = options;
     }
+    void AddOption(std::string option){
+        this->options.push_back(option);
+    }
 
     virtual void Render() const{
         for (size_t i = 0; i < options.size(); i++)

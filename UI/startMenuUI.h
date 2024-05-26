@@ -2,11 +2,11 @@
 #include <iostream>
 #include "selectionUI.h"
 
-static const COORD SELECT_COORDINATES = {1, 1};
+static const COORD START_MENU_SELECT_COORDINATES = {1, 1};
 //maybe singleton?
 class StartMenuUI : public SelectionUI{
 public:
-    StartMenuUI(COORD coords) : SelectionUI(SELECT_COORDINATES){
+    StartMenuUI(COORD coords) : SelectionUI(START_MENU_SELECT_COORDINATES){
     //credit to Alex Wargacki for the artwork
     std::cout << "                            ==(W{==========-      /===-                        \n"
                  "                              ||  (.--.)         /===-_---~~~~~~~~~------____  \n"

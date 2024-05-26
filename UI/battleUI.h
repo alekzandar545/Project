@@ -4,13 +4,13 @@
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
 
-static const COORD SELECT_COORDINATES = {18, 1};
+static const COORD BATTLE_MENU_SELECT_COORDINATES = {18, 1};
 static const unsigned PLAYER_HP_OFFSET = 10;
 static const unsigned MONSTER_HP_OFFSET = 60;
 //maybe singleton?
 class BattleUI : public SelectionUI{
 public:
-    BattleUI(Player player, Monster monster) : SelectionUI(SELECT_COORDINATES){
+    BattleUI(Player player, Monster monster) : SelectionUI(BATTLE_MENU_SELECT_COORDINATES){
         this->player = &player;
         this->monster = &monster;
         playerArt = {
@@ -67,7 +67,7 @@ public:
             if(i==selectionIndex){
                 SetConsoleTextAttribute(CURR_HANDLE, 22);
                 std::cout << options[i] << '\n';
-                SetConsoleTextAttribute(CURR_HANDLE, 0);
+                SetConsoleTextAttribute(CURR_HANDLE, 8);
                 continue;
             }
             std::cout << options[i] << '\n';
@@ -77,10 +77,10 @@ public:
     void RenderHPBars() const{
         SetConsoleTextAttribute(CURR_HANDLE, 12);
         SetConsoleCursorPosition(CURR_HANDLE, {PLAYER_HP_OFFSET, (short)(dragonArt.size())});
-        std::cout << "HP: " << player->HP << '/' << player->maxHP;
+        std::cout << "HP: " << player->HP << '/' << player->maxHP << "                     "; //add some padding for shrinking numbers
         SetConsoleCursorPosition(CURR_HANDLE, {MONSTER_HP_OFFSET, (short)(dragonArt.size())});
-        std::cout << "HP: " << player->HP << '/' << player->maxHP;
-        SetConsoleTextAttribute(CURR_HANDLE, 0);
+        std::cout << "HP: " << monster->HP << '/' << monster->maxHP << "                   ";
+        SetConsoleTextAttribute(CURR_HANDLE, 8);
     }
 
     Player* getPlayer() const{return this->player;}

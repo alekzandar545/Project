@@ -18,6 +18,13 @@ public:
     std::string GetName() const{
         return this->name;
     }
+    //constructors
+    Item() = default;
+    Item(std::string name, ItemType type, unsigned power){
+        this->name = name;
+        this->type = type;
+        this->power = power;
+    }
 private:
     ItemType type;
     std::string name;
