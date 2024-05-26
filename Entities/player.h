@@ -23,21 +23,21 @@ public:
     bool SpellAttack(Monster& monster) const;
     //item management
     void EquipItem(unsigned index){//index will be decided from ui placement
-        Item* newItem = &inventory[index];
+        Item newItem = inventory[index]; //create a copy
         switch (inventory[index].GetType())
         {
         case Item::ItemType::Weapon:
             inventory[index] = this->weapon;
-            this->weapon = *newItem;
+            this->weapon = newItem;
             break;
         case Item::ItemType::Spell:
             inventory[index] = this->spell;
-            this->spell = *newItem;
+            this->spell = newItem;
             break;
         case Item::ItemType::Armor:
             this->armor -= this->armorPiece.GetPower();
             inventory[index] = this->armorPiece;
-            this->armorPiece = *newItem;
+            this->armorPiece = newItem;
             this->armor += this->armorPiece.GetPower();
             break;
         }

@@ -22,6 +22,11 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
     this->HP = 50;
     this->weapon = Item("Shortsword", Item::ItemType::Weapon, 20);
     this->spell = Item("Fireball", Item::ItemType::Spell, 20);
+    this->armorPiece = Item("Old rags", Item::ItemType::Armor, 0);
+    this->inventory.push_back(Item("Fireball", Item::ItemType::Spell, 20));
+    this->inventory.push_back(Item("Blueball", Item::ItemType::Spell, 10));
+    this->inventory.push_back(Item("Cockball", Item::ItemType::Spell, 30));
+    this->inventory.push_back(Item("Iceball", Item::ItemType::Spell, 40));
     this->name = name;
 };
 //leveling
@@ -40,8 +45,8 @@ void Player::AddXP(unsigned xp){
 }
 //combat
 bool Player::MeleeAttack(Monster& monster) const{
-    return monster.TakeHit(str + weapon.GetPower());
+    return monster.TakeHit(str + str*weapon.GetPower()/100);
 }
 bool Player::SpellAttack(Monster& monster) const{
-    return monster.TakeHit(mana + spell.GetPower());
+    return monster.TakeHit(mana + mana*spell.GetPower()/100);
 }

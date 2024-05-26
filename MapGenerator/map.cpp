@@ -220,11 +220,13 @@ void Map::MovePlayer(int x, int y){
     playerY = newY;
 }
 //events --> event handler?
-void Map::TreasureEvent(){}
+void Map::TreasureEvent(){
+    player->AddGold(5+floor);
+}
 
 void Map::Alert(std::ostringstream& msg) const{
     std::string padding = "                    ";
-    std::cout <<'\n' << msg.str();
+    std::cout <<'\n' << msg.str() << padding;
     _getch();
 }
 void Map::BattleAlert(std::ostringstream& msg) const{
@@ -272,11 +274,14 @@ void Map::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead,
                         BattleAlert(msg);
                     }
                     break;
-                case 1:
+                case 1: //move this logic to a functionc
                     if(ui.getPlayer()->SpellAttack(*ui.getMonster())){
                         ui.Render(); 
                         std::ostringstream msg;
-                        msg << ui.getPlayer()->GetName() << " has slain the dragon";
+                        msg << ui.getPlayer()->GetName() << " has slain the dragon"<<
+                                                            " and has earned " << std::to_string(5+floor)  
+                                                            << " gold and " << std::to_string(25+floor*3) 
+                                                            << " xp" << '\n' << "Press any key to continue";
                         Alert(msg);
                         monsterIsDead = true;
                         return;

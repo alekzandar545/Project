@@ -22,7 +22,29 @@ void Render(Map& map){
 void IntitialRender(Map& map){
     map.RenderAll();
 }
-
+bool InventoryUserInput(InventoryUI& ui) 
+{ 
+    // Checks if a key is pressed or not 
+    if (_kbhit()) { 
+        // Getting the pressed key 
+        int ch = _getch(); 
+        switch (ch) { 
+            case 'w': //up arrow
+                ui.MoveSeleciton(0);
+                break; 
+            case 's': //down arrow
+                ui.MoveSeleciton(1);
+                break; 
+            case 'e':
+                ui.getPlayer()->EquipItem(ui.GetSelectionIndex());
+                ui.Render();
+                break;
+            case 'i':
+                return false;
+        } 
+    } 
+    return true;
+}   
 void UserInput(Map& map, Player& p) 
 { 
     // Checks if a key is pressed or not 
@@ -46,8 +68,15 @@ void UserInput(Map& map, Player& p)
             Render(map);
             break; 
         case 'i':{
-            InventoryUI ui({0,0}, p);
+            system("cls");
+            InventoryUI ui(&p);
+            bool isOpen = true;
             ui.Render();
+            while(isOpen){
+                isOpen = InventoryUserInput(ui);
+            }
+            system("cls");
+            map.RenderAll();
             break;
         }
         case 'x': 
