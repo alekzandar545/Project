@@ -11,7 +11,7 @@ public:
     enum class PlayerRace{
         Human,
         Berserk,
-        Sorcerrer
+        Sorcerer
     };
     //constructors
     Player(PlayerRace race, std::string name);

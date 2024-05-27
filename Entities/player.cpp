@@ -12,7 +12,7 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
         this->str = 40;
         this->mana = 10;
         break;
-    case PlayerRace::Sorcerrer:
+    case PlayerRace::Sorcerer:
         this->str = 10;
         this->mana = 40;
         break;        

@@ -10,6 +10,7 @@ class InventoryUI : public SelectionUI{
 public:
     InventoryUI(Player* player) : SelectionUI(INVENTORY_MENU_SELECT_COORDINATES){
         this->player = player;
+        
     }
     void RenderEquippedItems() const{
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, CONSOLE_COORDS.Y});
@@ -46,6 +47,16 @@ public:
             
             std::cout << padding <<'\n';
             SetConsoleTextAttribute(CURR_HANDLE, 8);
+        }
+    }
+    void MoveSelection(bool direction) override{//goes up for 0 down for 1
+        if(direction && selectionIndex < player->inventory.size()-1){
+            selectionIndex++;
+            Render();
+        }
+        else if(!direction && selectionIndex > 0){
+            selectionIndex--;
+            Render();
         }
     }
     //getters

@@ -31,7 +31,7 @@ public:
             std::cout << options[i] << '\n';
         }
     }
-    void MoveSeleciton(bool direction){//goes up for 0 down for 1
+    virtual void MoveSelection(bool direction){//goes up for 0 down for 1
         if(direction && selectionIndex < options.size()-1){
             selectionIndex++;
             Render();

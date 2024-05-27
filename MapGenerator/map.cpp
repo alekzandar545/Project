@@ -225,6 +225,11 @@ void Map::MovePlayer(int x, int y){
 //events --> event handler?
 void Map::TreasureEvent(){
     player->AddGold(5+floor);
+    Item newItem = Item::GenerateItem(floor);
+    player->inventory.push_back(newItem);
+    std::ostringstream msg;
+    msg << player->GetName() << " just acquired " << newItem.GetName();
+    Alert(msg);
 }
 
 void Map::Alert(std::ostringstream& msg) const{
@@ -238,7 +243,7 @@ void Map::BattleAlert(std::ostringstream& msg) const{
 
 void Map::GameOver() const{
    system("cls"); 
-   std::cout << "Game over'\n";
+   std::cout << "GAME OVER\n";
    std::cout << "Gold highscore: " << player->gold;
    bool isGameOver;
    EndGame();
@@ -253,10 +258,10 @@ void Map::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead,
         int ch = _getch(); 
         switch (ch) { 
             case 'w': //up arrow
-                ui.MoveSeleciton(0);
+                ui.MoveSelection(0);
                 break; 
             case 's': //down arrow
-                ui.MoveSeleciton(1);
+                ui.MoveSelection(1);
                 break; 
             case 'e':
                 std::ostringstream msg; 
@@ -275,7 +280,7 @@ void Map::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead,
                     }
                     else{
                         ui.Render(); 
-                        msg << ui.getPlayer()->GetName() << " hit the dragon with a " << ui.getPlayer()->weapon.GetName();
+                        msg << ui.getPlayer()->GetName() << " hit the dragon with their " << ui.getPlayer()->weapon.GetName();
                         BattleAlert(msg);
                         std::this_thread::sleep_for (std::chrono::seconds(1));
                         MonsterAttack(ui.getPlayer(), ui.getMonster(), playerIsDead);
@@ -391,6 +396,10 @@ void Map::NextFloor(){
     Fib(STARTING_MONSTERS[0],STARTING_MONSTERS[1],floor),Fib(STARTING_TREASURE[0],STARTING_TREASURE[1], floor), player);
     newMap.GenerateMap();
     *this = newMap;
+    player->AddXP(70 + floor*10);//see if it is balanced
+    std::ostringstream msg;
+    msg << "Floor " << floor << " passed! " << player->GetName() << " got " << 70+floor*10 << " xp!";
+    Alert(msg);
     playerX = 0;
     playerY = 0;
     renderer.SetChunkX(0); //maybe problematic later

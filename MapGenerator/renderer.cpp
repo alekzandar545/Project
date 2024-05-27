@@ -237,7 +237,7 @@ void Renderer::RenderStats(const unsigned height, const unsigned width, Player* 
     std::cout << "Level: " << player->level << "    ";
     std::cout << "XP: " << player->xp << '/' << player->requiredXp << "   ";
     SetConsoleTextAttribute(CURR_HANDLE, 12);
-    std::cout << "HP: " << player->HP << '/' << player->maxHP << '\n';
+    std::cout << "HP: " << player->HP << '/' << player->maxHP << padding << '\n';
     SetConsoleTextAttribute(CURR_HANDLE, 8);
     //SetConsoleCursorPosition(CURR_HANDLE, {(short)width,(short)(height+1)});
 }

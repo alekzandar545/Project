@@ -12,28 +12,29 @@
 #include "constants.h"
 
 bool isGameOver = false;
-//render stats and level etc later on
+
+// Render stats and level, etc. later on
 void Render(Map& map){
     if(!isGameOver){
         map.RenderStats();
         map.RenderPosition();
     }
 }
+
 void IntitialRender(Map& map){
     map.RenderAll();
 }
+
 bool InventoryUserInput(InventoryUI& ui) 
 { 
-    // Checks if a key is pressed or not 
     if (_kbhit()) { 
-        // Getting the pressed key 
         int ch = _getch(); 
         switch (ch) { 
-            case 'w': //up arrow
-                ui.MoveSeleciton(0);
+            case 'w': // up arrow
+                ui.MoveSelection(0);
                 break; 
-            case 's': //down arrow
-                ui.MoveSeleciton(1);
+            case 's': // down arrow
+                ui.MoveSelection(1);
                 break; 
             case 'e':
                 ui.GetPlayer()->EquipItem(ui.GetSelectionIndex());
@@ -44,19 +45,18 @@ bool InventoryUserInput(InventoryUI& ui)
         } 
     } 
     return true;
-}   
+}
+
 bool StatsUserInput(StatsUI& ui) 
 { 
-    // Checks if a key is pressed or not 
     if (_kbhit()) { 
-        // Getting the pressed key 
         int ch = _getch(); 
         switch (ch) { 
-            case 'w': //up arrow
-                ui.MoveSeleciton(0);
+            case 'w': // up arrow
+                ui.MoveSelection(0);
                 break; 
-            case 's': //down arrow
-                ui.MoveSeleciton(1);
+            case 's': // down arrow
+                ui.MoveSelection(1);
                 break; 
             case 'e':
                 if(ui.GetOption(ui.GetSelectionIndex()) == "Strength")
@@ -74,74 +74,169 @@ bool StatsUserInput(StatsUI& ui)
         } 
     } 
     return true;
-}   
+}
+
 void UserInput(Map& map, Player& p) 
 { 
-    // Checks if a key is pressed or not 
     if (_kbhit()) { 
-        // Getting the pressed key 
-        switch (_getch()) { 
-        case 'a': 
-            map.MovePlayer(-1, 0);
-            Render(map);
-            break; 
-        case 'd': 
-            map.MovePlayer(1, 0);
-            Render(map);
-            break; 
-        case 'w': 
-            map.MovePlayer(0, -1);
-            Render(map);
-            break; 
-        case 's': 
-            map.MovePlayer(0, 1);
-            Render(map);
-            break; 
-        case 'i':{
-            system("cls");
-            InventoryUI ui(&p);
-            bool isOpen = true;
-            ui.Render();
-            while(isOpen){
-                isOpen = InventoryUserInput(ui);
+        int ch = _getch(); 
+        switch (ch) { 
+            case 'a': 
+                map.MovePlayer(-1, 0);
+                Render(map);
+                break; 
+            case 'd': 
+                map.MovePlayer(1, 0);
+                Render(map);
+                break; 
+            case 'w': 
+                map.MovePlayer(0, -1);
+                Render(map);
+                break; 
+            case 's': 
+                map.MovePlayer(0, 1);
+                Render(map);
+                break; 
+            case 'i':{
+                system("cls");
+                InventoryUI ui(&p);
+                bool isOpen = true;
+                ui.Render();
+                while(isOpen){
+                    isOpen = InventoryUserInput(ui);
+                }
+                system("cls");
+                map.RenderAll();
+                break;
             }
-            system("cls");
-            map.RenderAll();
-            break;
-        }
-        case 'g':{
-            system("cls");
-            StatsUI ui(&p);
-            bool isOpen = true;
-            ui.Render();
-            while(isOpen){
-                isOpen = StatsUserInput(ui);
+            case 'g':{
+                system("cls");
+                StatsUI ui(&p);
+                bool isOpen = true;
+                ui.Render();
+                while(isOpen){
+                    isOpen = StatsUserInput(ui);
+                }
+                system("cls");
+                map.RenderAll();
+                break;
             }
-            system("cls");
-            map.RenderAll();
-            break;
-        }
-        case 'x': 
-            isGameOver = true; 
-            break; 
+            case 'x': 
+                isGameOver = true; 
+                break; 
         } 
     } 
-} 
+}
 
-int main()
-{   
-    //steps:
-    //1)startUI -> need load screen
-    //2)PlayerCreation
-    //3)Visualize map
-    system("cls");
+void StartUserInput(StartMenuUI& ui, bool& OpenStartUI) 
+{ 
+    if (_kbhit()) { 
+        int ch = _getch(); 
+        switch (ch) { 
+            case 'w': // up arrow
+                ui.MoveSelection(0);
+                break; 
+            case 's': // down arrow
+                ui.MoveSelection(1);
+                break; 
+            case 'e':
+                switch(ui.GetSelectionIndex()){ 
+                    case 0: // new game
+                        OpenStartUI = false;
+                        break; 
+                    case 1: // load game
+                        // load game interface
+                        break; 
+                    case 2: // highscores
+                        // highscores interface
+                        break; 
+                    case 3: // exit
+                        isGameOver = true;
+                        OpenStartUI = false;
+                        system("cls");
+                        break;
+                }
+                break;
+        } 
+    } 
+}
+
+void RaceSelectInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race) 
+{ 
+    if (_kbhit()) { 
+        int ch = _getch(); 
+        switch (ch) { 
+            case 'w': // up arrow
+                ui.MoveSelection(0);
+                break; 
+            case 's': // down arrow
+                ui.MoveSelection(1);
+                break; 
+            case 'e':
+                switch(ui.GetSelectionIndex()){ 
+                    case 0: //Human
+                        race = Player::PlayerRace::Human;
+                        break; 
+                    case 1: //Sorcerer
+                        race = Player::PlayerRace::Sorcerer;
+                        break; 
+                    case 2: //Berserk
+                        race = Player::PlayerRace::Berserk;
+                        break; 
+                    default:
+                        race = Player::PlayerRace::Human;
+                        break;
+
+                }
+                OpenRaceSelectUI = false;
+                system("cls");
+                break;
+        } 
+    } 
+}
+
+void InitializeGame(){
     srand(time(0));
-    Player p(Player::PlayerRace::Berserk, "Pesho");
-	Map map1(10,10,2,2,&p);
+    //name
+    system("cls");
+    char buffer[50];
+    std::cout << "Enter player name: ";
+    std::cin.getline(buffer, 50);
+    std::string name(buffer);
+    //race
+    system("cls");
+    std::cout << "Pick a race:\n";
+    SelectionUI raceSelectUI({0,1});
+    raceSelectUI.SetOptions({"Human","Sorcerer","Berserk"});
+    raceSelectUI.Render();
+    bool OpenRaceSelectUI = true;
+    Player::PlayerRace race;
+    while(OpenRaceSelectUI){
+        RaceSelectInput(raceSelectUI, OpenRaceSelectUI, race);
+    }
+    Player p(race, name);
+    //map creation
+    Map map1(10,10,2,2,&p);
     map1.GenerateMap();
+    system("cls");
     IntitialRender(map1);
     while(!isGameOver){
         UserInput(map1, p);
     }
+}
+
+int main()
+{   
+    system("cls");
+    StartMenuUI startUI;
+    bool OpenStartUI = true;
+    startUI.Render();
+    while(OpenStartUI){
+        StartUserInput(startUI, OpenStartUI);
+    }
+    if (!isGameOver) {
+        InitializeGame();
+    }
+
     return 0;
 }
