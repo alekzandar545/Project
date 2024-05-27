@@ -25,7 +25,7 @@ public:
             if(i==selectionIndex){
                 SetConsoleTextAttribute(CURR_HANDLE, 22);
                 std::cout << options[i] << '\n';
-                SetConsoleTextAttribute(CURR_HANDLE, 0);
+                SetConsoleTextAttribute(CURR_HANDLE, 8);
                 continue;
             }
             std::cout << options[i] << '\n';

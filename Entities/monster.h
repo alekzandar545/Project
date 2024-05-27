@@ -2,11 +2,16 @@
 #include "entity.h"
 #include "player.h"
 
+
 class Monster : public Entity{
 public:
+    enum class Attacks{
+        MeleeAttack,
+        SpellAttack
+    };
     Monster(unsigned level);
     //combat
-    unsigned ChooseAttack() const;
-    bool Attack(Entity* pl) const;
+    unsigned ChooseAttack(Attacks& attack) const;
+    bool Attack(Entity* pl, Attacks& attack) const;
 private:
 };

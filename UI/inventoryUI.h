@@ -45,7 +45,7 @@ public:
             }
             
             std::cout << padding <<'\n';
-            SetConsoleTextAttribute(CURR_HANDLE, 0);
+            SetConsoleTextAttribute(CURR_HANDLE, 8);
         }
     }
     //getters

@@ -11,7 +11,7 @@ class StatsUI : public SelectionUI{
 public:
     StatsUI(Player* player) : SelectionUI(STATS_SELECT_COORDINATES){
         this->player = player;
-        SetOptions({"Strength", "Mana", "Health Points"});
+        SetOptions({"Strength", "Mana", "Health Points", "Dexterity"});
     }
     void Render() const override{
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, CONSOLE_COORDS.Y});
@@ -28,10 +28,11 @@ public:
             else if(options[i] == "Mana")
                 std::cout << " - " << player->mana;
             else if(options[i] == "Health Points")
-                std::cout << " - " << player->HP;
-
+                std::cout << " - " << player->maxHP;
+            else if(options[i] == "Dexterity")
+                std::cout << " - " << player->dexterity;
             std::cout <<'\n';
-            SetConsoleTextAttribute(CURR_HANDLE, 0);
+            SetConsoleTextAttribute(CURR_HANDLE, 8);
         }
         std::cout << "\nSpare points: " << player->statPoints << padding;
     }

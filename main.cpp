@@ -9,14 +9,15 @@
 #include "UI/startMenuUI.h"
 #include "UI/inventoryUI.h"
 #include "UI/statsUI.h"
+#include "constants.h"
 
-//enum Directions { STOP = 0, LEFT, RIGHT, UP, DOWN }; //gotta use those i think>>?
-bool isGameOver = false; 
-
+bool isGameOver = false;
 //render stats and level etc later on
 void Render(Map& map){
-    map.RenderStats();
-    map.RenderPosition();
+    if(!isGameOver){
+        map.RenderStats();
+        map.RenderPosition();
+    }
 }
 void IntitialRender(Map& map){
     map.RenderAll();
@@ -64,6 +65,8 @@ bool StatsUserInput(StatsUI& ui)
                     ui.GetPlayer()->AddMana();
                 else if(ui.GetOption(ui.GetSelectionIndex()) == "Health Points")
                     ui.GetPlayer()->AddHP();
+                else if(ui.GetOption(ui.GetSelectionIndex()) == "Dexterity")
+                    ui.GetPlayer()->AddDexterity();
                 ui.Render();
                 break;
             case 'g':

@@ -16,4 +16,5 @@ public:
     unsigned maxHP;
     int HP;
     unsigned armor;
+    unsigned dexterity;
 };

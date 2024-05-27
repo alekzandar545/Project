@@ -69,6 +69,12 @@ public:
             statPoints--;
        } 
     }
+    void AddDexterity(){
+        if(statPoints > 0){
+            dexterity++;
+            statPoints--;
+        }
+    }
 
     //getters
     std::string GetName() const{return this->name;}

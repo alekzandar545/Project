@@ -2,9 +2,9 @@
 #include  "../Entities/player.h"
 #include <vector>
 class Renderer{
-    private:
-        unsigned CHUNK_COORDS[2] = {0,0};
-    public:
+private:
+    unsigned CHUNK_COORDS[2] = {0,0};
+public:
     //constructors
     Renderer() = default;
     Renderer(Renderer const &) = default;

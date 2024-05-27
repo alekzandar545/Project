@@ -55,6 +55,7 @@ public:
     void BattleAlert(std::ostringstream& msg) const;
     void GameOver() const;
     void BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& evaded);
+    void MonsterAttack(Player* player, Monster* monster, bool& playerIsDead);
 private:
     Renderer renderer;
     unsigned width, height;

@@ -17,6 +17,7 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
         this->mana = 40;
         break;        
     }
+    this->dexterity = 10;
     this->statPoints = 0;
     this->armor = 0;
     this->maxHP = 50;
