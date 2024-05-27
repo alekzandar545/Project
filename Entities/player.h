@@ -43,9 +43,18 @@ public:
         }
     }
     //inventory
-    void AddItem(Item item){
-        inventory.push_back(item);
+    bool AddItem(const Item& item){
+        if(this->inventory.size() < this->inventoryCapacity){
+            this->inventory.push_back(item);
+            return 1; //success
+        }
+        return 0; //failed
     }
+    void SellItem(const unsigned index){
+        this->gold += inventory[index].GetPower()/2;
+        this->inventory.erase(this->inventory.begin() + index);
+    }
+    //gold
     void AddGold(const unsigned gold){
         this->gold+=gold;
     }
@@ -79,6 +88,7 @@ public:
     //getters
     std::string GetName() const{return this->name;}
 //private:
+    unsigned inventoryCapacity;
     unsigned statPoints;
     unsigned level;
     unsigned xp;

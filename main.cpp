@@ -40,6 +40,12 @@ bool InventoryUserInput(InventoryUI& ui)
                 ui.GetPlayer()->EquipItem(ui.GetSelectionIndex());
                 ui.Render();
                 break;
+            case 'x':
+                ui.GetPlayer()->SellItem(ui.GetSelectionIndex());
+                system("cls");//need to rerender everything
+                ui.CheckSold();
+                ui.Render();
+                break;
             case 'i':
                 return false;
         } 
@@ -123,6 +129,7 @@ void UserInput(Map& map, Player& p)
             }
             case 'x': 
                 isGameOver = true; 
+                system("cls");
                 break; 
         } 
     } 
@@ -205,8 +212,8 @@ void InitializeGame(){
     std::string name(buffer);
     //race
     system("cls");
-    std::cout << "Pick a race:\n";
-    SelectionUI raceSelectUI({0,1});
+    std::cout << "Pick a race:\n------------";
+    SelectionUI raceSelectUI({0,2});
     raceSelectUI.SetOptions({"Human","Sorcerer","Berserk"});
     raceSelectUI.Render();
     bool OpenRaceSelectUI = true;

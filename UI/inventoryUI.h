@@ -10,7 +10,7 @@ class InventoryUI : public SelectionUI{
 public:
     InventoryUI(Player* player) : SelectionUI(INVENTORY_MENU_SELECT_COORDINATES){
         this->player = player;
-        
+        capacity = 10;
     }
     void RenderEquippedItems() const{
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, CONSOLE_COORDS.Y});
@@ -23,7 +23,7 @@ public:
         const unsigned ConsoleYOffset = 5; // need 5 lines for equipped items to be displayed:
         RenderEquippedItems();
 
-        std::cout << "Inventory:\n";
+        std::cout <<'(' << player->inventory.size() << '/' << player->inventoryCapacity << ") " << "Inventory:\n";
         for (size_t i = 0; i < player->inventory.size(); i++)
         {
             SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, (short)(CONSOLE_COORDS.Y + i + ConsoleYOffset)});
@@ -48,7 +48,9 @@ public:
             std::cout << padding <<'\n';
             SetConsoleTextAttribute(CURR_HANDLE, 8);
         }
+        std::cout << "\nPress E to equip item\nPress X to sell item";
     }
+
     void MoveSelection(bool direction) override{//goes up for 0 down for 1
         if(direction && selectionIndex < player->inventory.size()-1){
             selectionIndex++;
@@ -59,10 +61,16 @@ public:
             Render();
         }
     }
+    //check if item was removed recently
+    void CheckSold(){
+        if(selectionIndex == player->inventory.size())
+            selectionIndex--;
+    }
     //getters
     Player* GetPlayer() const{
         return this->player;
     }
 private:
+    unsigned capacity;
     Player* player;
 };

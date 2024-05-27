@@ -226,7 +226,10 @@ void Renderer::RenderAll(const unsigned height, const unsigned width, const std:
     RenderStats(height, width, player);
     RenderChunk(height, width, matrix);
     //controls info
-    std::cout << "I - inventory" << '\n' << "E - select" << '\n' << "G - stats";
+    std::cout << "I - inventory"
+            << "\nE - select" 
+            << "\nG - stats" 
+            << "\nX = save and exit";
 }
 
 void Renderer::RenderStats(const unsigned height, const unsigned width, Player* player) const{

@@ -224,12 +224,18 @@ void Map::MovePlayer(int x, int y){
 }
 //events --> event handler?
 void Map::TreasureEvent(){
-    player->AddGold(5+floor);
+    player->AddGold(3+floor);
     Item newItem = Item::GenerateItem(floor);
-    player->inventory.push_back(newItem);
     std::ostringstream msg;
-    msg << player->GetName() << " just acquired " << newItem.GetName();
-    Alert(msg);
+    if(player->AddItem(newItem)){
+        msg << player->GetName() << " just acquired " << newItem.GetName();
+        Alert(msg);
+    }
+    else{
+        msg << "Inventory is full!";
+        Alert(msg);
+    }
+
 }
 
 void Map::Alert(std::ostringstream& msg) const{

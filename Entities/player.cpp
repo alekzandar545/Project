@@ -17,6 +17,7 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
         this->mana = 40;
         break;        
     }
+    this->inventoryCapacity = 10;
     this->dexterity = 10;
     this->statPoints = 0;
     this->armor = 0;
@@ -25,10 +26,6 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
     this->weapon = Item("Shortsword", Item::ItemType::Weapon, 20);
     this->spell = Item("Fireball", Item::ItemType::Spell, 20);
     this->armorPiece = Item("Old rags", Item::ItemType::Armor, 0);
-    this->inventory.push_back(Item("Fireball", Item::ItemType::Spell, 20));
-    this->inventory.push_back(Item("Blueball", Item::ItemType::Spell, 10));
-    this->inventory.push_back(Item("Cockball", Item::ItemType::Spell, 30));
-    this->inventory.push_back(Item("Iceball", Item::ItemType::Spell, 40));
     this->name = name;
 };
 //leveling
