@@ -42,16 +42,38 @@ public:
             break;
         }
     }
+    //inventory
     void AddItem(Item item){
         inventory.push_back(item);
     }
     void AddGold(const unsigned gold){
         this->gold+=gold;
     }
+    //stats
+    void AddStrength(){
+        if(statPoints > 0){
+            str++;
+            statPoints--;
+        }
+    }
+    void AddMana(){
+        if(statPoints > 0){
+            mana++;
+            statPoints--;
+        }
+    }
+    void AddHP(){
+       if(statPoints > 0){
+            maxHP++;
+            HP++;
+            statPoints--;
+       } 
+    }
 
     //getters
     std::string GetName() const{return this->name;}
 //private:
+    unsigned statPoints;
     unsigned level;
     unsigned xp;
     unsigned requiredXp;

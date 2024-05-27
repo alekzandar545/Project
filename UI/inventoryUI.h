@@ -2,8 +2,9 @@
 #include <iostream>
 #include "selectionUI.h"
 #include "../Entities/player.h"
+#include "../constants.h"
 static const COORD INVENTORY_MENU_SELECT_COORDINATES = {0, 0};
-static const std::string padding = "                                                            ";
+
 //maybe singleton?
 class InventoryUI : public SelectionUI{
 public:
@@ -48,7 +49,7 @@ public:
         }
     }
     //getters
-    Player* getPlayer() const{
+    Player* GetPlayer() const{
         return this->player;
     }
 private:

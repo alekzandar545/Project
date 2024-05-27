@@ -17,6 +17,7 @@ Player::Player(PlayerRace race, std::string name) : gold(0), xp(0), level(1), re
         this->mana = 40;
         break;        
     }
+    this->statPoints = 0;
     this->armor = 0;
     this->maxHP = 50;
     this->HP = 50;
@@ -36,6 +37,7 @@ void Player::LevelUp(){
     xp = leftoverXP;
     requiredXp += requiredXp/10; //lets see if this progression is too slow
     HP = maxHP;
+    statPoints+=30;
 }
 
 void Player::AddXP(unsigned xp){

@@ -4,7 +4,7 @@
 #include <cmath>
 #include <windows.h>
 #include "map.h"
-#include "constants.h"
+#include "../constants.h"
 #include "../UI/selectionUI.h"
 #include "../UI/battleUI.h"
 #include "../Entities/player.h"
@@ -309,7 +309,6 @@ void Map::MonsterEvent(){
     system("cls");
     Monster m(floor); //monsters get stronger on each floor
     BattleUI battle(*player, m);
-    battle.SetOptions({"Melee attack", "Spell attack", "Potion", "Evade"});
     battle.Render();
     bool playerIsDead = 0;
     bool monsterIsDead = 0;

@@ -8,11 +8,10 @@
 #include "Entities/player.h"
 #include "UI/startMenuUI.h"
 #include "UI/inventoryUI.h"
+#include "UI/statsUI.h"
 
 //enum Directions { STOP = 0, LEFT, RIGHT, UP, DOWN }; //gotta use those i think>>?
 bool isGameOver = false; 
-
-
 
 //render stats and level etc later on
 void Render(Map& map){
@@ -36,10 +35,38 @@ bool InventoryUserInput(InventoryUI& ui)
                 ui.MoveSeleciton(1);
                 break; 
             case 'e':
-                ui.getPlayer()->EquipItem(ui.GetSelectionIndex());
+                ui.GetPlayer()->EquipItem(ui.GetSelectionIndex());
                 ui.Render();
                 break;
             case 'i':
+                return false;
+        } 
+    } 
+    return true;
+}   
+bool StatsUserInput(StatsUI& ui) 
+{ 
+    // Checks if a key is pressed or not 
+    if (_kbhit()) { 
+        // Getting the pressed key 
+        int ch = _getch(); 
+        switch (ch) { 
+            case 'w': //up arrow
+                ui.MoveSeleciton(0);
+                break; 
+            case 's': //down arrow
+                ui.MoveSeleciton(1);
+                break; 
+            case 'e':
+                if(ui.GetOption(ui.GetSelectionIndex()) == "Strength")
+                    ui.GetPlayer()->AddStrength();
+                else if(ui.GetOption(ui.GetSelectionIndex()) == "Mana")
+                    ui.GetPlayer()->AddMana();
+                else if(ui.GetOption(ui.GetSelectionIndex()) == "Health Points")
+                    ui.GetPlayer()->AddHP();
+                ui.Render();
+                break;
+            case 'g':
                 return false;
         } 
     } 
@@ -74,6 +101,18 @@ void UserInput(Map& map, Player& p)
             ui.Render();
             while(isOpen){
                 isOpen = InventoryUserInput(ui);
+            }
+            system("cls");
+            map.RenderAll();
+            break;
+        }
+        case 'g':{
+            system("cls");
+            StatsUI ui(&p);
+            bool isOpen = true;
+            ui.Render();
+            while(isOpen){
+                isOpen = StatsUserInput(ui);
             }
             system("cls");
             map.RenderAll();

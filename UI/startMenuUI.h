@@ -7,6 +7,7 @@ static const COORD START_MENU_SELECT_COORDINATES = {1, 1};
 class StartMenuUI : public SelectionUI{
 public:
     StartMenuUI(COORD coords) : SelectionUI(START_MENU_SELECT_COORDINATES){
+    SetOptions({"New game", "Load game", "Highscores", "Exit"});
     //credit to Alex Wargacki for the artwork
     std::cout << "                            ==(W{==========-      /===-                        \n"
                  "                              ||  (.--.)         /===-_---~~~~~~~~~------____  \n"

@@ -1,5 +1,5 @@
 #include "map.h"
-#include "constants.h"
+#include "../constants.h"
 #include "renderer.h"
 #include "conio.h"
 #include "windows.h"
@@ -63,7 +63,7 @@ void Renderer::RenderTile(char c) const{
 }
 
 void Renderer::RenderChunk(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const{ //should drop the parameter probably
-    //ClearConsoleLines(1,12); // deletes map without the stats
+    ClearConsoleLines(1, 1 + CHUNK_SIZE[1] + 1); // deletes map without the stats //+1 for top render and +1 for bottom render
     unsigned chunkX = CHUNK_COORDS[0];
     unsigned chunkY = CHUNK_COORDS[1];
     unsigned chunkHeight = CHUNK_SIZE[1];
@@ -226,7 +226,7 @@ void Renderer::RenderAll(const unsigned height, const unsigned width, const std:
     RenderStats(height, width, player);
     RenderChunk(height, width, matrix);
     //controls info
-    std::cout << "I - inventory" << '\n' << "E - select";
+    std::cout << "I - inventory" << '\n' << "E - select" << '\n' << "G - stats";
 }
 
 void Renderer::RenderStats(const unsigned height, const unsigned width, Player* player) const{
