@@ -1,17 +1,13 @@
-#include "vector"
+#include <vector>
 #include <iostream>
-#include <conio.h> 
 #include <cmath>
 #include <windows.h>
 #include "map.h"
 #include "../constants.h"
-#include "../UI/selectionUI.h"
-#include "../UI/battleUI.h"
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
-#include <sstream> //move to events later
-#include <chrono>
-#include <thread>
+#include "../Events/eventHandler.h"
+#include "../UI/inputHandler.h"
 
 //auxiliary functions //outta class in cpp file
 void Swap(unsigned& a, unsigned& b){
@@ -25,42 +21,24 @@ void Shuffle(std::vector<unsigned>& a){
         Swap(a[i], a[rand() % a.size()]);
     }
 }
-unsigned Fib(unsigned a, unsigned b, unsigned n){
-    if (n == 0) return a;
-    if (n == 1) return b;
-    unsigned prev = a;
-    unsigned curr = b;
-    unsigned next;
-    for (size_t i = 2; i <= n; ++i) {
-        next = prev + curr;
-        prev = curr;
-        curr = next;
-    }
-    return next;
-}
 
 //big4
-Map::Map(Player* player){
-    width = 0;
-    height = 0;
-    playerX = 0;
-    playerY = 0;
-    floor = 0;
-    this->player = player;
-    EndGame();
+Map::Map(Player* player)
+    : player(player), floor(0), playerX(0), playerY(0), height(0), width(0) {
 }
-//don't think i need this when i have the constants :)
-Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount, Player* player){
-    this->width = width;
-    this->height = height;
-    this->monsterCount = monsterCount;
-    this->treasureCount = treasureCount;
-    playerX = 0;
-    playerY = 0;
-    floor = 0;
-    this->player = player;
+
+Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount, Player* player)
+    : width(width), height(height), monsterCount(monsterCount), treasureCount(treasureCount), player(player), floor(0), playerX(0), playerY(0) {
 }
-Map::Map(const Map& other){
+
+Map::Map(const Map& other)
+    : matrix(other.matrix), height(other.height), width(other.width), monsterCount(other.monsterCount), treasureCount(other.treasureCount), playerX(other.playerX), playerY(other.playerY), floor(other.floor), player(other.player) {
+}
+
+Map& Map::operator=(const Map& other) {
+    if (&other == this)
+        return *this;
+
     matrix = other.matrix;
     height = other.height;
     width = other.width;
@@ -70,22 +48,9 @@ Map::Map(const Map& other){
     playerY = other.playerY;
     floor = other.floor;
     player = other.player;
-}
-Map& Map::operator=(const Map& other){
-    if(&other == this)
-        return *this;
-    matrix = other.matrix;
-    height = other.height;
-    width = other.width;
-    monsterCount = other.monsterCount;
-    treasureCount = other.treasureCount;
-    playerX = other.playerX;
-    playerY = other.playerY;
-    player = other.player;
-    //renderer = other.renderer;
-    //floor = other.floor;
     return *this;
 }
+
 Map::~Map() = default;
 
 //Creation
@@ -210,207 +175,22 @@ void Map::MovePlayer(int x, int y){
         return; 
     }
     //should not render those cases //maybe throw an exception
-    else if(matrix[newY][newX] == TREASURE)
-        TreasureEvent();
+    else if(matrix[newY][newX] == TREASURE){
+        Event event(this);
+        event.TreasureEvent();
+    }
+
     else if(matrix[newY][newX] == MONSTER)
-        MonsterEvent();
+    {
+        Event event(this);
+        event.MonsterEvent();
+    }
     else if(matrix[newY][newX] == '#'){
-        NextFloor(); return;
+        Event event(this);
+        event.NextFloor(); return;
     }
     matrix[playerY][playerX] = PATH;
     matrix[newY][newX] = PLAYER;
     playerX = newX;
     playerY = newY;
 }
-//events --> event handler?
-void Map::TreasureEvent(){
-    player->AddGold(3+floor);
-    Item newItem = Item::GenerateItem(floor);
-    std::ostringstream msg;
-    if(player->AddItem(newItem)){
-        msg << player->GetName() << " just acquired " << newItem.GetName();
-        Alert(msg);
-    }
-    else{
-        msg << "Inventory is full!";
-        Alert(msg);
-    }
-
-}
-
-void Map::Alert(std::ostringstream& msg) const{
-    std::cout << msg.str() << padding <<'\n';
-    std::this_thread::sleep_for (std::chrono::seconds(3));
-}
-void Map::BattleAlert(std::ostringstream& msg) const{
-    std::cout << msg.str() << padding <<'\n';
-    std::this_thread::sleep_for (std::chrono::seconds(1));
-}
-
-void Map::GameOver() const{
-   system("cls"); 
-   std::cout << "GAME OVER\n";
-   std::cout << "Gold highscore: " << player->gold;
-   bool isGameOver;
-   EndGame();
-   return;
-}
-
-void Map::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& fled) 
-{ 
-    // Checks if a key is pressed or not 
-    if (_kbhit()) { 
-        // Getting the pressed key 
-        int ch = _getch(); 
-        switch (ch) { 
-            case 'w': //up arrow
-                ui.MoveSelection(0);
-                break; 
-            case 's': //down arrow
-                ui.MoveSelection(1);
-                break; 
-            case 'e':
-                std::ostringstream msg; 
-                switch (ui.GetSelectionIndex())
-                {
-                case 0: //add enum for those
-                    if(ui.getPlayer()->MeleeAttack(*ui.getMonster())){
-                        ui.Render(); 
-                        msg << ui.getPlayer()->GetName() << " has slain the dragon"<<
-                                                            " and has earned " << std::to_string(5+floor)  
-                                                            << " gold and " << std::to_string(25+floor*3) 
-                                                            << " xp";
-                        Alert(msg);
-                        monsterIsDead = true;
-                        return;
-                    }
-                    else{
-                        ui.Render(); 
-                        msg << ui.getPlayer()->GetName() << " hit the dragon with their " << ui.getPlayer()->weapon.GetName();
-                        BattleAlert(msg);
-                        std::this_thread::sleep_for (std::chrono::seconds(1));
-                        MonsterAttack(ui.getPlayer(), ui.getMonster(), playerIsDead);
-                        system("cls");
-                        ui.RenderGraphics();
-                        ui.Render();
-                        if(playerIsDead)
-                            return;
-                    }
-                    break;
-                case 1: //move this logic to a functionc
-                    if(ui.getPlayer()->SpellAttack(*ui.getMonster())){
-                        ui.Render(); 
-                        msg << ui.getPlayer()->GetName() << " has slain the dragon"<<
-                                                            " and has earned " << std::to_string(5+floor)  
-                                                            << " gold and " << std::to_string(25+floor*3) 
-                                                            << " xp";
-                        Alert(msg);
-                        monsterIsDead = true;
-                        return;
-                    }
-                    else{
-                        ui.Render(); 
-                        msg << ui.getPlayer()->GetName() << " cast a " << ui.getPlayer()->spell.GetName() << " on the dragon!";
-                        BattleAlert(msg);
-                        std::this_thread::sleep_for (std::chrono::seconds(1));
-                        MonsterAttack(ui.getPlayer(), ui.getMonster(), playerIsDead);
-                        system("cls");
-                        ui.RenderGraphics();
-                        ui.Render();
-                        if(playerIsDead)
-                            return;
-                    }
-                    break;
-                case 2:
-                    //potion logic
-                    break;
-                case 3:
-                    fled = true;
-                    std::ostringstream msg; 
-                    msg << player->GetName() << " has fled!";
-                    Alert(msg);
-                    break;
-                }
-                break;
-                ui.Render();
-        } 
-    } 
-} 
-void Map::MonsterAttack(Player* player, Monster* monster, bool& playerIsDead){
-    std::ostringstream msg; 
-    Monster::Attacks attack;
-    monster->Attack(player, attack);
-    if(player->HP == 0){
-        playerIsDead = true;
-    }
-    switch(attack){
-        case Monster::Attacks::MeleeAttack:
-            msg << "The dragon hit " << player->GetName() << " with its claws!";
-            Alert(msg);
-        break;
-        case Monster::Attacks::SpellAttack:
-            msg << "The dragon burned " << player->GetName() << " with fire breath!";
-            Alert(msg);
-        break;        
-    }
-}
-void Map::MonsterEvent(){
-    system("cls");
-    Monster* m = new Monster(floor); //monsters get stronger on each floor
-    BattleUI battle(player, m);
-    battle.RenderGraphics();
-    battle.Render();
-    bool playerIsDead = 0;
-    bool monsterIsDead = 0;
-    bool evaded = 0;
-    //initiative throw(based on dexterity):
-    unsigned MonsterInitiative = rand() % (player->dexterity + m->dexterity);
-    if(MonsterInitiative > player->dexterity){//monster gets the first hit
-        std::cout << "Surprise attack! ";
-        MonsterAttack(player,m, playerIsDead);
-        system("cls");
-        battle.RenderGraphics();
-        battle.Render();
-    }
-    //combat phase
-    while(!playerIsDead && !monsterIsDead && !evaded){
-        BattleUserInput(battle, playerIsDead, monsterIsDead, evaded);
-    }
-    if(playerIsDead){
-        std::ostringstream msg; 
-        msg << player->GetName() << " has been slain.";
-        Alert(msg);
-        GameOver();
-        return;
-    }
-    else if(monsterIsDead){
-        if(player->HP < player->maxHP/2)
-            player->HP = player->maxHP/2;
-        player->AddGold(5+floor); // more gold on each floor
-        player->AddXP(25+floor*3); //more xp on each floor
-        //player->AddItem(GetRandomItem(floor)); //stronger items on each floor
-    }
-    system("cls");
-    RenderAll();
-}
-
-
-void Map::NextFloor(){
-    system("cls");
-    floor++;
-    Map newMap(Fib(STARTING_WIDTH[0],STARTING_WIDTH[1],floor),Fib(STARTING_HEIGHT[0],STARTING_HEIGHT[1],floor),
-    Fib(STARTING_MONSTERS[0],STARTING_MONSTERS[1],floor),Fib(STARTING_TREASURE[0],STARTING_TREASURE[1], floor), player);
-    newMap.GenerateMap();
-    *this = newMap;
-    player->AddXP(70 + floor*10);//see if it is balanced
-    std::ostringstream msg;
-    msg << "Floor " << floor << " passed! " << player->GetName() << " got " << 70+floor*10 << " xp!";
-    Alert(msg);
-    playerX = 0;
-    playerY = 0;
-    renderer.SetChunkX(0); //maybe problematic later
-    renderer.SetChunkY(0); 
-    RenderAll();
-}
-
-

@@ -50,3 +50,4 @@ bool Player::MeleeAttack(Monster& monster) const{
 bool Player::SpellAttack(Monster& monster) const{
     return monster.TakeHit(mana + mana*spell.GetPower()/100);
 }
+
