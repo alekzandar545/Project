@@ -81,9 +81,9 @@ public:
     void RenderHPBars() const{
         SetConsoleTextAttribute(CURR_HANDLE, 12);
         SetConsoleCursorPosition(CURR_HANDLE, {PLAYER_HP_OFFSET, (short)(dragonArt.size())});
-        std::cout << "HP: " << player->HP << '/' << player->maxHP << "     " << "Armor: " << player->armor << '%' << padding; //add some padding for shrinking numbers
+        std::cout << "HP: " << player->HP << '/' << player->maxHP << "     " << "Armor: " << player->armor << '%' << Constants::padding; //add some padding for shrinking numbers
         SetConsoleCursorPosition(CURR_HANDLE, {MONSTER_HP_OFFSET, (short)(dragonArt.size())});
-        std::cout << "HP: " << monster->HP << '/' << monster->maxHP << "     " << "Armor: " << monster->armor << '%' << padding << '\n';
+        std::cout << "HP: " << monster->HP << '/' << monster->maxHP << "     " << "Armor: " << monster->armor << '%' << Constants::padding << '\n';
         SetConsoleTextAttribute(CURR_HANDLE, 8);
     }
 

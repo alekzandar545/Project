@@ -98,9 +98,9 @@ public:
                 unsigned char ch;
                 reader >> ch;
                 if(ch=='%')
-                    ch = WALL;
+                    ch = Constants::WALL;
                 if(ch=='.')
-                    ch = PATH;
+                    ch = Constants::PATH;
                 if (reader.fail()) {
                     throw std::runtime_error("Failed to read matrix data.");
                 }

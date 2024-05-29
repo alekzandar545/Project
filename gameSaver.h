@@ -5,6 +5,7 @@
 #include "Entities/player.h"
 #include "MapGenerator/map.h"
 #include "Items/item.h"
+#include "constants.h"
 
 #include <chrono>
 #include <ctime>
@@ -97,9 +98,9 @@ private:
 
         for (const std::vector<char>& row : matrix) {
             for (char ch : row) {
-                if(ch == WALL)
+                if(ch == Constants::WALL)
                     writer << '%';
-                else if(ch == PATH)
+                else if(ch == Constants::PATH)
                     writer << '.';
                 else
                     writer << ch;

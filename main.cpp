@@ -15,9 +15,10 @@
 #include "gameLoader.h"
 #include "gameInitializer.h"
 
-bool isGameOver = false;
+
 
 int main() {
+    Constants::isGameOver = false;
     srand(time(0));
     system("cls");
     StartMenuUI startUI;
@@ -26,11 +27,11 @@ int main() {
     std::string loadDir;
     startUI.Render();
     while(OpenStartUI){
-        InputHandler::StartUserInput(startUI, OpenStartUI, newGame, loadDir, isGameOver);
+        InputHandler::StartUserInput(startUI, OpenStartUI, newGame, loadDir);
     }
-    if(newGame && !isGameOver)
+    if(newGame && !Constants::isGameOver)
         GameInitializer::NewGame();
-    else if(!isGameOver)
+    else if(!Constants::isGameOver)
         GameInitializer::LoadGame(loadDir);
     return 0;
 }

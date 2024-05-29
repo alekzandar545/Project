@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cstring>
 #include "selectionUI.h"
-#include "../constants.h"
 #include "../Entities/player.h"
 
 static const COORD STATS_SELECT_COORDINATES = {0, 0};
@@ -34,7 +33,7 @@ public:
             std::cout <<'\n';
             SetConsoleTextAttribute(CURR_HANDLE, 8);
         }
-        std::cout << "\nSpare points: " << player->statPoints << padding;
+        std::cout << "\nSpare points: " << player->statPoints << Constants::padding;
     }
     //getters
     Player* GetPlayer() const{

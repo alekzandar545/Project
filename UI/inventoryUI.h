@@ -16,9 +16,9 @@ public:
     void RenderEquippedItems() const{
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, CONSOLE_COORDS.Y});
         std::cout << "Items:\n";
-        std::cout << ' ' << player->armorPiece.GetName()<< "(Armor)" << ": " << player->armorPiece.GetPower() << "% dmg reduction" << padding << '\n';
-        std::cout << ' ' << player->weapon.GetName()<< "(Weapon)" << ": " << player->weapon.GetPower() << "% melee dmg bonus" << padding << '\n';
-        std::cout << ' ' << player->spell.GetName()<< "(Spell)" << ": " << player->spell.GetPower() << "% magic dmg bonus" << padding << '\n';
+        std::cout << ' ' << player->armorPiece.GetName()<< "(Armor)" << ": " << player->armorPiece.GetPower() << "% dmg reduction" << Constants::padding << '\n';
+        std::cout << ' ' << player->weapon.GetName()<< "(Weapon)" << ": " << player->weapon.GetPower() << "% melee dmg bonus" << Constants::padding << '\n';
+        std::cout << ' ' << player->spell.GetName()<< "(Spell)" << ": " << player->spell.GetPower() << "% magic dmg bonus" << Constants::padding << '\n';
     }
     void Render() const override{
         const unsigned ConsoleYOffset = 5; // need 5 lines for equipped items to be displayed:
@@ -46,7 +46,7 @@ public:
                     break;
             }
             
-            std::cout << padding <<'\n';
+            std::cout << Constants::padding <<'\n';
             SetConsoleTextAttribute(CURR_HANDLE, 8);
         }
         std::cout << "\nPress E to equip item\nPress X to sell item";

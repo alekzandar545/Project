@@ -36,22 +36,22 @@ void ClearConsoleLines(int startLine, int endLine) {
 //Rendering
 void Renderer::RenderTile(char c) const{
     switch(c){
-    case WALL:
+    case Constants::WALL:
         SetConsoleTextAttribute(CURR_HANDLE, 8);
         break;
-    case PATH:
+    case Constants::PATH:
         SetConsoleTextAttribute(CURR_HANDLE, 8); 
         break;
-    case PLAYER:
+    case Constants::PLAYER:
         SetConsoleTextAttribute(CURR_HANDLE, 3);
         break;
-    case EXIT:
+    case Constants::EXIT:
         SetConsoleTextAttribute(CURR_HANDLE, 10);
         break;
-    case TREASURE:
+    case Constants::TREASURE:
         SetConsoleTextAttribute(CURR_HANDLE, 6);
         break; 
-    case MONSTER:
+    case Constants::MONSTER:
         SetConsoleTextAttribute(CURR_HANDLE, 12);
         break;                                  
     default:
@@ -63,43 +63,43 @@ void Renderer::RenderTile(char c) const{
 }
 
 void Renderer::RenderChunk(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const{ //should drop the parameter probably
-    ClearConsoleLines(1, 1 + CHUNK_SIZE[1] + 1); // deletes map without the stats //+1 for top render and +1 for bottom render
+    ClearConsoleLines(1, 1 + Constants::CHUNK_SIZE[1] + 1); // deletes map without the stats //+1 for top render and +1 for bottom render
     unsigned chunkX = CHUNK_COORDS[0];
     unsigned chunkY = CHUNK_COORDS[1];
-    unsigned chunkHeight = CHUNK_SIZE[1];
+    unsigned chunkHeight = Constants::CHUNK_SIZE[1];
     if(height - chunkY != 0)
         chunkHeight = Min(height - chunkY, chunkHeight);
-    unsigned chunkWidth = CHUNK_SIZE[0];
+    unsigned chunkWidth = Constants::CHUNK_SIZE[0];
     if(width - chunkX != 0)
         chunkWidth = Min(width - chunkX, chunkWidth);
 
     //top part
-    std::cout << BORDER_SIDE;
+    std::cout << Constants::BORDER_SIDE;
     if(chunkY == 0){
         for (size_t i = 0; i < chunkWidth; i++)
         {
-            std::cout << BORDER_TOP;
+            std::cout << Constants::BORDER_TOP;
         }
     }
     else{
         for (size_t i = chunkX; i < chunkX + chunkWidth; i++)
         {
-            if(matrix[chunkY-1][i] == WALL)
-                std::cout << BORDER_TOP;
+            if(matrix[chunkY-1][i] == Constants::WALL)
+                std::cout << Constants::BORDER_TOP;
             else
                 RenderTile(matrix[chunkY-1][i]);
         }            
     }
-    std::cout << BORDER_SIDE;
+    std::cout << Constants::BORDER_SIDE;
     std::cout << '\n';  
     //middle part
     for (size_t i = chunkY; i < chunkY + chunkHeight; i++)
     {
         //left border
         if(chunkX == 0)
-            std::cout << BORDER_SIDE;
-        else if(matrix[i][chunkX-1] == WALL)
-            std::cout << BORDER_SIDE;
+            std::cout << Constants::BORDER_SIDE;
+        else if(matrix[i][chunkX-1] == Constants::WALL)
+            std::cout << Constants::BORDER_SIDE;
         else{
             RenderTile(matrix[i][chunkX-1]);
         }
@@ -110,32 +110,32 @@ void Renderer::RenderChunk(const unsigned height, const unsigned width, const st
         }
         //right border
         if(chunkX + chunkWidth == width)
-            std::cout << BORDER_SIDE;
-        else if(matrix[i][chunkX + chunkWidth] == WALL)
-            std::cout << BORDER_SIDE;
+            std::cout << Constants::BORDER_SIDE;
+        else if(matrix[i][chunkX + chunkWidth] == Constants::WALL)
+            std::cout << Constants::BORDER_SIDE;
         else{
             RenderTile(matrix[i][chunkX + chunkWidth]);
         } 
         std::cout << '\n';   
     }
     //bottom
-    std::cout << BORDER_SIDE;
+    std::cout << Constants::BORDER_SIDE;
     if((chunkY + chunkHeight) == height){
         for (size_t i = 0; i < chunkWidth; i++)
         {
-            std::cout << BORDER_BOTTOM;
+            std::cout << Constants::BORDER_BOTTOM;
         }
     }
     else{
         for (size_t i = chunkX; i < chunkX + chunkWidth; i++)
         {
-            if(matrix[chunkY + chunkHeight][i] == WALL)
-                std::cout << BORDER_BOTTOM;
+            if(matrix[chunkY + chunkHeight][i] == Constants::WALL)
+                std::cout << Constants::BORDER_BOTTOM;
             else
                 RenderTile(matrix[chunkY + chunkHeight][i]);
         }    
     }
-    std::cout << BORDER_SIDE; 
+    std::cout << Constants::BORDER_SIDE; 
     std::cout << '\n';
 }
 
@@ -145,21 +145,21 @@ void Renderer::RenderMap(const unsigned height, const unsigned width, const std:
     //print top border
     SetConsoleTextAttribute(CURR_HANDLE, 8);
     for (size_t i = 0; i < width + 2; i++)
-        std::cout << BORDER_TOP;
+        std::cout << Constants::BORDER_TOP;
     std::cout << '\n';     
     //print map
     for (size_t i = 0; i < height; ++i)
     {   
-        std::cout << BORDER_SIDE;
+        std::cout << Constants::BORDER_SIDE;
         for (size_t j = 0; j < width; ++j)
         {   
             RenderTile(matrix[i][j]);
         }
-        std::cout << BORDER_SIDE << '\n';
+        std::cout << Constants::BORDER_SIDE << '\n';
     }
     //print bottom border
     for (size_t i = 0; i < matrix[0].size() + 2; i++)
-        std::cout << BORDER_BOTTOM;
+        std::cout << Constants::BORDER_BOTTOM;
     std::cout << '\n';
 }
 //////////!DANGER ZONE!///////////
@@ -181,19 +181,19 @@ void Renderer::RenderPosition(const unsigned height, const unsigned width, const
     
     //loading new chunks
     if(playerX < CHUNK_COORDS[0]){
-        CHUNK_COORDS[0] -= CHUNK_SIZE[0];
+        CHUNK_COORDS[0] -= Constants::CHUNK_SIZE[0];
         RenderChunk(height, width, matrix);
     }
-    else if(playerX > CHUNK_COORDS[0]+CHUNK_SIZE[0]-1){
-        CHUNK_COORDS[0] += CHUNK_SIZE[0];
+    else if(playerX > CHUNK_COORDS[0]+Constants::CHUNK_SIZE[0]-1){
+        CHUNK_COORDS[0] += Constants::CHUNK_SIZE[0];
         RenderChunk(height, width, matrix); 
     }
     else if(playerY < CHUNK_COORDS[1]){
-        CHUNK_COORDS[1] -= CHUNK_SIZE[1];
+        CHUNK_COORDS[1] -= Constants::CHUNK_SIZE[1];
         RenderChunk(height, width, matrix);
     }
-    else if(playerY > CHUNK_COORDS[1]+CHUNK_SIZE[1]-1){
-        CHUNK_COORDS[1] += CHUNK_SIZE[1];
+    else if(playerY > CHUNK_COORDS[1]+Constants::CHUNK_SIZE[1]-1){
+        CHUNK_COORDS[1] += Constants::CHUNK_SIZE[1];
         RenderChunk(height, width, matrix); 
     }
     short offsetX = 1 - CHUNK_COORDS[0]; //wall
@@ -206,7 +206,7 @@ void Renderer::RenderPosition(const unsigned height, const unsigned width, const
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(playerX+offsetX-1), (short)(playerY+offsetY)});//left
         RenderTile(matrix[playerY][playerX-1]);
     }
-    if(playerX+1 < width && playerX+1 != CHUNK_COORDS[0] + CHUNK_SIZE[0]){
+    if(playerX+1 < width && playerX+1 != CHUNK_COORDS[0] + Constants::CHUNK_SIZE[0]){
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(playerX+offsetX+1), (short)(playerY+offsetY)});//right
         RenderTile(matrix[playerY][playerX+1]);
     }
@@ -214,7 +214,7 @@ void Renderer::RenderPosition(const unsigned height, const unsigned width, const
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(playerX+offsetX), (short)(playerY+offsetY-1)});//down
         RenderTile(matrix[playerY-1][playerX]);
     }
-    if(playerY+1 < height && playerY+1 != CHUNK_COORDS[1] + CHUNK_SIZE[1]){
+    if(playerY+1 < height && playerY+1 != CHUNK_COORDS[1] + Constants::CHUNK_SIZE[1]){
         SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), {(short)(playerX+offsetX), (short)(playerY+offsetY+1)});//up
         RenderTile(matrix[playerY+1][playerX]);
     }
@@ -240,7 +240,7 @@ void Renderer::RenderStats(const unsigned height, const unsigned width, Player* 
     std::cout << "Level: " << player->level << "    ";
     std::cout << "XP: " << player->xp << '/' << player->requiredXp << "   ";
     SetConsoleTextAttribute(CURR_HANDLE, 12);
-    std::cout << "HP: " << player->HP << '/' << player->maxHP << padding << '\n';
+    std::cout << "HP: " << player->HP << '/' << player->maxHP << Constants::padding << '\n';
     SetConsoleTextAttribute(CURR_HANDLE, 8);
     //SetConsoleCursorPosition(CURR_HANDLE, {(short)width,(short)(height+1)});
 }

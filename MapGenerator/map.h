@@ -31,7 +31,7 @@ public:
     void SetPlayerY(const unsigned playerY){this->playerY = playerY;}
     void IncreaseFloor(){this->floor++;};
     //Big4
-    Map() = default;
+    Map() : floor(0) {}
     Map(Player* player);
     Map(const unsigned width, const unsigned height, const unsigned monsterCount,const unsigned treasureCount, Player* player);
     Map(const unsigned width, const unsigned height, const unsigned PlayerX, const unsigned PlayerY, const unsigned monsterCount,

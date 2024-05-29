@@ -13,7 +13,6 @@
 #include "UI/statsUI.h"
 #include "UI/selectionUI.h"
 #include "UI/inputHandler.h"
-#include "constants.h"
 #include "gameLoader.h"
 
 class GameInitializer{
@@ -52,7 +51,7 @@ public:
 
         bool isGameOver = false;
         while(!isGameOver){
-            InputHandler::UserInput(map, player, isGameOver);
+            InputHandler::UserInput(map, player);
         }
     }
 
@@ -63,9 +62,8 @@ public:
         GameLoader::LoadGame(player,map,saveDir);
         map.RenderAll(); //first render
 
-        bool isGameOver = false;
-        while(!isGameOver){
-            InputHandler::UserInput(map, player, isGameOver);
+        while(!Constants::isGameOver){
+            InputHandler::UserInput(map, player);
         }
     }
 private:

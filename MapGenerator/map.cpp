@@ -33,7 +33,7 @@ Map::Map(const unsigned width, const unsigned height, const unsigned monsterCoun
 
 Map::Map(const unsigned width, const unsigned height, const unsigned playerX, const unsigned playerY, const unsigned monsterCount,
         const unsigned treasureCount, const unsigned floor, std::vector<std::vector<char>> matrix, Player* player)
-        : width(width), height(height), playerX(playerX), playerY(playerY), monsterCount(monsterCount), treasureCount(treasureCount), matrix(matrix), player(player) {}
+        : width(width), height(height), playerX(playerX), playerY(playerY), monsterCount(monsterCount), treasureCount(treasureCount), floor(floor), matrix(matrix), player(player) {}
 
 Map::Map(const Map& other)
     : matrix(other.matrix), height(other.height), width(other.width), monsterCount(other.monsterCount), treasureCount(other.treasureCount), playerX(other.playerX), playerY(other.playerY), floor(other.floor), player(other.player) {
@@ -61,7 +61,7 @@ Map::~Map() = default;
 void Map::Initialize(){
     for (int i = 0; i < matrix.size(); ++i)
         for (int j = 0; j < matrix[0].size(); ++j)
-            matrix[i][j] = WALL;
+            matrix[i][j] = Constants::WALL;
     CreatePath(0, 0);
 }
 void Map::CreatePath(const int i, const int j){ //Use DFS 
@@ -70,13 +70,13 @@ void Map::CreatePath(const int i, const int j){ //Use DFS
     //out of boundary
     if(i < 0 || j < 0 || i >= height || j >= width) return ;
     //visited, go back to the coming direction, return 
-    if(matrix[i][j] == PATH) return ;
+    if(matrix[i][j] == Constants::PATH) return ;
 
     //some neightbors are visited in addition to the coming direction, return
     //this is to avoid circles in maze
     if(countVisitedNeighbor(i, j) > rand() % LABYRYINTH +  1) return ;
 
-    matrix[i][j] = PATH; // visited
+    matrix[i][j] = Constants::PATH; // visited
 
     //shuffle the visitOrder
     Shuffle(visitOrder);
@@ -97,7 +97,7 @@ int Map::countVisitedNeighbor(const int i, const int j) const{
         int nj = j + directions[k][1];
         //out of boundary
         if(ni < 0 || nj < 0 || ni >= height || nj >= width) continue;
-        if(matrix[ni][nj] == PATH) count++;//visited
+        if(matrix[ni][nj] == Constants::PATH) count++;//visited
     }
     return count;
 }
@@ -122,7 +122,8 @@ void Map::CreateTreasure(){
     {
         for (size_t j = 0; j < width; j++)
         {
-            if(matrix[i][j] != WALL && matrix[i][j] != TREASURE && matrix[i][j] != MONSTER && matrix[i][j] != PLAYER && matrix[i][j] != EXIT){
+            if(matrix[i][j] != Constants::WALL && matrix[i][j] != Constants::TREASURE && matrix[i][j] != Constants::MONSTER &&
+               matrix[i][j] != Constants::PLAYER && matrix[i][j] != Constants::EXIT){
                 validIndexes.push_back(i*width + j);//adding ones so no multiplication by 0
             }
         }
@@ -130,7 +131,7 @@ void Map::CreateTreasure(){
     Shuffle(validIndexes); //what if treasure is more than free tiles?  
     for (size_t i = 0; i < treasureCount; i++)
     {
-        matrix[validIndexes[i]/width][validIndexes[i]%width] = TREASURE;
+        matrix[validIndexes[i]/width][validIndexes[i]%width] = Constants::TREASURE;
     }
 }
 void Map::CreateMonsters(){
@@ -140,7 +141,8 @@ void Map::CreateMonsters(){
     {
         for (size_t j = 0; j < width; j++)
         {
-            if(matrix[i][j] != WALL && matrix[i][j] != TREASURE && matrix[i][j] != MONSTER && matrix[i][j] != PLAYER && matrix[i][j] != EXIT){
+            if(matrix[i][j] != Constants::WALL && matrix[i][j] != Constants::TREASURE &&
+               matrix[i][j] != Constants::MONSTER && matrix[i][j] != Constants::PLAYER && matrix[i][j] != Constants::EXIT){
                 validIndexes.push_back(i*width + j);//adding ones so no multiplication by 0
             }
         }
@@ -148,16 +150,16 @@ void Map::CreateMonsters(){
     Shuffle(validIndexes); //what if treasure is more than free tiles?  
     for (size_t i = 0; i < monsterCount; i++)
     {
-        matrix[validIndexes[i]/width][validIndexes[i]%width] = MONSTER;
+        matrix[validIndexes[i]/width][validIndexes[i]%width] = Constants::MONSTER;
     }
 }
 void Map::CreateExit(){ //it is guaranteed that every internal blcok has at least 1 neighbor so ill free the bottom right corner
-    matrix[height-1][width-1] = EXIT;
-    matrix[height-2][width-1] = PATH;
-    matrix[height-1][width-2] = PATH;
-    matrix[height-2][width-2] = PATH;
+    matrix[height-1][width-1] = Constants::EXIT;
+    matrix[height-2][width-1] = Constants::PATH;
+    matrix[height-1][width-2] = Constants::PATH;
+    matrix[height-2][width-2] = Constants::PATH;
 }
-void Map::CreatePlayer(){matrix[0][0] = PLAYER;}
+void Map::CreatePlayer(){matrix[0][0] = Constants::PLAYER;}
 
 
 //rendering
@@ -175,16 +177,16 @@ void Map::MovePlayer(int x, int y){
     int newY = playerY + y;
     if(newX < 0 || newY < 0 || newX > width-1 || newY > height-1)
         return;
-    else if(matrix[newY][newX] == WALL){
+    else if(matrix[newY][newX] == Constants::WALL){
         return; 
     }
     //should not render those cases //maybe throw an exception
-    else if(matrix[newY][newX] == TREASURE){
+    else if(matrix[newY][newX] == Constants::TREASURE){
         Event event(this);
         event.TreasureEvent();
     }
 
-    else if(matrix[newY][newX] == MONSTER)
+    else if(matrix[newY][newX] == Constants::MONSTER)
     {
         Event event(this);
         event.MonsterEvent();
@@ -193,8 +195,8 @@ void Map::MovePlayer(int x, int y){
         Event event(this);
         event.NextFloor(); return;
     }
-    matrix[playerY][playerX] = PATH;
-    matrix[newY][newX] = PLAYER;
+    matrix[playerY][playerX] = Constants::PATH;
+    matrix[newY][newX] = Constants::PLAYER;
     playerX = newX;
     playerY = newY;
 }

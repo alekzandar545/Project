@@ -78,12 +78,12 @@ void Event::TreasureEvent() {
 }
 
 void Event::Alert(std::ostringstream& msg) const {
-    std::cout << msg.str() << padding << '\n';
+    std::cout << msg.str() << Constants::padding << '\n';
     std::this_thread::sleep_for(std::chrono::seconds(3));
 }
 
 void Event::BattleAlert(std::ostringstream& msg) const {
-    std::cout << msg.str() << padding << '\n';
+    std::cout << msg.str() << Constants::padding << '\n';
     std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
@@ -91,7 +91,7 @@ void Event::GameOver() const {
     system("cls");
     std::cout << "\nGAME OVER\n";
     std::cout << "Gold highscore: " << map->GetPlayer()->gold;
-    EndGame();
+    Constants::EndGame();
 }
 
 void Event::MonsterAttack(Player* player, Monster* monster, bool& playerIsDead) {
@@ -170,8 +170,10 @@ unsigned Fib(unsigned a, unsigned b, unsigned n){
 void Event::NextFloor() {
     system("cls");
     map->IncreaseFloor();
-    Map newMap(Fib(STARTING_WIDTH[0], STARTING_WIDTH[1], map->GetFloor()), Fib(STARTING_HEIGHT[0], STARTING_HEIGHT[1], map->GetFloor()),
-               Fib(STARTING_MONSTERS[0], STARTING_MONSTERS[1], map->GetFloor()), Fib(STARTING_TREASURE[0], STARTING_TREASURE[1], map->GetFloor()), map->GetPlayer());
+    Map newMap(Fib(Constants::STARTING_WIDTH[0], Constants::STARTING_WIDTH[1], map->GetFloor()),
+               Fib(Constants::STARTING_HEIGHT[0], Constants::STARTING_HEIGHT[1], map->GetFloor()),
+               Fib(Constants::STARTING_MONSTERS[0], Constants::STARTING_MONSTERS[1], map->GetFloor()), 
+               Fib(Constants::STARTING_TREASURE[0], Constants::STARTING_TREASURE[1], map->GetFloor()), map->GetPlayer());
     newMap.GenerateMap();
     //maybe leakage later?
     //Map* oldMap = map;

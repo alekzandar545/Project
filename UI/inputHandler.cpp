@@ -2,34 +2,34 @@
 
 InputHandler::InputHandler(Event* event) {this->event = event;}
 
-void InputHandler::UserInput(Map& map, Player& player, bool& isGameOver) {
+void InputHandler::UserInput(Map& map, Player& player) {
     if (_kbhit()) {
         int ch = _getch();
         switch (ch) {
             case 'a':
                 map.MovePlayer(-1, 0);
-                if(!isGameOver){
+                if(!Constants::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 'd':
                 map.MovePlayer(1, 0);
-                if(!isGameOver){
+                if(!Constants::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 'w':
                 map.MovePlayer(0, -1);
-                if(!isGameOver){
+                if(!Constants::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 's':
                 map.MovePlayer(0, 1);
-                if(!isGameOver){
+                if(!Constants::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
@@ -60,8 +60,9 @@ void InputHandler::UserInput(Map& map, Player& player, bool& isGameOver) {
             }
             case 'x':
                 GameSaver::SaveGame(player, map);
-                isGameOver = true;
+                Constants::EndGame();
                 system("cls");
+                return;
                 break;
         }
     }
@@ -132,7 +133,7 @@ bool InputHandler::StatsUserInput(StatsUI& ui) {
     return true;
 }
 
-void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newGame, std::string& loadDir, bool& isGameOver){
+void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newGame, std::string& loadDir){
     if (_kbhit()) {
         int ch = _getch();
         switch (ch) {
@@ -167,7 +168,7 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newG
                         // highscores interface
                         break;
                     case 3:
-                        isGameOver = true;
+                        Constants::isGameOver = true;
                         OpenStartUI = false;
                         system("cls");
                         break;

@@ -15,7 +15,7 @@ public:
         Sorcerer
     };
     //constructors
-    Player() = default;
+    Player();
     Player(PlayerRace race, std::string name);
     Player(std::string name, unsigned str, unsigned mana, unsigned maxHP, int HP, unsigned armor, unsigned dexterity,
         unsigned statPoints, unsigned level, unsigned xp, unsigned requiredXp, unsigned gold,

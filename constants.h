@@ -1,27 +1,34 @@
 #pragma once
 #include <string>
+#include <vector>
 
-//gameState
-extern bool isGameOver; 
-static void EndGame(){
-    isGameOver=true;
-}
-//chars
-static const char BORDER_TOP = 219;//220
-static const char BORDER_BOTTOM = 219;//223
-static const char BORDER_SIDE = 219;
-static const char WALL = 178;
-static const char PATH = 176;
-static const char EXIT = '#';
-static const char MONSTER = 'M';
-static const char TREASURE = 'T';
-static const char PLAYER = '@';
-//mapsizes
-static const unsigned STARTING_WIDTH[] = {10,15};
-static const unsigned STARTING_HEIGHT[] = {10,10};
-static const unsigned STARTING_TREASURE[] = {2,2};
-static const unsigned STARTING_MONSTERS[] = {2,3};
-static const unsigned CHUNK_SIZE[] = {30,10};
-//text
-static const std::string padding = "                                                         ";
-//colors
+class Constants {
+public:
+    // Game State
+    static bool isGameOver;
+
+    static void EndGame() {
+        isGameOver = true;
+    }
+
+    // Chars
+    static constexpr char BORDER_TOP = 219;  // 220
+    static constexpr char BORDER_BOTTOM = 219;  // 223
+    static constexpr char BORDER_SIDE = 219;
+    static constexpr char WALL = 178;
+    static constexpr char PATH = 176;
+    static constexpr char EXIT = '#';
+    static constexpr char MONSTER = 'M';
+    static constexpr char TREASURE = 'T';
+    static constexpr char PLAYER = '@';
+
+    // Map Sizes
+    static const std::vector<unsigned> STARTING_WIDTH;
+    static const std::vector<unsigned> STARTING_HEIGHT;
+    static const std::vector<unsigned> STARTING_TREASURE;
+    static const std::vector<unsigned> STARTING_MONSTERS;
+    static const std::vector<unsigned> CHUNK_SIZE;
+
+    // Text
+    static const std::string padding;
+};
