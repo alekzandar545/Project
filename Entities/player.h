@@ -3,6 +3,7 @@
 #include "monster.h"
 #include "../Items/item.h"
 #include <vector>
+#include <stdexcept>
 
 class Monster; //forward declaration
 
@@ -14,7 +15,29 @@ public:
         Sorcerer
     };
     //constructors
+    Player() = default;
     Player(PlayerRace race, std::string name);
+    Player(std::string name, unsigned str, unsigned mana, unsigned maxHP, int HP, unsigned armor, unsigned dexterity,
+        unsigned statPoints, unsigned level, unsigned xp, unsigned requiredXp, unsigned gold,
+        std::vector<Item> inventory, const Item& weapon, const Item& spell, const Item& armorPiece){
+            inventoryCapacity = 10;
+            this->name = name;
+            this->str = str;
+            this->mana = mana;
+            this->maxHP = maxHP;
+            this->HP = HP;
+            this->armor = armor;
+            this->dexterity = dexterity;
+            this->statPoints = statPoints;
+            this->level = level;
+            this->xp = xp;
+            this->requiredXp = requiredXp;
+            this->gold = gold;
+            this->inventory = inventory;
+            this->weapon = weapon;
+            this->spell = spell;
+            this->armorPiece = armorPiece;
+        }
     //leveling
     void LevelUp();
     void AddXP(unsigned xp);
@@ -22,7 +45,11 @@ public:
     bool MeleeAttack(Monster& monster) const;
     bool SpellAttack(Monster& monster) const;
     //item management
-    void EquipItem(unsigned index){//index will be decided from ui placement
+    void EquipItem(const unsigned index){//index will be decided from ui placement
+        if (this->inventory.size() == 0) 
+            throw std::out_of_range("Cannot equip item: Inventory is empty.");
+        if (index >= this->inventory.size())
+            throw std::out_of_range("Cannot equip item: Index is out of range.");
         Item newItem = inventory[index]; //create a copy
         switch (inventory[index].GetType())
         {
@@ -50,7 +77,12 @@ public:
         }
         return 0; //failed
     }
+
     void SellItem(const unsigned index){
+        if (this->inventory.size() == 0) 
+            throw std::out_of_range("Cannot sell item: Inventory is empty.");
+        if (index >= this->inventory.size())
+            throw std::out_of_range("Cannot sell item: Index is out of range.");
         this->gold += inventory[index].GetPower()/2;
         this->inventory.erase(this->inventory.begin() + index);
     }
@@ -85,8 +117,18 @@ public:
         }
     }
 
-    //getters
+    //Getters
     std::string GetName() const{return this->name;}
+    unsigned GetStatPoints() const {return this->statPoints;}
+    unsigned GetLevel() const {return this->level;}
+    unsigned GetXP() const {return this->xp;}
+    unsigned GetRequiredXP() const {return this->requiredXp;}
+    unsigned GetGold() const {return this->gold;}
+    unsigned GetInventorySize() const {return this->inventory.size();}
+    std::vector<Item> GetInventory() const {return this->inventory;}
+    Item GetWeapon() const {return this->weapon;}
+    Item GetSpell() const {return this->spell;}
+    Item GetArmorPiece() const {return this->armorPiece;}
 //private:
     unsigned inventoryCapacity;
     unsigned statPoints;
@@ -96,8 +138,8 @@ public:
     unsigned gold;
     std::string name;
     std::vector<Item> inventory;
-    Item spell;
     Item weapon;
+    Item spell;
     Item armorPiece;
 
 };

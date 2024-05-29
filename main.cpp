@@ -12,60 +12,25 @@
 #include "UI/selectionUI.h"
 #include "UI/inputHandler.h"
 #include "constants.h"
+#include "gameLoader.h"
+#include "gameInitializer.h"
 
 bool isGameOver = false;
 
-void Render(Map& map){
-    if(!isGameOver){
-        map.RenderStats();
-        map.RenderPosition();
-    }
-}
-
-void IntitialRender(Map& map){
-    map.RenderAll();
-}
-
-void InitializeGame(){
-    srand(time(0));
-    system("cls");
-    char buffer[50];
-    std::cout << "Enter player name: ";
-    std::cin.getline(buffer, 50);
-    std::string name(buffer);
-
-    system("cls");
-    std::cout << "Pick a race:\n------------";
-    SelectionUI raceSelectUI({0, 2});
-    raceSelectUI.SetOptions({"Human", "Sorcerer", "Berserk"});
-    raceSelectUI.Render();
-    bool OpenRaceSelectUI = true;
-    Player::PlayerRace race;
-    while(OpenRaceSelectUI){
-        InputHandler::RaceSelectInput(raceSelectUI, OpenRaceSelectUI, race);
-    }
-    Player p(race, name);
-
-    Map map1(10, 10, 2, 2, &p);
-    map1.GenerateMap();
-    system("cls");
-    IntitialRender(map1);
-    while(!isGameOver){
-        InputHandler::UserInput(map1, p, isGameOver);
-    }
-}
-
 int main() {
+    srand(time(0));
     system("cls");
     StartMenuUI startUI;
     bool OpenStartUI = true;
+    bool newGame = false;
+    std::string loadDir;
     startUI.Render();
     while(OpenStartUI){
-        InputHandler::StartUserInput(startUI, OpenStartUI, isGameOver);
+        InputHandler::StartUserInput(startUI, OpenStartUI, newGame, loadDir, isGameOver);
     }
-    if (!isGameOver) {
-        InitializeGame();
-    }
-
+    if(newGame && !isGameOver)
+        GameInitializer::NewGame();
+    else if(!isGameOver)
+        GameInitializer::LoadGame(loadDir);
     return 0;
 }

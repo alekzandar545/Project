@@ -2,33 +2,41 @@
 
 InputHandler::InputHandler(Event* event) {this->event = event;}
 
-void InputHandler::UserInput(Map& map, Player& p, bool& isGameOver) {
+void InputHandler::UserInput(Map& map, Player& player, bool& isGameOver) {
     if (_kbhit()) {
         int ch = _getch();
         switch (ch) {
             case 'a':
                 map.MovePlayer(-1, 0);
-                map.RenderStats();
-                map.RenderPosition();
+                if(!isGameOver){
+                    map.RenderStats();
+                    map.RenderPosition();
+                }
                 break;
             case 'd':
                 map.MovePlayer(1, 0);
-                map.RenderStats();
-                map.RenderPosition();
+                if(!isGameOver){
+                    map.RenderStats();
+                    map.RenderPosition();
+                }
                 break;
             case 'w':
                 map.MovePlayer(0, -1);
-                map.RenderStats();
-                map.RenderPosition();
+                if(!isGameOver){
+                    map.RenderStats();
+                    map.RenderPosition();
+                }
                 break;
             case 's':
                 map.MovePlayer(0, 1);
-                map.RenderStats();
-                map.RenderPosition();
+                if(!isGameOver){
+                    map.RenderStats();
+                    map.RenderPosition();
+                }
                 break;
             case 'i': {
                 system("cls");
-                InventoryUI ui(&p);
+                InventoryUI ui(&player);
                 bool isOpen = true;
                 ui.Render();
                 while (isOpen) {
@@ -40,7 +48,7 @@ void InputHandler::UserInput(Map& map, Player& p, bool& isGameOver) {
             }
             case 'g': {
                 system("cls");
-                StatsUI ui(&p);
+                StatsUI ui(&player);
                 bool isOpen = true;
                 ui.Render();
                 while (isOpen) {
@@ -51,6 +59,7 @@ void InputHandler::UserInput(Map& map, Player& p, bool& isGameOver) {
                 break;
             }
             case 'x':
+                GameSaver::SaveGame(player, map);
                 isGameOver = true;
                 system("cls");
                 break;
@@ -69,11 +78,21 @@ bool InputHandler::InventoryUserInput(InventoryUI& ui) {
                 ui.MoveSelection(1);
                 break;
             case 'e':
-                ui.GetPlayer()->EquipItem(ui.GetSelectionIndex());
+                try{
+                    ui.GetPlayer()->EquipItem(ui.GetSelectionIndex());
+                }
+                catch(const std::out_of_range& e){
+                    std::cerr <<'\n'<< e.what();
+                }
                 ui.Render();
                 break;
             case 'x':
-                ui.GetPlayer()->SellItem(ui.GetSelectionIndex());
+                try{
+                    ui.GetPlayer()->SellItem(ui.GetSelectionIndex());
+                }
+                catch(const std::out_of_range& e){
+                    std::cerr <<'\n'<< e.what();
+                }
                 system("cls");
                 ui.CheckSold();
                 ui.Render();
@@ -113,7 +132,7 @@ bool InputHandler::StatsUserInput(StatsUI& ui) {
     return true;
 }
 
-void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& isGameOver) {
+void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newGame, std::string& loadDir, bool& isGameOver){
     if (_kbhit()) {
         int ch = _getch();
         switch (ch) {
@@ -125,12 +144,25 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& isGa
                 break;
             case 'e':
                 switch (ui.GetSelectionIndex()) {
-                    case 0:
+                    case 0: //new game
+                        OpenStartUI = false;
+                        newGame = true                                                  ;
+                        break;
+                    case 1:{ //load game              
+                        LoadGameUI loadUI("Saves");
+                        //check if empty
+                        if(loadUI.GetOptions().size() == 0)
+                            return;
+                        system("cls");
+                        bool OpenLoadUI = true;
+                        loadUI.Render();
+                        while(OpenLoadUI){
+                            LoadUserInput(loadUI, OpenLoadUI, loadDir);
+                        }
+                        system("cls");
                         OpenStartUI = false;
                         break;
-                    case 1:
-                        // load game interface
-                        break;
+                    }
                     case 2:
                         // highscores interface
                         break;
@@ -145,7 +177,28 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& isGa
     }
 }
 
-void InputHandler::RaceSelectInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race) {
+void InputHandler::LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::string& loadDir){
+    if (_kbhit()) {
+        int ch = _getch();
+        switch (ch) {
+            case 'w':
+                ui.MoveSelection(0);
+                break;
+            case 's':
+                ui.MoveSelection(1);
+                break;
+            case 'e':
+                std::string dirName = "Saves/";
+                dirName.append(ui.GetOption(ui.GetSelectionIndex()));
+                loadDir = dirName;
+                OpenLoadGameUI = false;
+                system("cls");
+                break;
+        }
+    }
+}
+
+void InputHandler::RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race) {
     if (_kbhit()) {
         int ch = _getch();
         switch (ch) {

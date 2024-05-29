@@ -89,7 +89,7 @@ void Event::BattleAlert(std::ostringstream& msg) const {
 
 void Event::GameOver() const {
     system("cls");
-    std::cout << "GAME OVER\n";
+    std::cout << "\nGAME OVER\n";
     std::cout << "Gold highscore: " << map->GetPlayer()->gold;
     EndGame();
 }
@@ -173,7 +173,11 @@ void Event::NextFloor() {
     Map newMap(Fib(STARTING_WIDTH[0], STARTING_WIDTH[1], map->GetFloor()), Fib(STARTING_HEIGHT[0], STARTING_HEIGHT[1], map->GetFloor()),
                Fib(STARTING_MONSTERS[0], STARTING_MONSTERS[1], map->GetFloor()), Fib(STARTING_TREASURE[0], STARTING_TREASURE[1], map->GetFloor()), map->GetPlayer());
     newMap.GenerateMap();
+    //maybe leakage later?
+    //Map* oldMap = map;
     *map = newMap;
+ 
+    //delete oldMap;
     map->GetPlayer()->AddXP(70 + map->GetFloor() * 10); // see if it is balanced
     std::ostringstream msg;
     msg << "Floor " << map->GetFloor() << " passed! " << map->GetPlayer()->GetName() << " got " << 70 + map->GetFloor() * 10 << " xp!";

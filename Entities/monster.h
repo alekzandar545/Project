@@ -14,4 +14,5 @@ public:
     unsigned ChooseAttack(Attacks& attack) const;
     bool Attack(Entity* pl, Attacks& attack) const;
 private:
+    unsigned level;
 };

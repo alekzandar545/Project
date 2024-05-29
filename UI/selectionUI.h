@@ -45,8 +45,11 @@ public:
     unsigned GetSelectionIndex() const{//returns the index so later we use it in a switchCase for different functionalities
         return this->selectionIndex;
     }
-    std::string GetOption(const unsigned selectionIndex){
+    std::string GetOption(const unsigned selectionIndex) const{
         return options[selectionIndex];
+    }
+    std::vector<std::string> GetOptions() const{
+        return options;
     }
 protected:
     HANDLE CURR_HANDLE = GetStdHandle(STD_OUTPUT_HANDLE); 

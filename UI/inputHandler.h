@@ -7,7 +7,8 @@
 #include "../UI/selectionUI.h"
 #include "../constants.h"
 #include "../Events/eventHandler.h"
-
+#include "../gameSaver.h"
+#include "loadGameUI.h"
 class InputHandler {
 public:
     InputHandler(Event* event);
@@ -15,8 +16,9 @@ public:
     static void UserInput(Map& map, Player& p, bool& isGameOver);
     static bool InventoryUserInput(InventoryUI& ui);
     static bool StatsUserInput(StatsUI& ui);
-    static void StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& isGameOver);
-    static void RaceSelectInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race);
+    static void StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newGame, std::string& loadDir, bool& isGameOver);
+    static void RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race);
+    static void LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::string& loadDir);
 private:
     Event* event;
 };

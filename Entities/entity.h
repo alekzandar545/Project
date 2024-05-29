@@ -10,6 +10,12 @@ public:
         }
         return 0; //not dead
     }
+    unsigned GetStrength() const{return this->str;}
+    unsigned GetMana() const {return this->mana;}
+    unsigned GetMaxHP() const {return this->maxHP;}
+    int GetHP() const {return this->HP;}
+    unsigned GetArmor() const {return this->armor;}
+    unsigned GetDexterity() const {return this->dexterity;}
 //public:
     unsigned str;
     unsigned mana;

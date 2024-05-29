@@ -7,9 +7,9 @@ namespace fs = std::filesystem;
 
 static const COORD LOAD_GAME_SELECT_COORDINATES = {0, 0};
 
-class loadGameUI : public SelectionUI{
+class LoadGameUI : public SelectionUI{
 public:
-    loadGameUI(std::string path) : SelectionUI(LOAD_GAME_SELECT_COORDINATES){
+    LoadGameUI(std::string path) : SelectionUI(LOAD_GAME_SELECT_COORDINATES){
         //read options from folder
         try {
             for (const auto& entry : fs::directory_iterator(path)) {

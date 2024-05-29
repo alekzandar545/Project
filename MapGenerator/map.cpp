@@ -31,6 +31,10 @@ Map::Map(const unsigned width, const unsigned height, const unsigned monsterCoun
     : width(width), height(height), monsterCount(monsterCount), treasureCount(treasureCount), player(player), floor(0), playerX(0), playerY(0) {
 }
 
+Map::Map(const unsigned width, const unsigned height, const unsigned playerX, const unsigned playerY, const unsigned monsterCount,
+        const unsigned treasureCount, const unsigned floor, std::vector<std::vector<char>> matrix, Player* player)
+        : width(width), height(height), playerX(playerX), playerY(playerY), monsterCount(monsterCount), treasureCount(treasureCount), matrix(matrix), player(player) {}
+
 Map::Map(const Map& other)
     : matrix(other.matrix), height(other.height), width(other.width), monsterCount(other.monsterCount), treasureCount(other.treasureCount), playerX(other.playerX), playerY(other.playerY), floor(other.floor), player(other.player) {
 }
@@ -46,7 +50,7 @@ Map& Map::operator=(const Map& other) {
     treasureCount = other.treasureCount;
     playerX = other.playerX;
     playerY = other.playerY;
-    floor = other.floor;
+    //floor = other.floor;
     player = other.player;
     return *this;
 }
