@@ -2,11 +2,10 @@
 
 #include <vector>
 #include "../MapGenerator/map.h"
-#include "../constants.h"
+#include "../Utils/constants.h"
 #include "../UI/battleUI.h"
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
-#include "../constants.h"
 
 
 

@@ -3,7 +3,7 @@
 #include <cmath>
 #include <windows.h>
 #include "map.h"
-#include "../constants.h"
+#include "../Utils/constants.h"
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
 #include "../Events/eventHandler.h"

@@ -9,9 +9,9 @@ public:
     StartMenuUI() : SelectionUI(START_MENU_SELECT_COORDINATES){
         SetOptions({"New game", "Load game", "Highscores", "Exit"});
         //credit to Alex Wargacki for the artwork
-        std::cout << "                            ==(W{==========-      /===-                        \n"
-                    "                              ||  (.--.)         /===-_---~~~~~~~~~------____  \n"
-                    "                              | \\_,|**|,__      |===-~___                _,-' `\n"
+        this->art = "                            ==(W{==========-      /===-                        \n"
+                    "                               ||  (.--.)         /===-_---~~~~~~~~~------____  \n"
+                    "                               | \\_,|**|,__      |===-~___                _,-' `\n"
                     "                 -==\\\\        `\\ ' `--'   ),    `//~\\\\   ~~~~`---.___.-~~      \n"
                     "             ______-==|        /`\\_. .__/\\ \\    | |  \\\\           _-~`         \n"
                     "       __--~~~  ,-/-==\\\\      (   | .  |~~~~|   | |   `\\        ,'             \n"
@@ -37,7 +37,12 @@ public:
                     "  ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~                    \n"
                     "   ;'( ')/ ,)(                              ~~~~~~~~~~                         \n"
                     "  ' ') '( (/                                                                    \n";
+        std::cout << art;
+    }
+    void RenderArt(){
+        std::cout << art;
     }
 private:
+    std::string art;
 
 };

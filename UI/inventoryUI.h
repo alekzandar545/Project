@@ -3,7 +3,7 @@
 #include <iostream>
 #include "selectionUI.h"
 #include "../Entities/player.h"
-#include "../constants.h"
+#include "../Utils/constants.h"
 static const COORD INVENTORY_MENU_SELECT_COORDINATES = {0, 0};
 
 //maybe singleton?

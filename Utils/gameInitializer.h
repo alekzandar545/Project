@@ -5,14 +5,14 @@
 #include <windows.h>
 #include <stdio.h>
 #include <conio.h>
-#include "MapGenerator/renderer.h"
-#include "MapGenerator/map.h"
-#include "Entities/player.h"
-#include "UI/startMenuUI.h"
-#include "UI/inventoryUI.h"
-#include "UI/statsUI.h"
-#include "UI/selectionUI.h"
-#include "UI/inputHandler.h"
+#include "../MapGenerator/renderer.h"
+#include "../MapGenerator/map.h"
+#include "../Entities/player.h"
+#include "../UI/startMenuUI.h"
+#include "../UI/inventoryUI.h"
+#include "../UI/statsUI.h"
+#include "../UI/selectionUI.h"
+#include "../UI/inputHandler.h"
 #include "gameLoader.h"
 
 class GameInitializer{

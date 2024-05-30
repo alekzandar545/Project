@@ -5,9 +5,10 @@
 #include "../UI/statsUI.h"
 #include "../UI/startMenuUI.h"
 #include "../UI/selectionUI.h"
-#include "../constants.h"
+#include "../Utils/constants.h"
 #include "../Events/eventHandler.h"
-#include "../gameSaver.h"
+#include "../Utils/gameSaver.h"
+#include "../Utils/gameLoader.h"
 #include "loadGameUI.h"
 class InputHandler {
 public:

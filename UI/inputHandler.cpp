@@ -60,8 +60,8 @@ void InputHandler::UserInput(Map& map, Player& player) {
             }
             case 'x':
                 GameSaver::SaveGame(player, map);
-                Constants::EndGame();
                 system("cls");
+                Constants::EndGame();   
                 return;
                 break;
         }
@@ -164,10 +164,19 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newG
                         OpenStartUI = false;
                         break;
                     }
-                    case 2:
-                        // highscores interface
+                    case 2:{ //highscores
+                        system("cls");
+                        std::cout << "Highscores:\n-------------\n";
+                        std::vector<Player> characters;
+                        GameLoader::DisplayHighScores(characters, "Saves");
+                        std::cout << "--------------------------\nPress any key to go back";
+                        _getch();
+                        system("cls");
+                        ui.RenderArt();
+                        ui.Render();
                         break;
-                    case 3:
+                    }
+                    case 3: //exit
                         Constants::isGameOver = true;
                         OpenStartUI = false;
                         system("cls");

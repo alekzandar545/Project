@@ -2,10 +2,11 @@
 
 #include <iostream>
 #include <fstream>
-#include "Entities/player.h"
-#include "MapGenerator/map.h"
-#include "Items/item.h"
+#include "../Entities/player.h"
+#include "../MapGenerator/map.h"
+#include "../Items/item.h"
 #include <algorithm>
+#include <filesystem>
 
 class GameLoader {
 public:
@@ -30,7 +31,25 @@ public:
         reader.close();
         return true;
     }
-
+    static void LoadHighScores(std::vector<Player>& characters, const std::string& path){
+        for (const std::filesystem::directory_entry& entry : std::filesystem::directory_iterator(path)) {
+            Player player;
+            std::string saveFile = path + '/';
+            saveFile.append(entry.path().filename().string());
+            std::ifstream reader(saveFile);
+            if (!reader) {
+                throw std::runtime_error("Failed to open save file: " + saveFile);
+            }
+            LoadPlayer(reader, player);
+            characters.push_back(player);
+        }
+    }
+    static void DisplayHighScores(std::vector<Player>& characters, const std::string& path){
+        GameLoader::LoadHighScores(characters, path);
+        for(size_t i = 0; i < characters.size(); i++){
+            std::cout << characters[i].GetName() << " - " << characters[i].GetGold() << "gold\n";
+        }
+    }
 //private:
     static bool LoadPlayer(std::ifstream& reader, Player& player) {
         std::string name;

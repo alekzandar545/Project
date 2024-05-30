@@ -11,9 +11,9 @@
 #include "UI/statsUI.h"
 #include "UI/selectionUI.h"
 #include "UI/inputHandler.h"
-#include "constants.h"
-#include "gameLoader.h"
-#include "gameInitializer.h"
+#include "Utils/constants.h"
+#include "Utils/gameLoader.h"
+#include "Utils/gameInitializer.h"
 
 
 

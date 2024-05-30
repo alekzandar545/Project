@@ -2,9 +2,9 @@
 
 #include <iostream>
 #include <fstream>
-#include "Entities/player.h"
-#include "MapGenerator/map.h"
-#include "Items/item.h"
+#include "../Entities/player.h"
+#include "../MapGenerator/map.h"
+#include "../Items/item.h"
 #include "constants.h"
 
 #include <chrono>

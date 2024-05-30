@@ -3,7 +3,7 @@
 #include "selectionUI.h"
 #include "../Entities/player.h"
 #include "../Entities/monster.h"
-#include "../constants.h"
+#include "../Utils/constants.h"
 
 static const COORD BATTLE_MENU_SELECT_COORDINATES = {18, 1};
 static const unsigned PLAYER_HP_OFFSET = 4;
