@@ -1,0 +1,8 @@
+sosen 40 10 50 27 0 10 0 1 28 100 10 3
+3 Potion 50
+1 Fireball 20
+3 Potion 50
+0 Shortsword 20
+1 Cone_of_Cold 29
+2 Old_rags 0
+

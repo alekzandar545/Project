@@ -1,0 +1,8 @@
+sosen 70 40 100 0 28 20 0 5 62 146 157 3
+0 Bonecrusher_Mace 36
+3 Potion 50
+3 Potion 50
+0 Soulrender_Scythe 43
+1 Chromatic_Orb 37
+2 Chain_Shirt 28
+

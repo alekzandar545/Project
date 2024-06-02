@@ -3,16 +3,18 @@
 #include <vector>
 class Renderer{
 private:
-    unsigned CHUNK_COORDS[2] = {0,0};
+    static std::vector<unsigned> CHUNK_COORDS;
 public:
     //constructors
-    Renderer() = default;
+    Renderer();
+    Renderer(const unsigned x, const unsigned y);
     Renderer(Renderer const &) = default;
 	Renderer(Renderer &&) = default;
 	Renderer &operator =(Renderer const &) = default;
 	Renderer &operator =(Renderer &&) = default;
     //Rendering
-    void RenderAll(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix, Player* player) const;
+    static void ClearConsoleLines(int startLine, int endLine);
+    void RenderAll(const unsigned height, const unsigned width, const std::vector<std::vector<char>>& matrix, Player* player) const;
     void RenderStats(const unsigned heught, const unsigned width, Player* player) const;
     void RenderMap(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const;
     void RenderChunk(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const;
@@ -21,4 +23,7 @@ public:
     //setters
     void SetChunkX(const unsigned x);
     void SetChunkY(const unsigned y);
+    //getters
+    unsigned GetChunkX() const;
+    unsigned GetChunkY() const;
 };

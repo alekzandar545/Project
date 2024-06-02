@@ -13,29 +13,14 @@ public:
         MEDIUM_DENSITY = 3,
         LOW_DENSITY = 4
     };
-    //getters
-    unsigned GetWidth() const{return this->width;}
-    unsigned GetHeight() const{return this->height;}
-    unsigned GetPlayerX() const{return this->playerX;}
-    unsigned GetPlayerY() const{return this->playerY;}
-    unsigned GetFloor() const{return floor;}
-    Player* GetPlayer() const{return this->player;};
-    std::vector<std::vector<char>> GetMatrix() const{return this->matrix;}
-    unsigned GetMonsterCount() const {return this->monsterCount;}
-    unsigned GetTreasureCount() const {return this->treasureCount;}
-    Renderer GetRenderer() const {return this->renderer;}
-    //setters
-    void SetWidth(const unsigned width){this->width = width;}
-    void SetHeight(const unsigned height){this->height = height;}
-    void SetPlayerX(const unsigned playerX){this->playerX = playerX;}
-    void SetPlayerY(const unsigned playerY){this->playerY = playerY;}
-    void IncreaseFloor(){this->floor++;};
     //Big4
     Map() : floor(0) {}
     Map(Player* player);
-    Map(const unsigned width, const unsigned height, const unsigned monsterCount,const unsigned treasureCount, Player* player);
-    Map(const unsigned width, const unsigned height, const unsigned PlayerX, const unsigned PlayerY, const unsigned monsterCount,
-        const unsigned treasureCount, const unsigned floor, std::vector<std::vector<char>> matrix, Player* player);
+    Map(const unsigned width, const unsigned height, const unsigned monsterCount,
+        const unsigned treasureCount, const unsigned floor, Player* player);
+    Map(const unsigned width, const unsigned height, const unsigned PlayerX, const unsigned PlayerY, 
+        const unsigned monsterCount, const unsigned treasureCount, const unsigned floor, 
+        std::vector<std::vector<char>> matrix, Player* player);
     Map(const Map& other);
     Map& operator=(const Map& other);
     ~Map();
@@ -57,8 +42,25 @@ public:
     void RenderTile(char c) const;
     //functionality
     void MovePlayer(const int x, const int y);
+    //getters
+    unsigned GetWidth() const;
+    unsigned GetHeight() const;
+    unsigned GetPlayerX() const;
+    unsigned GetPlayerY() const;
+    unsigned GetFloor() const;
+    Player* GetPlayer() const;
+    std::vector<std::vector<char>> GetMatrix() const;
+    unsigned GetMonsterCount() const;
+    unsigned GetTreasureCount() const;
+    Renderer* GetRenderer() const;
+    //setters
+    void SetWidth(const unsigned width);
+    void SetHeight(const unsigned height);
+    void SetPlayerX(const unsigned playerX);
+    void SetPlayerY(const unsigned playerY);
+    void IncreaseFloor();
 //private:
-    Renderer renderer;
+    Renderer* renderer;
     unsigned width, height;
     unsigned playerX, playerY;
     unsigned treasureCount, monsterCount;

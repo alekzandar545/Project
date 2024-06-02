@@ -16,10 +16,10 @@ public:
     };
     //constructors
     Player();
-    Player(PlayerRace race, std::string name);
-    Player(std::string name, unsigned str, unsigned mana, unsigned maxHP, int HP, unsigned armor, unsigned dexterity,
-        unsigned statPoints, unsigned level, unsigned xp, unsigned requiredXp, unsigned gold,
-        std::vector<Item> inventory, const Item& weapon, const Item& spell, const Item& armorPiece){
+    Player(PlayerRace race, const std::string name);
+    Player(const std::string name, const unsigned str, const unsigned mana, const unsigned maxHP, const int HP, const unsigned armor, const unsigned dexterity,
+        const unsigned statPoints, const unsigned level, const unsigned xp, const unsigned requiredXp, const unsigned gold,
+        const std::vector<Item> inventory, const Item& weapon, const Item& spell, const Item& armorPiece){
             inventoryCapacity = 10;
             this->name = name;
             this->str = str;
@@ -45,7 +45,7 @@ public:
     bool MeleeAttack(Monster& monster) const;
     bool SpellAttack(Monster& monster) const;
     //item management
-    void EquipItem(const unsigned index){//index will be decided from ui placement
+    void EquipItem(const unsigned index){
         if (this->inventory.size() == 0) 
             throw std::out_of_range("Cannot equip item: Inventory is empty.");
         if (index >= this->inventory.size())
@@ -67,6 +67,8 @@ public:
             this->armorPiece = newItem;
             this->armor += this->armorPiece.GetPower();
             break;
+        case Item::ItemType::Potion:
+            this->UsePotion(index);
         }
     }
     //inventory
@@ -116,20 +118,54 @@ public:
             statPoints--;
         }
     }
+    void AddPotion(){
+        Item potion("Potion", Item::ItemType::Potion, 50);//potion restores 50% of hp
+        inventory.push_back(potion);
+    }
+    //if used in combat
+    bool UsePotion(){
+        for(size_t i = 0; i < inventory.size(); i++){
+            if(inventory[i].GetType() == Item::ItemType::Potion){
+                Heal(maxHP/2);
+                inventory.erase(inventory.begin() + i);
+                return true;
+            }
+        }
+        return false;
+    }
+    //if used in inventory
+    void UsePotion(unsigned index){
+        Heal(maxHP/2);
+        inventory.erase(inventory.begin() + index);
+    }
 
     //Getters
-    std::string GetName() const{return this->name;}
-    unsigned GetStatPoints() const {return this->statPoints;}
-    unsigned GetLevel() const {return this->level;}
-    unsigned GetXP() const {return this->xp;}
-    unsigned GetRequiredXP() const {return this->requiredXp;}
-    unsigned GetGold() const {return this->gold;}
-    unsigned GetInventorySize() const {return this->inventory.size();}
-    std::vector<Item> GetInventory() const {return this->inventory;}
-    Item GetWeapon() const {return this->weapon;}
-    Item GetSpell() const {return this->spell;}
-    Item GetArmorPiece() const {return this->armorPiece;}
-//private:
+    std::string GetName() const;
+    unsigned GetStatPoints() const;
+    unsigned GetLevel() const;
+    unsigned GetXP() const;
+    unsigned GetRequiredXP() const;
+    unsigned GetGold() const;
+    unsigned GetInventorySize() const;
+    std::vector<Item> GetInventory() const;
+    Item GetWeapon() const;
+    Item GetSpell() const;
+    Item GetArmorPiece() const;
+    unsigned GetInventoryCapacity() const;
+    
+    //Setters
+    void SetName(const std::string& name);
+    void SetStatPoints(const unsigned statPoints);
+    void SetLevel(const unsigned level);
+    void SetXP(const unsigned xp);
+    void SetRequiredXP(const unsigned requiredXp);
+    void SetGold(const unsigned gold);
+    void SetInventory(const std::vector<Item>& inventory);
+    void SetWeapon(const Item& weapon);
+    void SetSpell(const Item& spell);
+    void SetArmorPiece(const Item& armorPiece);
+    
+private:
     unsigned inventoryCapacity;
     unsigned statPoints;
     unsigned level;

@@ -1,35 +1,40 @@
 #include "inputHandler.h"
+#include "../Events/eventHandler.h"
+#include <conio.h>
+#include <windows.h>
+#include "../Utils/gameSaver.h"
+#include "../Utils/gameLoader.h"
 
-InputHandler::InputHandler(Event* event) {this->event = event;}
+InputHandler::InputHandler() = default;
 
 void InputHandler::UserInput(Map& map, Player& player) {
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'a':
                 map.MovePlayer(-1, 0);
-                if(!Constants::isGameOver){
+                if(!GameState::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 'd':
                 map.MovePlayer(1, 0);
-                if(!Constants::isGameOver){
+                if(!GameState::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 'w':
                 map.MovePlayer(0, -1);
-                if(!Constants::isGameOver){
+                if(!GameState::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
                 break;
             case 's':
                 map.MovePlayer(0, 1);
-                if(!Constants::isGameOver){
+                if(!GameState::isGameOver){
                     map.RenderStats();
                     map.RenderPosition();
                 }
@@ -59,17 +64,18 @@ void InputHandler::UserInput(Map& map, Player& player) {
                 break;
             }
             case 'x':
-                GameSaver::SaveGame(player, map);
-                system("cls");
-                Constants::EndGame();   
-                return;
+                if(GameSaver::SaveGame(player, map, "Saves/")){
+                    system("cls");
+                    GameState::EndGame();   
+                    return;
+                }
                 break;
         }
     }
 }
 
 bool InputHandler::InventoryUserInput(InventoryUI& ui) {
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':
@@ -85,6 +91,8 @@ bool InputHandler::InventoryUserInput(InventoryUI& ui) {
                 catch(const std::out_of_range& e){
                     std::cerr <<'\n'<< e.what();
                 }
+                system("cls");
+                ui.CheckSelection();
                 ui.Render();
                 break;
             case 'x':
@@ -95,7 +103,7 @@ bool InputHandler::InventoryUserInput(InventoryUI& ui) {
                     std::cerr <<'\n'<< e.what();
                 }
                 system("cls");
-                ui.CheckSold();
+                ui.CheckSelection();
                 ui.Render();
                 break;
             case 'i':
@@ -106,7 +114,7 @@ bool InputHandler::InventoryUserInput(InventoryUI& ui) {
 }
 
 bool InputHandler::StatsUserInput(StatsUI& ui) {
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':
@@ -134,7 +142,7 @@ bool InputHandler::StatsUserInput(StatsUI& ui) {
 }
 
 void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newGame, std::string& loadDir){
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':
@@ -167,8 +175,7 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newG
                     case 2:{ //highscores
                         system("cls");
                         std::cout << "Highscores:\n-------------\n";
-                        std::vector<Player> characters;
-                        GameLoader::DisplayHighScores(characters, "Saves");
+                        GameLoader::DisplayHighScores("Highscores");
                         std::cout << "--------------------------\nPress any key to go back";
                         _getch();
                         system("cls");
@@ -177,7 +184,7 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newG
                         break;
                     }
                     case 3: //exit
-                        Constants::isGameOver = true;
+                        GameState::EndGame();
                         OpenStartUI = false;
                         system("cls");
                         break;
@@ -188,7 +195,7 @@ void InputHandler::StartUserInput(StartMenuUI& ui, bool& OpenStartUI, bool& newG
 }
 
 void InputHandler::LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::string& loadDir){
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':
@@ -198,8 +205,7 @@ void InputHandler::LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::stri
                 ui.MoveSelection(1);
                 break;
             case 'e':
-                std::string dirName = "Saves/";
-                dirName.append(ui.GetOption(ui.GetSelectionIndex()));
+                std::string dirName = "Saves/" + ui.GetOption(ui.GetSelectionIndex());
                 loadDir = dirName;
                 OpenLoadGameUI = false;
                 system("cls");
@@ -209,7 +215,7 @@ void InputHandler::LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::stri
 }
 
 void InputHandler::RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race) {
-    if (_kbhit()) {
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':
@@ -224,10 +230,10 @@ void InputHandler::RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, 
                         race = Player::PlayerRace::Human;
                         break;
                     case 1:
-                        race = Player::PlayerRace::Sorcerer;
+                        race = Player::PlayerRace::Berserk;
                         break;
                     case 2:
-                        race = Player::PlayerRace::Berserk;
+                        race = Player::PlayerRace::Sorcerer;
                         break;
                     default:
                         race = Player::PlayerRace::Human;
@@ -240,8 +246,8 @@ void InputHandler::RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, 
     }
 }
 
-void InputHandler::BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& fled) {
-    if (_kbhit()) {
+void InputHandler::BattleUserInput(CombatEvents* event, BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& fled){
+    if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();
         switch (ch) {
             case 'w':

@@ -6,14 +6,16 @@
 #include "../UI/startMenuUI.h"
 #include "../UI/selectionUI.h"
 #include "../Utils/constants.h"
-#include "../Events/eventHandler.h"
-#include "../Utils/gameSaver.h"
-#include "../Utils/gameLoader.h"
+#include "../Utils/gameState.h"
 #include "loadGameUI.h"
+#include "../Events/combatEvents.h"
+
+class Event;
+
 class InputHandler {
 public:
-    InputHandler(Event* event);
-    void BattleUserInput(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& fled);
+    InputHandler();
+    static void BattleUserInput(CombatEvents* event, BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, bool& fled);
     static void UserInput(Map& map, Player& p);
     static bool InventoryUserInput(InventoryUI& ui);
     static bool StatsUserInput(StatsUI& ui);
@@ -21,6 +23,5 @@ public:
     static void RaceSelectUserInput(SelectionUI& ui, bool& OpenRaceSelectUI, Player::PlayerRace& race);
     static void LoadUserInput(LoadGameUI& ui, bool& OpenLoadGameUI, std::string& loadDir);
 private:
-    Event* event;
 };
 

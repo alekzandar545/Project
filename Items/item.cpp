@@ -29,7 +29,7 @@ std::string Item::GetName() const {
 
 // Static method to generate an item
 Item Item::GenerateItem(unsigned level) {
-    std::string weaponNames[] = {
+    const std::string weaponNames[] = {
         "Bloodthirster Blade", "Dragonfang Dagger", "Doomhammer", "Widowmaker Waraxe", 
         "Shadowstrike Scimitar", "Hellfire Halberd", "Frostbite Flail", "Stormbringer Sword", 
         "Grim Reaper's Glaive", "Bonecrusher Mace", "Blackguard's Blade", "Deathknell Dagger", 
@@ -44,7 +44,7 @@ Item Item::GenerateItem(unsigned level) {
         "Emberfury Flail", "Shadowreaper Scythe", "Bloodseeker Blade", "Frostfang Falchion", 
         "Thunderstrike Trident"
     };
-    std::string spellNames[] = {
+    const std::string spellNames[] = {
         "Acid Arrow", "Blight", "Burning Hands", "Chain Lightning", "Chaos Bolt", "Chromatic Orb", 
         "Cloudkill", "Cone of Cold", "Crown of Stars", "Delayed Blast Fireball", "Destructive Wave", 
         "Disintegrate", "Divine Word", "Dragon's Breath", "Earthquake", "Eldritch Blast", 
@@ -56,7 +56,7 @@ Item Item::GenerateItem(unsigned level) {
         "Spirit Guardians", "Spirit Shroud", "Sunbeam", "Sunburst", "Thunderwave", "Vampiric Touch", 
         "Wall of Fire"
     };
-    std::string armorNames[] = {
+    const std::string armorNames[] = {
         "Padded Armor", "Leather Armor", "Studded Leather Armor", "Hide Armor", "Chain Shirt", 
         "Scale Mail", "Breastplate", "Half Plate", "Ring Mail", "Chain Mail", "Splint Armor", 
         "Plate Armor", "Shield", "Mithral Armor", "Adamantine Armor", "Elven Chain", 
@@ -73,20 +73,22 @@ Item Item::GenerateItem(unsigned level) {
     };
 
     // Pick random type
-    unsigned pickType = rand() % 3;
-    unsigned bonus = rand() % 10;
+    const unsigned ITEM_TYPES = 3;
+    const unsigned BONUS_DMG = 10;
+    unsigned pickType = rand() % ITEM_TYPES;
+    unsigned bonus = rand() % BONUS_DMG;
     unsigned index = 0;
 
     switch (pickType){
-        case 0:
+        case 0: //weapon
             index = rand() % weaponNames->length();
-            return Item(weaponNames[index], ItemType::Weapon, 20 + 5 * level + bonus);
-        case 1:
+            return Item(weaponNames[index], ItemType::Weapon, 20 + 5*level + bonus);
+        case 1: //spell
             index = rand() % spellNames->length();
-            return Item(spellNames[index], ItemType::Spell, 20 + 5 * level + bonus);
-        case 2:
+            return Item(spellNames[index], ItemType::Spell, 20 + 5*level + bonus);
+        case 2: //armor
             index = rand() % armorNames->length();
-            return Item(armorNames[index], ItemType::Armor, 10 + 5 * level + bonus);
+            return Item(armorNames[index], ItemType::Armor, 10 + 5*level + bonus);
     }
     return Item();
 }

@@ -1,0 +1,7 @@
+e 40 10 50 50 0 10 120 5 86 146 9 2
+3 Potion 50
+1 Burning_Hands 50
+0 Shortsword 20
+1 Fireball 20
+2 Old_rags 0
+

@@ -24,25 +24,29 @@ void Shuffle(std::vector<unsigned>& a){
 
 //big4
 Map::Map(Player* player)
-    : player(player), floor(0), playerX(0), playerY(0), height(0), width(0) {
+    : player(player), floor(1), playerX(0), playerY(0), height(0), width(0), renderer(new Renderer()) {
 }
 
-Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount, Player* player)
-    : width(width), height(height), monsterCount(monsterCount), treasureCount(treasureCount), player(player), floor(0), playerX(0), playerY(0) {
+Map::Map(const unsigned width, const unsigned height, const unsigned monsterCount, const unsigned treasureCount, const unsigned floor, Player* player)
+    : width(width), height(height), monsterCount(monsterCount), treasureCount(treasureCount), player(player), floor(floor), playerX(0), playerY(0),renderer(new Renderer()) {
 }
 
-Map::Map(const unsigned width, const unsigned height, const unsigned playerX, const unsigned playerY, const unsigned monsterCount,
-        const unsigned treasureCount, const unsigned floor, std::vector<std::vector<char>> matrix, Player* player)
-        : width(width), height(height), playerX(playerX), playerY(playerY), monsterCount(monsterCount), treasureCount(treasureCount), floor(floor), matrix(matrix), player(player) {}
+Map::Map(const unsigned width, const unsigned height, const unsigned playerX, const unsigned playerY,
+        const unsigned monsterCount, const unsigned treasureCount,
+        const unsigned floor, std::vector<std::vector<char>> matrix, Player* player)
+        : width(width), height(height), playerX(playerX), playerY(playerY), 
+          monsterCount(monsterCount), treasureCount(treasureCount), floor(floor),
+          matrix(matrix), player(player), renderer(new Renderer()) {}
 
 Map::Map(const Map& other)
-    : matrix(other.matrix), height(other.height), width(other.width), monsterCount(other.monsterCount), treasureCount(other.treasureCount), playerX(other.playerX), playerY(other.playerY), floor(other.floor), player(other.player) {
+    : matrix(other.matrix), height(other.height), width(other.width), monsterCount(other.monsterCount), treasureCount(other.treasureCount),
+      playerX(other.playerX), playerY(other.playerY), floor(other.floor), player(other.player), renderer(other.renderer) {
 }
 
 Map& Map::operator=(const Map& other) {
     if (&other == this)
         return *this;
-
+    //renderer = other.renderer;
     matrix = other.matrix;
     height = other.height;
     width = other.width;
@@ -50,12 +54,15 @@ Map& Map::operator=(const Map& other) {
     treasureCount = other.treasureCount;
     playerX = other.playerX;
     playerY = other.playerY;
-    //floor = other.floor;
+    floor = other.floor;
     player = other.player;
     return *this;
 }
 
-Map::~Map() = default;
+Map::~Map(){
+    //delete renderer;
+    //delete player;
+}
 
 //Creation
 void Map::Initialize(){
@@ -74,7 +81,7 @@ void Map::CreatePath(const int i, const int j){ //Use DFS
 
     //some neightbors are visited in addition to the coming direction, return
     //this is to avoid circles in maze
-    if(countVisitedNeighbor(i, j) > rand() % LABYRYINTH +  1) return ;
+    if(countVisitedNeighbor(i, j) > rand() % LOW_DENSITY +  1) return ;
 
     matrix[i][j] = Constants::PATH; // visited
 
@@ -113,6 +120,10 @@ void Map::GenerateMap(){
     CreateExit();
     CreateTreasure();
     CreateMonsters();
+    this->GetRenderer()->SetChunkY(0);
+    this->GetRenderer()->SetChunkX(0);
+    this->SetPlayerX(0);
+    this->SetPlayerY(0);    
 }
 
 void Map::CreateTreasure(){
@@ -128,7 +139,11 @@ void Map::CreateTreasure(){
             }
         }
     }
-    Shuffle(validIndexes); //what if treasure is more than free tiles?  
+    //what if treasure is more than free tiles?  
+    if (validIndexes.size() < treasureCount) {
+        throw std::runtime_error("Not enough free tiles to place all treasures.");
+    }
+    Shuffle(validIndexes); 
     for (size_t i = 0; i < treasureCount; i++)
     {
         matrix[validIndexes[i]/width][validIndexes[i]%width] = Constants::TREASURE;
@@ -163,12 +178,12 @@ void Map::CreatePlayer(){matrix[0][0] = Constants::PLAYER;}
 
 
 //rendering
-void Map::RenderAll() const{renderer.RenderAll(height, width, matrix, player);};
-void Map::RenderStats() const{renderer.RenderStats(height, width, player);}
-void Map::RenderMap() const{renderer.RenderMap(height, width, matrix);};
-void Map::RenderChunk() const{renderer.RenderChunk(height, width, matrix);};
-void Map::RenderPosition(){renderer.RenderPosition(height, width, playerX, playerY, matrix);};
-void Map::RenderTile(char c) const{renderer.RenderTile(c);};
+void Map::RenderAll() const{renderer->RenderAll(height, width, matrix, player);}
+void Map::RenderStats() const{renderer->RenderStats(height, width, player);}
+void Map::RenderMap() const{renderer->RenderMap(height, width, matrix);};
+void Map::RenderChunk() const{renderer->RenderChunk(height, width, matrix);}
+void Map::RenderPosition(){renderer->RenderPosition(height, width, playerX, playerY, matrix);}
+void Map::RenderTile(char c) const{renderer->RenderTile(c);}
 
 
 //functionality
@@ -200,3 +215,20 @@ void Map::MovePlayer(int x, int y){
     playerX = newX;
     playerY = newY;
 }
+//getters
+unsigned Map::GetWidth() const {return this->width;}
+unsigned Map::GetHeight() const {return this->height;}
+unsigned Map::GetPlayerX() const {return this->playerX;}
+unsigned Map::GetPlayerY() const {return this->playerY;}
+unsigned Map::GetFloor() const {return this->floor;}
+Player* Map::GetPlayer() const {return this->player;}
+std::vector<std::vector<char>> Map::GetMatrix() const {return this->matrix;}
+unsigned Map::GetMonsterCount() const {return this->monsterCount;}
+unsigned Map::GetTreasureCount() const {return this->treasureCount;}
+Renderer* Map::GetRenderer() const {return renderer;}
+//setters
+void Map::SetWidth(const unsigned width) {this->width = width;}
+void Map::SetHeight(const unsigned height) {this->height = height;}
+void Map::SetPlayerX(const unsigned playerX) {this->playerX = playerX;}
+void Map::SetPlayerY(const unsigned playerY) {this->playerY = playerY;}
+void Map::IncreaseFloor() {this->floor++;}

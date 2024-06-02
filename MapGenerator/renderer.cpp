@@ -4,7 +4,7 @@
 #include "conio.h"
 #include "windows.h"
 #include <iostream>
-
+std::vector<unsigned> Renderer::CHUNK_COORDS = {0,0};
 HANDLE CURR_HANDLE = GetStdHandle(STD_OUTPUT_HANDLE); 
 //auxiliary functions
 unsigned Min(const unsigned a, const unsigned b){
@@ -14,15 +14,23 @@ unsigned Min(const unsigned a, const unsigned b){
         return b;
 }
 
-void ClearConsoleLines(int startLine, int endLine) {
+//construction
+Renderer::Renderer() {
+    CHUNK_COORDS[0] = 0;
+    CHUNK_COORDS[1] = 0;
+}
+Renderer::Renderer(const unsigned x, const unsigned y) {
+    CHUNK_COORDS[0] = x;
+    CHUNK_COORDS[1] = y;
+}
+void Renderer::ClearConsoleLines(int startLine, int endLine) {
     //HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     COORD coord;
     DWORD written;
     // Get the current screen buffer info
-    if (!GetConsoleScreenBufferInfo(CURR_HANDLE, &csbi)) {
-        return;
-    }
+    if (!GetConsoleScreenBufferInfo(CURR_HANDLE, &csbi))
+        throw std::runtime_error("Failed to get console screen buffer info");
     // Calculate the width of the console
     int consoleWidth = csbi.dwSize.X;
     for (int line = startLine; line <= endLine; ++line) {
@@ -63,7 +71,14 @@ void Renderer::RenderTile(char c) const{
 }
 
 void Renderer::RenderChunk(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const{ //should drop the parameter probably
-    ClearConsoleLines(1, 1 + Constants::CHUNK_SIZE[1] + 1); // deletes map without the stats //+1 for top render and +1 for bottom render
+    try {
+        // deletes map without the stats //+1 for top render and +1 for bottom render
+        ClearConsoleLines(1, 1 + Constants::CHUNK_SIZE[1] + 1); 
+    } 
+    catch (const std::runtime_error& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+    
     unsigned chunkX = CHUNK_COORDS[0];
     unsigned chunkY = CHUNK_COORDS[1];
     unsigned chunkHeight = Constants::CHUNK_SIZE[1];
@@ -167,13 +182,11 @@ COORD GetConsoleCursorPosition(HANDLE hConsoleOutput)
 {
     CONSOLE_SCREEN_BUFFER_INFO cbsi;
     if (GetConsoleScreenBufferInfo(hConsoleOutput, &cbsi))
-    {
         return cbsi.dwCursorPosition;
-    }
     else
     {
         // The function failed.
-        COORD invalid = { 0, 0 };
+        COORD invalid = {0, 0};
         return invalid;
     }
 }
@@ -221,7 +234,7 @@ void Renderer::RenderPosition(const unsigned height, const unsigned width, const
     SetConsoleCursorPosition(CURR_HANDLE, {0,0});
 }
 
-void Renderer::RenderAll(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix, Player* player) const{
+void Renderer::RenderAll(const unsigned height, const unsigned width, const std::vector<std::vector<char>>& matrix, Player* player) const{
     //now time to print the offset vertically;
     RenderStats(height, width, player);
     RenderChunk(height, width, matrix);
@@ -235,12 +248,12 @@ void Renderer::RenderAll(const unsigned height, const unsigned width, const std:
 void Renderer::RenderStats(const unsigned height, const unsigned width, Player* player) const{
     SetConsoleCursorPosition(CURR_HANDLE, {0,0});
     SetConsoleTextAttribute(CURR_HANDLE, 6);
-    std::cout << "Gold: " << player->gold << "   ";
+    std::cout << "Gold: " << player->GetGold() << "   ";
     SetConsoleTextAttribute(CURR_HANDLE, 2);
-    std::cout << "Level: " << player->level << "    ";
-    std::cout << "XP: " << player->xp << '/' << player->requiredXp << "   ";
+    std::cout << "Level: " << player->GetLevel() << "    ";
+    std::cout << "XP: " << player->GetXP() << '/' << player->GetRequiredXP() << "   ";
     SetConsoleTextAttribute(CURR_HANDLE, 12);
-    std::cout << "HP: " << player->HP << '/' << player->maxHP << Constants::padding << '\n';
+    std::cout << "HP: " << player->GetHP() << '/' << player->GetMaxHP() << Constants::padding << '\n';
     SetConsoleTextAttribute(CURR_HANDLE, 8);
     //SetConsoleCursorPosition(CURR_HANDLE, {(short)width,(short)(height+1)});
 }
@@ -252,3 +265,7 @@ void Renderer::SetChunkX(const unsigned x){
 void Renderer::SetChunkY(const unsigned y){
     CHUNK_COORDS[1] = y;
 }
+
+//getters
+unsigned Renderer::GetChunkX() const{return CHUNK_COORDS[0];}
+unsigned Renderer::GetChunkY() const{return CHUNK_COORDS[1];}

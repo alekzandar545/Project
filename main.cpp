@@ -12,13 +12,13 @@
 #include "UI/selectionUI.h"
 #include "UI/inputHandler.h"
 #include "Utils/constants.h"
+#include "Utils/gameState.h"
 #include "Utils/gameLoader.h"
 #include "Utils/gameInitializer.h"
 
 
 
 int main() {
-    Constants::isGameOver = false;
     srand(time(0));
     system("cls");
     StartMenuUI startUI;
@@ -29,9 +29,9 @@ int main() {
     while(OpenStartUI){
         InputHandler::StartUserInput(startUI, OpenStartUI, newGame, loadDir);
     }
-    if(newGame && !Constants::isGameOver)
+    if(newGame && !GameState::isGameOver)
         GameInitializer::NewGame();
-    else if(!Constants::isGameOver)
+    else if(!GameState::isGameOver)
         GameInitializer::LoadGame(loadDir);
     return 0;
 }

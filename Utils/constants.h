@@ -4,13 +4,6 @@
 
 class Constants {
 public:
-    // Game State
-    static bool isGameOver;
-
-    static void EndGame() {
-        isGameOver = true;
-    }
-
     // Chars
     static constexpr char BORDER_TOP = 219;  // 220
     static constexpr char BORDER_BOTTOM = 219;  // 223
@@ -29,6 +22,11 @@ public:
     static const std::vector<unsigned> STARTING_MONSTERS;
     static const std::vector<unsigned> CHUNK_SIZE;
 
+    // Inventory
+    static const unsigned INVENTORY_CAPACITY = 10;
+
     // Text
     static const std::string padding;
+
+    // Colors
 };
