@@ -1,0 +1,5 @@
+<map id="MoveSelection" name="MoveSelection">
+<area shape="rect" id="Node000001" title="Moves the selection up or down based on the specified direction." alt="" coords="5,5,111,32"/>
+<area shape="rect" id="Node000002" href="$class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="159,5,221,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,16,143,16,143,21,111,21"/>
+</map>

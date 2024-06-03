@@ -1,0 +1,5 @@
+<map id="BattleUI" name="BattleUI">
+<area shape="rect" id="Node000001" title="Represents the user interface for a battle in the game." alt="" coords="15,80,83,107"/>
+<area shape="rect" id="Node000002" href="$class_selection_u_i.html" title="Represents a user interface for selecting options." alt="" coords="5,5,93,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,48,52,80,46,80,46,48"/>
+</map>

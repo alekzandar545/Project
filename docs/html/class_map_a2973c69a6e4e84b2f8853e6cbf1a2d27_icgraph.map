@@ -1,0 +1,20 @@
+<map id="GetPlayer" name="GetPlayer">
+<area shape="rect" id="Node000001" title="Gets the player object." alt="" coords="432,199,511,225"/>
+<area shape="rect" id="Node000002" href="$class_event.html#a57684dfbd3dd46292af83cd970dffd2a" title="Handles the game over event." alt="" coords="228,5,350,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,185,432,118,410,83,382,53,349,34,352,29,386,49,414,80,437,116,465,183"/>
+<area shape="rect" id="Node000003" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,31,146,57"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="456,186,427,139,406,116,383,97,341,81,279,68,146,52,146,47,280,63,342,76,385,92,410,112,431,136,460,183"/>
+<area shape="rect" id="Node000004" href="$class_combat_events.html#ace3c91f0270df555e7030ad8a251e7b8" title="Handles the player&#39;s attempt to flee from combat." alt="" coords="200,107,378,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="443,190,415,168,383,148,354,136,356,131,385,143,418,163,447,186"/>
+<area shape="rect" id="Node000005" href="$class_combat_events.html#a173435952d5a7fd3e71d51bc4d8b9222" title="Handles a melee attack in combat." alt="" coords="195,157,383,200"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="416,205,383,199,384,193,417,199"/>
+<area shape="rect" id="Node000006" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="194,224,384,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="417,225,385,230,384,225,416,219"/>
+<area shape="rect" id="Node000007" href="$class_combat_events.html#ad7e9f4f25e863bb3582f6a344b3ff2ba" title="Handles a spell attack in combat." alt="" coords="198,291,380,333"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="446,238,418,260,385,281,361,292,359,288,383,276,415,256,442,234"/>
+<area shape="rect" id="Node000008" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="230,357,348,384"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="462,241,433,295,412,324,385,348,349,365,347,360,383,343,408,320,428,292,457,239"/>
+<area shape="rect" id="Node000009" href="$class_event.html#ae29a33485b2a77932276ccc460f909e5" title="Handles a treasure event." alt="" coords="217,408,361,435"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="467,241,458,277,441,319,418,362,386,398,363,412,360,407,382,394,414,359,437,317,452,276,462,240"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,30,146,38,146,33,212,25"/>
+</map>

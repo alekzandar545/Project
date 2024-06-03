@@ -1,0 +1,14 @@
+<map id="GameState" name="GameState">
+<area shape="rect" id="Node000001" title="Represents the state of the game." alt="" coords="102,309,190,336"/>
+<area shape="rect" id="Node000002" href="$class_map.html" title="Represents the game map." alt="" coords="88,219,135,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,259,144,308,139,310,119,261"/>
+<area shape="rect" id="Node000003" href="$class_renderer.html" title="The Renderer class is responsible for rendering the game map and player statistics on the console." alt="" coords="5,128,79,155"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="51,168,64,193,90,216,87,220,60,196,46,171"/>
+<area shape="rect" id="Node000004" href="$class_player.html" title="Represents a player entity in the game." alt="" coords="128,128,186,155"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="165,170,171,224,170,255,166,286,156,310,151,308,161,285,165,255,165,224,160,170"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="135,167,127,180,119,200,115,219,110,218,114,198,122,177,131,164"/>
+<area shape="rect" id="Node000005" href="$class_entity.html" title="Represents an entity in the game." alt="" coords="92,5,147,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="130,46,155,127,150,128,125,48"/>
+<area shape="rect" id="Node000006" href="$class_item.html" title="Represents an item in the game." alt="" coords="171,5,217,32"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="188,48,163,128,158,127,183,46"/>
+</map>

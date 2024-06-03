@@ -1,0 +1,57 @@
+<map id="GameOver" name="GameOver">
+<area shape="rect" id="Node000001" title="Handles the game over event." alt="" coords="5,697,88,724"/>
+<area shape="rect" id="Node000002" href="$class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="136,556,289,583"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,695,182,591,185,595,65,699"/>
+<area shape="rect" id="Node000010" href="$class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="827,867,941,893"/>
+<area shape="poly" id="edge27_Node000001_Node000010" title=" " alt="" coords="88,711,181,719,289,733,440,763,588,798,821,859,819,865,587,803,439,768,289,739,180,724,88,716"/>
+<area shape="rect" id="Node000027" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="156,748,269,775"/>
+<area shape="poly" id="edge28_Node000001_Node000027" title=" " alt="" coords="89,721,153,740,151,745,87,726"/>
+<area shape="rect" id="Node000003" href="$class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="337,465,519,492"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="245,553,379,496,381,501,248,558"/>
+<area shape="rect" id="Node000004" href="$class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="567,487,754,529"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,488,552,492,551,497,519,493"/>
+<area shape="rect" id="Node000005" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="823,5,945,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="435,464,480,390,561,276,612,213,670,151,733,93,800,42,809,37,812,41,803,46,736,97,673,155,616,217,565,279,485,393,440,466"/>
+<area shape="rect" id="Node000006" href="$class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="580,436,741,463"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="519,465,564,459,565,464,520,470"/>
+<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="666,435,704,348,751,227,758,199,762,174,763,129,771,86,782,65,800,42,808,35,811,39,804,46,786,68,776,88,769,129,767,174,764,200,756,229,709,350,671,437"/>
+<area shape="rect" id="Node000007" href="$class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="824,208,944,235"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="665,435,683,397,711,346,751,292,774,266,800,245,809,239,812,243,803,249,778,270,755,295,716,349,687,399,670,437"/>
+<area shape="rect" id="Node000008" href="$class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="806,259,962,285"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="668,434,719,368,757,329,800,295,810,290,812,294,803,300,760,333,723,372,673,437"/>
+<area shape="rect" id="Node000009" href="$class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="816,309,952,336"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="675,434,729,391,763,367,800,346,814,339,816,344,803,350,766,371,732,395,679,438"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="742,461,756,473,774,497,786,522,793,546,795,570,792,617,781,665,771,711,766,758,769,782,775,805,787,829,804,853,815,863,811,867,800,856,782,832,770,807,764,783,761,758,765,711,776,663,786,617,790,570,788,547,781,524,769,500,752,476,738,465"/>
+<area shape="rect" id="Node000011" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="833,360,935,387"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="698,433,801,396,822,389,823,394,803,401,700,438"/>
+<area shape="rect" id="Node000012" href="$class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="815,411,953,437"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="741,438,799,431,800,436,742,443"/>
+<area shape="rect" id="Node000013" href="$class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="802,461,966,488"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="742,456,787,461,786,466,741,461"/>
+<area shape="rect" id="Node000014" href="$class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="826,512,942,539"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="721,461,755,472,803,498,820,504,818,509,801,502,753,477,719,466"/>
+<area shape="rect" id="Node000015" href="$class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="826,563,942,589"/>
+<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="734,461,755,473,773,492,780,511,788,530,803,549,813,555,810,559,800,553,783,533,775,513,768,495,752,477,732,465"/>
+<area shape="rect" id="Node000016" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="820,613,948,640"/>
+<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="738,461,755,473,769,489,776,505,781,537,785,569,791,584,804,599,809,604,805,608,800,603,787,587,779,571,775,538,771,506,764,491,752,477,735,465"/>
+<area shape="rect" id="Node000017" href="$class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="807,664,961,691"/>
+<area shape="poly" id="edge17_Node000006_Node000017" title=" " alt="" coords="740,461,756,473,772,495,780,518,781,563,781,607,788,629,804,650,807,653,803,657,800,654,783,631,776,608,775,563,775,519,768,498,752,477,737,465"/>
+<area shape="rect" id="Node000018" href="$class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="826,715,942,741"/>
+<area shape="poly" id="edge18_Node000006_Node000018" title=" " alt="" coords="740,461,756,473,776,502,784,531,784,560,781,589,777,617,777,645,785,673,804,701,814,709,810,713,800,704,780,675,772,646,772,617,776,588,779,560,779,532,771,504,752,477,737,465"/>
+<area shape="rect" id="Node000019" href="$class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="810,765,958,792"/>
+<area shape="poly" id="edge19_Node000006_Node000019" title=" " alt="" coords="741,461,756,473,779,508,788,544,787,579,781,614,775,648,774,683,782,717,804,752,806,754,802,757,800,755,777,719,768,683,770,648,776,613,781,579,782,544,774,511,752,476,738,465"/>
+<area shape="rect" id="Node000020" href="$class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="817,816,951,843"/>
+<area shape="poly" id="edge20_Node000006_Node000020" title=" " alt="" coords="741,461,756,473,772,494,782,515,792,557,789,598,781,639,773,680,770,720,779,761,789,782,804,802,807,805,803,809,800,806,784,784,774,763,765,721,767,679,776,638,784,598,786,557,777,517,767,497,752,477,738,465"/>
+<area shape="rect" id="Node000021" href="$class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="816,56,952,83"/>
+<area shape="poly" id="edge21_Node000006_Node000021" title=" " alt="" coords="665,434,751,227,762,188,767,155,776,124,800,93,804,89,807,93,804,96,781,127,772,156,767,189,756,229,670,436"/>
+<area shape="rect" id="Node000022" href="$class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="832,107,936,133"/>
+<area shape="poly" id="edge22_Node000006_Node000022" title=" " alt="" coords="665,434,732,276,771,190,800,143,816,132,819,137,804,147,776,193,737,278,670,436"/>
+<area shape="rect" id="Node000023" href="$class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="809,157,959,184"/>
+<area shape="poly" id="edge23_Node000006_Node000023" title=" " alt="" coords="663,435,678,389,705,324,745,254,771,222,800,194,806,190,809,194,803,198,775,226,749,257,710,326,683,390,668,436"/>
+<area shape="rect" id="Node000024" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1015,107,1124,133"/>
+<area shape="poly" id="edge24_Node000023_Node000024" title=" " alt="" coords="935,154,1003,135,1004,140,936,159"/>
+<area shape="rect" id="Node000025" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1014,157,1125,184"/>
+<area shape="poly" id="edge25_Node000023_Node000025" title=" " alt="" coords="959,168,998,168,998,173,959,173"/>
+<area shape="rect" id="Node000026" href="$class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1018,208,1121,235"/>
+<area shape="poly" id="edge26_Node000023_Node000026" title=" " alt="" coords="936,182,1004,201,1003,206,935,187"/>
+</map>

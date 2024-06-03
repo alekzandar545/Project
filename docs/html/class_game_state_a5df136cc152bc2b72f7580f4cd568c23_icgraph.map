@@ -1,0 +1,30 @@
+<map id="sleepAndIgnoreInputs" name="sleepAndIgnoreInputs">
+<area shape="rect" id="Node000001" title=" " alt="" coords="618,208,764,235"/>
+<area shape="rect" id="Node000002" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="480,233,570,260"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="603,237,571,242,570,237,603,232"/>
+<area shape="rect" id="Node000012" href="$class_alerts.html#a79fbc5e46291b04e6025caba756c6853" title="Displays a battle alert message." alt="" coords="275,5,399,32"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="658,201,560,132,496,92,431,56,381,35,383,30,433,51,499,87,563,127,661,197"/>
+<area shape="rect" id="Node000003" href="$class_combat_events.html#a4ffc1fd976c73dc2e16cc6165d831d46" title="Drops a potion for the player." alt="" coords="248,107,426,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="505,222,473,183,453,164,431,148,407,136,409,131,433,143,456,160,477,180,509,219"/>
+<area shape="rect" id="Node000004" href="$class_combat_events.html#a173435952d5a7fd3e71d51bc4d8b9222" title="Handles a melee attack in combat." alt="" coords="5,40,194,83"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="513,219,501,189,484,155,460,123,430,97,403,82,374,71,313,56,251,51,194,52,194,47,251,46,313,51,376,66,405,77,434,92,464,119,488,153,506,187,518,217"/>
+<area shape="rect" id="Node000005" href="$class_combat_events.html#ad7e9f4f25e863bb3582f6a344b3ff2ba" title="Handles a spell attack in combat." alt="" coords="8,107,191,149"/>
+<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="464,243,359,228,299,215,241,199,186,176,137,152,140,147,188,172,243,193,301,210,360,222,465,238"/>
+<area shape="rect" id="Node000006" href="$class_combat_events.html#ace3c91f0270df555e7030ad8a251e7b8" title="Handles the player&#39;s attempt to flee from combat." alt="" coords="248,360,426,387"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="509,274,477,314,456,333,433,350,409,362,407,357,431,346,453,329,473,310,505,271"/>
+<area shape="rect" id="Node000007" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="242,411,432,453"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="516,276,485,338,462,372,434,401,416,412,413,408,430,397,458,368,481,336,511,274"/>
+<area shape="rect" id="Node000008" href="$class_event.html#a7a92f6a9c25d635dbf0546746b1bc6ca" title="Handles a monster attack event." alt="" coords="264,309,410,336"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="490,271,433,300,399,311,398,306,431,295,488,266"/>
+<area shape="rect" id="Node000009" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="29,393,170,420"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="524,276,517,320,501,373,475,426,456,449,433,468,393,486,350,494,305,492,261,483,219,469,180,453,122,423,124,418,182,449,220,464,262,478,306,486,350,488,392,481,431,463,452,445,470,423,496,371,512,319,519,275"/>
+<area shape="rect" id="Node000010" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="278,157,396,184"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="482,228,431,205,382,187,383,182,433,200,484,224"/>
+<area shape="rect" id="Node000011" href="$class_event.html#ae29a33485b2a77932276ccc460f909e5" title="Handles a treasure event." alt="" coords="265,259,409,285"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="465,257,409,265,409,260,464,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="264,105,188,86,189,81,266,100"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="233,126,191,128,191,122,233,121"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="265,343,243,351,132,395,130,390,241,345,264,338"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="260,35,195,47,194,42,259,30"/>
+<area shape="poly" id="edge16_Node000012_Node000005" title=" " alt="" coords="300,42,195,97,167,109,165,104,193,92,298,38"/>
+</map>

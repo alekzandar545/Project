@@ -1,0 +1,48 @@
+<map id="HandleSpellAttack" name="HandleSpellAttack">
+<area shape="rect" id="Node000001" title="Handles a spell attack in combat." alt="" coords="5,284,134,311"/>
+<area shape="rect" id="Node000002" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="434,56,524,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,283,82,244,102,191,134,136,155,112,180,92,208,77,239,66,302,54,364,52,418,56,418,62,364,57,303,59,240,71,211,82,183,97,159,116,139,140,107,193,87,245,76,284"/>
+<area shape="rect" id="Node000004" href="$class_alerts.html#a79fbc5e46291b04e6025caba756c6853" title="Displays a battle alert message." alt="" coords="417,5,541,32"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="70,283,78,238,97,175,112,141,130,109,153,79,180,54,205,38,233,26,290,11,348,6,401,6,401,12,349,11,291,16,234,31,208,43,183,58,157,82,134,111,116,143,102,177,84,239,75,284"/>
+<area shape="rect" id="Node000005" href="$class_combat_events.html#a4ffc1fd976c73dc2e16cc6165d831d46" title="Drops a potion for the player." alt="" coords="223,107,309,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="76,282,115,220,145,183,180,150,207,134,210,139,183,154,148,186,119,223,80,285"/>
+<area shape="rect" id="Node000007" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="418,157,539,184"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="79,282,119,237,148,213,181,194,236,175,295,165,352,161,402,161,402,167,352,166,295,170,238,180,183,198,151,217,123,240,83,285"/>
+<area shape="rect" id="Node000008" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="214,208,318,235"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="98,281,181,244,200,237,202,242,183,249,100,286"/>
+<area shape="rect" id="Node000009" href="$class_battle_u_i.html#a6f949d6a55a1d08d3501d3885702a4e4" title="Gets the Monster object associated with the battle." alt="" coords="196,259,336,285"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="134,286,180,280,180,286,135,292"/>
+<area shape="rect" id="Node000010" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="211,309,321,336"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="135,303,196,311,195,316,134,308"/>
+<area shape="rect" id="Node000011" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="210,360,322,387"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="100,309,183,346,202,352,200,357,181,350,98,314"/>
+<area shape="rect" id="Node000012" href="$class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="208,411,324,437"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="84,309,125,352,153,376,183,396,195,402,192,407,180,401,150,380,122,356,80,313"/>
+<area shape="rect" id="Node000013" href="$class_battle_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the battle UI." alt="" coords="208,461,324,488"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="79,310,117,376,147,414,183,447,195,454,192,459,180,451,143,418,113,379,75,312"/>
+<area shape="rect" id="Node000019" href="$class_battle_u_i.html#a9ca94355bb561fbfe402db52c0f8d2c2" title="Renders the graphics for the battle UI." alt="" coords="182,512,350,539"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="77,310,89,348,110,398,141,452,161,477,183,498,189,502,186,506,180,502,157,480,137,455,105,401,84,349,72,312"/>
+<area shape="rect" id="Node000020" href="$class_player.html#aa5b9adec9dff73d92e99992442720f97" title="Performs a spell attack on a monster." alt="" coords="199,563,333,589"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="75,311,85,356,104,421,136,489,158,521,183,549,188,552,185,556,180,553,153,524,131,492,99,422,79,358,70,312"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="609,23,794,65"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="524,62,593,54,594,59,524,67"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="542,23,594,29,593,34,541,28"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="308,107,417,81,419,86,309,113"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a38ed69f8bd64e83e8040c7d8fb5d9f00" title="Adds a potion to the player&#39;s inventory." alt="" coords="416,107,542,133"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="309,117,400,117,400,123,309,123"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="309,127,405,151,404,156,308,133"/>
+<area shape="rect" id="Node000014" href="$class_battle_u_i.html#ac28f355d831cf2da6849142a8c5d6a27" title="Renders the HP bars for the player and the monster." alt="" coords="398,461,559,488"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="325,472,383,472,383,477,325,477"/>
+<area shape="rect" id="Node000015" href="$class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="642,436,761,463"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="559,463,626,455,626,461,560,468"/>
+<area shape="rect" id="Node000016" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="607,487,796,513"/>
+<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="560,481,592,485,592,490,559,486"/>
+<area shape="rect" id="Node000017" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="650,537,753,564"/>
+<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="513,486,608,523,636,531,634,536,606,528,511,491"/>
+<area shape="rect" id="Node000018" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="638,385,765,412"/>
+<area shape="poly" id="edge20_Node000014_Node000018" title=" " alt="" coords="511,458,606,421,630,414,632,419,608,427,513,463"/>
+<area shape="rect" id="Node000021" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="423,588,534,615"/>
+<area shape="poly" id="edge23_Node000020_Node000021" title=" " alt="" coords="333,581,408,590,407,596,333,587"/>
+<area shape="rect" id="Node000022" href="$class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="425,537,532,564"/>
+<area shape="poly" id="edge24_Node000020_Node000022" title=" " alt="" coords="333,565,409,556,410,561,333,571"/>
+</map>

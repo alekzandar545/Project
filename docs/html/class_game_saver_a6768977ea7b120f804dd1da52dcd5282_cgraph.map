@@ -1,0 +1,25 @@
+<map id="SaveMap" name="SaveMap">
+<area shape="rect" id="Node000001" title="Saves the map object to the output stream." alt="" coords="5,259,80,285"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#a711d8730ce215aecc5509712e988fae5" title="Gets the X coordinate of the game map chunk." alt="" coords="134,5,281,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,258,48,217,61,159,86,97,104,68,126,42,130,39,133,43,130,46,108,71,91,99,66,160,53,218,47,259"/>
+<area shape="rect" id="Node000003" href="$class_renderer.html#a77da2e589b87f722158fe874d743c16d" title="Gets the Y coordinate of the game map chunk." alt="" coords="133,56,282,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="44,258,52,224,68,180,92,133,126,93,131,89,134,93,130,97,96,136,73,182,57,226,49,259"/>
+<area shape="rect" id="Node000004" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="155,107,260,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="47,257,75,202,98,171,126,143,140,135,142,139,129,147,102,174,80,205,52,260"/>
+<area shape="rect" id="Node000005" href="$class_map.html#a74a7e6e6ffe6c7ce293fe572f6334542" title="Gets the height of the map." alt="" coords="151,157,264,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="54,256,85,225,126,194,137,188,140,193,129,198,88,229,57,260"/>
+<area shape="rect" id="Node000006" href="$class_map.html#aac69a4a239b9ecdf76248f1b5364b5cf" title="Gets the map matrix." alt="" coords="152,208,263,235"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="79,258,147,237,148,242,81,263"/>
+<area shape="rect" id="Node000007" href="$class_map.html#ac5ba19a257ffbe13f127f2d6ed46772e" title="Gets the number of monsters in the map." alt="" coords="129,259,286,285"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="80,269,114,269,114,275,80,275"/>
+<area shape="rect" id="Node000008" href="$class_map.html#a7a4173371a47b1d903db7755c57d40cb" title="Gets the player&#39;s x&#45;coordinate." alt="" coords="148,309,267,336"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="81,281,148,302,147,307,79,286"/>
+<area shape="rect" id="Node000009" href="$class_map.html#a752c07693312472d1e0a8eada3f2f811" title="Gets the player&#39;s y&#45;coordinate." alt="" coords="147,360,268,387"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="57,284,88,315,129,346,140,351,137,356,126,350,85,319,54,288"/>
+<area shape="rect" id="Node000010" href="$class_map.html#acea78826f7e1fccb5aae1475017ee964" title="Gets the renderer object." alt="" coords="144,411,271,437"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="52,284,80,339,102,370,129,397,136,401,133,405,126,401,98,373,75,342,47,287"/>
+<area shape="rect" id="Node000011" href="$class_map.html#a0cabbaa2f7d307887225778beb269d14" title="Gets the number of treasures in the map." alt="" coords="128,461,287,488"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="49,285,57,318,73,362,96,408,130,447,134,451,131,455,126,451,92,411,68,364,52,320,44,286"/>
+<area shape="rect" id="Node000012" href="$class_map.html#aa3b0e805be2744e606a48587d125a6e8" title="Gets the width of the map." alt="" coords="153,512,262,539"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="47,285,53,326,66,384,91,445,108,473,129,498,140,506,137,511,126,502,104,476,86,447,61,385,48,327,42,286"/>
+</map>

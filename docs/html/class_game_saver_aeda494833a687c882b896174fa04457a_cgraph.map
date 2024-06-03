@@ -1,0 +1,9 @@
+<map id="SaveItem" name="SaveItem">
+<area shape="rect" id="Node000001" title="Saves the item object to the output stream." alt="" coords="5,56,80,83"/>
+<area shape="rect" id="Node000002" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="129,5,238,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,54,129,35,131,40,81,59"/>
+<area shape="rect" id="Node000003" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="128,56,239,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="80,67,112,67,112,72,80,72"/>
+<area shape="rect" id="Node000004" href="$class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="132,107,235,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="81,80,131,98,129,103,79,85"/>
+</map>

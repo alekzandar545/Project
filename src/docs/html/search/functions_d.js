@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['player_0',['Player',['../class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8',1,'Player::Player()'],['../class_player.html#a3faef33b66dbff8327e986867ba7418d',1,'Player::Player(PlayerRace race, const std::string name)'],['../class_player.html#a6b5a7a2ab70d34de65571880c2d5fc50',1,'Player::Player(const std::string name, const unsigned str, const unsigned mana, const unsigned maxHP, const int HP, const unsigned armor, const unsigned dexterity, const unsigned statPoints, const unsigned level, const unsigned xp, const unsigned requiredXp, const unsigned gold, const std::vector&lt; Item &gt; inventory, const Item &amp;weapon, const Item &amp;spell, const Item &amp;armorPiece)'],['../class_player.html#a4a8b7f689e924b15a9e6f9888983fb43',1,'Player::Player(const Player &amp;other)']]]
-];

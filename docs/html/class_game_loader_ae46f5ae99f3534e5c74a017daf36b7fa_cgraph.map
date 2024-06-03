@@ -1,0 +1,9 @@
+<map id="DisplayHighScores" name="DisplayHighScores">
+<area shape="rect" id="Node000001" title="Displays the high scores." alt="" coords="5,5,137,32"/>
+<area shape="rect" id="Node000002" href="$class_game_loader.html#a19a0c12f0cb12715e72435dfffb18317" title="Loads the high scores from a file." alt="" coords="185,5,301,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,16,169,16,169,21,137,21"/>
+<area shape="rect" id="Node000003" href="$class_game_loader.html#ab7d1e1fbaefea2ef1bc88850b9072173" title="Loads a player from a file." alt="" coords="349,5,435,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,16,334,16,334,21,301,21"/>
+<area shape="rect" id="Node000004" href="$class_game_loader.html#ab15b522dfbd516143892966e54199c25" title="Loads an item from a file." alt="" coords="483,5,558,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="436,16,468,16,468,21,436,21"/>
+</map>

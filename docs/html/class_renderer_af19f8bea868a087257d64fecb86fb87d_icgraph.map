@@ -1,0 +1,5 @@
+<map id="RenderMap" name="RenderMap">
+<area shape="rect" id="Node000001" title="Renders the game map on the console." alt="" coords="174,5,261,32"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a5c3974a16f8fcbe73236883c982f0c97" title="Renders the entire map." alt="" coords="5,5,126,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>

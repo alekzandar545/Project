@@ -1,0 +1,17 @@
+<map id="MonsterAttack" name="MonsterAttack">
+<area shape="rect" id="Node000001" title="Handles a monster attack event." alt="" coords="5,97,112,124"/>
+<area shape="rect" id="Node000002" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="175,17,266,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,94,158,58,176,49,178,54,161,62,88,99"/>
+<area shape="rect" id="Node000004" href="$class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="163,72,278,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,100,147,94,148,99,112,105"/>
+<area shape="rect" id="Node000007" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="169,123,272,149"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="112,116,154,123,154,128,112,122"/>
+<area shape="rect" id="Node000008" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="160,173,281,200"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="87,122,161,159,173,164,171,169,159,164,85,127"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="329,5,513,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,27,313,26,313,31,266,32"/>
+<area shape="rect" id="Node000005" href="$class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="342,72,500,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="278,83,326,83,326,88,278,88"/>
+<area shape="rect" id="Node000006" href="$class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="368,123,475,149"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="277,97,353,116,352,121,276,102"/>
+</map>

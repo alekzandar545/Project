@@ -1,0 +1,14 @@
+<map id="RenderPosition" name="RenderPosition">
+<area shape="rect" id="Node000001" title="Renders the player&#39;s position." alt="" coords="5,81,115,108"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#a0cb985d0dad864b96ee375dd64d50cb4" title="Renders the player position on the console." alt="" coords="163,81,332,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,92,147,92,147,97,115,97"/>
+<area shape="rect" id="Node000003" href="$class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="380,56,539,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="332,82,364,78,365,83,332,87"/>
+<area shape="rect" id="Node000006" href="$class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="611,107,753,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="333,97,595,112,595,118,332,102"/>
+<area shape="rect" id="Node000004" href="$class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f" title="Clears the specified lines on the console." alt="" coords="587,5,777,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="521,53,605,33,606,39,522,58"/>
+<area shape="rect" id="Node000005" href="$class_math_functions.html#a8b4c499ff6cb50ad02707797b00e67d5" title="Returns the minimum of two unsigned integers." alt="" coords="614,56,750,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="540,67,598,67,598,72,540,72"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="522,81,606,100,605,105,521,86"/>
+</map>

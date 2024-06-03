@@ -1,0 +1,5 @@
+<map id="MeleeAttack" name="MeleeAttack">
+<area shape="rect" id="Node000001" title="Performs a melee attack on a monster." alt="" coords="242,13,336,40"/>
+<area shape="rect" id="Node000002" href="$class_combat_events.html#a173435952d5a7fd3e71d51bc4d8b9222" title="Handles a melee attack in combat." alt="" coords="5,5,194,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,29,194,29,194,24,226,24"/>
+</map>

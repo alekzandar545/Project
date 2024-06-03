@@ -1,0 +1,5 @@
+<map id="Shuffle" name="Shuffle">
+<area shape="rect" id="Node000001" title="Shuffles the elements of a vector of unsigned integers." alt="" coords="5,5,66,32"/>
+<area shape="rect" id="Node000002" href="$class_math_functions.html#a46628b1d99e2e23466d9fcaad2a1c823" title="Swaps the values of two unsigned integers." alt="" coords="114,5,167,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,16,98,16,98,21,66,21"/>
+</map>

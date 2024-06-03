@@ -50,6 +50,10 @@ BattleUI::BattleUI( Monster* monster) : SelectionUI(BATTLE_MENU_SELECT_COORDINAT
     };
 }
 
+BattleUI::~BattleUI() {
+    delete monster;
+}
+
 void BattleUI::RenderGraphics() const {
     SetConsoleCursorPosition(CURR_HANDLE, {0, 0});
     for (unsigned i = 0; i < dragonArt.size(); i++) {

@@ -1,0 +1,78 @@
+<map id="NextFloor" name="NextFloor">
+<area shape="rect" id="Node000001" title="Advances to the next floor." alt="" coords="5,351,83,377"/>
+<area shape="rect" id="Node000002" href="$class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="145,49,250,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,349,73,254,97,192,128,131,147,106,166,85,170,89,151,110,133,133,102,194,78,256,51,351"/>
+<area shape="rect" id="Node000004" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="152,144,243,171"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="53,349,175,182,179,185,57,352"/>
+<area shape="rect" id="Node000006" href="$class_math_functions.html#aeee63f83fa137b620c87128de40ce5b5" title="Calculates the nth Fibonacci number starting from a and b." alt="" coords="131,275,264,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="65,348,129,311,142,305,144,310,132,316,68,352"/>
+<area shape="rect" id="Node000007" href="$class_map.html#abb1cffdc01f22addfa498ef7e0c68aa1" title="Generates the game map." alt="" coords="131,325,264,352"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="83,355,115,350,116,355,83,360"/>
+<area shape="rect" id="Node000022" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="145,376,250,403"/>
+<area shape="poly" id="edge24_Node000001_Node000022" title=" " alt="" coords="83,368,130,376,129,381,83,373"/>
+<area shape="rect" id="Node000023" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="137,427,258,453"/>
+<area shape="poly" id="edge25_Node000001_Node000023" title=" " alt="" coords="68,376,132,412,144,418,142,423,129,417,65,380"/>
+<area shape="rect" id="Node000024" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="141,477,254,504"/>
+<area shape="poly" id="edge26_Node000001_Node000024" title=" " alt="" coords="56,376,86,419,108,442,132,463,139,468,137,472,129,467,104,446,82,422,51,379"/>
+<area shape="rect" id="Node000025" href="$class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="142,579,253,605"/>
+<area shape="poly" id="edge27_Node000001_Node000025" title=" " alt="" coords="54,377,86,438,133,514,175,566,170,569,128,518,81,441,50,379"/>
+<area shape="rect" id="Node000003" href="$class_player.html#ad6dda931e17895069ecfbfbb4101f5b0" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="349,5,460,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,49,333,31,334,36,251,54"/>
+<area shape="rect" id="Node000005" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="312,56,496,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="230,141,311,108,327,102,329,107,313,113,232,146"/>
+<area shape="rect" id="Node000008" href="$class_map.html#abf37cc9e93169041de1b6ac194d54491" title="Creates an exit in the map." alt="" coords="347,123,462,149"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="247,323,262,311,275,294,282,276,285,240,288,204,296,185,310,166,331,151,334,156,314,170,301,187,294,205,290,241,287,277,280,296,266,315,250,327"/>
+<area shape="rect" id="Node000009" href="$class_map.html#a969a424f35e755c3ed6b52aed95a4ceb" title="Creates monsters in the map." alt="" coords="551,199,697,225"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="245,323,262,311,273,299,278,286,283,259,289,233,297,221,311,210,341,194,373,184,407,178,441,177,507,181,564,192,563,197,506,186,441,182,408,184,375,189,343,199,313,214,301,224,294,235,289,260,284,288,277,302,266,315,248,327"/>
+<area shape="rect" id="Node000012" href="$class_map.html#a45cf0a2090c294f88d6903a30df72387" title="Places the player in the map." alt="" coords="340,224,469,251"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="240,322,263,311,277,300,286,289,296,278,311,267,337,254,339,259,313,272,299,282,290,293,280,304,265,316,242,327"/>
+<area shape="rect" id="Node000013" href="$class_map.html#a8b4d03874979faeffba526c9f3c567e3" title="Creates treasures in the map." alt="" coords="553,275,695,301"/>
+<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="253,322,312,311,430,297,537,289,538,294,430,302,312,316,254,327"/>
+<area shape="rect" id="Node000014" href="$class_map.html#acea78826f7e1fccb5aae1475017ee964" title="Gets the renderer object." alt="" coords="341,325,468,352"/>
+<area shape="poly" id="edge14_Node000007_Node000014" title=" " alt="" coords="264,336,325,336,325,341,264,341"/>
+<area shape="rect" id="Node000015" href="$class_map.html#a98b1050f09da390896f964fb7a892391" title="Initializes the map." alt="" coords="354,376,455,403"/>
+<area shape="poly" id="edge15_Node000007_Node000015" title=" " alt="" coords="256,350,339,371,338,376,254,355"/>
+<area shape="rect" id="Node000018" href="$class_renderer.html#a7c7362ce31d3531ee864a8c3faea1f14" title="Sets the X coordinate of the game map chunk." alt="" coords="332,427,477,453"/>
+<area shape="poly" id="edge20_Node000007_Node000018" title=" " alt="" coords="244,350,266,362,281,375,290,388,299,401,313,412,324,418,321,423,311,417,295,404,286,391,277,379,262,366,241,355"/>
+<area shape="rect" id="Node000019" href="$class_renderer.html#aa86947851a399d267505cbf0ae584614" title="Sets the Y coordinate of the game map chunk." alt="" coords="331,477,478,504"/>
+<area shape="poly" id="edge21_Node000007_Node000019" title=" " alt="" coords="248,350,266,362,277,375,284,389,290,415,296,440,303,452,314,463,319,467,316,472,310,467,298,455,291,442,285,416,279,391,273,378,262,366,245,355"/>
+<area shape="rect" id="Node000020" href="$class_map.html#a5cf4c6dc1a425ebef86d0ebadd43ccb4" title="Sets the player&#39;s x&#45;coordinate." alt="" coords="345,528,463,555"/>
+<area shape="poly" id="edge22_Node000007_Node000020" title=" " alt="" coords="250,350,266,362,280,382,287,402,290,441,292,478,300,496,314,514,332,526,329,531,310,518,295,499,287,479,284,441,282,403,276,385,262,366,247,355"/>
+<area shape="rect" id="Node000021" href="$class_map.html#a901a1683e6d33d9dab9b098749ad60c9" title="Sets the player&#39;s y&#45;coordinate." alt="" coords="344,579,464,605"/>
+<area shape="poly" id="edge23_Node000007_Node000021" title=" " alt="" coords="251,350,266,362,283,389,291,415,292,441,289,467,287,492,289,516,296,540,314,565,331,577,328,582,310,569,292,543,283,517,282,492,284,466,286,441,285,416,278,391,262,366,248,355"/>
+<area shape="rect" id="Node000010" href="$class_math_functions.html#ac07a43cb21fb1d04c3ab1b4d72810be9" title="Shuffles the elements of a vector of unsigned integers." alt="" coords="769,275,924,301"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="666,223,791,267,790,272,665,228"/>
+<area shape="rect" id="Node000011" href="$class_math_functions.html#a46628b1d99e2e23466d9fcaad2a1c823" title="Swaps the values of two unsigned integers." alt="" coords="989,275,1136,301"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="924,285,974,285,974,291,924,291"/>
+<area shape="poly" id="edge13_Node000013_Node000010" title=" " alt="" coords="695,285,753,285,753,291,695,291"/>
+<area shape="rect" id="Node000016" href="$class_map.html#acaa57a28ff9be1bfd722fd7214fc536e" title="Creates a path starting from a given position." alt="" coords="564,363,684,389"/>
+<area shape="poly" id="edge16_Node000015_Node000016" title=" " alt="" coords="455,384,548,378,549,383,455,389"/>
+<area shape="poly" id="edge19_Node000016_Node000010" title=" " alt="" coords="659,360,796,305,798,310,661,365"/>
+<area shape="poly" id="edge18_Node000016_Node000016" title=" " alt="" coords="587,364,580,354,585,344,600,338,624,336,650,339,664,345,662,350,649,344,624,341,601,343,588,348,586,353,591,361"/>
+<area shape="rect" id="Node000017" href="$class_map.html#a4ddbb5e8380e4a999827460f5f80b8b2" title="Counts visited neighbors of a cell." alt="" coords="758,363,935,389"/>
+<area shape="poly" id="edge17_Node000016_Node000017" title=" " alt="" coords="684,373,742,373,742,379,684,379"/>
+<area shape="rect" id="Node000026" href="$class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="336,629,473,656"/>
+<area shape="poly" id="edge28_Node000025_Node000026" title=" " alt="" coords="253,603,332,622,331,628,252,608"/>
+<area shape="rect" id="Node000027" href="$class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="544,559,704,585"/>
+<area shape="poly" id="edge29_Node000026_Node000027" title=" " alt="" coords="457,626,496,615,571,589,573,594,497,620,459,631"/>
+<area shape="rect" id="Node000031" href="$class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="547,736,701,763"/>
+<area shape="poly" id="edge33_Node000026_Node000031" title=" " alt="" coords="435,654,582,726,579,731,433,659"/>
+<area shape="rect" id="Node000028" href="$class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f" title="Clears the specified lines on the console." alt="" coords="752,483,941,509"/>
+<area shape="poly" id="edge30_Node000027_Node000028" title=" " alt="" coords="656,556,751,519,774,511,776,517,753,524,658,561"/>
+<area shape="rect" id="Node000029" href="$class_math_functions.html#a8b4c499ff6cb50ad02707797b00e67d5" title="Returns the minimum of two unsigned integers." alt="" coords="778,533,915,560"/>
+<area shape="poly" id="edge31_Node000027_Node000029" title=" " alt="" coords="704,560,762,554,763,559,704,566"/>
+<area shape="rect" id="Node000030" href="$class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="775,584,918,611"/>
+<area shape="poly" id="edge32_Node000027_Node000030" title=" " alt="" coords="704,578,760,585,759,590,704,584"/>
+<area shape="rect" id="Node000032" href="$class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="789,635,904,661"/>
+<area shape="poly" id="edge34_Node000031_Node000032" title=" " alt="" coords="643,733,691,702,751,671,774,662,776,667,753,676,693,707,646,738"/>
+<area shape="rect" id="Node000033" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="795,685,898,712"/>
+<area shape="poly" id="edge35_Node000031_Node000033" title=" " alt="" coords="685,733,779,711,781,716,687,738"/>
+<area shape="rect" id="Node000034" href="$class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="788,736,905,763"/>
+<area shape="poly" id="edge36_Node000031_Node000034" title=" " alt="" coords="701,747,773,747,773,752,701,752"/>
+<area shape="rect" id="Node000035" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="783,787,910,813"/>
+<area shape="poly" id="edge37_Node000031_Node000035" title=" " alt="" coords="687,761,770,780,769,785,685,766"/>
+<area shape="rect" id="Node000036" href="$class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="769,837,924,864"/>
+<area shape="poly" id="edge38_Node000031_Node000036" title=" " alt="" coords="646,761,693,792,753,823,771,830,769,835,751,828,691,796,643,765"/>
+<area shape="rect" id="Node000037" href="$class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="795,888,898,915"/>
+<area shape="poly" id="edge39_Node000031_Node000037" title=" " alt="" coords="637,761,683,816,716,847,753,874,781,886,778,891,750,878,713,851,679,820,633,765"/>
+</map>

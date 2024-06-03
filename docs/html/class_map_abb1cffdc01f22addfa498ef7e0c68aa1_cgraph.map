@@ -1,0 +1,34 @@
+<map id="GenerateMap" name="GenerateMap">
+<area shape="rect" id="Node000001" title="Generates the game map." alt="" coords="5,233,105,260"/>
+<area shape="rect" id="Node000002" href="$class_map.html#abf37cc9e93169041de1b6ac194d54491" title="Creates an exit in the map." alt="" coords="185,5,268,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,232,68,196,86,148,114,95,151,49,170,35,173,39,155,53,118,98,91,150,73,198,62,234"/>
+<area shape="rect" id="Node000003" href="$class_map.html#a969a424f35e755c3ed6b52aed95a4ceb" title="Creates monsters in the map." alt="" coords="348,81,461,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="58,232,68,201,87,162,114,123,132,106,151,92,197,75,245,69,293,70,336,75,336,81,293,75,246,74,198,80,154,97,135,110,118,126,92,165,73,203,63,234"/>
+<area shape="rect" id="Node000006" href="$class_map.html#a45cf0a2090c294f88d6903a30df72387" title="Places the player in the map." alt="" coords="178,107,275,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="66,231,101,192,151,150,172,138,174,143,154,154,105,196,69,235"/>
+<area shape="rect" id="Node000007" href="$class_map.html#a8b4d03874979faeffba526c9f3c567e3" title="Creates treasures in the map." alt="" coords="350,157,459,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="76,230,110,211,152,193,198,182,246,175,334,168,334,173,247,180,200,187,153,199,113,215,78,235"/>
+<area shape="rect" id="Node000008" href="$class_map.html#acea78826f7e1fccb5aae1475017ee964" title="Gets the renderer object." alt="" coords="179,208,274,235"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="105,237,163,228,164,233,106,242"/>
+<area shape="rect" id="Node000009" href="$class_map.html#a98b1050f09da390896f964fb7a892391" title="Initializes the map." alt="" coords="192,259,261,285"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="106,251,177,262,177,267,105,257"/>
+<area shape="rect" id="Node000012" href="$class_renderer.html#a7c7362ce31d3531ee864a8c3faea1f14" title="Sets the X coordinate of the game map chunk." alt="" coords="154,309,299,336"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="82,258,154,295,169,301,167,306,152,300,79,263"/>
+<area shape="rect" id="Node000013" href="$class_renderer.html#aa86947851a399d267505cbf0ae584614" title="Sets the Y coordinate of the game map chunk." alt="" coords="153,360,300,387"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="68,259,103,301,127,325,154,346,163,351,160,355,151,350,124,329,99,305,64,262"/>
+<area shape="rect" id="Node000014" href="$class_map.html#a5cf4c6dc1a425ebef86d0ebadd43ccb4" title="Sets the player&#39;s x&#45;coordinate." alt="" coords="184,411,269,437"/>
+<area shape="poly" id="edge16_Node000001_Node000014" title=" " alt="" coords="64,259,96,325,122,363,154,397,171,407,168,411,151,401,118,367,91,328,59,262"/>
+<area shape="rect" id="Node000015" href="$class_map.html#a901a1683e6d33d9dab9b098749ad60c9" title="Sets the player&#39;s y&#45;coordinate." alt="" coords="183,461,270,488"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="62,260,71,297,89,347,116,401,134,426,154,447,170,458,167,462,151,451,130,429,112,403,84,349,66,298,56,261"/>
+<area shape="rect" id="Node000004" href="$class_math_functions.html#ac07a43cb21fb1d04c3ab1b4d72810be9" title="Shuffles the elements of a vector of unsigned integers." alt="" coords="509,157,664,184"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,106,539,148,537,153,438,111"/>
+<area shape="rect" id="Node000005" href="$class_math_functions.html#a46628b1d99e2e23466d9fcaad2a1c823" title="Swaps the values of two unsigned integers." alt="" coords="712,157,859,184"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="664,168,696,168,696,173,664,173"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="460,168,494,168,494,173,460,173"/>
+<area shape="rect" id="Node000010" href="$class_map.html#acaa57a28ff9be1bfd722fd7214fc536e" title="Creates a path starting from a given position." alt="" coords="362,245,448,272"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="261,267,346,260,346,266,261,272"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="433,242,542,189,545,194,436,247"/>
+<area shape="poly" id="edge12_Node000010_Node000010" title=" " alt="" coords="374,246,369,237,372,227,385,221,405,219,426,221,438,228,435,232,424,226,405,224,386,226,376,231,374,236,379,244"/>
+<area shape="rect" id="Node000011" href="$class_map.html#a4ddbb5e8380e4a999827460f5f80b8b2" title="Counts visited neighbors of a cell." alt="" coords="514,245,659,272"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="448,256,499,256,499,261,448,261"/>
+</map>

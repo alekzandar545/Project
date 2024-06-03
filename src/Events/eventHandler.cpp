@@ -85,9 +85,7 @@ void Event::MonsterEvent() {
             map->GetPlayer()->SetHP(map->GetPlayer()->GetMaxHP() / 2);
         map->GetPlayer()->AddGold(5 + map->GetFloor()); // more gold on each floor
         map->GetPlayer()->AddXP(25 + map->GetFloor() * 3); // more xp on each floor
-        // map->GetPlayer()->AddItem(GetRandomItem(map->GetFloor())); // stronger items on each floor
     }
-    delete monster;
     system("cls");
     map->RenderAll();
 }
@@ -95,10 +93,10 @@ void Event::MonsterEvent() {
 void Event::NextFloor() {
     system("cls");
     *map = Map(MathFunctions::Fib(Constants::STARTING_WIDTH[0], Constants::STARTING_WIDTH[1], map->GetFloor()),
-               MathFunctions::Fib(Constants::STARTING_HEIGHT[0], Constants::STARTING_HEIGHT[1], map->GetFloor()),
-               MathFunctions::Fib(Constants::STARTING_MONSTERS[0], Constants::STARTING_MONSTERS[1], map->GetFloor()), 
-               MathFunctions::Fib(Constants::STARTING_TREASURE[0], Constants::STARTING_TREASURE[1], map->GetFloor()), 
-               map->GetFloor()+1, map->GetPlayer());
+            MathFunctions::Fib(Constants::STARTING_HEIGHT[0], Constants::STARTING_HEIGHT[1], map->GetFloor()),
+            MathFunctions::Fib(Constants::STARTING_MONSTERS[0], Constants::STARTING_MONSTERS[1], map->GetFloor()), 
+            MathFunctions::Fib(Constants::STARTING_TREASURE[0], Constants::STARTING_TREASURE[1], map->GetFloor()), 
+            map->GetFloor()+1, map->GetPlayer());
     map->GenerateMap();
     map->GetPlayer()->AddXP(70 + map->GetFloor() * 10); // see if it is balanced
     std::ostringstream msg;

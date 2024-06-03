@@ -27,7 +27,7 @@ public:
     /**
      * @brief Default destructor.
      */
-    ~SelectionUI() = default;
+    virtual ~SelectionUI() = default;
 
     /**
      * @brief Sets the options available for selection.

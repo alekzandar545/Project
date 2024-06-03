@@ -1,0 +1,17 @@
+<map id="RenderAll" name="RenderAll">
+<area shape="rect" id="Node000001" title="Renders the entire game map and player position on the console." alt="" coords="594,80,672,107"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="436,80,546,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="579,96,547,96,547,91,579,91"/>
+<area shape="rect" id="Node000003" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,43,184,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="465,72,430,43,387,20,353,12,317,9,246,14,181,28,130,45,129,40,180,23,245,8,317,3,354,7,389,15,433,39,469,68"/>
+<area shape="rect" id="Node000004" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="240,30,380,56"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="425,78,360,60,361,54,427,73"/>
+<area shape="rect" id="Node000005" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,119,182,146"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="469,120,433,149,389,172,354,181,318,184,246,180,180,165,129,149,131,144,182,160,247,174,318,179,353,176,387,167,430,144,465,116"/>
+<area shape="rect" id="Node000006" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="251,131,369,158"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="427,114,361,133,360,128,425,109"/>
+<area shape="rect" id="Node000007" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,80,388,107"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="421,96,388,96,388,91,421,91"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="216,80,175,73,176,68,217,75"/>
+<area shape="poly" id="edge8_Node000007_Node000005" title=" " alt="" coords="218,113,173,121,172,116,217,108"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="copy" name="copy">
+<area shape="rect" id="Node000001" title="Copies the attributes of another player." alt="" coords="130,31,179,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a68078016ff57f4a7b539a536da375768" title=" " alt="" coords="5,5,82,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,38,82,30,83,25,115,32"/>
+<area shape="rect" id="Node000003" href="$class_player.html#a4af057e1a8ffccd3a6eb4371e81a5236" title=" " alt="" coords="14,56,73,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,56,74,65,73,60,114,50"/>
+</map>

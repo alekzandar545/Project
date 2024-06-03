@@ -1,0 +1,11 @@
+<map id="RenderGraphics" name="RenderGraphics">
+<area shape="rect" id="Node000001" title="Renders the graphics for the battle UI." alt="" coords="244,113,358,140"/>
+<area shape="rect" id="Node000002" href="$class_combat_events.html#a173435952d5a7fd3e71d51bc4d8b9222" title="Handles a melee attack in combat." alt="" coords="6,5,195,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,106,194,62,168,51,170,46,197,58,270,102"/>
+<area shape="rect" id="Node000003" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="5,72,196,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,117,196,112,197,107,229,112"/>
+<area shape="rect" id="Node000004" href="$class_combat_events.html#ad7e9f4f25e863bb3582f6a344b3ff2ba" title="Handles a spell attack in combat." alt="" coords="9,139,192,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,141,193,147,192,142,228,136"/>
+<area shape="rect" id="Node000005" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="30,205,171,232"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="271,152,236,175,197,196,165,207,163,202,195,191,234,170,268,147"/>
+</map>

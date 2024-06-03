@@ -1,0 +1,5 @@
+<map id="Fib" name="Fib">
+<area shape="rect" id="Node000001" title="Calculates the nth Fibonacci number starting from a and b." alt="" coords="171,5,210,32"/>
+<area shape="rect" id="Node000002" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="5,5,123,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,21,123,21,123,16,155,16"/>
+</map>

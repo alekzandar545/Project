@@ -1,0 +1,21 @@
+<map id="Render" name="Render">
+<area shape="rect" id="Node000001" title="Renders the inventory UI." alt="" coords="5,132,68,159"/>
+<area shape="rect" id="Node000002" href="$class_inventory_u_i.html#aec9d9012dc62ca6d7dffcf92a03184ac" title="Displays the details of a specific item in the inventory UI." alt="" coords="403,56,492,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,130,73,96,92,80,115,67,149,55,186,48,259,42,329,46,388,54,387,59,328,51,259,47,186,53,151,60,117,72,95,84,76,100,49,133"/>
+<area shape="rect" id="Node000006" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="353,157,541,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="49,158,76,191,95,207,117,219,154,230,193,235,233,234,272,229,345,210,403,188,405,193,346,215,273,234,233,239,193,240,153,235,115,224,92,211,73,194,45,161"/>
+<area shape="rect" id="Node000007" href="$class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="141,132,280,159"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="68,143,126,143,126,148,68,148"/>
+<area shape="rect" id="Node000008" href="$class_player.html#a2244bca0965cbf4a63cce31d939931f1" title="Gets the capacity of the player&#39;s inventory." alt="" coords="116,183,305,209"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="69,153,116,168,142,176,141,181,115,173,67,158"/>
+<area shape="rect" id="Node000009" href="$class_inventory_u_i.html#ae8f429c3670b2e6224f8b861ce199e7e" title="Renders the equipped items in the inventory UI." alt="" coords="136,81,285,108"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="67,133,115,117,141,110,142,115,116,123,69,138"/>
+<area shape="rect" id="Node000003" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="590,5,700,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="492,55,575,34,576,39,493,61"/>
+<area shape="rect" id="Node000004" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="589,56,701,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="492,67,574,67,574,72,492,72"/>
+<area shape="rect" id="Node000005" href="$class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="593,107,697,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="493,78,579,100,577,106,492,83"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="285,84,387,73,387,78,285,89"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="266,106,306,117,396,149,395,154,304,123,265,111"/>
+</map>

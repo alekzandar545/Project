@@ -66,7 +66,7 @@ Map& Map::operator=(Map&& other) noexcept {
     if (&other == this)
         return *this;
     //delete player; //don't really wanna delete the player, just wanna transfer
-    delete renderer;
+    //delete renderer;
     matrix = std::move(other.matrix);
     height = other.height;
     width = other.width;
@@ -80,7 +80,6 @@ Map& Map::operator=(Map&& other) noexcept {
     // Null out the pointers in the other object so they arent deleted when it is destroyed
     other.player = nullptr;
     other.renderer = nullptr;
-
     return *this;
 }
 Map::~Map(){delete renderer;
@@ -88,8 +87,8 @@ Map::~Map(){delete renderer;
 
 //Creation
 void Map::Initialize(){
-    for (int i = 0; i < matrix.size(); ++i)
-        for (int j = 0; j < matrix[0].size(); ++j)
+    for (int i = 0; i < height; ++i)
+        for (int j = 0; j < width; ++j)
             matrix[i][j] = Constants::WALL;
     CreatePath(0, 0);
 }
@@ -133,7 +132,7 @@ int Map::countVisitedNeighbor(const int i, const int j) const{
 void Map::GenerateMap(){
     matrix.clear();
     std::vector<char> row(width);
-    for (int i = 0; i < height; ++i)
+    for (int i = 0; i < height; i++)
     {
         matrix.push_back(row);
     }

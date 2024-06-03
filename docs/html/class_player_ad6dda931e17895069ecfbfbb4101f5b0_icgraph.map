@@ -1,0 +1,9 @@
+<map id="LevelUp" name="LevelUp">
+<area shape="rect" id="Node000001" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="302,31,368,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="194,31,254,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,47,254,47,254,41,287,41"/>
+<area shape="rect" id="Node000003" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,5,146,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,39,146,33,146,28,178,34"/>
+<area shape="rect" id="Node000004" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="17,56,134,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="179,54,135,62,134,57,178,49"/>
+</map>

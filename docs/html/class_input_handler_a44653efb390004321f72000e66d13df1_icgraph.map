@@ -1,0 +1,5 @@
+<map id="BattleUserInput" name="BattleUserInput">
+<area shape="rect" id="Node000001" title="Handles user input during battles." alt="" coords="194,5,304,32"/>
+<area shape="rect" id="Node000002" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,5,146,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,21,146,21,146,16,178,16"/>
+</map>

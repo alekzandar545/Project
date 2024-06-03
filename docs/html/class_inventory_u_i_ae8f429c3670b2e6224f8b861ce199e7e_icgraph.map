@@ -1,0 +1,17 @@
+<map id="RenderEquippedItems" name="RenderEquippedItems">
+<area shape="rect" id="Node000001" title="Renders the equipped items in the inventory UI." alt="" coords="927,22,1075,49"/>
+<area shape="rect" id="Node000002" href="$class_inventory_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the inventory UI." alt="" coords="817,22,879,49"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="912,38,880,38,880,33,912,33"/>
+<area shape="rect" id="Node000003" href="$class_input_handler.html#a882995d6451ced9684db6d342572d464" title="Handles user input for inventory management." alt="" coords="436,6,615,49"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="801,21,768,13,691,9,616,14,616,9,691,3,769,8,803,16"/>
+<area shape="rect" id="Node000004" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,44,388,70"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="803,56,769,64,676,74,603,73,530,68,436,64,388,63,388,57,436,58,530,63,603,68,676,69,768,58,801,50"/>
+<area shape="rect" id="Node000007" href="$class_inventory_u_i.html#af87afec2b10d5c47599f4f99fd883bfb" title="Moves the selection in the inventory UI." alt="" coords="663,22,769,49"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="801,38,769,38,769,33,801,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="421,45,389,49,388,44,420,39"/>
+<area shape="rect" id="Node000005" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,18,184,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,49,184,45,185,40,216,43"/>
+<area shape="rect" id="Node000006" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,69,182,96"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="216,71,183,75,182,69,216,65"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="648,36,616,34,616,29,648,30"/>
+</map>

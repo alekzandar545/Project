@@ -28,6 +28,14 @@ public:
     BattleUI(Monster* monster);
 
     /**
+     * @brief Destructor for the BattleUI class.
+     * 
+     * This destructor is responsible for cleaning up any resources
+     * allocated by the BattleUI class (Monster).
+     */
+    ~BattleUI() override;
+
+    /**
      * @brief Renders the graphics for the battle UI.
      */
     void RenderGraphics() const;

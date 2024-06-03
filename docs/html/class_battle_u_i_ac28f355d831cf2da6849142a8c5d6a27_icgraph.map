@@ -1,0 +1,16 @@
+<map id="RenderHPBars" name="RenderHPBars">
+<area shape="rect" id="Node000001" title="Renders the HP bars for the player and the monster." alt="" coords="542,131,650,157"/>
+<area shape="rect" id="Node000002" href="$class_battle_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the battle UI." alt="" coords="432,131,494,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="527,147,495,147,495,141,527,141"/>
+<area shape="rect" id="Node000003" href="$class_input_handler.html#a44653efb390004321f72000e66d13df1" title="Handles user input during battles." alt="" coords="208,5,370,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,121,413,94,383,69,350,51,352,46,385,64,417,90,443,117"/>
+<area shape="rect" id="Node000004" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,43,146,69"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="419,126,383,113,258,84,146,66,147,61,259,79,385,108,421,121"/>
+<area shape="rect" id="Node000005" href="$class_combat_events.html#a173435952d5a7fd3e71d51bc4d8b9222" title="Handles a melee attack in combat." alt="" coords="195,123,383,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="416,147,384,147,384,141,416,141"/>
+<area shape="rect" id="Node000006" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="194,189,384,232"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="419,166,385,180,354,191,353,186,383,175,417,161"/>
+<area shape="rect" id="Node000007" href="$class_combat_events.html#ad7e9f4f25e863bb3582f6a344b3ff2ba" title="Handles a spell attack in combat." alt="" coords="198,256,380,299"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="449,172,422,210,386,246,366,258,363,253,382,242,418,207,445,169"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,43,147,49,146,44,192,37"/>
+</map>

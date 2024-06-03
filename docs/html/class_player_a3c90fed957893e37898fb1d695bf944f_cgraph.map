@@ -1,0 +1,5 @@
+<map id="UsePotion" name="UsePotion">
+<area shape="rect" id="Node000001" title="Uses a potion from the player&#39;s inventory." alt="" coords="5,5,87,32"/>
+<area shape="rect" id="Node000002" href="$class_entity.html#a9fb6f4bd9bf657f95482884aab55a51b" title="Heals the entity by the specified value." alt="" coords="135,5,224,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,16,119,16,119,21,87,21"/>
+</map>

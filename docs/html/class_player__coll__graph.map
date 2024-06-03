@@ -1,0 +1,7 @@
+<map id="Player" name="Player">
+<area shape="rect" id="Node000001" title="Represents a player entity in the game." alt="" coords="41,128,100,155"/>
+<area shape="rect" id="Node000002" href="$class_entity.html" title="Represents an entity in the game." alt="" coords="5,5,61,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,46,69,127,64,128,39,48"/>
+<area shape="rect" id="Node000003" href="$class_item.html" title="Represents an item in the game." alt="" coords="85,5,131,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,48,77,128,72,127,97,46"/>
+</map>

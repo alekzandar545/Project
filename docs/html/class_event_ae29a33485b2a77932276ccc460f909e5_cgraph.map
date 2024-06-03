@@ -1,0 +1,23 @@
+<map id="TreasureEvent" name="TreasureEvent">
+<area shape="rect" id="Node000001" title="Handles a treasure event." alt="" coords="5,183,109,209"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a9d417707b34a9388942cf618b8cb7e48" title="Adds gold to the player&#39;s current amount." alt="" coords="165,5,281,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,181,94,115,121,76,155,42,160,38,164,42,158,46,126,80,99,118,66,183"/>
+<area shape="rect" id="Node000003" href="$class_player.html#ad6d899bfa608f328449654508d57b018" title="Adds an item to the player&#39;s inventory." alt="" coords="166,56,280,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="67,180,103,138,128,114,155,92,163,87,166,92,158,97,131,118,107,141,71,184"/>
+<area shape="rect" id="Node000004" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="178,107,268,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="82,180,156,143,169,137,171,142,158,148,85,185"/>
+<area shape="rect" id="Node000006" href="$class_item.html#a0a7c0a20b9af2c57d2a57455ec3e711e" title="Static method to generate an item based on the given level." alt="" coords="157,157,289,184"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="109,185,141,180,142,186,109,191"/>
+<area shape="rect" id="Node000008" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="171,208,275,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="109,201,156,208,155,214,109,207"/>
+<area shape="rect" id="Node000009" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="168,259,278,285"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="85,207,158,244,171,250,169,255,156,249,82,212"/>
+<area shape="rect" id="Node000010" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="162,309,284,336"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="71,208,107,251,131,274,158,295,166,300,163,305,155,300,128,278,103,254,67,212"/>
+<area shape="rect" id="Node000011" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="167,360,279,387"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="66,209,99,274,126,312,158,346,164,350,160,354,155,350,121,316,94,277,61,211"/>
+<area shape="rect" id="Node000005" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="337,95,521,137"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="268,116,321,115,321,121,268,122"/>
+<area shape="rect" id="Node000007" href="$class_item.html#adacabf2754ed68bfa754f1996f5a3cca" title="Default constructor for Item." alt="" coords="390,161,469,188"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="289,169,374,171,374,176,289,175"/>
+</map>

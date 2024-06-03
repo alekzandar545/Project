@@ -1,0 +1,5 @@
+<map id="LoadUserInput" name="LoadUserInput">
+<area shape="rect" id="Node000001" title="Handles user input for loading a saved game." alt="" coords="158,5,262,32"/>
+<area shape="rect" id="Node000002" href="$class_input_handler.html#ac33247328d9737322f309d1354f09959" title="Handles user input for the start menu options." alt="" coords="5,5,110,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,21,110,21,110,16,142,16"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="RenderHPBars" name="RenderHPBars">
+<area shape="rect" id="Node000001" title="Renders the HP bars for the player and the monster." alt="" coords="5,81,113,108"/>
+<area shape="rect" id="Node000002" href="$class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="195,5,315,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,78,160,42,180,34,182,39,162,46,86,83"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="161,56,349,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,85,145,81,145,86,113,90"/>
+<area shape="rect" id="Node000004" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="204,107,306,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="113,99,189,109,188,114,113,104"/>
+<area shape="rect" id="Node000005" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="191,157,319,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="86,106,162,143,182,150,180,155,160,148,83,111"/>
+</map>

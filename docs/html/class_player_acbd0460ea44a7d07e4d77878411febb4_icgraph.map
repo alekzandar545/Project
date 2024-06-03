@@ -1,0 +1,7 @@
+<map id="SetDefaultValues" name="SetDefaultValues">
+<area shape="rect" id="Node000001" title="Sets the default values for the player&#39;s attributes." alt="" coords="112,31,233,57"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a244719265958cdd3814a61c97a6e3e98" title=" " alt="" coords="5,5,64,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,33,64,27,65,21,97,27"/>
+<area shape="rect" id="Node000003" href="$class_player.html#af95729f1ca88058fdcb214e9ced9ec6d" title=" " alt="" coords="5,56,64,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,61,65,67,64,61,96,55"/>
+</map>

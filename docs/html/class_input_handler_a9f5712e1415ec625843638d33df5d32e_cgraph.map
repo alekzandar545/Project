@@ -1,0 +1,9 @@
+<map id="RaceSelectUserInput" name="RaceSelectUserInput">
+<area shape="rect" id="Node000001" title="Handles user input for race selection." alt="" coords="5,43,149,69"/>
+<area shape="rect" id="Node000002" href="$class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="201,5,372,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,43,185,38,186,43,149,49"/>
+<area shape="rect" id="Node000003" href="$class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="197,72,376,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,63,182,68,181,73,149,69"/>
+<area shape="rect" id="Node000004" href="$class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="424,72,560,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="376,83,408,83,408,88,376,88"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="StatsUserInput" name="StatsUserInput">
+<area shape="rect" id="Node000001" title="Handles user input for displaying player stats." alt="" coords="356,31,463,57"/>
+<area shape="rect" id="Node000002" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,308,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="340,47,309,47,309,41,340,41"/>
+<area shape="rect" id="Node000003" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,39,184,34,185,29,216,34"/>
+<area shape="rect" id="Node000004" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="217,54,183,59,182,54,216,49"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="CreatePlayer" name="CreatePlayer">
+<area shape="rect" id="Node000001" title="Creates a new player." alt="" coords="5,101,102,128"/>
+<area shape="rect" id="Node000002" href="$class_input_handler.html#a9f5712e1415ec625843638d33df5d32e" title="Handles user input for race selection." alt="" coords="150,35,318,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,98,151,80,153,85,98,103"/>
+<area shape="rect" id="Node000006" href="$class_player.html#a31da5cd649039eccb6e2916cfeac57cf" title="Sets the name of the player." alt="" coords="174,101,294,128"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="102,112,158,112,158,117,102,117"/>
+<area shape="rect" id="Node000007" href="$class_selection_u_i.html#ab6d70aa0afea95f8b71d1203df730ee7" title="Sets the options available for selection." alt="" coords="154,152,314,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="103,126,170,145,169,150,101,131"/>
+<area shape="rect" id="Node000003" href="$class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="371,5,541,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,42,354,37,355,43,319,47"/>
+<area shape="rect" id="Node000004" href="$class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="366,72,545,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="319,65,351,69,350,74,318,70"/>
+<area shape="rect" id="Node000005" href="$class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="593,72,730,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="546,83,578,83,578,88,546,88"/>
+</map>

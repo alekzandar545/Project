@@ -1,0 +1,15 @@
+<map id="UsePotion" name="UsePotion">
+<area shape="rect" id="Node000001" title="Uses a potion from the player&#39;s inventory." alt="" coords="902,60,983,87"/>
+<area shape="rect" id="Node000002" href="$class_player.html#a51b68f7c3df099f6a241eef7ebcd9ec3" title="Equips an item from the player&#39;s inventory." alt="" coords="719,31,798,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="886,67,798,53,799,48,887,62"/>
+<area shape="rect" id="Node000007" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="663,81,854,124"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="887,85,854,90,854,85,886,80"/>
+<area shape="rect" id="Node000003" href="$class_input_handler.html#a882995d6451ced9684db6d342572d464" title="Handles user input for inventory management." alt="" coords="436,23,615,65"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="704,47,616,47,616,41,704,41"/>
+<area shape="rect" id="Node000004" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="421,47,389,47,389,41,421,41"/>
+<area shape="rect" id="Node000005" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" id="Node000006" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
+</map>

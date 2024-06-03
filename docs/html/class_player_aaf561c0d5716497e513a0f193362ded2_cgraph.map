@@ -1,0 +1,7 @@
+<map id="MeleeAttack" name="MeleeAttack">
+<area shape="rect" id="Node000001" title="Performs a melee attack on a monster." alt="" coords="5,31,100,57"/>
+<area shape="rect" id="Node000002" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="148,5,259,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,33,132,28,133,33,101,39"/>
+<area shape="rect" id="Node000003" href="$class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="150,56,257,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,49,135,55,134,60,100,55"/>
+</map>

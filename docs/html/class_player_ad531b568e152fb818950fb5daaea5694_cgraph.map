@@ -1,0 +1,5 @@
+<map id="AddXP" name="AddXP">
+<area shape="rect" id="Node000001" title="Adds experience points to the player&#39;s current XP." alt="" coords="5,5,66,32"/>
+<area shape="rect" id="Node000002" href="$class_player.html#ad6dda931e17895069ecfbfbb4101f5b0" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="114,5,180,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,16,98,16,98,21,66,21"/>
+</map>

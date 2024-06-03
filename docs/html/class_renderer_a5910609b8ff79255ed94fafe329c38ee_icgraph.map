@@ -1,0 +1,35 @@
+<map id="RenderTile" name="RenderTile">
+<area shape="rect" id="Node000001" title="Renders a single tile on the console." alt="" coords="970,81,1052,108"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="815,56,914,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="954,88,914,81,915,75,955,82"/>
+<area shape="rect" id="Node000011" href="$class_renderer.html#a0cb985d0dad864b96ee375dd64d50cb4" title="Renders the player position on the console." alt="" coords="638,5,747,32"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="978,75,951,59,921,47,877,35,831,27,748,21,748,16,831,22,878,30,923,41,953,54,980,70"/>
+<area shape="rect" id="Node000013" href="$class_renderer.html#af19f8bea868a087257d64fecb86fb87d" title="Renders the game map on the console." alt="" coords="821,107,908,133"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="955,107,909,115,908,110,954,102"/>
+<area shape="rect" id="Node000015" href="$class_map.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile." alt="" coords="807,157,922,184"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="975,119,923,148,899,159,897,154,921,143,973,114"/>
+<area shape="rect" id="Node000003" href="$class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="654,107,731,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="803,90,733,111,731,106,801,85"/>
+<area shape="rect" id="Node000010" href="$class_map.html#a57f08c5c4d7cb780ec69de4a74dcb15c" title="Renders a chunk of the map." alt="" coords="626,56,759,83"/>
+<area shape="poly" id="edge11_Node000002_Node000010" title=" " alt="" coords="799,72,759,72,759,67,799,67"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="801,54,740,35,741,30,803,48"/>
+<area shape="rect" id="Node000004" href="$class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="452,107,562,133"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="638,123,563,123,563,117,638,117"/>
+<area shape="rect" id="Node000005" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,31,184,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="436,107,387,97,181,61,182,55,389,92,437,102"/>
+<area shape="rect" id="Node000006" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="240,157,380,184"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="438,140,365,159,364,154,437,135"/>
+<area shape="rect" id="Node000007" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,132,182,159"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="481,145,440,175,389,199,345,209,310,211,231,199,173,182,123,162,125,157,174,177,232,193,311,205,345,203,387,193,437,170,478,141"/>
+<area shape="rect" id="Node000008" href="$class_event.html#adf51076ed987241d25a5567439836afe" title="Advances to the next floor." alt="" coords="251,107,369,133"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="437,123,369,123,369,117,437,117"/>
+<area shape="rect" id="Node000009" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,5,388,32"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="470,100,387,53,347,35,349,30,389,48,473,96"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="216,32,185,36,184,31,216,27"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="274,43,120,134,118,129,271,38"/>
+<area shape="rect" id="Node000012" href="$class_map.html#a90d54fb9595e65dc58bab82fffea99a3" title="Renders the player&#39;s position." alt="" coords="436,5,578,32"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="622,21,579,21,579,16,622,16"/>
+<area shape="poly" id="edge14_Node000012_Node000009" title=" " alt="" coords="420,21,389,21,389,16,420,16"/>
+<area shape="rect" id="Node000014" href="$class_map.html#a5c3974a16f8fcbe73236883c982f0c97" title="Renders the entire map." alt="" coords="632,157,753,184"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="807,140,741,159,739,154,805,135"/>
+</map>

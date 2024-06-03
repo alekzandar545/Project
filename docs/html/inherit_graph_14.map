@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_selection_u_i.html" title="Represents a user interface for selecting options." alt="" coords="5,107,93,133"/>
+<area shape="rect" id="Node000001" href="$class_battle_u_i.html" title="Represents the user interface for a battle in the game." alt="" coords="155,5,223,32"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="74,94,139,42,158,30,161,35,142,46,78,98"/>
+<area shape="rect" id="Node000002" href="$class_inventory_u_i.html" title="The InventoryUI class represents the user interface for displaying and managing the inventory." alt="" coords="147,56,231,83"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="101,98,149,81,151,86,103,103"/>
+<area shape="rect" id="Node000003" href="$class_load_game_u_i.html" title="Represents the user interface for loading a game." alt="" coords="141,107,237,133"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="108,117,140,117,140,123,108,123"/>
+<area shape="rect" id="Node000004" href="$class_start_menu_u_i.html" title="Represents the user interface for the start menu." alt="" coords="142,157,236,184"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="103,137,151,154,149,159,101,142"/>
+<area shape="rect" id="Node000005" href="$class_stats_u_i.html" title="Represents the user interface for displaying statistics." alt="" coords="157,208,221,235"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="78,142,142,194,161,205,158,210,139,198,74,146"/>
+</map>

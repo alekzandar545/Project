@@ -1,0 +1,11 @@
+<map id="HandleFlee" name="HandleFlee">
+<area shape="rect" id="Node000001" title="Handles the player&#39;s attempt to flee from combat." alt="" coords="5,64,92,91"/>
+<area shape="rect" id="Node000002" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="155,13,246,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,61,143,43,145,48,92,66"/>
+<area shape="rect" id="Node000004" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="140,64,261,91"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="92,75,124,75,124,80,92,80"/>
+<area shape="rect" id="Node000005" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="144,115,257,141"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="92,89,145,107,143,112,90,94"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="309,5,493,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,24,293,24,293,29,246,29"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="StartMenuUI" name="StartMenuUI">
+<area shape="rect" id="Node000001" title="Represents the user interface for the start menu." alt="" coords="5,80,99,107"/>
+<area shape="rect" id="Node000002" href="$class_selection_u_i.html" title="Represents a user interface for selecting options." alt="" coords="8,5,96,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,48,55,80,49,80,49,48"/>
+</map>

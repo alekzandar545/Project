@@ -1,0 +1,5 @@
+<map id="Alert" name="Alert">
+<area shape="rect" id="Node000001" title="Displays a general alert message." alt="" coords="5,13,54,40"/>
+<area shape="rect" id="Node000002" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="102,5,286,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,24,86,24,86,29,54,29"/>
+</map>

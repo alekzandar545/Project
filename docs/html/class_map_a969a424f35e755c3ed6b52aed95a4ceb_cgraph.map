@@ -1,0 +1,7 @@
+<map id="CreateMonsters" name="CreateMonsters">
+<area shape="rect" id="Node000001" title="Creates monsters in the map." alt="" coords="5,5,119,32"/>
+<area shape="rect" id="Node000002" href="$class_math_functions.html#ac07a43cb21fb1d04c3ab1b4d72810be9" title="Shuffles the elements of a vector of unsigned integers." alt="" coords="167,5,321,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,16,151,16,151,21,119,21"/>
+<area shape="rect" id="Node000003" href="$class_math_functions.html#a46628b1d99e2e23466d9fcaad2a1c823" title="Swaps the values of two unsigned integers." alt="" coords="369,5,516,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,16,353,16,353,21,322,21"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="LoadGameUI" name="LoadGameUI">
+<area shape="rect" id="Node000001" title="Represents the user interface for loading a game." alt="" coords="5,80,102,107"/>
+<area shape="rect" id="Node000002" href="$class_selection_u_i.html" title="Represents a user interface for selecting options." alt="" coords="10,5,97,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,48,56,80,51,80,51,48"/>
+</map>

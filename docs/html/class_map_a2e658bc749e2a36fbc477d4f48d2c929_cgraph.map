@@ -1,0 +1,17 @@
+<map id="RenderStats" name="RenderStats">
+<area shape="rect" id="Node000001" title="Renders player stats." alt="" coords="5,132,99,159"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="147,132,300,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,143,131,143,131,148,99,148"/>
+<area shape="rect" id="Node000003" href="$class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="368,5,482,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,130,282,87,313,63,347,42,358,36,360,41,349,46,317,67,286,91,240,134"/>
+<area shape="rect" id="Node000004" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="374,56,476,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="256,129,347,92,365,86,367,91,349,97,258,134"/>
+<area shape="rect" id="Node000005" href="$class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="367,107,483,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="300,133,351,127,352,132,301,138"/>
+<area shape="rect" id="Node000006" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="362,157,489,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="301,152,347,158,346,163,300,158"/>
+<area shape="rect" id="Node000007" href="$class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="348,208,502,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="258,157,349,194,367,200,365,205,347,198,256,162"/>
+<area shape="rect" id="Node000008" href="$class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="374,259,477,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="240,157,286,200,317,223,349,244,360,250,358,255,347,249,313,228,282,204,236,161"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="AddOption" name="AddOption">
+<area shape="rect" id="Node000001" title="Adds an option to the list of available options." alt="" coords="233,5,315,32"/>
+<area shape="rect" id="Node000002" href="$class_load_game_u_i.html#a4ef96c9c955a24d15ca10f01ff94e3d4" title="Constructs a LoadGameUI object with the specified path." alt="" coords="5,5,185,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,21,185,21,185,16,217,16"/>
+</map>

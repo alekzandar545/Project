@@ -1,0 +1,5 @@
+<map id="RenderTile" name="RenderTile">
+<area shape="rect" id="Node000001" title="Renders a single tile." alt="" coords="5,5,88,32"/>
+<area shape="rect" id="Node000002" href="$class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="136,5,278,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,16,120,16,120,21,88,21"/>
+</map>

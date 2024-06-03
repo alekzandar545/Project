@@ -1,0 +1,5 @@
+<map id="GetOptions" name="GetOptions">
+<area shape="rect" id="Node000001" title="Gets all the available options." alt="" coords="238,5,325,32"/>
+<area shape="rect" id="Node000002" href="$class_input_handler.html#ac33247328d9737322f309d1354f09959" title="Handles user input for the start menu options." alt="" coords="5,5,190,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,21,190,21,190,16,222,16"/>
+</map>

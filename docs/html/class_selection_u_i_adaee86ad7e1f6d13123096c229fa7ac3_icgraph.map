@@ -1,0 +1,25 @@
+<map id="MoveSelection" name="MoveSelection">
+<area shape="rect" id="Node000001" title="Moves the selection up or down based on the specified direction." alt="" coords="705,123,811,149"/>
+<area shape="rect" id="Node000002" href="$class_input_handler.html#a44653efb390004321f72000e66d13df1" title="Handles user input during battles." alt="" coords="483,5,645,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="729,114,695,88,656,62,632,51,634,46,659,58,698,83,732,110"/>
+<area shape="rect" id="Node000004" href="$class_input_handler.html#a6bfdca75a62ecb66e53773046130d703" title="Handles user input for loading a saved game." alt="" coords="472,72,656,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="689,121,617,102,619,97,691,116"/>
+<area shape="rect" id="Node000005" href="$class_input_handler.html#ac33247328d9737322f309d1354f09959" title="Handles user input for the start menu options." alt="" coords="235,97,419,124"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="690,135,419,119,420,113,690,129"/>
+<area shape="rect" id="Node000006" href="$class_input_handler.html#a9f5712e1415ec625843638d33df5d32e" title="Handles user input for race selection." alt="" coords="480,173,648,216"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="698,157,637,175,636,170,696,152"/>
+<area shape="rect" id="Node000009" href="$class_input_handler.html#a9b258d6e376ea74d3fa259827b1ab42b" title="Handles user input for displaying player stats." alt="" coords="470,240,657,267"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="738,163,703,198,659,230,632,242,630,237,656,226,700,194,734,159"/>
+<area shape="rect" id="Node000003" href="$class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="257,13,397,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="467,29,398,29,398,24,467,24"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="456,100,420,103,419,98,456,94"/>
+<area shape="rect" id="Node000007" href="$class_game_initializer.html#a2a4bc62db2b6ac3d7a9d1bdcd7433f8a" title="Creates a new player." alt="" coords="232,185,422,212"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="464,199,422,200,422,194,464,194"/>
+<area shape="rect" id="Node000008" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,187,182,213"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="216,202,183,202,183,197,216,197"/>
+<area shape="rect" id="Node000010" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="249,239,405,265"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="454,255,405,255,405,250,454,250"/>
+<area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="249,237,157,217,158,211,250,232"/>
+<area shape="rect" id="Node000011" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,239,184,265"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="233,255,184,255,184,249,233,249"/>
+</map>

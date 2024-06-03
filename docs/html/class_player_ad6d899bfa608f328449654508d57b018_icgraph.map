@@ -1,0 +1,5 @@
+<map id="AddItem" name="AddItem">
+<area shape="rect" id="Node000001" title="Adds an item to the player&#39;s inventory." alt="" coords="197,5,266,32"/>
+<area shape="rect" id="Node000002" href="$class_event.html#ae29a33485b2a77932276ccc460f909e5" title="Handles a treasure event." alt="" coords="5,5,149,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,21,149,21,149,16,181,16"/>
+</map>
