@@ -1,0 +1,11 @@
+digraph "GameLoader::DisplayHighScores"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="GameLoader::DisplayHighScores",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Displays the high scores."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="InputHandler::StartUserInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input_handler.html#a18453cd409e02fafed9a2da42d8b632c",tooltip="Handles user input for the start menu options."];
+}

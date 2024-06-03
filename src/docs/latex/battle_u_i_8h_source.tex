@@ -1,0 +1,35 @@
+\doxysection{battle\+UI.\+h}
+\hypertarget{battle_u_i_8h_source}{}\label{battle_u_i_8h_source}\index{UI/battleUI.h@{UI/battleUI.h}}
+\mbox{\hyperlink{battle_u_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{selection_u_i_8h}{selectionUI.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{monster_8h}{../Entities/monster.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{../Utils/constants.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ COORD\ BATTLE\_MENU\_SELECT\_COORDINATES\ =\ \{18,\ 1\};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ PLAYER\_HP\_OFFSET\ =\ 4;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ MONSTER\_HP\_OFFSET\ =\ 53;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_battle_u_i}{BattleUI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_selection_u_i}{SelectionUI}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_battle_u_i_a90cfe3ba6f62a137da0368b29bbb8732}{BattleUI}}(\mbox{\hyperlink{class_monster}{Monster}}*\ monster);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_u_i_a49414a8921654d2c423aef063fb1bb53}{RenderGraphics}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_u_i_a7f64fecd0128bcbf29ab533b0af2de84}{Render}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_battle_u_i_af90c38e3b548f3b05668166e60d3c5d8}{RenderHPBars}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_monster}{Monster}}*\ \mbox{\hyperlink{class_battle_u_i_a54b0653a8f3bb77a42839699d5856888}{getMonster}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_monster}{Monster}}*\ monster;\ }
+\DoxyCodeLine{00053\ \ \ \ \ std::vector<std::string>\ playerArt;\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::vector<std::string>\ dragonArt;\ }
+\DoxyCodeLine{00055\ \};}
+
+\end{DoxyCode}

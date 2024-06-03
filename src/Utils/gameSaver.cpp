@@ -97,8 +97,8 @@ void GameSaver::SaveMap(std::ofstream& writer, const Map& map) {
            << map.GetHeight() << " "
            << map.GetPlayerX() << " "
            << map.GetPlayerY() << " "
-           << map.renderer->GetChunkX() << " "
-           << map.renderer->GetChunkY() << " "
+           << map.GetRenderer()->GetChunkX() << " "
+           << map.GetRenderer()->GetChunkY() << " "
            << map.GetMonsterCount() << " "
            << map.GetTreasureCount() << " "
            << map.GetFloor() << std::endl;

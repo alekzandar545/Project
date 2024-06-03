@@ -2,6 +2,10 @@
 #include <string>
 #include <vector>
 
+/**
+ * @class Constants
+ * @brief A class that contains various constants used in the project.
+ */
 class Constants {
 public:
     // Chars

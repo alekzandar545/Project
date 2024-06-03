@@ -1,0 +1,256 @@
+\doxysection{Selection\+UI Class Reference}
+\hypertarget{class_selection_u_i}{}\label{class_selection_u_i}\index{SelectionUI@{SelectionUI}}
+
+
+Represents a user interface for selecting options.  
+
+
+
+
+{\ttfamily \#include $<$selection\+UI.\+h$>$}
+
+
+
+Inheritance diagram for Selection\+UI\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_selection_u_i_a54b55a17ae88e9ebbd2a3690bf2c42af}{Selection\+UI}} (COORD coords)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object with the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_selection_u_i_a2dd735dab2b583b9547c977c8cbbb33f}{Selection\+UI}} (const \mbox{\hyperlink{class_selection_u_i}{Selection\+UI}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object by copying another \doxylink{class_selection_u_i}{Selection\+UI} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_selection_u_i_a0f63d0cc1b0b6dde2df19ebbc8f3fcf5}{\texorpdfstring{$\sim$}{\string~}\+Selection\+UI}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_u_i_a340d528389975077f525f91296da7d3b}{Set\+Options}} (std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306}{options}})
+\begin{DoxyCompactList}\small\item\em Sets the options available for selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_u_i_a03fc51aea07e91f54cf3ac037895141e}{Add\+Option}} (std\+::string option)
+\begin{DoxyCompactList}\small\item\em Adds an option to the list of available options. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_selection_u_i_a35061fb0fc32a9afcc860933dcdacb5b}{Render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the selection UI on the console. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_selection_u_i_a5c06553a8bb32cd881fb54b054cfc8af}{Move\+Selection}} (bool direction)
+\begin{DoxyCompactList}\small\item\em Moves the selection up or down based on the specified direction. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_selection_u_i_a7e46fb4cb30cf470f0fa7e6c45fb1a85}{Get\+Selection\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Gets the index of the currently selected option. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_selection_u_i_a3c8dc39914656861fe792512d1a1baea}{Get\+Option}} (unsigned \mbox{\hyperlink{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9}{selection\+Index}}) const
+\begin{DoxyCompactList}\small\item\em Gets the option at the specified selection index. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_a2b3b3b90bea70a618a49f136cd6148b3}{Get\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Gets all the available options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{class_selection_u_i_a09335093ea4f3c185e1be5289a17461e}{CURR\+\_\+\+HANDLE}}
+\item 
+unsigned \mbox{\hyperlink{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9}{selection\+Index}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306}{options}}
+\item 
+COORD \mbox{\hyperlink{class_selection_u_i_acf70d44f47f8d5eef42ba496e8c4b17d}{CONSOLE\+\_\+\+COORDS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user interface for selecting options. 
+
+The \doxylink{class_selection_u_i}{Selection\+UI} class provides functionality for rendering a selection menu and managing user input for selecting options. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_selection_u_i_a54b55a17ae88e9ebbd2a3690bf2c42af}\index{SelectionUI@{SelectionUI}!SelectionUI@{SelectionUI}}
+\index{SelectionUI@{SelectionUI}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{SelectionUI()}{SelectionUI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a54b55a17ae88e9ebbd2a3690bf2c42af} 
+Selection\+UI\+::\+Selection\+UI (\begin{DoxyParamCaption}\item[{COORD}]{coords}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object with the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coords} & The coordinates of the selection UI on the console. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_selection_u_i_a2dd735dab2b583b9547c977c8cbbb33f}\index{SelectionUI@{SelectionUI}!SelectionUI@{SelectionUI}}
+\index{SelectionUI@{SelectionUI}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{SelectionUI()}{SelectionUI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a2dd735dab2b583b9547c977c8cbbb33f} 
+Selection\+UI\+::\+Selection\+UI (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_selection_u_i}{Selection\+UI}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object by copying another \doxylink{class_selection_u_i}{Selection\+UI} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_selection_u_i}{Selection\+UI} object to be copied. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_selection_u_i_a0f63d0cc1b0b6dde2df19ebbc8f3fcf5}\index{SelectionUI@{SelectionUI}!````~SelectionUI@{\texorpdfstring{$\sim$}{\string~}SelectionUI}}
+\index{````~SelectionUI@{\texorpdfstring{$\sim$}{\string~}SelectionUI}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SelectionUI()}{\string~SelectionUI()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a0f63d0cc1b0b6dde2df19ebbc8f3fcf5} 
+Selection\+UI\+::\texorpdfstring{$\sim$}{\string~}\+Selection\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_selection_u_i_a03fc51aea07e91f54cf3ac037895141e}\index{SelectionUI@{SelectionUI}!AddOption@{AddOption}}
+\index{AddOption@{AddOption}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{AddOption()}{AddOption()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a03fc51aea07e91f54cf3ac037895141e} 
+void Selection\+UI\+::\+Add\+Option (\begin{DoxyParamCaption}\item[{std\+::string}]{option}{}\end{DoxyParamCaption})}
+
+
+
+Adds an option to the list of available options. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The option to be added. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_selection_u_i_a3c8dc39914656861fe792512d1a1baea}\index{SelectionUI@{SelectionUI}!GetOption@{GetOption}}
+\index{GetOption@{GetOption}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{GetOption()}{GetOption()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a3c8dc39914656861fe792512d1a1baea} 
+std\+::string Selection\+UI\+::\+Get\+Option (\begin{DoxyParamCaption}\item[{unsigned}]{selection\+Index}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the option at the specified selection index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em selection\+Index} & The index of the option to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The option at the specified selection index. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_selection_u_i_a2b3b3b90bea70a618a49f136cd6148b3}\index{SelectionUI@{SelectionUI}!GetOptions@{GetOptions}}
+\index{GetOptions@{GetOptions}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{GetOptions()}{GetOptions()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a2b3b3b90bea70a618a49f136cd6148b3} 
+std\+::vector$<$ std\+::string $>$ Selection\+UI\+::\+Get\+Options (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets all the available options. 
+
+\begin{DoxyReturn}{Returns}
+A vector of strings representing all the available options. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_selection_u_i_a7e46fb4cb30cf470f0fa7e6c45fb1a85}\index{SelectionUI@{SelectionUI}!GetSelectionIndex@{GetSelectionIndex}}
+\index{GetSelectionIndex@{GetSelectionIndex}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{GetSelectionIndex()}{GetSelectionIndex()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a7e46fb4cb30cf470f0fa7e6c45fb1a85} 
+unsigned Selection\+UI\+::\+Get\+Selection\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the index of the currently selected option. 
+
+\begin{DoxyReturn}{Returns}
+The index of the currently selected option. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{class_selection_u_i_a5c06553a8bb32cd881fb54b054cfc8af}\index{SelectionUI@{SelectionUI}!MoveSelection@{MoveSelection}}
+\index{MoveSelection@{MoveSelection}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{MoveSelection()}{MoveSelection()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a5c06553a8bb32cd881fb54b054cfc8af} 
+void Selection\+UI\+::\+Move\+Selection (\begin{DoxyParamCaption}\item[{bool}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Moves the selection up or down based on the specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & If true, moves the selection down. If false, moves the selection up. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_inventory_u_i_af8fd4ff787e816b823732fc5dab0b414}{Inventory\+UI}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{class_selection_u_i_a35061fb0fc32a9afcc860933dcdacb5b}\index{SelectionUI@{SelectionUI}!Render@{Render}}
+\index{Render@{Render}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a35061fb0fc32a9afcc860933dcdacb5b} 
+void Selection\+UI\+::\+Render (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the selection UI on the console. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_battle_u_i_a7f64fecd0128bcbf29ab533b0af2de84}{Battle\+UI}}, \mbox{\hyperlink{class_inventory_u_i_abfa020b6e6fbf812f8128a14e3c26134}{Inventory\+UI}}, and \mbox{\hyperlink{class_stats_u_i_a9187af953a9cd0ba1ea799eecf1a3c5c}{Stats\+UI}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_selection_u_i_a340d528389975077f525f91296da7d3b}\index{SelectionUI@{SelectionUI}!SetOptions@{SetOptions}}
+\index{SetOptions@{SetOptions}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{SetOptions()}{SetOptions()}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a340d528389975077f525f91296da7d3b} 
+void Selection\+UI\+::\+Set\+Options (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{options}{}\end{DoxyParamCaption})}
+
+
+
+Sets the options available for selection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options} & A vector of strings representing the available options. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_selection_u_i_acf70d44f47f8d5eef42ba496e8c4b17d}\index{SelectionUI@{SelectionUI}!CONSOLE\_COORDS@{CONSOLE\_COORDS}}
+\index{CONSOLE\_COORDS@{CONSOLE\_COORDS}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{CONSOLE\_COORDS}{CONSOLE\_COORDS}}
+{\footnotesize\ttfamily \label{class_selection_u_i_acf70d44f47f8d5eef42ba496e8c4b17d} 
+COORD Selection\+UI\+::\+CONSOLE\+\_\+\+COORDS\hspace{0.3cm}{\ttfamily [protected]}}
+
+The coordinates of the selection UI on the console. \Hypertarget{class_selection_u_i_a09335093ea4f3c185e1be5289a17461e}\index{SelectionUI@{SelectionUI}!CURR\_HANDLE@{CURR\_HANDLE}}
+\index{CURR\_HANDLE@{CURR\_HANDLE}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{CURR\_HANDLE}{CURR\_HANDLE}}
+{\footnotesize\ttfamily \label{class_selection_u_i_a09335093ea4f3c185e1be5289a17461e} 
+HANDLE Selection\+UI\+::\+CURR\+\_\+\+HANDLE\hspace{0.3cm}{\ttfamily [protected]}}
+
+The handle to the console output buffer. \Hypertarget{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306}\index{SelectionUI@{SelectionUI}!options@{options}}
+\index{options@{options}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily \label{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306} 
+std\+::vector$<$std\+::string$>$ Selection\+UI\+::options\hspace{0.3cm}{\ttfamily [protected]}}
+
+The available options. \Hypertarget{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9}\index{SelectionUI@{SelectionUI}!selectionIndex@{selectionIndex}}
+\index{selectionIndex@{selectionIndex}!SelectionUI@{SelectionUI}}
+\doxysubsubsection{\texorpdfstring{selectionIndex}{selectionIndex}}
+{\footnotesize\ttfamily \label{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9} 
+unsigned Selection\+UI\+::selection\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+The index of the currently selected option. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UI/\mbox{\hyperlink{selection_u_i_8h}{selection\+UI.\+h}}\item 
+UI/\mbox{\hyperlink{selection_u_i_8cpp}{selection\+UI.\+cpp}}\end{DoxyCompactItemize}

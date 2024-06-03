@@ -1,0 +1,131 @@
+\doxysection{Start\+Menu\+UI Class Reference}
+\hypertarget{class_start_menu_u_i}{}\label{class_start_menu_u_i}\index{StartMenuUI@{StartMenuUI}}
+
+
+Represents the user interface for the start menu.  
+
+
+
+
+{\ttfamily \#include $<$start\+Menu\+UI.\+h$>$}
+
+
+
+Inheritance diagram for Start\+Menu\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Start\+Menu\+UI\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_start_menu_u_i_ac0c3b46dac321b466f9ffb1b426bee6a}{Start\+Menu\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_start_menu_u_i_ad058b2bdbac65b0964e2bb784041a18e}{Start\+Menu\+UI}} (const \mbox{\hyperlink{class_start_menu_u_i}{Start\+Menu\+UI}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_start_menu_u_i_a96b054082782904239ccd3c501d0c692}{\texorpdfstring{$\sim$}{\string~}\+Start\+Menu\+UI}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_start_menu_u_i_a8f9dec043708180b88dfa08138a5f817}{Render\+Art}} ()
+\begin{DoxyCompactList}\small\item\em Renders the art for the start menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_selection_u_i}{Selection\+UI}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_selection_u_i_a54b55a17ae88e9ebbd2a3690bf2c42af}{Selection\+UI}} (COORD coords)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object with the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_selection_u_i_a2dd735dab2b583b9547c977c8cbbb33f}{Selection\+UI}} (const \mbox{\hyperlink{class_selection_u_i}{Selection\+UI}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_selection_u_i}{Selection\+UI} object by copying another \doxylink{class_selection_u_i}{Selection\+UI} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_selection_u_i_a0f63d0cc1b0b6dde2df19ebbc8f3fcf5}{\texorpdfstring{$\sim$}{\string~}\+Selection\+UI}} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_u_i_a340d528389975077f525f91296da7d3b}{Set\+Options}} (std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306}{options}})
+\begin{DoxyCompactList}\small\item\em Sets the options available for selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_selection_u_i_a03fc51aea07e91f54cf3ac037895141e}{Add\+Option}} (std\+::string option)
+\begin{DoxyCompactList}\small\item\em Adds an option to the list of available options. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_selection_u_i_a35061fb0fc32a9afcc860933dcdacb5b}{Render}} () const
+\begin{DoxyCompactList}\small\item\em Renders the selection UI on the console. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_selection_u_i_a5c06553a8bb32cd881fb54b054cfc8af}{Move\+Selection}} (bool direction)
+\begin{DoxyCompactList}\small\item\em Moves the selection up or down based on the specified direction. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_selection_u_i_a7e46fb4cb30cf470f0fa7e6c45fb1a85}{Get\+Selection\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Gets the index of the currently selected option. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_selection_u_i_a3c8dc39914656861fe792512d1a1baea}{Get\+Option}} (unsigned \mbox{\hyperlink{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9}{selection\+Index}}) const
+\begin{DoxyCompactList}\small\item\em Gets the option at the specified selection index. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_a2b3b3b90bea70a618a49f136cd6148b3}{Get\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Gets all the available options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_selection_u_i}{Selection\+UI}}}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{class_selection_u_i_a09335093ea4f3c185e1be5289a17461e}{CURR\+\_\+\+HANDLE}}
+\item 
+unsigned \mbox{\hyperlink{class_selection_u_i_abe951368696ee30f9bd0d9026e2589e9}{selection\+Index}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_selection_u_i_ac610293cf2bd0effdedef5668efc1306}{options}}
+\item 
+COORD \mbox{\hyperlink{class_selection_u_i_acf70d44f47f8d5eef42ba496e8c4b17d}{CONSOLE\+\_\+\+COORDS}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the user interface for the start menu. 
+
+The \doxylink{class_start_menu_u_i}{Start\+Menu\+UI} class is responsible for rendering the start menu and managing its functionality. It inherits from the \doxylink{class_selection_u_i}{Selection\+UI} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_start_menu_u_i_ac0c3b46dac321b466f9ffb1b426bee6a}\index{StartMenuUI@{StartMenuUI}!StartMenuUI@{StartMenuUI}}
+\index{StartMenuUI@{StartMenuUI}!StartMenuUI@{StartMenuUI}}
+\doxysubsubsection{\texorpdfstring{StartMenuUI()}{StartMenuUI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_start_menu_u_i_ac0c3b46dac321b466f9ffb1b426bee6a} 
+Start\+Menu\+UI\+::\+Start\+Menu\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. 
+
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{class_start_menu_u_i_ad058b2bdbac65b0964e2bb784041a18e}\index{StartMenuUI@{StartMenuUI}!StartMenuUI@{StartMenuUI}}
+\index{StartMenuUI@{StartMenuUI}!StartMenuUI@{StartMenuUI}}
+\doxysubsubsection{\texorpdfstring{StartMenuUI()}{StartMenuUI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_start_menu_u_i_ad058b2bdbac65b0964e2bb784041a18e} 
+Start\+Menu\+UI\+::\+Start\+Menu\+UI (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_start_menu_u_i}{Start\+Menu\+UI}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \doxylink{class_start_menu_u_i}{Start\+Menu\+UI} object to be copied. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_start_menu_u_i_a96b054082782904239ccd3c501d0c692}\index{StartMenuUI@{StartMenuUI}!````~StartMenuUI@{\texorpdfstring{$\sim$}{\string~}StartMenuUI}}
+\index{````~StartMenuUI@{\texorpdfstring{$\sim$}{\string~}StartMenuUI}!StartMenuUI@{StartMenuUI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StartMenuUI()}{\string~StartMenuUI()}}
+{\footnotesize\ttfamily \label{class_start_menu_u_i_a96b054082782904239ccd3c501d0c692} 
+Start\+Menu\+UI\+::\texorpdfstring{$\sim$}{\string~}\+Start\+Menu\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default destructor for \doxylink{class_start_menu_u_i}{Start\+Menu\+UI}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_start_menu_u_i_a8f9dec043708180b88dfa08138a5f817}\index{StartMenuUI@{StartMenuUI}!RenderArt@{RenderArt}}
+\index{RenderArt@{RenderArt}!StartMenuUI@{StartMenuUI}}
+\doxysubsubsection{\texorpdfstring{RenderArt()}{RenderArt()}}
+{\footnotesize\ttfamily \label{class_start_menu_u_i_a8f9dec043708180b88dfa08138a5f817} 
+void Start\+Menu\+UI\+::\+Render\+Art (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Renders the art for the start menu. 
+
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UI/\mbox{\hyperlink{start_menu_u_i_8h}{start\+Menu\+UI.\+h}}\item 
+UI/\mbox{\hyperlink{start_menu_u_i_8cpp}{start\+Menu\+UI.\+cpp}}\end{DoxyCompactItemize}

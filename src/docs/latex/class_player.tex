@@ -1,0 +1,815 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Represents a player entity in the game.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+% FIG 0
+
+
+Collaboration diagram for Player\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+Race}} \{ \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9ac1bb19b27818343c1926119b958741b5}{Human}}
+, \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9a41c71f8fbc23d3cd1fa6045d4ee0c391}{Berserk}}
+, \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9a39babca9e3d0ceda5051773a25fe2a4f}{Sorcerer}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the race of the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\item 
+\mbox{\hyperlink{class_player_a3faef33b66dbff8327e986867ba7418d}{Player}} (\mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+Race}} race, const std\+::string name)
+\item 
+\mbox{\hyperlink{class_player_a6b5a7a2ab70d34de65571880c2d5fc50}{Player}} (const std\+::string name, const unsigned \mbox{\hyperlink{class_entity_ad62def4ac9a6db4bd1ff8beb44f4e9bd}{str}}, const unsigned \mbox{\hyperlink{class_entity_a0b126fec0cb0c95c7fcb4c79cf994384}{mana}}, const unsigned \mbox{\hyperlink{class_entity_abb28c9340b2015acbb222cd8d898a949}{max\+HP}}, const int \mbox{\hyperlink{class_entity_a5bf8beafebce7ab62ddea70dbb8f3709}{HP}}, const unsigned \mbox{\hyperlink{class_entity_a1e7528f5c31682a423820b1f031a7065}{armor}}, const unsigned \mbox{\hyperlink{class_entity_a0f0ed0c1581be1a3efd485cb69e5b381}{dexterity}}, const unsigned stat\+Points, const unsigned level, const unsigned xp, const unsigned required\+Xp, const unsigned gold, const std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$ inventory, const \mbox{\hyperlink{class_item}{Item}} \&weapon, const \mbox{\hyperlink{class_item}{Item}} \&spell, const \mbox{\hyperlink{class_item}{Item}} \&armor\+Piece)
+\item 
+\mbox{\hyperlink{class_player_a4a8b7f689e924b15a9e6f9888983fb43}{Player}} (const \mbox{\hyperlink{class_player}{Player}} \&other)
+\item 
+\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+\mbox{\hyperlink{class_player}{Player}} \& \mbox{\hyperlink{class_player_a36425d47a907d6fbf6d5b7b58bec5e77}{operator=}} (const \mbox{\hyperlink{class_player}{Player}} \&other)
+\item 
+void \mbox{\hyperlink{class_player_aae180f7a4a011ba1fd485e3d8728f489}{Level\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s level and updates their attributes accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a995383a151ab0d0e2bca471928312a2f}{Add\+XP}} (unsigned xp)
+\begin{DoxyCompactList}\small\item\em Adds experience points to the player\textquotesingle{}s current XP. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a2b6ed44fd893374bf508ddb7320ccc2f}{Melee\+Attack}} (\mbox{\hyperlink{class_monster}{Monster}} \&monster) const
+\begin{DoxyCompactList}\small\item\em Performs a melee attack on a monster. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a9459f74155714db111234c8961606f99}{Spell\+Attack}} (\mbox{\hyperlink{class_monster}{Monster}} \&monster) const
+\begin{DoxyCompactList}\small\item\em Performs a spell attack on a monster. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ae31dd4cf4062d3df3901203bc08f0a7d}{Equip\+Item}} (const unsigned index)
+\begin{DoxyCompactList}\small\item\em Equips an item from the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a235f0ef8c9602c52de476d4eebdcead6}{Add\+Item}} (const \mbox{\hyperlink{class_item}{Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a573ef4cafc8aa5141ec36a716fe47965}{Sell\+Item}} (const unsigned index)
+\begin{DoxyCompactList}\small\item\em Sells an item from the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a42e33c2d9598bc8375f85098c92f0150}{Add\+Gold}} (const unsigned gold)
+\begin{DoxyCompactList}\small\item\em Adds gold to the player\textquotesingle{}s current amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a7e3220fba35c144b42251ea2c8be5721}{Add\+Strength}} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s strength attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa12dfb090663d983f0bb7a4e8a422269}{Add\+Mana}} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s mana attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a849e9d1e7b54ad1c982e90a0180e2319}{Add\+HP}} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s maximum HP attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_af50d3e5c8f4fdcd70ce22a659d26ea47}{Add\+Dexterity}} ()
+\begin{DoxyCompactList}\small\item\em Increases the player\textquotesingle{}s dexterity attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_afc3a3a12fb09c751854056455d77c2a4}{Add\+Potion}} ()
+\begin{DoxyCompactList}\small\item\em Adds a potion to the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a5add429ea9d0513d752afb843bf190a0}{Use\+Potion}} ()
+\begin{DoxyCompactList}\small\item\em Uses a potion from the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa92efed6dcbcd9b7f730a5dcd68fe5b0}{Use\+Potion}} (unsigned index)
+\begin{DoxyCompactList}\small\item\em Uses a potion from the player\textquotesingle{}s inventory at a specific index. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_affddef50f994746a860e2366e412917f}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the player. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_a444dfb7602d387020e5db9dbd82adf78}{Get\+Stat\+Points}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of stat points the player has. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_a660cd57549ab90f1ad50ef9b647bb090}{Get\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s current level. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_a68873bb0e60bda5b38854004bf4d95b9}{Get\+XP}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s current XP. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_a70501de11e963ceb9d23f0147cdf31cc}{Get\+Required\+XP}} () const
+\begin{DoxyCompactList}\small\item\em Gets the required XP for the player to level up. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_ae8998911055deca652b0e53e787c6669}{Get\+Gold}} () const
+\begin{DoxyCompactList}\small\item\em Gets the amount of gold the player has. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_ada96dcfe46cb2f1866c07e0ec15c4d37}{Get\+Inventory\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$ \mbox{\hyperlink{class_player_a6f3e987f40925dc9b8d13959891c218b}{Get\+Inventory}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_item}{Item}} \mbox{\hyperlink{class_player_a11cb0f91cfe9333c23f6996722bcec73}{Get\+Weapon}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s equipped weapon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_item}{Item}} \mbox{\hyperlink{class_player_ac6abc32ef6bce0c9e7c7149a6da2c852}{Get\+Spell}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s equipped spell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_item}{Item}} \mbox{\hyperlink{class_player_a375ae3f158b8768cd220e53a9fe6212a}{Get\+Armor\+Piece}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s equipped armor piece. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_player_ac29cbeb9feafc33d0a4ad672b68fa61c}{Get\+Inventory\+Capacity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the capacity of the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a176f5cc6300f406ef5e876ee2e20c0ad}{Set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ab86a4990b1b97e4832d1c966860e6b94}{Set\+Stat\+Points}} (const unsigned stat\+Points)
+\begin{DoxyCompactList}\small\item\em Sets the number of stat points the player has. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ae84da3ef437ef144e6d1ae1900113418}{Set\+Level}} (const unsigned level)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s current level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ad738545666b1547513d9f0ff86b9c8a2}{Set\+XP}} (const unsigned xp)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s current XP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a1cd34c612b8b8efd073dd9584b71c2e0}{Set\+Required\+XP}} (const unsigned required\+Xp)
+\begin{DoxyCompactList}\small\item\em Sets the required XP for the player to level up. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a01f1dcef4c1d1428a5472dcaf2a2f171}{Set\+Gold}} (const unsigned gold)
+\begin{DoxyCompactList}\small\item\em Sets the amount of gold the player has. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a19dbe2814685fb0b0997161470409813}{Set\+Inventory}} (const std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$ \&inventory)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_accb094d4d7da373a84130c8bfcdf8c88}{Set\+Weapon}} (const \mbox{\hyperlink{class_item}{Item}} \&weapon)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s equipped weapon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_acf723aa93413518b7150df51f7f5ef6b}{Set\+Spell}} (const \mbox{\hyperlink{class_item}{Item}} \&spell)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s equipped spell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a817038a654cc73436dcda4664cb2e5e6}{Set\+Armor\+Piece}} (const \mbox{\hyperlink{class_item}{Item}} \&armor\+Piece)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s equipped armor piece. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_entity}{Entity}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_entity_a2bdaf34c9b05d6c1a599645e32a1898d}{Take\+Hit}} (const unsigned dmg)
+\begin{DoxyCompactList}\small\item\em Takes a hit with the specified damage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a203760a5a6e092e53fd6028571acf8e3}{Heal}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Heals the entity by the specified value. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_ae8d382c156fbc9d7aeb746f47373b655}{Get\+Strength}} () const
+\begin{DoxyCompactList}\small\item\em Gets the strength attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_a97778852dc4b0b437f51e6a8384d6ee9}{Get\+Mana}} () const
+\begin{DoxyCompactList}\small\item\em Gets the mana attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_a744ee8b7de25a13cf950d29ff5099484}{Get\+Max\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum health points attribute of the entity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_entity_a6e859081bc51ff1aad43267aaeb61c57}{Get\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current health points attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_ac6589d64fdd4da658fd1bc9102caa359}{Get\+Armor}} () const
+\begin{DoxyCompactList}\small\item\em Gets the armor attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_aa486631fec98d5ce6e167c291fe0cc9c}{Get\+Dexterity}} () const
+\begin{DoxyCompactList}\small\item\em Gets the dexterity attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_ae46dbd3d5ec8137b7367f71ea17321bc}{Set\+Strength}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Sets the strength attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_af279bd6ca967d5bd1d1ef22e568525d9}{Set\+Mana}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Sets the mana attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_ac55e3782cd38e9204900843b1b66f295}{Set\+Max\+HP}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Sets the maximum health points attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a35b9be8c46e8e98c6be6d620dac4021c}{Set\+HP}} (const int value)
+\begin{DoxyCompactList}\small\item\em Sets the current health points attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a68cd44f74746aa2c437ca841d02add5b}{Set\+Armor}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Sets the armor attribute of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_ae0fc9abb7112b56644537ea6b5b59e82}{Set\+Dexterity}} (const unsigned value)
+\begin{DoxyCompactList}\small\item\em Sets the dexterity attribute of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{class_entity_ad62def4ac9a6db4bd1ff8beb44f4e9bd}{str}}
+\begin{DoxyCompactList}\small\item\em The strength attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_a0b126fec0cb0c95c7fcb4c79cf994384}{mana}}
+\begin{DoxyCompactList}\small\item\em The mana attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_abb28c9340b2015acbb222cd8d898a949}{max\+HP}}
+\begin{DoxyCompactList}\small\item\em The maximum health points attribute of the entity. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_entity_a5bf8beafebce7ab62ddea70dbb8f3709}{HP}}
+\begin{DoxyCompactList}\small\item\em The current health points attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_a1e7528f5c31682a423820b1f031a7065}{armor}}
+\begin{DoxyCompactList}\small\item\em The armor attribute of the entity. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_entity_a0f0ed0c1581be1a3efd485cb69e5b381}{dexterity}}
+\begin{DoxyCompactList}\small\item\em The dexterity attribute of the entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a player entity in the game. 
+
+The \doxylink{class_player}{Player} class inherits from the \doxylink{class_entity}{Entity} class and provides functionality for managing a player\textquotesingle{}s attributes, inventory, and combat actions. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_player_a5a599f0b151a5ad772b8c805817e54e9}\index{Player@{Player}!PlayerRace@{PlayerRace}}
+\index{PlayerRace@{PlayerRace}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{PlayerRace}{PlayerRace}}
+{\footnotesize\ttfamily \label{class_player_a5a599f0b151a5ad772b8c805817e54e9} 
+enum class \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+::\+Player\+Race}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents the race of the player. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Human@{Human}!Player@{Player}}\index{Player@{Player}!Human@{Human}}}\Hypertarget{class_player_a5a599f0b151a5ad772b8c805817e54e9ac1bb19b27818343c1926119b958741b5}\label{class_player_a5a599f0b151a5ad772b8c805817e54e9} 
+Human&Human race \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Berserk@{Berserk}!Player@{Player}}\index{Player@{Player}!Berserk@{Berserk}}}\Hypertarget{class_player_a5a599f0b151a5ad772b8c805817e54e9a41c71f8fbc23d3cd1fa6045d4ee0c391}\label{class_player_a5a599f0b151a5ad772b8c805817e54e9} 
+Berserk&Berserk race \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sorcerer@{Sorcerer}!Player@{Player}}\index{Player@{Player}!Sorcerer@{Sorcerer}}}\Hypertarget{class_player_a5a599f0b151a5ad772b8c805817e54e9a39babca9e3d0ceda5051773a25fe2a4f}\label{class_player_a5a599f0b151a5ad772b8c805817e54e9} 
+Sorcerer&Sorcerer race \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8} 
+Player\+::\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Default constructor \Hypertarget{class_player_a3faef33b66dbff8327e986867ba7418d}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_player_a3faef33b66dbff8327e986867ba7418d} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+Race}}}]{race}{, }\item[{const std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+Constructor with race and name parameters \Hypertarget{class_player_a6b5a7a2ab70d34de65571880c2d5fc50}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_player_a6b5a7a2ab70d34de65571880c2d5fc50} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{const std\+::string}]{name}{, }\item[{const unsigned}]{str}{, }\item[{const unsigned}]{mana}{, }\item[{const unsigned}]{max\+HP}{, }\item[{const int}]{HP}{, }\item[{const unsigned}]{armor}{, }\item[{const unsigned}]{dexterity}{, }\item[{const unsigned}]{stat\+Points}{, }\item[{const unsigned}]{level}{, }\item[{const unsigned}]{xp}{, }\item[{const unsigned}]{required\+Xp}{, }\item[{const unsigned}]{gold}{, }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$}]{inventory}{, }\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{weapon}{, }\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{spell}{, }\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{armor\+Piece}{}\end{DoxyParamCaption})}
+
+Constructor with all parameters \Hypertarget{class_player_a4a8b7f689e924b15a9e6f9888983fb43}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_player_a4a8b7f689e924b15a9e6f9888983fb43} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}} \&}]{other}{}\end{DoxyParamCaption})}
+
+Copy constructor \Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\index{Player@{Player}!````~Player@{\texorpdfstring{$\sim$}{\string~}Player}}
+\index{````~Player@{\texorpdfstring{$\sim$}{\string~}Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Player()}{\string~Player()}}
+{\footnotesize\ttfamily \label{class_player_a749d2c00e1fe0f5c2746f7505a58c062} 
+Player\+::\texorpdfstring{$\sim$}{\string~}\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_af50d3e5c8f4fdcd70ce22a659d26ea47}\index{Player@{Player}!AddDexterity@{AddDexterity}}
+\index{AddDexterity@{AddDexterity}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddDexterity()}{AddDexterity()}}
+{\footnotesize\ttfamily \label{class_player_af50d3e5c8f4fdcd70ce22a659d26ea47} 
+void Player\+::\+Add\+Dexterity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the player\textquotesingle{}s dexterity attribute. 
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{class_player_a42e33c2d9598bc8375f85098c92f0150}\index{Player@{Player}!AddGold@{AddGold}}
+\index{AddGold@{AddGold}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddGold()}{AddGold()}}
+{\footnotesize\ttfamily \label{class_player_a42e33c2d9598bc8375f85098c92f0150} 
+void Player\+::\+Add\+Gold (\begin{DoxyParamCaption}\item[{const unsigned}]{gold}{}\end{DoxyParamCaption})}
+
+
+
+Adds gold to the player\textquotesingle{}s current amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gold} & The amount of gold to add. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_player_a849e9d1e7b54ad1c982e90a0180e2319}\index{Player@{Player}!AddHP@{AddHP}}
+\index{AddHP@{AddHP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddHP()}{AddHP()}}
+{\footnotesize\ttfamily \label{class_player_a849e9d1e7b54ad1c982e90a0180e2319} 
+void Player\+::\+Add\+HP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the player\textquotesingle{}s maximum HP attribute. 
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{class_player_a235f0ef8c9602c52de476d4eebdcead6}\index{Player@{Player}!AddItem@{AddItem}}
+\index{AddItem@{AddItem}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddItem()}{AddItem()}}
+{\footnotesize\ttfamily \label{class_player_a235f0ef8c9602c52de476d4eebdcead6} 
+bool Player\+::\+Add\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Adds an item to the player\textquotesingle{}s inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The item to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item was successfully added, false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{class_player_aa12dfb090663d983f0bb7a4e8a422269}\index{Player@{Player}!AddMana@{AddMana}}
+\index{AddMana@{AddMana}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddMana()}{AddMana()}}
+{\footnotesize\ttfamily \label{class_player_aa12dfb090663d983f0bb7a4e8a422269} 
+void Player\+::\+Add\+Mana (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the player\textquotesingle{}s mana attribute. 
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{class_player_afc3a3a12fb09c751854056455d77c2a4}\index{Player@{Player}!AddPotion@{AddPotion}}
+\index{AddPotion@{AddPotion}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddPotion()}{AddPotion()}}
+{\footnotesize\ttfamily \label{class_player_afc3a3a12fb09c751854056455d77c2a4} 
+void Player\+::\+Add\+Potion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Adds a potion to the player\textquotesingle{}s inventory. 
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_player_a7e3220fba35c144b42251ea2c8be5721}\index{Player@{Player}!AddStrength@{AddStrength}}
+\index{AddStrength@{AddStrength}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddStrength()}{AddStrength()}}
+{\footnotesize\ttfamily \label{class_player_a7e3220fba35c144b42251ea2c8be5721} 
+void Player\+::\+Add\+Strength (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the player\textquotesingle{}s strength attribute. 
+
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{class_player_a995383a151ab0d0e2bca471928312a2f}\index{Player@{Player}!AddXP@{AddXP}}
+\index{AddXP@{AddXP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddXP()}{AddXP()}}
+{\footnotesize\ttfamily \label{class_player_a995383a151ab0d0e2bca471928312a2f} 
+void Player\+::\+Add\+XP (\begin{DoxyParamCaption}\item[{unsigned}]{xp}{}\end{DoxyParamCaption})}
+
+
+
+Adds experience points to the player\textquotesingle{}s current XP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xp} & The amount of experience points to add. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_player_ae31dd4cf4062d3df3901203bc08f0a7d}\index{Player@{Player}!EquipItem@{EquipItem}}
+\index{EquipItem@{EquipItem}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{EquipItem()}{EquipItem()}}
+{\footnotesize\ttfamily \label{class_player_ae31dd4cf4062d3df3901203bc08f0a7d} 
+void Player\+::\+Equip\+Item (\begin{DoxyParamCaption}\item[{const unsigned}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Equips an item from the player\textquotesingle{}s inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the item to equip. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{class_player_a375ae3f158b8768cd220e53a9fe6212a}\index{Player@{Player}!GetArmorPiece@{GetArmorPiece}}
+\index{GetArmorPiece@{GetArmorPiece}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetArmorPiece()}{GetArmorPiece()}}
+{\footnotesize\ttfamily \label{class_player_a375ae3f158b8768cd220e53a9fe6212a} 
+\mbox{\hyperlink{class_item}{Item}} Player\+::\+Get\+Armor\+Piece (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s equipped armor piece. 
+
+\begin{DoxyReturn}{Returns}
+The armor piece item. 
+\end{DoxyReturn}
+\Hypertarget{class_player_ae8998911055deca652b0e53e787c6669}\index{Player@{Player}!GetGold@{GetGold}}
+\index{GetGold@{GetGold}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetGold()}{GetGold()}}
+{\footnotesize\ttfamily \label{class_player_ae8998911055deca652b0e53e787c6669} 
+unsigned Player\+::\+Get\+Gold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the amount of gold the player has. 
+
+\begin{DoxyReturn}{Returns}
+The amount of gold. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{class_player_a6f3e987f40925dc9b8d13959891c218b}\index{Player@{Player}!GetInventory@{GetInventory}}
+\index{GetInventory@{GetInventory}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetInventory()}{GetInventory()}}
+{\footnotesize\ttfamily \label{class_player_a6f3e987f40925dc9b8d13959891c218b} 
+std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$ Player\+::\+Get\+Inventory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s inventory. 
+
+\begin{DoxyReturn}{Returns}
+The inventory vector. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 14
+\Hypertarget{class_player_ac29cbeb9feafc33d0a4ad672b68fa61c}\index{Player@{Player}!GetInventoryCapacity@{GetInventoryCapacity}}
+\index{GetInventoryCapacity@{GetInventoryCapacity}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetInventoryCapacity()}{GetInventoryCapacity()}}
+{\footnotesize\ttfamily \label{class_player_ac29cbeb9feafc33d0a4ad672b68fa61c} 
+unsigned Player\+::\+Get\+Inventory\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the capacity of the player\textquotesingle{}s inventory. 
+
+\begin{DoxyReturn}{Returns}
+The inventory capacity. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{class_player_ada96dcfe46cb2f1866c07e0ec15c4d37}\index{Player@{Player}!GetInventorySize@{GetInventorySize}}
+\index{GetInventorySize@{GetInventorySize}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetInventorySize()}{GetInventorySize()}}
+{\footnotesize\ttfamily \label{class_player_ada96dcfe46cb2f1866c07e0ec15c4d37} 
+unsigned Player\+::\+Get\+Inventory\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the size of the player\textquotesingle{}s inventory. 
+
+\begin{DoxyReturn}{Returns}
+The inventory size. 
+\end{DoxyReturn}
+\Hypertarget{class_player_a660cd57549ab90f1ad50ef9b647bb090}\index{Player@{Player}!GetLevel@{GetLevel}}
+\index{GetLevel@{GetLevel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetLevel()}{GetLevel()}}
+{\footnotesize\ttfamily \label{class_player_a660cd57549ab90f1ad50ef9b647bb090} 
+unsigned Player\+::\+Get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s current level. 
+
+\begin{DoxyReturn}{Returns}
+The player\textquotesingle{}s level. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{class_player_affddef50f994746a860e2366e412917f}\index{Player@{Player}!GetName@{GetName}}
+\index{GetName@{GetName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_player_affddef50f994746a860e2366e412917f} 
+std\+::string Player\+::\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the player. 
+
+\begin{DoxyReturn}{Returns}
+The player\textquotesingle{}s name. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 17
+\Hypertarget{class_player_a70501de11e963ceb9d23f0147cdf31cc}\index{Player@{Player}!GetRequiredXP@{GetRequiredXP}}
+\index{GetRequiredXP@{GetRequiredXP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetRequiredXP()}{GetRequiredXP()}}
+{\footnotesize\ttfamily \label{class_player_a70501de11e963ceb9d23f0147cdf31cc} 
+unsigned Player\+::\+Get\+Required\+XP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the required XP for the player to level up. 
+
+\begin{DoxyReturn}{Returns}
+The required XP. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 18
+\Hypertarget{class_player_ac6abc32ef6bce0c9e7c7149a6da2c852}\index{Player@{Player}!GetSpell@{GetSpell}}
+\index{GetSpell@{GetSpell}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetSpell()}{GetSpell()}}
+{\footnotesize\ttfamily \label{class_player_ac6abc32ef6bce0c9e7c7149a6da2c852} 
+\mbox{\hyperlink{class_item}{Item}} Player\+::\+Get\+Spell (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s equipped spell. 
+
+\begin{DoxyReturn}{Returns}
+The spell item. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 19
+\Hypertarget{class_player_a444dfb7602d387020e5db9dbd82adf78}\index{Player@{Player}!GetStatPoints@{GetStatPoints}}
+\index{GetStatPoints@{GetStatPoints}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetStatPoints()}{GetStatPoints()}}
+{\footnotesize\ttfamily \label{class_player_a444dfb7602d387020e5db9dbd82adf78} 
+unsigned Player\+::\+Get\+Stat\+Points (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of stat points the player has. 
+
+\begin{DoxyReturn}{Returns}
+The number of stat points. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 20
+\Hypertarget{class_player_a11cb0f91cfe9333c23f6996722bcec73}\index{Player@{Player}!GetWeapon@{GetWeapon}}
+\index{GetWeapon@{GetWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetWeapon()}{GetWeapon()}}
+{\footnotesize\ttfamily \label{class_player_a11cb0f91cfe9333c23f6996722bcec73} 
+\mbox{\hyperlink{class_item}{Item}} Player\+::\+Get\+Weapon (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s equipped weapon. 
+
+\begin{DoxyReturn}{Returns}
+The weapon item. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 21
+\Hypertarget{class_player_a68873bb0e60bda5b38854004bf4d95b9}\index{Player@{Player}!GetXP@{GetXP}}
+\index{GetXP@{GetXP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetXP()}{GetXP()}}
+{\footnotesize\ttfamily \label{class_player_a68873bb0e60bda5b38854004bf4d95b9} 
+unsigned Player\+::\+Get\+XP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s current XP. 
+
+\begin{DoxyReturn}{Returns}
+The player\textquotesingle{}s XP. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 22
+\Hypertarget{class_player_aae180f7a4a011ba1fd485e3d8728f489}\index{Player@{Player}!LevelUp@{LevelUp}}
+\index{LevelUp@{LevelUp}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{LevelUp()}{LevelUp()}}
+{\footnotesize\ttfamily \label{class_player_aae180f7a4a011ba1fd485e3d8728f489} 
+void Player\+::\+Level\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the player\textquotesingle{}s level and updates their attributes accordingly. 
+
+Here is the caller graph for this function\+:
+% FIG 23
+\Hypertarget{class_player_a2b6ed44fd893374bf508ddb7320ccc2f}\index{Player@{Player}!MeleeAttack@{MeleeAttack}}
+\index{MeleeAttack@{MeleeAttack}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{MeleeAttack()}{MeleeAttack()}}
+{\footnotesize\ttfamily \label{class_player_a2b6ed44fd893374bf508ddb7320ccc2f} 
+bool Player\+::\+Melee\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monster}{Monster}} \&}]{monster}{}\end{DoxyParamCaption}) const}
+
+
+
+Performs a melee attack on a monster. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monster} & The monster to attack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the attack is successful, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 24
+Here is the caller graph for this function\+:
+% FIG 25
+\Hypertarget{class_player_a36425d47a907d6fbf6d5b7b58bec5e77}\index{Player@{Player}!operator=@{operator=}}
+\index{operator=@{operator=}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_player_a36425d47a907d6fbf6d5b7b58bec5e77} 
+\mbox{\hyperlink{class_player}{Player}} \& Player\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_player}{Player}} \&}]{other}{}\end{DoxyParamCaption})}
+
+Assignment operator \Hypertarget{class_player_a573ef4cafc8aa5141ec36a716fe47965}\index{Player@{Player}!SellItem@{SellItem}}
+\index{SellItem@{SellItem}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SellItem()}{SellItem()}}
+{\footnotesize\ttfamily \label{class_player_a573ef4cafc8aa5141ec36a716fe47965} 
+void Player\+::\+Sell\+Item (\begin{DoxyParamCaption}\item[{const unsigned}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Sells an item from the player\textquotesingle{}s inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the item to sell. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 26
+\Hypertarget{class_player_a817038a654cc73436dcda4664cb2e5e6}\index{Player@{Player}!SetArmorPiece@{SetArmorPiece}}
+\index{SetArmorPiece@{SetArmorPiece}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetArmorPiece()}{SetArmorPiece()}}
+{\footnotesize\ttfamily \label{class_player_a817038a654cc73436dcda4664cb2e5e6} 
+void Player\+::\+Set\+Armor\+Piece (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{armor\+Piece}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s equipped armor piece. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em armor\+Piece} & The armor piece item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a01f1dcef4c1d1428a5472dcaf2a2f171}\index{Player@{Player}!SetGold@{SetGold}}
+\index{SetGold@{SetGold}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetGold()}{SetGold()}}
+{\footnotesize\ttfamily \label{class_player_a01f1dcef4c1d1428a5472dcaf2a2f171} 
+void Player\+::\+Set\+Gold (\begin{DoxyParamCaption}\item[{const unsigned}]{gold}{}\end{DoxyParamCaption})}
+
+
+
+Sets the amount of gold the player has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gold} & The amount of gold. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a19dbe2814685fb0b0997161470409813}\index{Player@{Player}!SetInventory@{SetInventory}}
+\index{SetInventory@{SetInventory}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetInventory()}{SetInventory()}}
+{\footnotesize\ttfamily \label{class_player_a19dbe2814685fb0b0997161470409813} 
+void Player\+::\+Set\+Inventory (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $>$ \&}]{inventory}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inventory} & The inventory vector. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ae84da3ef437ef144e6d1ae1900113418}\index{Player@{Player}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetLevel()}{SetLevel()}}
+{\footnotesize\ttfamily \label{class_player_ae84da3ef437ef144e6d1ae1900113418} 
+void Player\+::\+Set\+Level (\begin{DoxyParamCaption}\item[{const unsigned}]{level}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s current level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The player\textquotesingle{}s level. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a176f5cc6300f406ef5e876ee2e20c0ad}\index{Player@{Player}!SetName@{SetName}}
+\index{SetName@{SetName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily \label{class_player_a176f5cc6300f406ef5e876ee2e20c0ad} 
+void Player\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The player\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 27
+\Hypertarget{class_player_a1cd34c612b8b8efd073dd9584b71c2e0}\index{Player@{Player}!SetRequiredXP@{SetRequiredXP}}
+\index{SetRequiredXP@{SetRequiredXP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetRequiredXP()}{SetRequiredXP()}}
+{\footnotesize\ttfamily \label{class_player_a1cd34c612b8b8efd073dd9584b71c2e0} 
+void Player\+::\+Set\+Required\+XP (\begin{DoxyParamCaption}\item[{const unsigned}]{required\+Xp}{}\end{DoxyParamCaption})}
+
+
+
+Sets the required XP for the player to level up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em required\+Xp} & The required XP. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_acf723aa93413518b7150df51f7f5ef6b}\index{Player@{Player}!SetSpell@{SetSpell}}
+\index{SetSpell@{SetSpell}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetSpell()}{SetSpell()}}
+{\footnotesize\ttfamily \label{class_player_acf723aa93413518b7150df51f7f5ef6b} 
+void Player\+::\+Set\+Spell (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{spell}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s equipped spell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spell} & The spell item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ab86a4990b1b97e4832d1c966860e6b94}\index{Player@{Player}!SetStatPoints@{SetStatPoints}}
+\index{SetStatPoints@{SetStatPoints}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetStatPoints()}{SetStatPoints()}}
+{\footnotesize\ttfamily \label{class_player_ab86a4990b1b97e4832d1c966860e6b94} 
+void Player\+::\+Set\+Stat\+Points (\begin{DoxyParamCaption}\item[{const unsigned}]{stat\+Points}{}\end{DoxyParamCaption})}
+
+
+
+Sets the number of stat points the player has. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stat\+Points} & The number of stat points. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_accb094d4d7da373a84130c8bfcdf8c88}\index{Player@{Player}!SetWeapon@{SetWeapon}}
+\index{SetWeapon@{SetWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetWeapon()}{SetWeapon()}}
+{\footnotesize\ttfamily \label{class_player_accb094d4d7da373a84130c8bfcdf8c88} 
+void Player\+::\+Set\+Weapon (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_item}{Item}} \&}]{weapon}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s equipped weapon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & The weapon item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ad738545666b1547513d9f0ff86b9c8a2}\index{Player@{Player}!SetXP@{SetXP}}
+\index{SetXP@{SetXP}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetXP()}{SetXP()}}
+{\footnotesize\ttfamily \label{class_player_ad738545666b1547513d9f0ff86b9c8a2} 
+void Player\+::\+Set\+XP (\begin{DoxyParamCaption}\item[{const unsigned}]{xp}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s current XP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xp} & The player\textquotesingle{}s XP. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a9459f74155714db111234c8961606f99}\index{Player@{Player}!SpellAttack@{SpellAttack}}
+\index{SpellAttack@{SpellAttack}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SpellAttack()}{SpellAttack()}}
+{\footnotesize\ttfamily \label{class_player_a9459f74155714db111234c8961606f99} 
+bool Player\+::\+Spell\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_monster}{Monster}} \&}]{monster}{}\end{DoxyParamCaption}) const}
+
+
+
+Performs a spell attack on a monster. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monster} & The monster to attack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the attack is successful, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 28
+Here is the caller graph for this function\+:
+% FIG 29
+\Hypertarget{class_player_a5add429ea9d0513d752afb843bf190a0}\index{Player@{Player}!UsePotion@{UsePotion}}
+\index{UsePotion@{UsePotion}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{UsePotion()}{UsePotion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_player_a5add429ea9d0513d752afb843bf190a0} 
+bool Player\+::\+Use\+Potion (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Uses a potion from the player\textquotesingle{}s inventory. 
+
+\begin{DoxyReturn}{Returns}
+True if a potion was successfully used, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 30
+Here is the caller graph for this function\+:
+% FIG 31
+\Hypertarget{class_player_aa92efed6dcbcd9b7f730a5dcd68fe5b0}\index{Player@{Player}!UsePotion@{UsePotion}}
+\index{UsePotion@{UsePotion}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{UsePotion()}{UsePotion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_player_aa92efed6dcbcd9b7f730a5dcd68fe5b0} 
+void Player\+::\+Use\+Potion (\begin{DoxyParamCaption}\item[{unsigned}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Uses a potion from the player\textquotesingle{}s inventory at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the potion to use. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 32
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Entities/\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+Entities/\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

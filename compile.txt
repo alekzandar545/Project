@@ -1,0 +1,5 @@
+while in Tests
+g++ test_mapGenerator.cpp ../src/Entities/*.cpp ../src/MapGenerator/*.cpp ../src/UI/*.cpp ../src/Events/*.cpp ../src/Utils/*.cpp ../src/Items/*.cpp -o test_mapGenerator
+
+While in src
+g++ *.cpp Entities/*.cpp MapGenerator/*.cpp UI/*.cpp Events/*.cpp Utils/*.cpp Items/*.cpp -o main.exe

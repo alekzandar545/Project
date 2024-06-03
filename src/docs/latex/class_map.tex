@@ -1,0 +1,758 @@
+\doxysection{Map Class Reference}
+\hypertarget{class_map}{}\label{class_map}\index{Map@{Map}}
+
+
+Represents the game map.  
+
+
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923}{Obstacle\+Density}} \{ \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923a0ab7684509554701a75d1c758f38c89b}{LABYRINTH}} = 1
+, \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923a3c796ed7396c9be9bb465a61839d425f}{HIGH\+\_\+\+DENSITY}} = 2
+, \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923ab651830ec40e685aa4803aa735636966}{MEDIUM\+\_\+\+DENSITY}} = 3
+, \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923ab8aacf279f3a047f2fd2752204b1479c}{LOW\+\_\+\+DENSITY}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the density of obstacles in the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_a0f5ad0fd4563497b4214038cbca8b582}{Map}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_ad4728122f1060f0fa451020e510065d7}{Map}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_map}{Map} with a given player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_a16b495b52685cd5a24cace225c0d2f1e}{Map}} (const unsigned width, const unsigned height, const unsigned monster\+Count, const unsigned treasure\+Count, const unsigned floor, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_map}{Map} with specified dimensions and elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_af271bbae18c885029cc77c124468583f}{Map}} (const unsigned width, const unsigned height, const unsigned PlayerX, const unsigned PlayerY, const unsigned monster\+Count, const unsigned treasure\+Count, const unsigned floor, std\+::vector$<$ std\+::vector$<$ char $>$ $>$ matrix, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_map}{Map} with specified dimensions, elements, and player position. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_af19b58ddac9be188873d8e24133dd95b}{Map}} (const \mbox{\hyperlink{class_map}{Map}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_af78dbcd720d4ff40a5d2ba610252003a}{Map}} (\mbox{\hyperlink{class_map}{Map}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map}{Map}} \& \mbox{\hyperlink{class_map_af1055bc2b92bf1e019807a84c6e3e448}{operator=}} (const \mbox{\hyperlink{class_map}{Map}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map}{Map}} \& \mbox{\hyperlink{class_map_a9e0acdff8f66cf51ed3c77b62bbe2f34}{operator=}} (\mbox{\hyperlink{class_map}{Map}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{\texorpdfstring{$\sim$}{\string~}\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a3dae0b4058576c659d42c2688bf991a5}{Initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aadd9f7f5f360583d93b6cbbca60a7f5c}{Create\+Path}} (const int i, const int j)
+\begin{DoxyCompactList}\small\item\em Creates a path starting from a given position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_map_aa6f4f5faa2dcf92b1f920107cf57eb1d}{count\+Visited\+Neighbor}} (const int i, const int j) const
+\begin{DoxyCompactList}\small\item\em Counts visited neighbors of a cell. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a3b3bdb86074b311997c27783d7f43ecf}{Generate\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Generates the game map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aec79e0d0f14f2d15d937306e50089ce8}{Create\+Treasure}} ()
+\begin{DoxyCompactList}\small\item\em Creates treasures in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aaf313c04001d8bc094fe2a54c068096f}{Create\+Monsters}} ()
+\begin{DoxyCompactList}\small\item\em Creates monsters in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a9a4ecd6d4f84c505eb668b4a522d41dd}{Create\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Places the player in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_abf356a8fb21c6bd51bda5bcd6d0bdfc6}{Create\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Creates an exit in the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aca8c6908e60633d6cbb50356adb244ed}{Render\+All}} () const
+\begin{DoxyCompactList}\small\item\em Renders all elements of the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a38f2e7bbe348cbb132c0379705e2f5cd}{Render\+Stats}} () const
+\begin{DoxyCompactList}\small\item\em Renders player stats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a6451c3ce5d5a5827df18ad3bfb253348}{Render\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Renders the entire map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a41829150a37d7032b1166f9fedde11ea}{Render\+Chunk}} () const
+\begin{DoxyCompactList}\small\item\em Renders a chunk of the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a359e10690ce031050cf524ab2e1d7154}{Render\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Renders the player\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a8a7299c58ad2b78e5e1591026bd6be2d}{Render\+Tile}} (char c) const
+\begin{DoxyCompactList}\small\item\em Renders a single tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a9fb43c95019f11e31ba85fc68da84fd8}{Move\+Player}} (const int x, const int y)
+\begin{DoxyCompactList}\small\item\em Moves the player to a new position. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a2ab07d6b6908864e712d45dcaa7d46e2}{Get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Gets the width of the map. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_adb36120126c3293fb599b3adec557cb7}{Get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Gets the height of the map. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a49dc082347549d3d231833290aa42ca4}{Get\+PlayerX}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s x-\/coordinate. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a91430916c30eefe2ec45c63f44ec816f}{Get\+PlayerY}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player\textquotesingle{}s y-\/coordinate. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a9d7c069f93d337d45e725a89e413a55b}{Get\+Floor}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current floor level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_map_a2a75f0965389cfb4dc80839ed02e4afc}{Get\+Player}} () const
+\begin{DoxyCompactList}\small\item\em Gets the player object. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ \mbox{\hyperlink{class_map_a180239ce061383bbb3056b91a44670e0}{Get\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Gets the map matrix. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a7cc819da610511099e02c21c4069fee3}{Get\+Monster\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of monsters in the map. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{class_map_a6eb875dfd285c0c13a6c792153e871a3}{Get\+Treasure\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of treasures in the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_renderer}{Renderer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_map_ae62f08d2512d48fe602700a437106bdc}{Get\+Renderer}} () const
+\begin{DoxyCompactList}\small\item\em Gets the renderer object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a44492c0e4e7d23dd01b393871bb196cd}{Set\+Player}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Sets the player object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_af1658a06137d58a0b293b1be8e637ca5}{Set\+Width}} (const unsigned width)
+\begin{DoxyCompactList}\small\item\em Sets the width of the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a82a97996ca23d425d8a4b57f61292598}{Set\+Height}} (const unsigned height)
+\begin{DoxyCompactList}\small\item\em Sets the height of the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a6cfd9cee453fabde295d8c9b25ad93a3}{Set\+PlayerX}} (const unsigned playerX)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s x-\/coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a26b9f6c93057243f3bb0f007722813a9}{Set\+PlayerY}} (const unsigned playerY)
+\begin{DoxyCompactList}\small\item\em Sets the player\textquotesingle{}s y-\/coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a20b8c527356823f8e4fb9d08549229c0}{Increase\+Floor}} ()
+\begin{DoxyCompactList}\small\item\em Increases the floor level by one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the game map. 
+
+The \doxylink{class_map}{Map} class handles the generation, rendering, and management of the game map, including the player\textquotesingle{}s position, obstacles, treasures, and monsters. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_map_af84c777f50c645b8b011b84252165923}\index{Map@{Map}!ObstacleDensity@{ObstacleDensity}}
+\index{ObstacleDensity@{ObstacleDensity}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{ObstacleDensity}{ObstacleDensity}}
+{\footnotesize\ttfamily \label{class_map_af84c777f50c645b8b011b84252165923} 
+enum \mbox{\hyperlink{class_map_af84c777f50c645b8b011b84252165923}{Map\+::\+Obstacle\+Density}}}
+
+
+
+Defines the density of obstacles in the map. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LABYRINTH@{LABYRINTH}!Map@{Map}}\index{Map@{Map}!LABYRINTH@{LABYRINTH}}}\Hypertarget{class_map_af84c777f50c645b8b011b84252165923a0ab7684509554701a75d1c758f38c89b}\label{class_map_af84c777f50c645b8b011b84252165923} 
+LABYRINTH&High density, labyrinth-\/like. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH\_DENSITY@{HIGH\_DENSITY}!Map@{Map}}\index{Map@{Map}!HIGH\_DENSITY@{HIGH\_DENSITY}}}\Hypertarget{class_map_af84c777f50c645b8b011b84252165923a3c796ed7396c9be9bb465a61839d425f}\label{class_map_af84c777f50c645b8b011b84252165923} 
+HIGH\+\_\+\+DENSITY&High obstacle density. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEDIUM\_DENSITY@{MEDIUM\_DENSITY}!Map@{Map}}\index{Map@{Map}!MEDIUM\_DENSITY@{MEDIUM\_DENSITY}}}\Hypertarget{class_map_af84c777f50c645b8b011b84252165923ab651830ec40e685aa4803aa735636966}\label{class_map_af84c777f50c645b8b011b84252165923} 
+MEDIUM\+\_\+\+DENSITY&Medium obstacle density. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW\_DENSITY@{LOW\_DENSITY}!Map@{Map}}\index{Map@{Map}!LOW\_DENSITY@{LOW\_DENSITY}}}\Hypertarget{class_map_af84c777f50c645b8b011b84252165923ab8aacf279f3a047f2fd2752204b1479c}\label{class_map_af84c777f50c645b8b011b84252165923} 
+LOW\+\_\+\+DENSITY&Low obstacle density. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \label{class_map_a0f5ad0fd4563497b4214038cbca8b582} 
+Map\+::\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_map}{Map}. 
+
+\Hypertarget{class_map_ad4728122f1060f0fa451020e510065d7}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \label{class_map_ad4728122f1060f0fa451020e510065d7} 
+Map\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_map}{Map} with a given player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_a16b495b52685cd5a24cace225c0d2f1e}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \label{class_map_a16b495b52685cd5a24cace225c0d2f1e} 
+Map\+::\+Map (\begin{DoxyParamCaption}\item[{const unsigned}]{width}{, }\item[{const unsigned}]{height}{, }\item[{const unsigned}]{monster\+Count}{, }\item[{const unsigned}]{treasure\+Count}{, }\item[{const unsigned}]{floor}{, }\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_map}{Map} with specified dimensions and elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the map. \\
+\hline
+{\em height} & Height of the map. \\
+\hline
+{\em monster\+Count} & Number of monsters in the map. \\
+\hline
+{\em treasure\+Count} & Number of treasures in the map. \\
+\hline
+{\em floor} & Current floor level. \\
+\hline
+{\em player} & Pointer to the player. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_af271bbae18c885029cc77c124468583f}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \label{class_map_af271bbae18c885029cc77c124468583f} 
+Map\+::\+Map (\begin{DoxyParamCaption}\item[{const unsigned}]{width}{, }\item[{const unsigned}]{height}{, }\item[{const unsigned}]{PlayerX}{, }\item[{const unsigned}]{PlayerY}{, }\item[{const unsigned}]{monster\+Count}{, }\item[{const unsigned}]{treasure\+Count}{, }\item[{const unsigned}]{floor}{, }\item[{std\+::vector$<$ std\+::vector$<$ char $>$ $>$}]{matrix}{, }\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_map}{Map} with specified dimensions, elements, and player position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the map. \\
+\hline
+{\em height} & Height of the map. \\
+\hline
+{\em PlayerX} & X-\/coordinate of the player. \\
+\hline
+{\em PlayerY} & Y-\/coordinate of the player. \\
+\hline
+{\em monster\+Count} & Number of monsters in the map. \\
+\hline
+{\em treasure\+Count} & Number of treasures in the map. \\
+\hline
+{\em floor} & Current floor level. \\
+\hline
+{\em matrix} & 2D matrix representing the map layout. \\
+\hline
+{\em player} & Pointer to the player. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_af19b58ddac9be188873d8e24133dd95b}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \label{class_map_af19b58ddac9be188873d8e24133dd95b} 
+Map\+::\+Map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_map}{Map}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy constructor for \doxylink{class_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_map}{Map} object to copy from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_af78dbcd720d4ff40a5d2ba610252003a}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \label{class_map_af78dbcd720d4ff40a5d2ba610252003a} 
+Map\+::\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}} \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move constructor for \doxylink{class_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_map}{Map} object to move from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\index{Map@{Map}!````~Map@{\texorpdfstring{$\sim$}{\string~}Map}}
+\index{````~Map@{\texorpdfstring{$\sim$}{\string~}Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Map()}{\string~Map()}}
+{\footnotesize\ttfamily \label{class_map_aa403fbe09394ccf39747588f5168e3b2} 
+Map\+::\texorpdfstring{$\sim$}{\string~}\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor for \doxylink{class_map}{Map}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_map_aa6f4f5faa2dcf92b1f920107cf57eb1d}\index{Map@{Map}!countVisitedNeighbor@{countVisitedNeighbor}}
+\index{countVisitedNeighbor@{countVisitedNeighbor}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{countVisitedNeighbor()}{countVisitedNeighbor()}}
+{\footnotesize\ttfamily \label{class_map_aa6f4f5faa2dcf92b1f920107cf57eb1d} 
+int Map\+::count\+Visited\+Neighbor (\begin{DoxyParamCaption}\item[{const int}]{i}{, }\item[{const int}]{j}{}\end{DoxyParamCaption}) const}
+
+
+
+Counts visited neighbors of a cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of visited neighbors. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 0
+\Hypertarget{class_map_abf356a8fb21c6bd51bda5bcd6d0bdfc6}\index{Map@{Map}!CreateExit@{CreateExit}}
+\index{CreateExit@{CreateExit}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreateExit()}{CreateExit()}}
+{\footnotesize\ttfamily \label{class_map_abf356a8fb21c6bd51bda5bcd6d0bdfc6} 
+void Map\+::\+Create\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates an exit in the map. 
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_map_aaf313c04001d8bc094fe2a54c068096f}\index{Map@{Map}!CreateMonsters@{CreateMonsters}}
+\index{CreateMonsters@{CreateMonsters}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreateMonsters()}{CreateMonsters()}}
+{\footnotesize\ttfamily \label{class_map_aaf313c04001d8bc094fe2a54c068096f} 
+void Map\+::\+Create\+Monsters (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates monsters in the map. 
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_map_aadd9f7f5f360583d93b6cbbca60a7f5c}\index{Map@{Map}!CreatePath@{CreatePath}}
+\index{CreatePath@{CreatePath}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreatePath()}{CreatePath()}}
+{\footnotesize\ttfamily \label{class_map_aadd9f7f5f360583d93b6cbbca60a7f5c} 
+void Map\+::\+Create\+Path (\begin{DoxyParamCaption}\item[{const int}]{i}{, }\item[{const int}]{j}{}\end{DoxyParamCaption})}
+
+
+
+Creates a path starting from a given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Row index. \\
+\hline
+{\em j} & Column index. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{class_map_a9a4ecd6d4f84c505eb668b4a522d41dd}\index{Map@{Map}!CreatePlayer@{CreatePlayer}}
+\index{CreatePlayer@{CreatePlayer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreatePlayer()}{CreatePlayer()}}
+{\footnotesize\ttfamily \label{class_map_a9a4ecd6d4f84c505eb668b4a522d41dd} 
+void Map\+::\+Create\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Places the player in the map. 
+
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{class_map_aec79e0d0f14f2d15d937306e50089ce8}\index{Map@{Map}!CreateTreasure@{CreateTreasure}}
+\index{CreateTreasure@{CreateTreasure}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreateTreasure()}{CreateTreasure()}}
+{\footnotesize\ttfamily \label{class_map_aec79e0d0f14f2d15d937306e50089ce8} 
+void Map\+::\+Create\+Treasure (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates treasures in the map. 
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{class_map_a3b3bdb86074b311997c27783d7f43ecf}\index{Map@{Map}!GenerateMap@{GenerateMap}}
+\index{GenerateMap@{GenerateMap}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GenerateMap()}{GenerateMap()}}
+{\footnotesize\ttfamily \label{class_map_a3b3bdb86074b311997c27783d7f43ecf} 
+void Map\+::\+Generate\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates the game map. 
+
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_map_a9d7c069f93d337d45e725a89e413a55b}\index{Map@{Map}!GetFloor@{GetFloor}}
+\index{GetFloor@{GetFloor}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetFloor()}{GetFloor()}}
+{\footnotesize\ttfamily \label{class_map_a9d7c069f93d337d45e725a89e413a55b} 
+unsigned Map\+::\+Get\+Floor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current floor level. 
+
+\begin{DoxyReturn}{Returns}
+Current floor level. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{class_map_adb36120126c3293fb599b3adec557cb7}\index{Map@{Map}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_map_adb36120126c3293fb599b3adec557cb7} 
+unsigned Map\+::\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the height of the map. 
+
+\begin{DoxyReturn}{Returns}
+Height of the map. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a180239ce061383bbb3056b91a44670e0}\index{Map@{Map}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetMatrix()}{GetMatrix()}}
+{\footnotesize\ttfamily \label{class_map_a180239ce061383bbb3056b91a44670e0} 
+std\+::vector$<$ std\+::vector$<$ char $>$ $>$ Map\+::\+Get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the map matrix. 
+
+\begin{DoxyReturn}{Returns}
+2D matrix representing the map layout. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a7cc819da610511099e02c21c4069fee3}\index{Map@{Map}!GetMonsterCount@{GetMonsterCount}}
+\index{GetMonsterCount@{GetMonsterCount}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetMonsterCount()}{GetMonsterCount()}}
+{\footnotesize\ttfamily \label{class_map_a7cc819da610511099e02c21c4069fee3} 
+unsigned Map\+::\+Get\+Monster\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of monsters in the map. 
+
+\begin{DoxyReturn}{Returns}
+Number of monsters in the map. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a2a75f0965389cfb4dc80839ed02e4afc}\index{Map@{Map}!GetPlayer@{GetPlayer}}
+\index{GetPlayer@{GetPlayer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetPlayer()}{GetPlayer()}}
+{\footnotesize\ttfamily \label{class_map_a2a75f0965389cfb4dc80839ed02e4afc} 
+\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*} Map\+::\+Get\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the player object. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{class_map_a49dc082347549d3d231833290aa42ca4}\index{Map@{Map}!GetPlayerX@{GetPlayerX}}
+\index{GetPlayerX@{GetPlayerX}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetPlayerX()}{GetPlayerX()}}
+{\footnotesize\ttfamily \label{class_map_a49dc082347549d3d231833290aa42ca4} 
+unsigned Map\+::\+Get\+PlayerX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s x-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_player}{Player}\textquotesingle{}s x-\/coordinate. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a91430916c30eefe2ec45c63f44ec816f}\index{Map@{Map}!GetPlayerY@{GetPlayerY}}
+\index{GetPlayerY@{GetPlayerY}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetPlayerY()}{GetPlayerY()}}
+{\footnotesize\ttfamily \label{class_map_a91430916c30eefe2ec45c63f44ec816f} 
+unsigned Map\+::\+Get\+PlayerY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the player\textquotesingle{}s y-\/coordinate. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_player}{Player}\textquotesingle{}s y-\/coordinate. 
+\end{DoxyReturn}
+\Hypertarget{class_map_ae62f08d2512d48fe602700a437106bdc}\index{Map@{Map}!GetRenderer@{GetRenderer}}
+\index{GetRenderer@{GetRenderer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetRenderer()}{GetRenderer()}}
+{\footnotesize\ttfamily \label{class_map_ae62f08d2512d48fe602700a437106bdc} 
+\mbox{\hyperlink{class_renderer}{Renderer}} \texorpdfstring{$\ast$}{*} Map\+::\+Get\+Renderer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the renderer object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the renderer object. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{class_map_a6eb875dfd285c0c13a6c792153e871a3}\index{Map@{Map}!GetTreasureCount@{GetTreasureCount}}
+\index{GetTreasureCount@{GetTreasureCount}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetTreasureCount()}{GetTreasureCount()}}
+{\footnotesize\ttfamily \label{class_map_a6eb875dfd285c0c13a6c792153e871a3} 
+unsigned Map\+::\+Get\+Treasure\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of treasures in the map. 
+
+\begin{DoxyReturn}{Returns}
+Number of treasures in the map. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a2ab07d6b6908864e712d45dcaa7d46e2}\index{Map@{Map}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily \label{class_map_a2ab07d6b6908864e712d45dcaa7d46e2} 
+unsigned Map\+::\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the width of the map. 
+
+\begin{DoxyReturn}{Returns}
+Width of the map. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a20b8c527356823f8e4fb9d08549229c0}\index{Map@{Map}!IncreaseFloor@{IncreaseFloor}}
+\index{IncreaseFloor@{IncreaseFloor}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{IncreaseFloor()}{IncreaseFloor()}}
+{\footnotesize\ttfamily \label{class_map_a20b8c527356823f8e4fb9d08549229c0} 
+void Map\+::\+Increase\+Floor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases the floor level by one. 
+
+\Hypertarget{class_map_a3dae0b4058576c659d42c2688bf991a5}\index{Map@{Map}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_map_a3dae0b4058576c659d42c2688bf991a5} 
+void Map\+::\+Initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the map. 
+
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{class_map_a9fb43c95019f11e31ba85fc68da84fd8}\index{Map@{Map}!MovePlayer@{MovePlayer}}
+\index{MovePlayer@{MovePlayer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}}
+{\footnotesize\ttfamily \label{class_map_a9fb43c95019f11e31ba85fc68da84fd8} 
+void Map\+::\+Move\+Player (\begin{DoxyParamCaption}\item[{const int}]{x}{, }\item[{const int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Moves the player to a new position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & New x-\/coordinate. \\
+\hline
+{\em y} & New y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{class_map_af1055bc2b92bf1e019807a84c6e3e448}\index{Map@{Map}!operator=@{operator=}}
+\index{operator=@{operator=}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_map_af1055bc2b92bf1e019807a84c6e3e448} 
+\mbox{\hyperlink{class_map}{Map}} \& Map\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_map}{Map}} \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator for \doxylink{class_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_map}{Map} object to assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned \doxylink{class_map}{Map} object. 
+\end{DoxyReturn}
+\Hypertarget{class_map_a9e0acdff8f66cf51ed3c77b62bbe2f34}\index{Map@{Map}!operator=@{operator=}}
+\index{operator=@{operator=}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_map_a9e0acdff8f66cf51ed3c77b62bbe2f34} 
+\mbox{\hyperlink{class_map}{Map}} \& Map\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}} \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move assignment operator for \doxylink{class_map}{Map}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Another \doxylink{class_map}{Map} object to move assign from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the assigned \doxylink{class_map}{Map} object. 
+\end{DoxyReturn}
+\Hypertarget{class_map_aca8c6908e60633d6cbb50356adb244ed}\index{Map@{Map}!RenderAll@{RenderAll}}
+\index{RenderAll@{RenderAll}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderAll()}{RenderAll()}}
+{\footnotesize\ttfamily \label{class_map_aca8c6908e60633d6cbb50356adb244ed} 
+void Map\+::\+Render\+All (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders all elements of the map. 
+
+Here is the call graph for this function\+:
+% FIG 17
+Here is the caller graph for this function\+:
+% FIG 18
+\Hypertarget{class_map_a41829150a37d7032b1166f9fedde11ea}\index{Map@{Map}!RenderChunk@{RenderChunk}}
+\index{RenderChunk@{RenderChunk}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderChunk()}{RenderChunk()}}
+{\footnotesize\ttfamily \label{class_map_a41829150a37d7032b1166f9fedde11ea} 
+void Map\+::\+Render\+Chunk (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders a chunk of the map. 
+
+Here is the call graph for this function\+:
+% FIG 19
+\Hypertarget{class_map_a6451c3ce5d5a5827df18ad3bfb253348}\index{Map@{Map}!RenderMap@{RenderMap}}
+\index{RenderMap@{RenderMap}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderMap()}{RenderMap()}}
+{\footnotesize\ttfamily \label{class_map_a6451c3ce5d5a5827df18ad3bfb253348} 
+void Map\+::\+Render\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders the entire map. 
+
+Here is the call graph for this function\+:
+% FIG 20
+\Hypertarget{class_map_a359e10690ce031050cf524ab2e1d7154}\index{Map@{Map}!RenderPosition@{RenderPosition}}
+\index{RenderPosition@{RenderPosition}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderPosition()}{RenderPosition()}}
+{\footnotesize\ttfamily \label{class_map_a359e10690ce031050cf524ab2e1d7154} 
+void Map\+::\+Render\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Renders the player\textquotesingle{}s position. 
+
+Here is the call graph for this function\+:
+% FIG 21
+Here is the caller graph for this function\+:
+% FIG 22
+\Hypertarget{class_map_a38f2e7bbe348cbb132c0379705e2f5cd}\index{Map@{Map}!RenderStats@{RenderStats}}
+\index{RenderStats@{RenderStats}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderStats()}{RenderStats()}}
+{\footnotesize\ttfamily \label{class_map_a38f2e7bbe348cbb132c0379705e2f5cd} 
+void Map\+::\+Render\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders player stats. 
+
+Here is the call graph for this function\+:
+% FIG 23
+Here is the caller graph for this function\+:
+% FIG 24
+\Hypertarget{class_map_a8a7299c58ad2b78e5e1591026bd6be2d}\index{Map@{Map}!RenderTile@{RenderTile}}
+\index{RenderTile@{RenderTile}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderTile()}{RenderTile()}}
+{\footnotesize\ttfamily \label{class_map_a8a7299c58ad2b78e5e1591026bd6be2d} 
+void Map\+::\+Render\+Tile (\begin{DoxyParamCaption}\item[{char}]{c}{}\end{DoxyParamCaption}) const}
+
+
+
+Renders a single tile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Character representing the tile. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 25
+\Hypertarget{class_map_a82a97996ca23d425d8a4b57f61292598}\index{Map@{Map}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily \label{class_map_a82a97996ca23d425d8a4b57f61292598} 
+void Map\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{const unsigned}]{height}{}\end{DoxyParamCaption})}
+
+
+
+Sets the height of the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & Height of the map. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_a44492c0e4e7d23dd01b393871bb196cd}\index{Map@{Map}!SetPlayer@{SetPlayer}}
+\index{SetPlayer@{SetPlayer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{SetPlayer()}{SetPlayer()}}
+{\footnotesize\ttfamily \label{class_map_a44492c0e4e7d23dd01b393871bb196cd} 
+void Map\+::\+Set\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_map_a6cfd9cee453fabde295d8c9b25ad93a3}\index{Map@{Map}!SetPlayerX@{SetPlayerX}}
+\index{SetPlayerX@{SetPlayerX}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{SetPlayerX()}{SetPlayerX()}}
+{\footnotesize\ttfamily \label{class_map_a6cfd9cee453fabde295d8c9b25ad93a3} 
+void Map\+::\+Set\+PlayerX (\begin{DoxyParamCaption}\item[{const unsigned}]{playerX}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s x-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playerX} & \doxylink{class_player}{Player}\textquotesingle{}s x-\/coordinate. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 26
+\Hypertarget{class_map_a26b9f6c93057243f3bb0f007722813a9}\index{Map@{Map}!SetPlayerY@{SetPlayerY}}
+\index{SetPlayerY@{SetPlayerY}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{SetPlayerY()}{SetPlayerY()}}
+{\footnotesize\ttfamily \label{class_map_a26b9f6c93057243f3bb0f007722813a9} 
+void Map\+::\+Set\+PlayerY (\begin{DoxyParamCaption}\item[{const unsigned}]{playerY}{}\end{DoxyParamCaption})}
+
+
+
+Sets the player\textquotesingle{}s y-\/coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playerY} & \doxylink{class_player}{Player}\textquotesingle{}s y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 27
+\Hypertarget{class_map_af1658a06137d58a0b293b1be8e637ca5}\index{Map@{Map}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{SetWidth()}{SetWidth()}}
+{\footnotesize\ttfamily \label{class_map_af1658a06137d58a0b293b1be8e637ca5} 
+void Map\+::\+Set\+Width (\begin{DoxyParamCaption}\item[{const unsigned}]{width}{}\end{DoxyParamCaption})}
+
+
+
+Sets the width of the map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the map. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Map\+Generator/\mbox{\hyperlink{map_8h}{map.\+h}}\item 
+Map\+Generator/\mbox{\hyperlink{map_8cpp}{map.\+cpp}}\end{DoxyCompactItemize}

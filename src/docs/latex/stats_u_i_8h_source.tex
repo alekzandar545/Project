@@ -1,0 +1,27 @@
+\doxysection{stats\+UI.\+h}
+\hypertarget{stats_u_i_8h_source}{}\label{stats_u_i_8h_source}\index{UI/statsUI.h@{UI/statsUI.h}}
+\mbox{\hyperlink{stats_u_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{selection_u_i_8h}{selectionUI.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <windows.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_stats_u_i}{StatsUI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_selection_u_i}{SelectionUI}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//constructors}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_stats_u_i_a8a6c8523b8a23571981006d27829564a}{StatsUI}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_stats_u_i_aecc02587c24902b8606ac4cab342078c}{StatsUI}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_stats_u_i}{StatsUI}}\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_stats_u_i_a178ae5e72f9c4f3adf85fdcfb51fe530}{\string~StatsUI}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//shouldn't\ delete\ pointer\ to\ player,\ because\ UI\ only\ displays\ it,\ dosnt\ really\ own\ it}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_stats_u_i_a9187af953a9cd0ba1ea799eecf1a3c5c}{Render}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ COORD\ STATS\_SELECT\_COORDINATES;}
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}

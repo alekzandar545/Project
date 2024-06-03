@@ -141,7 +141,7 @@ bool GameLoader::LoadMap(std::ifstream& reader, Map& map, Player* player) {
 
     map = Map(width, height, playerX, playerY, monsterCount,
               treasureCount, floor, matrix, player);
-    map.renderer->SetChunkX(chunkX);
-    map.renderer->SetChunkY(chunkY);
+    map.GetRenderer()->SetChunkX(chunkX);
+    map.GetRenderer()->SetChunkY(chunkY);
     return true;
 }

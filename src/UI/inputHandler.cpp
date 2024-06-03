@@ -5,8 +5,6 @@
 #include "../Utils/gameSaver.h"
 #include "../Utils/gameLoader.h"
 
-InputHandler::InputHandler() = default;
-
 void InputHandler::UserInput(Map& map, Player& player) {
     if (_kbhit() && !GameState::isGameOver && !GameState::isSleeping) {
         int ch = _getch();

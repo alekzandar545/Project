@@ -1,0 +1,135 @@
+\doxysection{Event Class Reference}
+\hypertarget{class_event}{}\label{class_event}\index{Event@{Event}}
+
+
+The \doxylink{class_event}{Event} class represents an event in the game.  
+
+
+
+
+{\ttfamily \#include $<$event\+Handler.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event_a537604f3302c1525af8dd7181d1d80b3}{Event}} (\mbox{\hyperlink{class_map}{Map}} \texorpdfstring{$\ast$}{*}map)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{class_event}{Event} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a3179a63a237e3a6ec7f56f4b693311ed}{Treasure\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Handles a treasure event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a636d60c815f707b331c33a65eb87e034}{Game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Handles the game over event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a5de3ce0dfad3a73227db61e9c7e8d6da}{Monster\+Attack}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, \mbox{\hyperlink{class_monster}{Monster}} \texorpdfstring{$\ast$}{*}monster, bool \&player\+Is\+Dead)
+\begin{DoxyCompactList}\small\item\em Handles a monster attack event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_ae13a9997f6b23b04342dee739f2cd1b6}{Monster\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Handles a monster event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a24e8745f6b8cfb8fa37d56be302da3bd}{Next\+Floor}} ()
+\begin{DoxyCompactList}\small\item\em Advances to the next floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_event}{Event} class represents an event in the game. 
+
+Represents an event in the game.
+
+This class handles various events such as treasure events, monster events, and advancing to the next floor.
+
+The \doxylink{class_event}{Event} class is responsible for handling various events that can occur in the game. These events include treasure events, monster events, and advancing to the next floor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_a537604f3302c1525af8dd7181d1d80b3}\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+{\footnotesize\ttfamily \label{class_event_a537604f3302c1525af8dd7181d1d80b3} 
+Event\+::\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}} \texorpdfstring{$\ast$}{*}}]{map}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{class_event}{Event} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Pointer to the game map \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_a636d60c815f707b331c33a65eb87e034}\index{Event@{Event}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily \label{class_event_a636d60c815f707b331c33a65eb87e034} 
+void Event\+::\+Game\+Over (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Handles the game over event. 
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_event_a5de3ce0dfad3a73227db61e9c7e8d6da}\index{Event@{Event}!MonsterAttack@{MonsterAttack}}
+\index{MonsterAttack@{MonsterAttack}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{MonsterAttack()}{MonsterAttack()}}
+{\footnotesize\ttfamily \label{class_event_a5de3ce0dfad3a73227db61e9c7e8d6da} 
+void Event\+::\+Monster\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{\mbox{\hyperlink{class_monster}{Monster}} \texorpdfstring{$\ast$}{*}}]{monster}{, }\item[{bool \&}]{player\+Is\+Dead}{}\end{DoxyParamCaption})}
+
+
+
+Handles a monster attack event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player object \\
+\hline
+{\em monster} & Pointer to the monster object \\
+\hline
+{\em player\+Is\+Dead} & Reference to a boolean indicating if the player is dead \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_event_ae13a9997f6b23b04342dee739f2cd1b6}\index{Event@{Event}!MonsterEvent@{MonsterEvent}}
+\index{MonsterEvent@{MonsterEvent}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{MonsterEvent()}{MonsterEvent()}}
+{\footnotesize\ttfamily \label{class_event_ae13a9997f6b23b04342dee739f2cd1b6} 
+void Event\+::\+Monster\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles a monster event. 
+
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{class_event_a24e8745f6b8cfb8fa37d56be302da3bd}\index{Event@{Event}!NextFloor@{NextFloor}}
+\index{NextFloor@{NextFloor}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{NextFloor()}{NextFloor()}}
+{\footnotesize\ttfamily \label{class_event_a24e8745f6b8cfb8fa37d56be302da3bd} 
+void Event\+::\+Next\+Floor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Advances to the next floor. 
+
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{class_event_a3179a63a237e3a6ec7f56f4b693311ed}\index{Event@{Event}!TreasureEvent@{TreasureEvent}}
+\index{TreasureEvent@{TreasureEvent}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{TreasureEvent()}{TreasureEvent()}}
+{\footnotesize\ttfamily \label{class_event_a3179a63a237e3a6ec7f56f4b693311ed} 
+void Event\+::\+Treasure\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles a treasure event. 
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\mbox{\hyperlink{event_handler_8h}{event\+Handler.\+h}}\item 
+Events/\mbox{\hyperlink{event_handler_8cpp}{event\+Handler.\+cpp}}\end{DoxyCompactItemize}

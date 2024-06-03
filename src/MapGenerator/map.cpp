@@ -103,7 +103,7 @@ void Map::CreatePath(const int i, const int j){ //Use DFS
 
     //some neightbors are visited in addition to the coming direction, return
     //this is to avoid circles in maze
-    if(countVisitedNeighbor(i, j) > rand() % LABYRYINTH +  1) return ;
+    if(countVisitedNeighbor(i, j) > rand() % LABYRINTH +  1) return ;
 
     matrix[i][j] = Constants::PATH; // visited
 

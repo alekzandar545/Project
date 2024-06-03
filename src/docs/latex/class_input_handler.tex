@@ -1,0 +1,217 @@
+\doxysection{Input\+Handler Class Reference}
+\hypertarget{class_input_handler}{}\label{class_input_handler}\index{InputHandler@{InputHandler}}
+
+
+Handles user input for various UI screens and events.  
+
+
+
+
+{\ttfamily \#include $<$input\+Handler.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_input_handler_ae545a74e25eef71ed3f658789cc5018a}{Battle\+User\+Input}} (\mbox{\hyperlink{class_combat_events}{Combat\+Events}} \texorpdfstring{$\ast$}{*}event, \mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&ui, bool \&player\+Is\+Dead, bool \&monster\+Is\+Dead, bool \&fled)
+\begin{DoxyCompactList}\small\item\em Handles user input during battles. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_handler_a41e6c1f2ba464836b12f0e5644957ccd}{User\+Input}} (\mbox{\hyperlink{class_map}{Map}} \&map, \mbox{\hyperlink{class_player}{Player}} \&p)
+\begin{DoxyCompactList}\small\item\em Handles user input for map navigation. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_handler_a46e9a06e7b4b10e165cf9dc1302bfaa8}{Inventory\+User\+Input}} (\mbox{\hyperlink{class_inventory_u_i}{Inventory\+UI}} \&ui)
+\begin{DoxyCompactList}\small\item\em Handles user input for inventory management. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_handler_a10f347a80886e0ad1636ffcf62373aca}{Stats\+User\+Input}} (\mbox{\hyperlink{class_stats_u_i}{Stats\+UI}} \&ui)
+\begin{DoxyCompactList}\small\item\em Handles user input for displaying player stats. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_handler_a18453cd409e02fafed9a2da42d8b632c}{Start\+User\+Input}} (\mbox{\hyperlink{class_start_menu_u_i}{Start\+Menu\+UI}} \&ui, bool \&Open\+Start\+UI, bool \&new\+Game, std\+::string \&load\+Dir)
+\begin{DoxyCompactList}\small\item\em Handles user input for the start menu options. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_handler_a84616e25acab826ff3b8f1c5a6ff8607}{Race\+Select\+User\+Input}} (\mbox{\hyperlink{class_selection_u_i}{Selection\+UI}} \&ui, bool \&Open\+Race\+Select\+UI, \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+::\+Player\+Race}} \&race)
+\begin{DoxyCompactList}\small\item\em Handles user input for race selection. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_input_handler_affcbd382e0c44811482b4a29cfd7997e}{Load\+User\+Input}} (\mbox{\hyperlink{class_load_game_u_i}{Load\+Game\+UI}} \&ui, bool \&Open\+Load\+Game\+UI, std\+::string \&load\+Dir)
+\begin{DoxyCompactList}\small\item\em Handles user input for loading a saved game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles user input for various UI screens and events. 
+
+The \doxylink{class_input_handler}{Input\+Handler} class provides static methods to handle user input for different UI screens and events in the game. It includes methods for handling input during battles, map navigation, inventory management, stats display, start menu options, race selection, and game loading. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_input_handler_ae545a74e25eef71ed3f658789cc5018a}\index{InputHandler@{InputHandler}!BattleUserInput@{BattleUserInput}}
+\index{BattleUserInput@{BattleUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{BattleUserInput()}{BattleUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_ae545a74e25eef71ed3f658789cc5018a} 
+void Input\+Handler\+::\+Battle\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_combat_events}{Combat\+Events}} \texorpdfstring{$\ast$}{*}}]{event}{, }\item[{\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&}]{ui}{, }\item[{bool \&}]{player\+Is\+Dead}{, }\item[{bool \&}]{monster\+Is\+Dead}{, }\item[{bool \&}]{fled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input during battles. 
+
+This method takes care of processing user input during battles and updates the necessary variables and UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & A pointer to the \doxylink{class_combat_events}{Combat\+Events} object. \\
+\hline
+{\em ui} & The \doxylink{class_battle_u_i}{Battle\+UI} object. \\
+\hline
+{\em player\+Is\+Dead} & A reference to a boolean variable indicating if the player is dead. \\
+\hline
+{\em monster\+Is\+Dead} & A reference to a boolean variable indicating if the monster is dead. \\
+\hline
+{\em fled} & A reference to a boolean variable indicating if the player has fled from the battle. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_input_handler_a46e9a06e7b4b10e165cf9dc1302bfaa8}\index{InputHandler@{InputHandler}!InventoryUserInput@{InventoryUserInput}}
+\index{InventoryUserInput@{InventoryUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{InventoryUserInput()}{InventoryUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_a46e9a06e7b4b10e165cf9dc1302bfaa8} 
+bool Input\+Handler\+::\+Inventory\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_inventory_u_i}{Inventory\+UI}} \&}]{ui}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for inventory management. 
+
+This method handles user input for managing the player\textquotesingle{}s inventory and returns a boolean value indicating if the inventory screen should remain open.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The \doxylink{class_inventory_u_i}{Inventory\+UI} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the inventory screen should remain open, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_input_handler_affcbd382e0c44811482b4a29cfd7997e}\index{InputHandler@{InputHandler}!LoadUserInput@{LoadUserInput}}
+\index{LoadUserInput@{LoadUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{LoadUserInput()}{LoadUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_affcbd382e0c44811482b4a29cfd7997e} 
+void Input\+Handler\+::\+Load\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_load_game_u_i}{Load\+Game\+UI}} \&}]{ui}{, }\item[{bool \&}]{Open\+Load\+Game\+UI}{, }\item[{std\+::string \&}]{load\+Dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for loading a saved game. 
+
+This method handles user input for loading a saved game and updates the necessary variables and UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The \doxylink{class_load_game_u_i}{Load\+Game\+UI} object. \\
+\hline
+{\em Open\+Load\+Game\+UI} & A reference to a boolean variable indicating if the load game UI should remain open. \\
+\hline
+{\em load\+Dir} & A reference to a string variable storing the directory path for loading a saved game. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{class_input_handler_a84616e25acab826ff3b8f1c5a6ff8607}\index{InputHandler@{InputHandler}!RaceSelectUserInput@{RaceSelectUserInput}}
+\index{RaceSelectUserInput@{RaceSelectUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{RaceSelectUserInput()}{RaceSelectUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_a84616e25acab826ff3b8f1c5a6ff8607} 
+void Input\+Handler\+::\+Race\+Select\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_selection_u_i}{Selection\+UI}} \&}]{ui}{, }\item[{bool \&}]{Open\+Race\+Select\+UI}{, }\item[{\mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player\+::\+Player\+Race}} \&}]{race}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for race selection. 
+
+This method handles user input for selecting the player\textquotesingle{}s race and updates the necessary variables and UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The \doxylink{class_selection_u_i}{Selection\+UI} object. \\
+\hline
+{\em Open\+Race\+Select\+UI} & A reference to a boolean variable indicating if the race selection UI should remain open. \\
+\hline
+{\em race} & A reference to a Player\+Race variable storing the selected race. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_input_handler_a18453cd409e02fafed9a2da42d8b632c}\index{InputHandler@{InputHandler}!StartUserInput@{StartUserInput}}
+\index{StartUserInput@{StartUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{StartUserInput()}{StartUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_a18453cd409e02fafed9a2da42d8b632c} 
+void Input\+Handler\+::\+Start\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_start_menu_u_i}{Start\+Menu\+UI}} \&}]{ui}{, }\item[{bool \&}]{Open\+Start\+UI}{, }\item[{bool \&}]{new\+Game}{, }\item[{std\+::string \&}]{load\+Dir}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for the start menu options. 
+
+This method handles user input for the start menu options and updates the necessary variables and UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The \doxylink{class_start_menu_u_i}{Start\+Menu\+UI} object. \\
+\hline
+{\em Open\+Start\+UI} & A reference to a boolean variable indicating if the start menu UI should remain open. \\
+\hline
+{\em new\+Game} & A reference to a boolean variable indicating if a new game should be started. \\
+\hline
+{\em load\+Dir} & A reference to a string variable storing the directory path for loading a saved game. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 8
+\Hypertarget{class_input_handler_a10f347a80886e0ad1636ffcf62373aca}\index{InputHandler@{InputHandler}!StatsUserInput@{StatsUserInput}}
+\index{StatsUserInput@{StatsUserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{StatsUserInput()}{StatsUserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_a10f347a80886e0ad1636ffcf62373aca} 
+bool Input\+Handler\+::\+Stats\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stats_u_i}{Stats\+UI}} \&}]{ui}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for displaying player stats. 
+
+This method handles user input for displaying the player\textquotesingle{}s stats and returns a boolean value indicating if the stats screen should remain open.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The \doxylink{class_stats_u_i}{Stats\+UI} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the stats screen should remain open, false otherwise. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_input_handler_a41e6c1f2ba464836b12f0e5644957ccd}\index{InputHandler@{InputHandler}!UserInput@{UserInput}}
+\index{UserInput@{UserInput}!InputHandler@{InputHandler}}
+\doxysubsubsection{\texorpdfstring{UserInput()}{UserInput()}}
+{\footnotesize\ttfamily \label{class_input_handler_a41e6c1f2ba464836b12f0e5644957ccd} 
+void Input\+Handler\+::\+User\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}} \&}]{map}{, }\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles user input for map navigation. 
+
+This method handles user input for navigating the game map and updates the necessary variables and UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The \doxylink{class_map}{Map} object. \\
+\hline
+{\em p} & The \doxylink{class_player}{Player} object. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 11
+Here is the caller graph for this function\+:
+% FIG 12
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UI/\mbox{\hyperlink{input_handler_8h}{input\+Handler.\+h}}\item 
+UI/\mbox{\hyperlink{input_handler_8cpp}{input\+Handler.\+cpp}}\end{DoxyCompactItemize}

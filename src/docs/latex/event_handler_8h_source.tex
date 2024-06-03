@@ -1,0 +1,31 @@
+\doxysection{event\+Handler.\+h}
+\hypertarget{event_handler_8h_source}{}\label{event_handler_8h_source}\index{Events/eventHandler.h@{Events/eventHandler.h}}
+\mbox{\hyperlink{event_handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{map_8h}{../MapGenerator/map.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{../Utils/constants.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{battle_u_i_8h}{../UI/battleUI.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{monster_8h}{../Entities/monster.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_map}{Map}}*\ map;\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_event_a537604f3302c1525af8dd7181d1d80b3}{Event}}(\mbox{\hyperlink{class_map}{Map}}*\ map);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a3179a63a237e3a6ec7f56f4b693311ed}{TreasureEvent}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a636d60c815f707b331c33a65eb87e034}{GameOver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a5de3ce0dfad3a73227db61e9c7e8d6da}{MonsterAttack}}(\mbox{\hyperlink{class_player}{Player}}*\ player,\ \mbox{\hyperlink{class_monster}{Monster}}*\ monster,\ \textcolor{keywordtype}{bool}\&\ playerIsDead);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_ae13a9997f6b23b04342dee739f2cd1b6}{MonsterEvent}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a24e8745f6b8cfb8fa37d56be302da3bd}{NextFloor}}();}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+
+\end{DoxyCode}

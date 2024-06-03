@@ -1,5 +1,0 @@
-sosen 40 75 90 90 27 25 0 5 99 146 181 0
-0 Soulrender_Scythe 40
-1 Chromatic_Orb 37
-2 Scale_Mail 27
-

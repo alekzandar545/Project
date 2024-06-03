@@ -1,7 +1,0 @@
-sosen 40 75 90 52 37 25 30 6 73 160 196 2
-1 Chromatic_Orb 40
-2 Scale_Mail 27
-0 Soulrender_Scythe 40
-1 Chromatic_Orb 37
-2 Plate_Armor 37
-

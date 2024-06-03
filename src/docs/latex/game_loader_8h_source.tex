@@ -1,0 +1,31 @@
+\doxysection{game\+Loader.\+h}
+\hypertarget{game_loader_8h_source}{}\label{game_loader_8h_source}\index{Utils/gameLoader.h@{Utils/gameLoader.h}}
+\mbox{\hyperlink{game_loader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{map_8h}{../MapGenerator/map.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{item_8h}{../Items/item.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_loader}{GameLoader}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_loader_a90e085e7fc2a1643f0539952750c9478}{LoadGame}}(\mbox{\hyperlink{class_player}{Player}}\&\ player,\ \mbox{\hyperlink{class_map}{Map}}\&\ map,\ \textcolor{keyword}{const}\ std::string\&\ saveFile);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_loader_aaef9d94d139bf58e09c24cbbb85ea1b7}{DisplayHighScores}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ LoadHighScores(std::vector<Player>\&\ characters);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LoadPlayer(std::ifstream\&\ reader,\ \mbox{\hyperlink{class_player}{Player}}\&\ player);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LoadItem(std::ifstream\&\ reader,\ \mbox{\hyperlink{class_item}{Item}}\&\ item);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ LoadMap(std::ifstream\&\ reader,\ \mbox{\hyperlink{class_map}{Map}}\&\ map,\ \mbox{\hyperlink{class_player}{Player}}*\ player);}
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,15 @@
+digraph "GameSaver::SaveGame"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="GameSaver::SaveGame",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Saves the game data including the player and map information to a specified directory."];
+  Node1 -> Node2 [id="edge4_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="InputHandler::UserInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input_handler.html#a41e6c1f2ba464836b12f0e5644957ccd",tooltip="Handles user input for map navigation."];
+  Node2 -> Node3 [id="edge5_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="GameInitializer::LoadGame",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_initializer.html#ae716e7cff2b6d5aeb52817de93c03839",tooltip="Loads a saved game from the specified directory."];
+  Node2 -> Node4 [id="edge6_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="GameInitializer::NewGame",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_initializer.html#ae604744fcd25ff4e95f332f29c1b60d5",tooltip="Starts a new game."];
+}

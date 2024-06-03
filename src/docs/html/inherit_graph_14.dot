@@ -1,0 +1,19 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="SelectionUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_selection_u_i.html",tooltip="Represents a user interface for selecting options."];
+  Node0 -> Node1 [id="edge3_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="BattleUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_battle_u_i.html",tooltip="Represents the user interface for a battle in the game."];
+  Node0 -> Node2 [id="edge4_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="InventoryUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_inventory_u_i.html",tooltip="The InventoryUI class represents the user interface for displaying and managing the inventory."];
+  Node0 -> Node3 [id="edge5_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="LoadGameUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_load_game_u_i.html",tooltip="Represents the user interface for loading a game."];
+  Node0 -> Node4 [id="edge6_Node000000_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="StartMenuUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_start_menu_u_i.html",tooltip="Represents the user interface for the start menu."];
+  Node0 -> Node5 [id="edge7_Node000000_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="StatsUI",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_stats_u_i.html",tooltip="Represents the user interface for displaying statistics."];
+}

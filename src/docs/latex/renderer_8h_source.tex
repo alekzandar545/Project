@@ -1,0 +1,35 @@
+\doxysection{renderer.\+h}
+\hypertarget{renderer_8h_source}{}\label{renderer_8h_source}\index{MapGenerator/renderer.h@{MapGenerator/renderer.h}}
+\mbox{\hyperlink{renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ \ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_renderer}{Renderer}}\{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<unsigned>\ CHUNK\_COORDS;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//constructors}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}}();}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_renderer_a7ebf46f54dab9905f79b80f7fddb76a6}{Renderer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ y);}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_renderer_a806dc322075009296c7ef28e089128cb}{Renderer}}(\mbox{\hyperlink{class_renderer}{Renderer}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_renderer_a2c58b8a74ee7f548974ed231bbfe1f36}{Renderer}}(\mbox{\hyperlink{class_renderer}{Renderer}}\ \&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_renderer}{Renderer}}\ \&\mbox{\hyperlink{class_renderer_a3678df8ac2c05de75d2c486288ee7e29}{operator\ =}}(\mbox{\hyperlink{class_renderer}{Renderer}}\ \textcolor{keyword}{const}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_renderer}{Renderer}}\ \&\mbox{\hyperlink{class_renderer_a3678df8ac2c05de75d2c486288ee7e29}{operator\ =}}(\mbox{\hyperlink{class_renderer}{Renderer}}\ \&\&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//Rendering}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_ac5ab21b60330a2bcc77fc2e03d5fdfb4}{ClearConsoleLines}}(\textcolor{keywordtype}{int}\ startLine,\ \textcolor{keywordtype}{int}\ endLine);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a4b9534b25b7aaa77db529028db506fe1}{RenderAll}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ width,\ \textcolor{keyword}{const}\ std::vector<std::vector<char>>\&\ matrix,\ \mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a9d637be028a796df2def962b166cbc3b}{RenderStats}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ width,\ \mbox{\hyperlink{class_player}{Player}}*\ player)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a26139ba49b2898369bb053ae9f3fe5e6}{RenderMap}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ width,\ \textcolor{keyword}{const}\ std::vector<std::vector<char>>\ matrix)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_ad5663b888320b7defaac139ce3a43387}{RenderChunk}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ width,\ \textcolor{keyword}{const}\ std::vector<std::vector<char>>\ matrix)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_ae24a23687403ad8d9606ec7694920dd3}{RenderPosition}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ width,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ playerX,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ playerY,\ \textcolor{keyword}{const}\ std::vector<std::vector<char>>\ matrix);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_aa94241894e0983a77439ba58057c7fee}{RenderTile}}(\textcolor{keywordtype}{char}\ c)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//setters}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a80cbff8e8d9d36e00fa1db815fa45968}{SetChunkX}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ x);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_renderer_a97b4ded4a13e5c4ac2c4b0ec9e9a0b94}{SetChunkY}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ y);}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//getters}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_renderer_ab10206b6c6b6295bc388a506a51839c2}{GetChunkX}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_renderer_ac04f58037a841ddb1fbead25584a73bb}{GetChunkY}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{game\+State.\+h}
+\hypertarget{game_state_8h_source}{}\label{game_state_8h_source}\index{Utils/gameState.h@{Utils/gameState.h}}
+\mbox{\hyperlink{game_state_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{map_8h}{../MapGenerator/map.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_saver_8h}{gameSaver.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_state}{GameState}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_game_state_a6c07974c68fb9f852e3585c0001e98fd}{GameState}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_game_state_ae623df5042cd0c17daa3394fdcb397b3}{\string~GameState}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ Game\ State}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ std::atomic<bool>\ \mbox{\hyperlink{class_game_state_a3d1726b9154738934e2a43743e09285d}{isGameOver}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ std::atomic<bool>\ \mbox{\hyperlink{class_game_state_ac8fc48c399b586d2638cb4d1ca5b9156}{isSleeping}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_a75f5002c9098349d3e3f023e1dfb20e8}{EndGame}}();\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_acc8e547b41b8b7a515afe338a138487e}{sleepAndIgnoreInputs}}(\textcolor{keywordtype}{int}\ seconds);\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_a5db11863d236c0c50867fa0bdbef68a2}{SetGameMap}}(\mbox{\hyperlink{class_map}{Map}}*\ map);\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_state_ada9e5f536b72ae2dd91f6051cbe02a51}{SetGamePlayer}}(\mbox{\hyperlink{class_player}{Player}}*\ player);\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_map}{Map}}*\ \mbox{\hyperlink{class_game_state_ad7d77fee28416433c82fde1136f4ac73}{GetGameMap}}();\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player}{Player}}*\ \mbox{\hyperlink{class_game_state_ae9cbe002761ccccece4ff619af1aea05}{GetGamePlayer}}();\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ std::mutex\ stateMutex;\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_map}{Map}}*\ map;\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_player}{Player}}*\ player;\ }
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+digraph "GameSaver::SaveHighscore"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="GameSaver::SaveHighscore",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Saves the player's highscore to a specified directory."];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="GameState::EndGame",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_state.html#a75f5002c9098349d3e3f023e1dfb20e8",tooltip=" "];
+  Node2 -> Node3 [id="edge9_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Event::GameOver",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_event.html#a636d60c815f707b331c33a65eb87e034",tooltip="Handles the game over event."];
+  Node3 -> Node4 [id="edge10_Node000003_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Event::MonsterEvent",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_event.html#ae13a9997f6b23b04342dee739f2cd1b6",tooltip="Handles a monster event."];
+  Node2 -> Node5 [id="edge11_Node000002_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="InputHandler::StartUserInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input_handler.html#a18453cd409e02fafed9a2da42d8b632c",tooltip="Handles user input for the start menu options."];
+  Node2 -> Node6 [id="edge12_Node000002_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="InputHandler::UserInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input_handler.html#a41e6c1f2ba464836b12f0e5644957ccd",tooltip="Handles user input for map navigation."];
+  Node6 -> Node7 [id="edge13_Node000006_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="GameInitializer::LoadGame",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_initializer.html#ae716e7cff2b6d5aeb52817de93c03839",tooltip="Loads a saved game from the specified directory."];
+  Node6 -> Node8 [id="edge14_Node000006_Node000008",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="GameInitializer::NewGame",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_initializer.html#ae604744fcd25ff4e95f332f29c1b60d5",tooltip="Starts a new game."];
+}

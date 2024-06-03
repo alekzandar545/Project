@@ -1,0 +1,153 @@
+\doxysection{Combat\+Events Class Reference}
+\hypertarget{class_combat_events}{}\label{class_combat_events}\index{CombatEvents@{CombatEvents}}
+
+
+Handles combat-\/related events in the game.  
+
+
+
+
+{\ttfamily \#include $<$combat\+Events.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_combat_events_a7ae15c0d896b5547edb05112a20af941}{Combat\+Events}} (\mbox{\hyperlink{class_map}{Map}} \texorpdfstring{$\ast$}{*}map)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_combat_events}{Combat\+Events} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_events_ab80edf2cd1ee2ae489c6c4e35e9ca367}{Drop\+Potion}} (\mbox{\hyperlink{class_player}{Player}} \&player)
+\begin{DoxyCompactList}\small\item\em Drops a potion for the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_events_ac218c5524397d2ab4fedb0203e87475b}{Handle\+Melee\+Attack}} (\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&ui, bool \&player\+Is\+Dead, bool \&monster\+Is\+Dead)
+\begin{DoxyCompactList}\small\item\em Handles a melee attack in combat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_events_a446faa7e9689eeb8eeb7f97046be3c8c}{Handle\+Spell\+Attack}} (\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&ui, bool \&player\+Is\+Dead, bool \&monster\+Is\+Dead)
+\begin{DoxyCompactList}\small\item\em Handles a spell attack in combat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_events_a3260199bd698163d4460d0d1319daf4c}{Handle\+Potion\+Usage}} (\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&ui)
+\begin{DoxyCompactList}\small\item\em Handles the usage of a potion in combat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_combat_events_aa686683b5bc50a8f84b1f4d39ee20679}{Handle\+Flee}} (\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&ui, bool \&fled)
+\begin{DoxyCompactList}\small\item\em Handles the player\textquotesingle{}s attempt to flee from combat. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles combat-\/related events in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_combat_events_a7ae15c0d896b5547edb05112a20af941}\index{CombatEvents@{CombatEvents}!CombatEvents@{CombatEvents}}
+\index{CombatEvents@{CombatEvents}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{CombatEvents()}{CombatEvents()}}
+{\footnotesize\ttfamily \label{class_combat_events_a7ae15c0d896b5547edb05112a20af941} 
+Combat\+Events\+::\+Combat\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_map}{Map}} \texorpdfstring{$\ast$}{*}}]{map}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_combat_events}{Combat\+Events} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & A pointer to the game map. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_combat_events_ab80edf2cd1ee2ae489c6c4e35e9ca367}\index{CombatEvents@{CombatEvents}!DropPotion@{DropPotion}}
+\index{DropPotion@{DropPotion}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{DropPotion()}{DropPotion()}}
+{\footnotesize\ttfamily \label{class_combat_events_ab80edf2cd1ee2ae489c6c4e35e9ca367} 
+void Combat\+Events\+::\+Drop\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Drops a potion for the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player object. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{class_combat_events_aa686683b5bc50a8f84b1f4d39ee20679}\index{CombatEvents@{CombatEvents}!HandleFlee@{HandleFlee}}
+\index{HandleFlee@{HandleFlee}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{HandleFlee()}{HandleFlee()}}
+{\footnotesize\ttfamily \label{class_combat_events_aa686683b5bc50a8f84b1f4d39ee20679} 
+void Combat\+Events\+::\+Handle\+Flee (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&}]{ui}{, }\item[{bool \&}]{fled}{}\end{DoxyParamCaption})}
+
+
+
+Handles the player\textquotesingle{}s attempt to flee from combat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The battle user interface. \\
+\hline
+{\em fled} & A boolean indicating if the player successfully fled. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\Hypertarget{class_combat_events_ac218c5524397d2ab4fedb0203e87475b}\index{CombatEvents@{CombatEvents}!HandleMeleeAttack@{HandleMeleeAttack}}
+\index{HandleMeleeAttack@{HandleMeleeAttack}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{HandleMeleeAttack()}{HandleMeleeAttack()}}
+{\footnotesize\ttfamily \label{class_combat_events_ac218c5524397d2ab4fedb0203e87475b} 
+void Combat\+Events\+::\+Handle\+Melee\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&}]{ui}{, }\item[{bool \&}]{player\+Is\+Dead}{, }\item[{bool \&}]{monster\+Is\+Dead}{}\end{DoxyParamCaption})}
+
+
+
+Handles a melee attack in combat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The battle user interface. \\
+\hline
+{\em player\+Is\+Dead} & A boolean indicating if the player is dead. \\
+\hline
+{\em monster\+Is\+Dead} & A boolean indicating if the monster is dead. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{class_combat_events_a3260199bd698163d4460d0d1319daf4c}\index{CombatEvents@{CombatEvents}!HandlePotionUsage@{HandlePotionUsage}}
+\index{HandlePotionUsage@{HandlePotionUsage}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{HandlePotionUsage()}{HandlePotionUsage()}}
+{\footnotesize\ttfamily \label{class_combat_events_a3260199bd698163d4460d0d1319daf4c} 
+void Combat\+Events\+::\+Handle\+Potion\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&}]{ui}{}\end{DoxyParamCaption})}
+
+
+
+Handles the usage of a potion in combat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The battle user interface. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{class_combat_events_a446faa7e9689eeb8eeb7f97046be3c8c}\index{CombatEvents@{CombatEvents}!HandleSpellAttack@{HandleSpellAttack}}
+\index{HandleSpellAttack@{HandleSpellAttack}!CombatEvents@{CombatEvents}}
+\doxysubsubsection{\texorpdfstring{HandleSpellAttack()}{HandleSpellAttack()}}
+{\footnotesize\ttfamily \label{class_combat_events_a446faa7e9689eeb8eeb7f97046be3c8c} 
+void Combat\+Events\+::\+Handle\+Spell\+Attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_battle_u_i}{Battle\+UI}} \&}]{ui}{, }\item[{bool \&}]{player\+Is\+Dead}{, }\item[{bool \&}]{monster\+Is\+Dead}{}\end{DoxyParamCaption})}
+
+
+
+Handles a spell attack in combat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui} & The battle user interface. \\
+\hline
+{\em player\+Is\+Dead} & A boolean indicating if the player is dead. \\
+\hline
+{\em monster\+Is\+Dead} & A boolean indicating if the monster is dead. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 5
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Events/\mbox{\hyperlink{combat_events_8h}{combat\+Events.\+h}}\item 
+Events/\mbox{\hyperlink{combat_events_8cpp}{combat\+Events.\+cpp}}\end{DoxyCompactItemize}

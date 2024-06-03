@@ -1,0 +1,21 @@
+digraph "GameInitializer::CreatePlayer"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="GameInitializer::CreatePlayer",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Creates a new player."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="InputHandler::RaceSelect\lUserInput",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_input_handler.html#a84616e25acab826ff3b8f1c5a6ff8607",tooltip="Handles user input for race selection."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="SelectionUI::GetSelection\lIndex",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_selection_u_i.html#a7e46fb4cb30cf470f0fa7e6c45fb1a85",tooltip="Gets the index of the currently selected option."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="SelectionUI::MoveSelection",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_selection_u_i.html#a5c06553a8bb32cd881fb54b054cfc8af",tooltip="Moves the selection up or down based on the specified direction."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="SelectionUI::Render",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_selection_u_i.html#a35061fb0fc32a9afcc860933dcdacb5b",tooltip="Renders the selection UI on the console."];
+  Node1 -> Node6 [id="edge5_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Player::SetName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_player.html#a176f5cc6300f406ef5e876ee2e20c0ad",tooltip="Sets the name of the player."];
+  Node1 -> Node7 [id="edge6_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="SelectionUI::SetOptions",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_selection_u_i.html#a340d528389975077f525f91296da7d3b",tooltip="Sets the options available for selection."];
+}

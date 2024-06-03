@@ -1,0 +1,23 @@
+digraph "Event::MonsterAttack"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Event::MonsterAttack",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Handles a monster attack event."];
+  Node1 -> Node2 [id="edge8_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Alerts::Alert",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_alerts.html#a10627b6297fb89a8f5acfd419a13ebe2",tooltip="Displays a general alert message."];
+  Node2 -> Node3 [id="edge9_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="GameState::sleepAndIgnore\lInputs",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_game_state.html#acc8e547b41b8b7a515afe338a138487e",tooltip=" "];
+  Node1 -> Node4 [id="edge10_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Monster::Attack",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_monster.html#a7e5a7ced312a66bc3813c461eac19db8",tooltip="Performs an attack on another entity."];
+  Node4 -> Node5 [id="edge11_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Monster::ChooseAttack",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_monster.html#a31fdec7138aba82141671505314932a0",tooltip="Chooses an attack for the monster."];
+  Node4 -> Node6 [id="edge12_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="Entity::TakeHit",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_entity.html#a2bdaf34c9b05d6c1a599645e32a1898d",tooltip="Takes a hit with the specified damage."];
+  Node1 -> Node7 [id="edge13_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="Entity::GetHP",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_entity.html#a6e859081bc51ff1aad43267aaeb61c57",tooltip="Gets the current health points attribute of the entity."];
+  Node1 -> Node8 [id="edge14_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="Player::GetName",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_player.html#affddef50f994746a860e2366e412917f",tooltip="Gets the name of the player."];
+}

@@ -1,0 +1,53 @@
+\doxysection{entity.\+h}
+\hypertarget{entity_8h_source}{}\label{entity_8h_source}\index{Entities/entity.h@{Entities/entity.h}}
+\mbox{\hyperlink{entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entity}{Entity}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_entity_a980f368aa07ce358583982821533a54a}{Entity}}();}
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_entity_a2bdaf34c9b05d6c1a599645e32a1898d}{TakeHit}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ dmg);}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a203760a5a6e092e53fd6028571acf8e3}{Heal}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Getters}}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_ae8d382c156fbc9d7aeb746f47373b655}{GetStrength}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_a97778852dc4b0b437f51e6a8384d6ee9}{GetMana}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_a744ee8b7de25a13cf950d29ff5099484}{GetMaxHP}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a6e859081bc51ff1aad43267aaeb61c57}{GetHP}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_ac6589d64fdd4da658fd1bc9102caa359}{GetArmor}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_aa486631fec98d5ce6e167c291fe0cc9c}{GetDexterity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Setters}}
+\DoxyCodeLine{00070\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_ae46dbd3d5ec8137b7367f71ea17321bc}{SetStrength}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_af279bd6ca967d5bd1d1ef22e568525d9}{SetMana}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_ac55e3782cd38e9204900843b1b66f295}{SetMaxHP}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a35b9be8c46e8e98c6be6d620dac4021c}{SetHP}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00094\ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a68cd44f74746aa2c437ca841d02add5b}{SetArmor}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_ae0fc9abb7112b56644537ea6b5b59e82}{SetDexterity}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ value);}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_ad62def4ac9a6db4bd1ff8beb44f4e9bd}{str}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_a0b126fec0cb0c95c7fcb4c79cf994384}{mana}};\ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_abb28c9340b2015acbb222cd8d898a949}{maxHP}};\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a5bf8beafebce7ab62ddea70dbb8f3709}{HP}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_a1e7528f5c31682a423820b1f031a7065}{armor}};\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{class_entity_a0f0ed0c1581be1a3efd485cb69e5b381}{dexterity}};\ }
+\DoxyCodeLine{00114\ \};}
+
+\end{DoxyCode}

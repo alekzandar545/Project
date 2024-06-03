@@ -1,0 +1,39 @@
+\doxysection{input\+Handler.\+h}
+\hypertarget{input_handler_8h_source}{}\label{input_handler_8h_source}\index{UI/inputHandler.h@{UI/inputHandler.h}}
+\mbox{\hyperlink{input_handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{player_8h}{../Entities/player.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{inventory_u_i_8h}{../UI/inventoryUI.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{stats_u_i_8h}{../UI/statsUI.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{start_menu_u_i_8h}{../UI/startMenuUI.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{selection_u_i_8h}{../UI/selectionUI.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{../Utils/constants.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{game_state_8h}{../Utils/gameState.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{load_game_u_i_8h}{loadGameUI.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{combat_events_8h}{../Events/combatEvents.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_handler}{InputHandler}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_ae545a74e25eef71ed3f658789cc5018a}{BattleUserInput}}(\mbox{\hyperlink{class_combat_events}{CombatEvents}}*\ event,\ \mbox{\hyperlink{class_battle_u_i}{BattleUI}}\&\ ui,\ \textcolor{keywordtype}{bool}\&\ playerIsDead,\ \textcolor{keywordtype}{bool}\&\ monsterIsDead,\ \textcolor{keywordtype}{bool}\&\ fled);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a41e6c1f2ba464836b12f0e5644957ccd}{UserInput}}(\mbox{\hyperlink{class_map}{Map}}\&\ map,\ \mbox{\hyperlink{class_player}{Player}}\&\ p);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_a46e9a06e7b4b10e165cf9dc1302bfaa8}{InventoryUserInput}}(\mbox{\hyperlink{class_inventory_u_i}{InventoryUI}}\&\ ui);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_input_handler_a10f347a80886e0ad1636ffcf62373aca}{StatsUserInput}}(\mbox{\hyperlink{class_stats_u_i}{StatsUI}}\&\ ui);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a18453cd409e02fafed9a2da42d8b632c}{StartUserInput}}(\mbox{\hyperlink{class_start_menu_u_i}{StartMenuUI}}\&\ ui,\ \textcolor{keywordtype}{bool}\&\ OpenStartUI,\ \textcolor{keywordtype}{bool}\&\ newGame,\ std::string\&\ loadDir);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_a84616e25acab826ff3b8f1c5a6ff8607}{RaceSelectUserInput}}(\mbox{\hyperlink{class_selection_u_i}{SelectionUI}}\&\ ui,\ \textcolor{keywordtype}{bool}\&\ OpenRaceSelectUI,\ \mbox{\hyperlink{class_player_a5a599f0b151a5ad772b8c805817e54e9}{Player::PlayerRace}}\&\ race);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_handler_affcbd382e0c44811482b4a29cfd7997e}{LoadUserInput}}(\mbox{\hyperlink{class_load_game_u_i}{LoadGameUI}}\&\ ui,\ \textcolor{keywordtype}{bool}\&\ OpenLoadGameUI,\ std::string\&\ loadDir);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+
+\end{DoxyCode}
