@@ -1,179 +1,268 @@
 <map id="UserInput" name="UserInput">
-<area shape="rect" id="Node000001" title="Handles user input for map navigation." alt="" coords="5,1256,82,1283"/>
-<area shape="rect" id="Node000002" href="$class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="130,431,283,457"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,1256,48,1123,62,908,73,792,87,683,105,591,127,523,148,491,173,466,176,470,152,495,132,525,110,592,93,684,78,793,67,908,53,1123,48,1256"/>
-<area shape="rect" id="Node000027" href="$class_input_handler.html#a882995d6451ced9684db6d342572d464" title="Handles user input for inventory management." alt="" coords="143,1829,270,1856"/>
-<area shape="poly" id="edge27_Node000001_Node000027" title=" " alt="" coords="50,1283,78,1431,103,1538,132,1647,165,1739,195,1814,190,1816,160,1741,127,1649,97,1540,73,1432,45,1284"/>
-<area shape="rect" id="Node000035" href="$class_inventory_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the inventory UI." alt="" coords="589,1931,722,1957"/>
-<area shape="poly" id="edge52_Node000001_Node000035" title=" " alt="" coords="54,1282,85,1341,132,1413,233,1527,379,1675,631,1918,627,1922,375,1678,229,1530,128,1416,80,1344,49,1285"/>
-<area shape="rect" id="Node000040" href="$class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="146,1880,267,1907"/>
-<area shape="poly" id="edge51_Node000001_Node000040" title=" " alt="" coords="48,1283,50,1396,61,1571,72,1663,86,1748,106,1819,118,1846,132,1866,135,1870,131,1873,128,1870,114,1848,101,1820,81,1749,66,1664,56,1571,45,1396,42,1283"/>
-<area shape="rect" id="Node000041" href="$class_stats_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the statistics on the screen." alt="" coords="599,791,712,817"/>
-<area shape="poly" id="edge53_Node000001_Node000041" title=" " alt="" coords="61,1253,622,825,625,829,65,1258"/>
-<area shape="rect" id="Node000042" href="$class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="151,1231,262,1257"/>
-<area shape="poly" id="edge60_Node000001_Node000042" title=" " alt="" coords="82,1261,136,1252,137,1257,82,1266"/>
-<area shape="rect" id="Node000049" href="$class_map.html#a90d54fb9595e65dc58bab82fffea99a3" title="Renders the player&#39;s position." alt="" coords="135,1281,278,1308"/>
-<area shape="poly" id="edge73_Node000001_Node000049" title=" " alt="" coords="82,1273,120,1279,119,1284,82,1278"/>
-<area shape="rect" id="Node000051" href="$class_map.html#a2e658bc749e2a36fbc477d4f48d2c929" title="Renders player stats." alt="" coords="143,901,270,928"/>
-<area shape="poly" id="edge77_Node000001_Node000051" title=" " alt="" coords="49,1254,190,941,195,943,54,1257"/>
-<area shape="rect" id="Node000052" href="$class_game_saver.html#a879dad382765e3bec9a91dc2a69432f1" title="Saves the game data including the player and map information to a specified directory." alt="" coords="343,461,502,488"/>
-<area shape="poly" id="edge79_Node000001_Node000052" title=" " alt="" coords="43,1255,50,1196,65,1103,90,996,107,941,127,888,157,827,192,767,268,655,341,562,396,498,400,501,345,565,272,658,197,770,162,829,132,890,112,943,95,997,70,1105,55,1196,49,1256"/>
-<area shape="rect" id="Node000065" href="$class_input_handler.html#a9b258d6e376ea74d3fa259827b1ab42b" title="Handles user input for displaying player stats." alt="" coords="369,1484,476,1511"/>
-<area shape="poly" id="edge95_Node000001_Node000065" title=" " alt="" coords="69,1281,387,1473,384,1478,66,1286"/>
-<area shape="rect" id="Node000003" href="$class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="332,381,514,408"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="267,428,346,409,347,415,268,433"/>
-<area shape="rect" id="Node000004" href="$class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="562,344,749,387"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="514,381,546,376,547,382,515,386"/>
-<area shape="rect" id="Node000005" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="831,5,952,32"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="432,379,482,318,565,226,616,176,672,127,732,81,795,42,814,33,817,38,798,46,736,86,676,131,620,180,569,230,486,321,437,382"/>
-<area shape="rect" id="Node000006" href="$class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="575,461,736,488"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="465,406,601,453,599,458,463,411"/>
-<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="724,459,747,441,764,415,776,390,782,365,784,341,780,291,768,242,757,193,753,144,756,118,763,93,776,68,795,42,815,27,818,31,799,46,780,71,768,95,761,120,758,144,762,192,773,241,785,291,790,341,787,366,781,392,769,418,751,444,727,463"/>
-<area shape="rect" id="Node000007" href="$class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="832,157,951,184"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="722,459,747,441,766,410,774,380,773,349,769,319,765,288,765,257,773,226,795,194,816,179,819,184,799,198,778,228,770,258,770,288,774,318,779,349,779,380,771,412,751,444,725,463"/>
-<area shape="rect" id="Node000008" href="$class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="814,208,969,235"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="721,458,747,441,763,418,770,395,770,348,768,324,770,300,778,276,795,252,808,240,811,244,799,255,783,278,775,301,774,324,775,348,775,395,768,420,751,445,724,463"/>
-<area shape="rect" id="Node000009" href="$class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="823,613,960,640"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="693,486,722,502,751,523,766,544,774,564,782,582,798,599,811,607,808,611,795,603,777,585,769,566,762,547,747,527,719,507,690,491"/>
-<area shape="rect" id="Node000010" href="$class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="834,563,949,589"/>
-<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="683,486,798,548,820,556,818,561,796,553,680,491"/>
-<area shape="rect" id="Node000011" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="840,360,943,387"/>
-<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="707,458,747,440,761,430,770,419,780,407,795,396,824,384,826,389,798,401,784,411,775,422,765,433,750,445,710,463"/>
-<area shape="rect" id="Node000012" href="$class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="822,867,961,893"/>
-<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="701,486,728,501,751,524,773,569,781,612,778,654,770,695,763,734,762,773,772,813,783,833,799,853,810,863,806,867,795,856,779,836,767,815,757,774,758,734,765,694,772,653,775,613,768,571,747,527,725,506,699,491"/>
-<area shape="rect" id="Node000013" href="$class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="809,309,974,336"/>
-<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="716,459,747,441,764,418,770,394,776,370,795,346,801,342,804,346,799,350,781,372,775,396,768,420,750,445,719,463"/>
-<area shape="rect" id="Node000014" href="$class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="833,411,950,437"/>
-<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="721,458,817,437,818,442,722,463"/>
-<area shape="rect" id="Node000015" href="$class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="833,664,950,691"/>
-<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="697,486,725,502,751,524,763,541,769,558,773,590,778,621,786,635,798,650,820,664,818,668,795,654,781,638,773,622,768,591,764,559,758,543,747,527,722,506,694,491"/>
-<area shape="rect" id="Node000016" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="828,765,955,792"/>
-<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="700,486,727,501,751,524,768,555,775,585,775,614,772,643,769,670,770,697,779,724,799,751,815,764,812,768,795,755,774,727,765,698,764,670,766,642,770,614,770,586,763,557,747,527,724,506,697,491"/>
-<area shape="rect" id="Node000017" href="$class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="814,461,969,488"/>
-<area shape="poly" id="edge17_Node000006_Node000017" title=" " alt="" coords="736,472,799,472,799,477,736,477"/>
-<area shape="rect" id="Node000018" href="$class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="833,56,950,83"/>
-<area shape="poly" id="edge18_Node000006_Node000018" title=" " alt="" coords="723,459,747,441,762,419,772,397,781,354,778,311,768,268,760,225,757,181,767,137,778,115,795,93,817,77,820,81,799,97,782,118,772,139,762,182,765,224,774,267,783,310,786,354,777,399,767,421,751,445,727,463"/>
-<area shape="rect" id="Node000019" href="$class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="817,715,966,741"/>
-<area shape="poly" id="edge19_Node000006_Node000019" title=" " alt="" coords="699,486,727,502,751,524,765,548,772,572,773,616,775,659,782,680,799,701,805,707,802,711,795,704,778,682,769,660,767,617,767,572,760,550,747,527,723,506,696,491"/>
-<area shape="rect" id="Node000020" href="$class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="825,816,958,843"/>
-<area shape="poly" id="edge20_Node000006_Node000020" title=" " alt="" coords="700,486,728,501,751,524,771,562,778,599,776,634,771,669,766,702,766,735,776,768,799,802,812,813,809,817,795,806,771,771,761,736,761,702,766,668,771,634,772,599,766,564,747,527,725,506,698,491"/>
-<area shape="rect" id="Node000021" href="$class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="824,107,959,133"/>
-<area shape="poly" id="edge21_Node000006_Node000021" title=" " alt="" coords="723,459,747,441,769,404,777,367,775,330,769,293,762,256,761,219,770,181,795,144,808,132,811,137,799,147,775,184,766,220,767,256,774,292,781,329,783,367,774,406,751,444,726,463"/>
-<area shape="rect" id="Node000022" href="$class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="840,512,943,539"/>
-<area shape="poly" id="edge22_Node000006_Node000022" title=" " alt="" coords="722,486,825,508,824,514,721,491"/>
-<area shape="rect" id="Node000023" href="$class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="1054,1829,1203,1856"/>
-<area shape="poly" id="edge23_Node000006_Node000023" title=" " alt="" coords="735,459,747,450,761,432,767,413,768,372,769,332,778,313,795,295,845,266,869,258,893,255,917,257,941,264,964,277,988,296,1009,329,1028,384,1045,459,1059,550,1084,770,1102,1019,1114,1273,1122,1506,1129,1814,1124,1814,1117,1506,1109,1273,1096,1020,1078,771,1054,551,1039,460,1023,385,1004,331,984,299,961,281,939,269,916,262,894,260,871,263,847,271,798,299,782,316,775,333,773,372,773,413,766,434,751,454,738,463"/>
-<area shape="rect" id="Node000024" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1271,1916,1381,1943"/>
-<area shape="poly" id="edge24_Node000023_Node000024" title=" " alt="" coords="1191,1854,1223,1866,1248,1879,1272,1895,1289,1905,1286,1910,1269,1900,1246,1884,1221,1870,1189,1859"/>
-<area shape="rect" id="Node000025" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1270,1975,1382,2001"/>
-<area shape="poly" id="edge25_Node000023_Node000025" title=" " alt="" coords="1204,1854,1224,1866,1242,1887,1250,1909,1257,1930,1272,1953,1285,1964,1282,1968,1268,1956,1252,1933,1245,1910,1238,1890,1221,1870,1201,1859"/>
-<area shape="rect" id="Node000026" href="$class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1274,1859,1378,1885"/>
-<area shape="poly" id="edge26_Node000023_Node000026" title=" " alt="" coords="1204,1851,1259,1859,1258,1865,1203,1856"/>
-<area shape="rect" id="Node000028" href="$class_inventory_u_i.html#abb51ba47b083bf45d0c28385ee5492d7" title="Checks the selected item in the inventory UI." alt="" coords="331,1829,514,1856"/>
-<area shape="poly" id="edge28_Node000027_Node000028" title=" " alt="" coords="271,1840,315,1840,315,1845,271,1845"/>
-<area shape="rect" id="Node000029" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="1034,1880,1222,1907"/>
-<area shape="poly" id="edge34_Node000027_Node000029" title=" " alt="" coords="263,1826,331,1815,515,1802,590,1802,660,1805,804,1824,987,1855,1062,1873,1061,1878,985,1860,803,1829,659,1811,590,1807,515,1807,331,1820,264,1831"/>
-<area shape="rect" id="Node000030" href="$class_player.html#a51b68f7c3df099f6a241eef7ebcd9ec3" title="Equips an item from the player&#39;s inventory." alt="" coords="361,2149,485,2176"/>
-<area shape="poly" id="edge30_Node000027_Node000030" title=" " alt="" coords="269,1854,285,1866,300,1885,310,1903,317,1938,320,1976,333,2019,369,2083,404,2135,400,2138,364,2086,329,2021,315,1977,312,1939,305,1905,296,1888,281,1870,266,1859"/>
-<area shape="rect" id="Node000033" href="$class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="570,1712,741,1755"/>
-<area shape="poly" id="edge35_Node000027_Node000033" title=" " alt="" coords="225,1827,271,1798,330,1771,387,1755,445,1744,554,1733,555,1738,446,1750,388,1761,332,1776,274,1802,228,1831"/>
-<area shape="rect" id="Node000034" href="$class_inventory_u_i.html#af87afec2b10d5c47599f4f99fd883bfb" title="Moves the selection in the inventory UI." alt="" coords="335,1981,511,2008"/>
-<area shape="poly" id="edge36_Node000027_Node000034" title=" " alt="" coords="266,1854,285,1866,303,1890,310,1915,316,1938,333,1961,349,1972,346,1976,329,1965,311,1940,305,1916,298,1893,281,1870,264,1859"/>
-<area shape="poly" id="edge49_Node000027_Node000035" title=" " alt="" coords="261,1854,284,1866,300,1879,309,1893,317,1906,332,1916,392,1937,456,1949,518,1952,574,1951,574,1956,518,1957,455,1954,391,1943,330,1921,313,1909,304,1896,296,1883,282,1870,259,1859"/>
-<area shape="rect" id="Node000039" href="$class_player.html#ae55b25d19fc5f7861d86d4f51297db00" title="Sells an item from the player&#39;s inventory." alt="" coords="366,1880,479,1907"/>
-<area shape="poly" id="edge50_Node000027_Node000039" title=" " alt="" coords="267,1854,351,1874,350,1879,266,1859"/>
-<area shape="poly" id="edge29_Node000028_Node000029" title=" " alt="" coords="515,1847,1019,1883,1018,1888,515,1852"/>
-<area shape="poly" id="edge31_Node000030_Node000025" title=" " alt="" coords="482,2174,579,2192,705,2206,775,2209,846,2207,917,2200,985,2185,1033,2170,1079,2150,1167,2101,1241,2051,1295,2010,1298,2014,1244,2056,1170,2106,1082,2154,1035,2175,987,2191,918,2205,846,2213,775,2215,705,2212,578,2197,481,2179"/>
-<area shape="rect" id="Node000031" href="$class_player.html#a3c90fed957893e37898fb1d695bf944f" title="Uses a potion from the player&#39;s inventory." alt="" coords="592,2149,719,2176"/>
-<area shape="poly" id="edge32_Node000030_Node000031" title=" " alt="" coords="485,2160,577,2160,577,2165,485,2165"/>
-<area shape="rect" id="Node000032" href="$class_entity.html#a9fb6f4bd9bf657f95482884aab55a51b" title="Heals the entity by the specified value." alt="" coords="847,2149,936,2176"/>
-<area shape="poly" id="edge33_Node000031_Node000032" title=" " alt="" coords="719,2160,831,2160,831,2165,719,2165"/>
-<area shape="poly" id="edge37_Node000034_Node000029" title=" " alt="" coords="457,2006,553,2039,617,2056,688,2070,763,2077,840,2075,915,2062,950,2050,985,2034,1002,2019,1010,2002,1018,1982,1032,1961,1060,1935,1090,1913,1093,1918,1064,1939,1036,1964,1022,1985,1015,2004,1006,2022,987,2038,952,2055,916,2067,841,2080,763,2082,687,2075,616,2061,551,2044,455,2011"/>
-<area shape="poly" id="edge38_Node000034_Node000035" title=" " alt="" coords="487,1978,576,1959,577,1964,488,1983"/>
-<area shape="poly" id="edge44_Node000035_Node000012" title=" " alt="" coords="664,1929,706,1861,729,1815,746,1766,758,1688,762,1589,757,1356,755,1237,759,1126,770,1029,781,989,794,955,818,923,848,900,852,904,822,927,799,957,786,990,776,1030,764,1126,761,1237,762,1356,767,1589,764,1689,751,1767,733,1817,711,1863,669,1932"/>
-<area shape="poly" id="edge43_Node000035_Node000029" title=" " alt="" coords="722,1928,796,1916,911,1904,1018,1896,1018,1902,911,1909,797,1921,723,1933"/>
-<area shape="rect" id="Node000036" href="$class_inventory_u_i.html#aec9d9012dc62ca6d7dffcf92a03184ac" title="Displays the details of a specific item in the inventory UI." alt="" coords="1048,1975,1208,2001"/>
-<area shape="poly" id="edge39_Node000035_Node000036" title=" " alt="" coords="673,1956,725,1997,760,2018,797,2033,849,2045,890,2048,932,2043,985,2033,1035,2021,1081,2005,1082,2010,1037,2026,987,2039,933,2048,891,2053,848,2051,796,2039,757,2023,722,2001,670,1960"/>
-<area shape="rect" id="Node000037" href="$class_player.html#a2244bca0965cbf4a63cce31d939931f1" title="Gets the capacity of the player&#39;s inventory." alt="" coords="797,1931,986,1957"/>
-<area shape="poly" id="edge45_Node000035_Node000037" title=" " alt="" coords="722,1941,781,1941,781,1947,722,1947"/>
-<area shape="rect" id="Node000038" href="$class_inventory_u_i.html#ae8f429c3670b2e6224f8b861ce199e7e" title="Renders the equipped items in the inventory UI." alt="" coords="798,1981,985,2024"/>
-<area shape="poly" id="edge46_Node000035_Node000038" title=" " alt="" coords="713,1955,789,1974,787,1980,711,1960"/>
-<area shape="poly" id="edge40_Node000036_Node000024" title=" " alt="" coords="1175,1972,1263,1945,1265,1950,1177,1977"/>
-<area shape="poly" id="edge41_Node000036_Node000025" title=" " alt="" coords="1209,1985,1255,1985,1255,1991,1209,1991"/>
-<area shape="poly" id="edge42_Node000036_Node000026" title=" " alt="" coords="1151,1972,1269,1902,1286,1891,1289,1896,1272,1906,1154,1977"/>
-<area shape="poly" id="edge48_Node000038_Node000029" title=" " alt="" coords="957,1978,985,1967,1090,1912,1092,1917,987,1972,959,1983"/>
-<area shape="poly" id="edge47_Node000038_Node000036" title=" " alt="" coords="985,1994,1032,1991,1033,1997,986,2000"/>
-<area shape="poly" id="edge54_Node000041_Node000009" title=" " alt="" coords="663,789,714,722,751,683,795,650,808,643,810,648,798,654,755,687,718,726,668,792"/>
-<area shape="poly" id="edge56_Node000041_Node000015" title=" " alt="" coords="670,788,723,745,758,721,796,700,817,691,819,696,798,705,761,726,726,749,674,792"/>
-<area shape="poly" id="edge57_Node000041_Node000016" title=" " alt="" coords="712,795,812,784,812,790,713,801"/>
-<area shape="poly" id="edge58_Node000041_Node000019" title=" " alt="" coords="692,788,796,751,820,744,822,749,797,756,694,793"/>
-<area shape="poly" id="edge59_Node000041_Node000020" title=" " alt="" coords="713,807,809,818,809,823,712,813"/>
-<area shape="poly" id="edge55_Node000041_Node000029" title=" " alt="" coords="674,816,726,859,761,882,798,903,826,913,852,917,900,917,923,917,945,922,967,934,988,954,1009,989,1022,1033,1030,1085,1032,1143,1026,1272,1013,1412,999,1552,993,1681,996,1738,1003,1789,1016,1832,1036,1866,1037,1868,1033,1871,1032,1870,1011,1835,998,1790,991,1739,988,1681,994,1551,1007,1412,1021,1272,1027,1143,1024,1085,1017,1035,1004,992,984,958,964,938,943,927,922,923,900,922,852,922,824,918,796,908,758,887,723,863,670,820"/>
-<area shape="rect" id="Node000043" href="$class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="354,1231,491,1257"/>
-<area shape="poly" id="edge61_Node000042_Node000043" title=" " alt="" coords="262,1241,338,1241,338,1247,262,1247"/>
-<area shape="rect" id="Node000044" href="$class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="576,1256,735,1283"/>
-<area shape="poly" id="edge62_Node000043_Node000044" title=" " alt="" coords="492,1249,561,1256,560,1262,492,1254"/>
-<area shape="rect" id="Node000048" href="$class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="579,537,732,564"/>
-<area shape="poly" id="edge66_Node000043_Node000048" title=" " alt="" coords="425,1229,475,1048,515,915,560,778,603,666,640,577,645,579,607,668,565,780,520,916,480,1050,430,1231"/>
-<area shape="rect" id="Node000045" href="$class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f" title="Clears the specified lines on the console." alt="" coords="797,1576,986,1603"/>
-<area shape="poly" id="edge63_Node000044_Node000045" title=" " alt="" coords="725,1281,751,1300,772,1334,780,1368,779,1401,774,1434,769,1466,769,1498,777,1530,799,1562,801,1565,797,1568,795,1566,772,1532,763,1499,764,1466,769,1433,774,1401,775,1368,767,1336,747,1303,722,1285"/>
-<area shape="rect" id="Node000046" href="$class_math_functions.html#a8b4c499ff6cb50ad02707797b00e67d5" title="Returns the minimum of two unsigned integers." alt="" coords="823,1525,960,1552"/>
-<area shape="poly" id="edge64_Node000044_Node000046" title=" " alt="" coords="725,1281,751,1299,769,1327,777,1355,777,1382,774,1408,772,1435,773,1460,780,1486,799,1511,811,1521,808,1525,795,1515,776,1488,767,1461,766,1435,769,1408,772,1382,771,1355,764,1329,747,1303,722,1285"/>
-<area shape="rect" id="Node000047" href="$class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="820,1627,963,1653"/>
-<area shape="poly" id="edge65_Node000044_Node000047" title=" " alt="" coords="726,1281,751,1299,765,1320,775,1341,784,1381,781,1421,774,1460,767,1498,765,1536,774,1575,784,1594,799,1613,808,1621,805,1625,795,1616,779,1596,769,1576,760,1537,761,1498,769,1459,776,1420,778,1381,770,1342,761,1323,747,1303,723,1285"/>
-<area shape="poly" id="edge67_Node000048_Node000010" title=" " alt="" coords="733,556,819,566,818,571,732,562"/>
-<area shape="poly" id="edge68_Node000048_Node000011" title=" " alt="" coords="692,535,721,519,747,498,763,472,769,447,775,422,795,397,824,381,826,385,798,401,780,424,774,448,768,474,751,502,724,524,695,539"/>
-<area shape="poly" id="edge69_Node000048_Node000014" title=" " alt="" coords="686,535,716,518,747,498,761,485,770,472,779,459,795,447,817,437,819,442,798,452,783,463,774,475,765,488,750,502,719,523,688,539"/>
-<area shape="poly" id="edge70_Node000048_Node000016" title=" " alt="" coords="665,563,682,601,710,652,749,706,773,730,798,751,814,760,812,765,795,756,769,734,745,709,706,655,677,604,660,566"/>
-<area shape="poly" id="edge71_Node000048_Node000017" title=" " alt="" coords="692,534,796,497,820,490,822,495,797,503,694,539"/>
-<area shape="poly" id="edge72_Node000048_Node000022" title=" " alt="" coords="732,540,824,530,824,535,733,545"/>
-<area shape="rect" id="Node000050" href="$class_renderer.html#a0cb985d0dad864b96ee375dd64d50cb4" title="Renders the player position on the console." alt="" coords="338,1281,507,1308"/>
-<area shape="poly" id="edge74_Node000049_Node000050" title=" " alt="" coords="278,1292,322,1292,322,1297,278,1297"/>
-<area shape="poly" id="edge75_Node000050_Node000044" title=" " alt="" coords="507,1283,560,1277,561,1282,508,1288"/>
-<area shape="poly" id="edge76_Node000050_Node000047" title=" " alt="" coords="508,1294,577,1299,648,1308,710,1322,733,1332,751,1343,775,1376,784,1410,783,1445,777,1479,771,1513,769,1546,777,1580,799,1613,808,1621,805,1625,795,1616,772,1582,764,1547,766,1512,772,1478,778,1444,779,1411,770,1379,747,1347,731,1336,708,1327,647,1313,576,1304,508,1300"/>
-<area shape="poly" id="edge78_Node000051_Node000048" title=" " alt="" coords="223,899,624,572,627,576,226,903"/>
-<area shape="poly" id="edge80_Node000052_Node000004" title=" " alt="" coords="450,458,561,403,588,391,590,396,563,408,452,463"/>
-<area shape="poly" id="edge81_Node000052_Node000005" title=" " alt="" coords="492,458,651,423,717,407,747,397,763,375,775,354,781,332,784,310,781,267,771,223,761,178,757,133,760,111,766,88,778,65,795,42,815,27,818,31,799,46,782,68,771,90,765,112,763,133,766,177,776,221,786,266,789,310,786,333,780,356,768,378,750,401,719,412,653,429,493,463"/>
-<area shape="poly" id="edge94_Node000052_Node000006" title=" " alt="" coords="503,472,559,472,559,477,503,477"/>
-<area shape="rect" id="Node000053" href="$class_game_saver.html#a6768977ea7b120f804dd1da52dcd5282" title="Saves the map object to the output stream." alt="" coords="581,1188,730,1215"/>
-<area shape="poly" id="edge82_Node000052_Node000053" title=" " alt="" coords="431,488,648,1173,643,1174,426,489"/>
-<area shape="rect" id="Node000054" href="$class_renderer.html#a711d8730ce215aecc5509712e988fae5" title="Gets the X coordinate of the game map chunk." alt="" coords="818,968,965,995"/>
-<area shape="poly" id="edge83_Node000053_Node000054" title=" " alt="" coords="660,1186,678,1150,707,1101,746,1049,770,1025,795,1004,803,999,806,1004,798,1009,773,1029,750,1052,711,1104,683,1152,665,1189"/>
-<area shape="rect" id="Node000055" href="$class_renderer.html#a77da2e589b87f722158fe874d743c16d" title="Gets the Y coordinate of the game map chunk." alt="" coords="817,1019,966,1045"/>
-<area shape="poly" id="edge84_Node000053_Node000055" title=" " alt="" coords="664,1186,715,1123,752,1086,795,1055,807,1049,809,1054,798,1060,756,1090,719,1126,668,1189"/>
-<area shape="rect" id="Node000056" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="839,1069,944,1096"/>
-<area shape="poly" id="edge85_Node000053_Node000056" title=" " alt="" coords="672,1185,725,1146,796,1106,823,1095,825,1100,798,1110,728,1151,675,1190"/>
-<area shape="rect" id="Node000057" href="$class_map.html#a74a7e6e6ffe6c7ce293fe572f6334542" title="Gets the height of the map." alt="" coords="835,1120,948,1147"/>
-<area shape="poly" id="edge86_Node000053_Node000057" title=" " alt="" coords="701,1185,796,1156,822,1149,824,1154,797,1161,702,1190"/>
-<area shape="rect" id="Node000058" href="$class_map.html#aac69a4a239b9ecdf76248f1b5364b5cf" title="Gets the map matrix." alt="" coords="836,1171,947,1197"/>
-<area shape="poly" id="edge87_Node000053_Node000058" title=" " alt="" coords="730,1193,820,1187,820,1192,731,1199"/>
-<area shape="rect" id="Node000059" href="$class_map.html#ac5ba19a257ffbe13f127f2d6ed46772e" title="Gets the number of monsters in the map." alt="" coords="813,1221,970,1248"/>
-<area shape="poly" id="edge88_Node000053_Node000059" title=" " alt="" coords="731,1209,798,1219,797,1224,730,1215"/>
-<area shape="rect" id="Node000060" href="$class_map.html#a7a4173371a47b1d903db7755c57d40cb" title="Gets the player&#39;s x&#45;coordinate." alt="" coords="832,1272,951,1299"/>
-<area shape="poly" id="edge89_Node000053_Node000060" title=" " alt="" coords="688,1213,798,1257,820,1265,818,1270,796,1263,686,1218"/>
-<area shape="rect" id="Node000061" href="$class_map.html#a752c07693312472d1e0a8eada3f2f811" title="Gets the player&#39;s y&#45;coordinate." alt="" coords="831,1323,952,1349"/>
-<area shape="poly" id="edge90_Node000053_Node000061" title=" " alt="" coords="699,1213,726,1225,750,1242,766,1260,774,1277,783,1293,798,1309,817,1319,815,1323,795,1313,778,1296,770,1279,762,1263,747,1246,723,1230,697,1218"/>
-<area shape="rect" id="Node000062" href="$class_map.html#acea78826f7e1fccb5aae1475017ee964" title="Gets the renderer object." alt="" coords="828,1373,955,1400"/>
-<area shape="poly" id="edge91_Node000053_Node000062" title=" " alt="" coords="705,1213,729,1225,751,1242,762,1258,769,1274,774,1304,779,1332,786,1346,798,1359,815,1370,812,1375,795,1363,782,1349,774,1334,769,1304,764,1275,758,1261,747,1246,726,1230,702,1218"/>
-<area shape="rect" id="Node000063" href="$class_map.html#a0cabbaa2f7d307887225778beb269d14" title="Gets the number of treasures in the map." alt="" coords="812,1424,971,1451"/>
-<area shape="poly" id="edge92_Node000053_Node000063" title=" " alt="" coords="708,1213,731,1225,751,1242,765,1265,772,1287,774,1330,776,1370,783,1390,799,1410,802,1413,799,1417,795,1414,778,1393,770,1372,768,1330,767,1288,761,1267,747,1246,728,1229,705,1218"/>
-<area shape="rect" id="Node000064" href="$class_map.html#aa3b0e805be2744e606a48587d125a6e8" title="Gets the width of the map." alt="" coords="837,1475,946,1501"/>
-<area shape="poly" id="edge93_Node000053_Node000064" title=" " alt="" coords="709,1213,731,1225,751,1242,768,1272,775,1300,776,1328,773,1356,770,1382,772,1409,780,1435,799,1461,824,1477,821,1481,795,1465,775,1437,766,1409,765,1382,768,1355,770,1328,770,1301,763,1274,747,1246,728,1229,706,1218"/>
-<area shape="poly" id="edge100_Node000065_Node000029" title=" " alt="" coords="437,1510,499,1584,535,1623,564,1647,612,1670,653,1680,696,1685,749,1697,797,1713,853,1726,898,1731,941,1742,963,1753,988,1771,1006,1796,1012,1820,1019,1844,1025,1855,1036,1866,1042,1870,1039,1875,1032,1870,1021,1858,1014,1846,1007,1822,1001,1798,984,1775,961,1758,939,1747,897,1736,852,1731,796,1719,748,1703,695,1691,652,1685,610,1675,561,1652,531,1626,495,1588,433,1513"/>
-<area shape="poly" id="edge102_Node000065_Node000033" title=" " alt="" coords="438,1509,474,1553,517,1609,530,1633,538,1653,547,1672,564,1691,578,1702,574,1706,561,1695,543,1675,533,1656,525,1636,512,1612,470,1556,434,1513"/>
-<area shape="poly" id="edge105_Node000065_Node000041" title=" " alt="" coords="430,1482,468,1413,512,1319,544,1217,583,1076,645,832,650,833,588,1077,550,1218,517,1321,473,1416,435,1485"/>
-<area shape="rect" id="Node000066" href="$class_player.html#ad380a42bcd94d21b10bb4b4811a201ba" title="Increases the player&#39;s dexterity attribute." alt="" coords="585,1408,726,1435"/>
-<area shape="poly" id="edge96_Node000065_Node000066" title=" " alt="" coords="459,1481,561,1444,586,1437,587,1442,563,1449,460,1486"/>
-<area shape="rect" id="Node000067" href="$class_player.html#a0cd60ff12405a9258ad15013ed8d9ce8" title="Increases the player&#39;s maximum HP attribute." alt="" coords="602,1459,709,1485"/>
-<area shape="poly" id="edge97_Node000065_Node000067" title=" " alt="" coords="477,1489,586,1477,586,1482,477,1494"/>
-<area shape="rect" id="Node000068" href="$class_player.html#a576eae4adeab184913133a70f2a4fe79" title="Increases the player&#39;s mana attribute." alt="" coords="595,1509,716,1536"/>
-<area shape="poly" id="edge98_Node000065_Node000068" title=" " alt="" coords="477,1500,580,1512,579,1517,477,1506"/>
-<area shape="rect" id="Node000069" href="$class_player.html#afec7049003183289f73ab89afd5a78a2" title="Increases the player&#39;s strength attribute." alt="" coords="586,1560,725,1587"/>
-<area shape="poly" id="edge99_Node000065_Node000069" title=" " alt="" coords="460,1509,563,1545,587,1553,586,1558,561,1551,459,1514"/>
-<area shape="rect" id="Node000070" href="$class_selection_u_i.html#ac0c77f1c80b4996a3ef68668567f939a" title="Gets the option at the specified selection index." alt="" coords="578,1611,733,1637"/>
-<area shape="poly" id="edge101_Node000065_Node000070" title=" " alt="" coords="441,1509,493,1552,527,1576,564,1596,579,1603,577,1608,561,1601,524,1580,490,1556,437,1513"/>
-<area shape="rect" id="Node000071" href="$class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="566,1357,745,1384"/>
-<area shape="poly" id="edge103_Node000065_Node000071" title=" " alt="" coords="437,1481,490,1438,524,1414,561,1394,577,1387,579,1392,564,1398,527,1419,493,1443,441,1486"/>
-<area shape="rect" id="Node000072" href="$class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="823,1677,960,1704"/>
-<area shape="poly" id="edge104_Node000071_Node000072" title=" " alt="" coords="736,1383,751,1394,773,1429,782,1463,781,1497,775,1531,770,1565,769,1598,777,1631,799,1664,811,1673,807,1678,795,1667,772,1633,763,1598,764,1564,770,1530,776,1497,777,1464,768,1431,747,1398,733,1387"/>
+<area shape="rect" id="Node000001" title="Handles user input for map navigation." alt="" coords="5,1141,82,1167"/>
+<area shape="rect" id="Node000002" href="$class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="764,1090,917,1117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,1151,341,1142,520,1133,702,1119,748,1114,748,1120,703,1125,521,1138,342,1148,82,1156"/>
+<area shape="rect" id="Node000027" href="$class_input_handler.html#a882995d6451ced9684db6d342572d464" title="Handles user input for inventory management." alt="" coords="555,381,682,407"/>
+<area shape="poly" id="edge27_Node000001_Node000027" title=" " alt="" coords="43,1140,50,996,66,767,78,649,92,545,108,467,117,440,128,424,176,389,230,366,288,352,348,348,407,349,463,355,557,374,556,379,462,360,407,354,348,353,289,358,232,371,178,394,132,428,122,443,113,468,97,546,83,650,71,767,55,996,48,1141"/>
+<area shape="rect" id="Node000035" href="$class_inventory_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the inventory UI." alt="" coords="1004,693,1137,719"/>
+<area shape="poly" id="edge126_Node000001_Node000035" title=" " alt="" coords="46,1139,87,1014,126,920,179,816,245,712,283,662,325,616,372,574,421,537,475,507,533,485,582,469,623,459,643,458,663,462,683,470,704,485,727,513,736,543,735,574,729,606,724,637,723,667,731,695,752,721,783,740,817,752,854,756,891,755,963,742,1023,723,1025,728,964,748,891,761,853,761,816,757,781,745,749,725,726,698,717,668,718,636,724,605,730,574,731,544,723,515,701,489,680,475,661,467,643,463,624,464,583,474,535,490,478,512,424,542,375,578,329,620,287,666,249,715,183,819,131,922,92,1016,51,1141"/>
+<area shape="rect" id="Node000040" href="$class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="149,1926,270,1953"/>
+<area shape="poly" id="edge51_Node000001_Node000040" title=" " alt="" coords="48,1168,56,1289,73,1483,99,1685,114,1769,132,1830,157,1876,186,1913,182,1916,153,1879,127,1832,109,1770,93,1686,68,1484,51,1290,43,1168"/>
+<area shape="rect" id="Node000060" href="$class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="563,1901,674,1927"/>
+<area shape="poly" id="edge134_Node000001_Node000060" title=" " alt="" coords="53,1167,90,1248,154,1378,239,1533,288,1610,339,1684,386,1749,425,1799,470,1841,536,1886,550,1894,547,1898,533,1891,467,1846,421,1802,382,1753,335,1688,283,1613,235,1535,149,1381,85,1250,48,1169"/>
+<area shape="rect" id="Node000090" href="$class_stats_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the statistics on the screen." alt="" coords="1248,389,1362,415"/>
+<area shape="poly" id="edge127_Node000001_Node000090" title=" " alt="" coords="42,1140,46,993,58,750,69,619,84,496,103,391,114,348,127,314,178,200,202,150,229,106,261,71,300,44,349,27,410,21,620,21,668,19,710,14,784,4,819,3,854,9,891,23,932,46,945,58,953,70,960,95,966,121,980,148,1014,187,1051,223,1130,288,1206,341,1267,378,1264,383,1203,345,1127,292,1047,227,1010,190,976,151,961,123,955,96,948,72,941,61,928,51,889,27,852,14,818,9,784,9,711,19,668,24,620,26,410,26,350,32,302,48,264,75,233,110,207,152,183,202,132,316,119,350,108,392,89,497,74,620,64,751,51,993,48,1141"/>
+<area shape="rect" id="Node000091" href="$class_map.html#a90d54fb9595e65dc58bab82fffea99a3" title="Renders the player&#39;s position." alt="" coords="138,2382,281,2409"/>
+<area shape="poly" id="edge135_Node000001_Node000091" title=" " alt="" coords="49,1168,75,1475,101,1715,132,1964,171,2197,205,2366,199,2367,166,2198,127,1965,95,1716,70,1475,43,1168"/>
+<area shape="rect" id="Node000093" href="$class_map.html#a2e658bc749e2a36fbc477d4f48d2c929" title="Renders player stats." alt="" coords="146,1267,273,1294"/>
+<area shape="poly" id="edge139_Node000001_Node000093" title=" " alt="" coords="63,1165,131,1221,178,1256,175,1260,128,1225,59,1170"/>
+<area shape="rect" id="Node000094" href="$class_game_saver.html#a879dad382765e3bec9a91dc2a69432f1" title="Saves the game data including the player and map information to a specified directory." alt="" coords="130,1090,289,1117"/>
+<area shape="poly" id="edge141_Node000001_Node000094" title=" " alt="" coords="81,1140,148,1119,150,1124,83,1145"/>
+<area shape="rect" id="Node000105" href="$class_input_handler.html#a9b258d6e376ea74d3fa259827b1ab42b" title="Handles user input for displaying player stats." alt="" coords="565,297,672,323"/>
+<area shape="poly" id="edge157_Node000001_Node000105" title=" " alt="" coords="43,1140,50,986,65,740,77,614,91,502,108,417,117,389,128,371,173,334,226,308,282,291,341,282,399,279,455,281,550,293,549,298,454,287,399,285,341,288,283,296,228,313,176,338,132,374,122,391,113,419,96,503,82,615,71,741,55,986,48,1140"/>
+<area shape="rect" id="Node000003" href="$class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="979,1090,1161,1117"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="917,1101,964,1101,964,1106,917,1106"/>
+<area shape="rect" id="Node000004" href="$class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="1212,989,1398,1031"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1112,1087,1161,1069,1209,1048,1238,1035,1240,1040,1211,1052,1163,1074,1114,1092"/>
+<area shape="rect" id="Node000005" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="1481,1647,1603,1674"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="1081,1116,1131,1208,1169,1270,1212,1330,1293,1423,1378,1510,1514,1635,1511,1639,1374,1514,1289,1427,1208,1333,1165,1273,1127,1211,1076,1118"/>
+<area shape="rect" id="Node000006" href="$class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="1224,1106,1386,1133"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="1162,1107,1209,1110,1208,1115,1162,1112"/>
+<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="1361,1131,1383,1143,1402,1160,1426,1200,1439,1236,1443,1271,1442,1306,1437,1379,1440,1419,1450,1465,1467,1513,1488,1559,1527,1633,1522,1635,1483,1561,1462,1515,1445,1467,1435,1420,1432,1379,1437,1306,1438,1272,1434,1238,1421,1202,1398,1164,1380,1147,1358,1135"/>
+<area shape="rect" id="Node000007" href="$class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="1482,1123,1602,1150"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1386,1123,1467,1129,1466,1134,1386,1128"/>
+<area shape="rect" id="Node000008" href="$class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="1464,921,1620,947"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="1370,1103,1398,1085,1410,1070,1417,1055,1421,1022,1425,990,1432,973,1446,957,1450,954,1454,958,1450,961,1437,976,1430,991,1426,1023,1422,1056,1415,1073,1401,1089,1373,1108"/>
+<area shape="rect" id="Node000009" href="$class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="1474,769,1610,795"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="1373,1103,1398,1085,1419,1050,1427,1016,1426,981,1420,947,1414,912,1413,877,1422,841,1446,806,1458,795,1462,799,1450,809,1427,843,1419,877,1419,911,1425,946,1431,981,1432,1016,1424,1053,1402,1089,1377,1108"/>
+<area shape="rect" id="Node000010" href="$class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="1485,1377,1599,1403"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="1359,1131,1382,1143,1402,1160,1418,1187,1426,1214,1426,1240,1424,1265,1422,1290,1424,1314,1432,1339,1450,1363,1471,1377,1468,1382,1446,1367,1427,1341,1419,1315,1417,1290,1419,1265,1421,1240,1420,1215,1414,1190,1398,1164,1379,1147,1357,1136"/>
+<area shape="rect" id="Node000011" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="1491,1427,1593,1454"/>
+<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="1360,1131,1383,1143,1402,1160,1421,1194,1429,1228,1428,1260,1424,1291,1420,1322,1420,1353,1429,1383,1450,1413,1462,1424,1477,1431,1475,1435,1459,1428,1446,1417,1424,1385,1415,1353,1414,1322,1418,1291,1423,1259,1423,1228,1416,1196,1398,1164,1380,1147,1357,1135"/>
+<area shape="rect" id="Node000012" href="$class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="1473,819,1611,846"/>
+<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="1373,1103,1398,1085,1416,1057,1424,1029,1424,1001,1420,972,1417,943,1417,914,1426,885,1446,856,1457,847,1460,851,1450,860,1430,888,1422,915,1422,943,1425,971,1429,1000,1429,1030,1421,1059,1402,1089,1376,1108"/>
+<area shape="rect" id="Node000013" href="$class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="1460,971,1624,998"/>
+<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="1365,1103,1398,1085,1414,1067,1421,1047,1429,1027,1446,1008,1453,1003,1456,1007,1449,1012,1433,1030,1426,1049,1418,1069,1401,1089,1368,1108"/>
+<area shape="rect" id="Node000014" href="$class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="1484,1225,1600,1251"/>
+<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="1346,1131,1374,1143,1401,1160,1416,1173,1425,1187,1434,1199,1449,1210,1470,1220,1468,1225,1446,1215,1431,1202,1421,1190,1412,1177,1398,1164,1372,1148,1344,1136"/>
+<area shape="rect" id="Node000015" href="$class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="1484,667,1600,694"/>
+<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="1331,1103,1367,1078,1384,1061,1397,1042,1416,995,1422,951,1419,909,1411,868,1405,828,1406,788,1417,747,1446,704,1468,688,1471,693,1450,708,1422,749,1411,788,1411,828,1417,867,1424,908,1427,951,1422,996,1402,1045,1388,1065,1370,1082,1334,1108"/>
+<area shape="rect" id="Node000016" href="$class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="1478,1174,1606,1201"/>
+<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="1352,1131,1448,1159,1474,1167,1473,1172,1447,1165,1351,1136"/>
+<area shape="rect" id="Node000017" href="$class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="1465,1326,1619,1353"/>
+<area shape="poly" id="edge17_Node000006_Node000017" title=" " alt="" coords="1358,1131,1381,1143,1402,1160,1415,1181,1422,1201,1425,1239,1428,1276,1435,1294,1450,1312,1453,1315,1450,1319,1446,1316,1431,1297,1423,1278,1419,1240,1417,1202,1411,1183,1398,1164,1378,1147,1355,1136"/>
+<area shape="rect" id="Node000018" href="$class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="1484,1022,1600,1049"/>
+<area shape="poly" id="edge18_Node000006_Node000018" title=" " alt="" coords="1351,1103,1399,1085,1422,1071,1447,1058,1468,1050,1470,1055,1449,1063,1425,1076,1401,1090,1353,1108"/>
+<area shape="rect" id="Node000019" href="$class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="1468,566,1616,593"/>
+<area shape="poly" id="edge19_Node000006_Node000019" title=" " alt="" coords="1331,1103,1367,1078,1384,1061,1397,1042,1410,1002,1415,949,1415,820,1414,753,1417,692,1427,641,1435,620,1446,603,1453,596,1457,600,1450,606,1440,622,1432,642,1423,693,1420,754,1420,820,1421,949,1415,1003,1402,1044,1388,1065,1371,1082,1334,1108"/>
+<area shape="rect" id="Node000020" href="$class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="1475,617,1609,643"/>
+<area shape="poly" id="edge20_Node000006_Node000020" title=" " alt="" coords="1331,1103,1367,1078,1384,1061,1397,1042,1410,1014,1419,988,1424,937,1419,889,1410,842,1402,796,1401,750,1406,726,1414,702,1427,678,1446,653,1460,642,1463,646,1450,657,1432,681,1419,705,1411,728,1407,750,1407,795,1415,841,1424,888,1429,937,1424,989,1415,1016,1402,1045,1388,1065,1370,1082,1334,1108"/>
+<area shape="rect" id="Node000021" href="$class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="1474,870,1610,897"/>
+<area shape="poly" id="edge21_Node000006_Node000021" title=" " alt="" coords="1372,1103,1398,1085,1413,1064,1420,1042,1420,997,1421,952,1429,929,1446,907,1459,897,1462,901,1450,911,1434,932,1426,953,1426,997,1425,1043,1418,1066,1402,1089,1375,1108"/>
+<area shape="rect" id="Node000022" href="$class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="1490,1275,1594,1302"/>
+<area shape="poly" id="edge22_Node000006_Node000022" title=" " alt="" coords="1354,1131,1379,1143,1402,1160,1419,1187,1425,1213,1432,1238,1438,1250,1449,1261,1476,1276,1474,1281,1446,1265,1434,1253,1427,1240,1420,1214,1414,1189,1398,1164,1376,1148,1352,1136"/>
+<area shape="rect" id="Node000023" href="$class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="1467,1073,1617,1099"/>
+<area shape="poly" id="edge23_Node000006_Node000023" title=" " alt="" coords="1386,1105,1452,1096,1452,1101,1387,1111"/>
+<area shape="rect" id="Node000024" href="$class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1685,1073,1794,1099"/>
+<area shape="poly" id="edge24_Node000023_Node000024" title=" " alt="" coords="1617,1083,1669,1083,1669,1089,1617,1089"/>
+<area shape="rect" id="Node000025" href="$class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1684,515,1795,542"/>
+<area shape="poly" id="edge25_Node000023_Node000025" title=" " alt="" coords="1615,1073,1634,1059,1659,1026,1673,994,1679,964,1680,933,1676,865,1676,825,1681,782,1729,557,1734,558,1687,782,1681,826,1681,864,1685,933,1685,964,1678,996,1664,1028,1638,1063,1618,1077"/>
+<area shape="rect" id="Node000026" href="$class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1688,794,1791,821"/>
+<area shape="poly" id="edge26_Node000023_Node000026" title=" " alt="" coords="1616,1071,1634,1059,1657,1034,1677,1006,1706,945,1723,885,1732,836,1738,837,1728,886,1710,947,1681,1009,1661,1038,1638,1063,1618,1075"/>
+<area shape="rect" id="Node000028" href="$class_inventory_u_i.html#abb51ba47b083bf45d0c28385ee5492d7" title="Checks the selected item in the inventory UI." alt="" coords="979,470,1162,497"/>
+<area shape="poly" id="edge28_Node000027_Node000028" title=" " alt="" coords="658,405,704,424,727,435,751,445,860,466,963,477,963,482,859,471,750,450,725,440,702,428,656,410"/>
+<area shape="rect" id="Node000029" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="1448,718,1636,745"/>
+<area shape="poly" id="edge34_Node000027_Node000029" title=" " alt="" coords="669,406,704,424,720,439,728,454,737,467,752,480,779,491,811,501,890,513,1080,525,1178,531,1268,541,1345,558,1376,571,1401,587,1415,601,1422,616,1427,646,1431,676,1438,690,1450,704,1454,708,1450,712,1446,708,1433,693,1426,678,1422,647,1417,617,1410,604,1398,591,1374,576,1343,563,1268,546,1177,536,1080,531,889,519,810,506,777,496,749,484,733,471,724,456,715,442,701,428,667,410"/>
+<area shape="rect" id="Node000030" href="$class_player.html#a51b68f7c3df099f6a241eef7ebcd9ec3" title="Equips an item from the player&#39;s inventory." alt="" coords="778,314,903,341"/>
+<area shape="poly" id="edge30_Node000027_Node000030" title=" " alt="" coords="665,377,778,343,779,348,667,383"/>
+<area shape="rect" id="Node000033" href="$class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="755,669,926,711"/>
+<area shape="poly" id="edge35_Node000027_Node000033" title=" " alt="" coords="680,406,705,424,724,454,732,484,732,513,729,542,726,570,727,598,734,626,753,655,754,656,750,660,749,658,729,628,721,599,721,570,724,541,727,513,727,485,719,457,701,428,677,410"/>
+<area shape="rect" id="Node000034" href="$class_inventory_u_i.html#af87afec2b10d5c47599f4f99fd883bfb" title="Moves the selection in the inventory UI." alt="" coords="752,786,929,813"/>
+<area shape="poly" id="edge36_Node000027_Node000034" title=" " alt="" coords="641,406,674,435,705,475,720,511,727,543,728,601,730,658,737,688,753,722,777,752,805,775,802,779,773,755,748,725,732,690,724,658,723,601,722,543,715,512,700,478,670,439,637,410"/>
+<area shape="poly" id="edge49_Node000027_Node000035" title=" " alt="" coords="676,406,704,424,717,440,724,456,729,487,734,518,740,532,753,547,774,564,795,574,836,582,879,587,904,593,931,604,993,642,1043,680,1040,685,990,646,929,608,903,598,879,592,835,587,793,579,771,568,749,551,736,535,728,519,724,488,719,458,713,443,701,428,673,410"/>
+<area shape="rect" id="Node000039" href="$class_player.html#ae55b25d19fc5f7861d86d4f51297db00" title="Sells an item from the player&#39;s inventory." alt="" coords="784,618,897,645"/>
+<area shape="poly" id="edge50_Node000027_Node000039" title=" " alt="" coords="678,406,705,424,720,447,728,469,729,513,730,555,738,576,753,597,771,612,768,616,749,601,733,579,725,556,724,513,723,470,716,449,701,428,675,410"/>
+<area shape="poly" id="edge29_Node000028_Node000029" title=" " alt="" coords="1162,470,1221,471,1285,479,1347,499,1375,514,1402,533,1419,554,1427,576,1429,598,1427,620,1427,663,1434,684,1450,704,1453,707,1449,711,1446,708,1430,686,1422,664,1422,619,1423,598,1422,577,1414,557,1398,537,1373,518,1345,504,1284,484,1221,476,1162,476"/>
+<area shape="poly" id="edge31_Node000030_Node000025" title=" " alt="" coords="902,317,928,300,945,275,952,250,951,224,948,197,945,171,946,145,955,120,976,97,1030,60,1081,36,1131,24,1181,22,1231,30,1284,46,1401,97,1465,136,1524,186,1575,242,1620,301,1658,360,1689,415,1729,500,1725,502,1684,418,1653,363,1616,304,1571,245,1520,189,1462,140,1398,102,1282,51,1230,35,1181,28,1132,29,1083,41,1033,65,980,101,960,123,951,146,950,171,953,197,957,223,957,250,950,277,932,304,904,321"/>
+<area shape="rect" id="Node000031" href="$class_player.html#a3c90fed957893e37898fb1d695bf944f" title="Uses a potion from the player&#39;s inventory." alt="" coords="1007,111,1133,138"/>
+<area shape="poly" id="edge32_Node000030_Node000031" title=" " alt="" coords="902,313,929,300,969,266,1004,225,1032,185,1053,150,1057,153,1037,188,1008,228,973,269,931,304,904,318"/>
+<area shape="rect" id="Node000032" href="$class_entity.html#a9fb6f4bd9bf657f95482884aab55a51b" title="Heals the entity by the specified value." alt="" coords="1260,111,1350,138"/>
+<area shape="poly" id="edge33_Node000031_Node000032" title=" " alt="" coords="1134,122,1245,122,1245,127,1134,127"/>
+<area shape="poly" id="edge37_Node000034_Node000029" title=" " alt="" coords="929,788,1432,739,1433,744,929,793"/>
+<area shape="poly" id="edge38_Node000034_Node000035" title=" " alt="" coords="881,783,929,765,1024,724,1027,728,931,770,883,788"/>
+<area shape="poly" id="edge44_Node000035_Node000012" title=" " alt="" coords="1124,717,1475,812,1474,817,1122,722"/>
+<area shape="poly" id="edge43_Node000035_Node000029" title=" " alt="" coords="1137,707,1433,723,1432,728,1137,712"/>
+<area shape="rect" id="Node000036" href="$class_inventory_u_i.html#aec9d9012dc62ca6d7dffcf92a03184ac" title="Displays the details of a specific item in the inventory UI." alt="" coords="1462,515,1622,542"/>
+<area shape="poly" id="edge39_Node000035_Node000036" title=" " alt="" coords="1076,691,1113,614,1160,508,1170,468,1173,434,1182,403,1193,388,1209,374,1234,359,1257,349,1280,344,1302,343,1348,353,1401,374,1443,400,1478,434,1507,469,1528,501,1523,504,1503,472,1475,437,1439,404,1398,379,1346,358,1302,349,1281,349,1259,354,1236,364,1212,379,1197,392,1187,405,1179,435,1175,469,1165,510,1118,616,1081,693"/>
+<area shape="rect" id="Node000037" href="$class_player.html#a2244bca0965cbf4a63cce31d939931f1" title="Gets the capacity of the player&#39;s inventory." alt="" coords="1210,667,1400,694"/>
+<area shape="poly" id="edge45_Node000035_Node000037" title=" " alt="" coords="1137,696,1195,690,1195,695,1138,701"/>
+<area shape="rect" id="Node000038" href="$class_inventory_u_i.html#ae8f429c3670b2e6224f8b861ce199e7e" title="Renders the equipped items in the inventory UI." alt="" coords="1211,601,1399,643"/>
+<area shape="poly" id="edge46_Node000035_Node000038" title=" " alt="" coords="1108,690,1209,653,1227,647,1228,652,1211,658,1110,695"/>
+<area shape="poly" id="edge40_Node000036_Node000024" title=" " alt="" coords="1623,540,1638,552,1664,586,1678,619,1685,650,1685,682,1681,750,1681,789,1687,832,1734,1057,1729,1058,1681,833,1676,789,1676,750,1680,682,1679,651,1673,620,1659,589,1634,556,1620,545"/>
+<area shape="poly" id="edge41_Node000036_Node000025" title=" " alt="" coords="1623,526,1668,526,1668,531,1623,531"/>
+<area shape="poly" id="edge42_Node000036_Node000026" title=" " alt="" coords="1620,540,1638,552,1661,577,1681,606,1710,668,1728,729,1738,778,1732,779,1723,730,1706,670,1677,608,1657,580,1634,556,1617,545"/>
+<area shape="poly" id="edge48_Node000038_Node000029" title=" " alt="" coords="1380,642,1401,653,1416,666,1426,679,1435,692,1449,704,1460,709,1457,714,1446,708,1431,696,1421,683,1412,670,1398,657,1378,646"/>
+<area shape="poly" id="edge47_Node000038_Node000036" title=" " alt="" coords="1346,598,1447,551,1468,544,1469,549,1449,556,1348,602"/>
+<area shape="rect" id="Node000041" href="$class_event.html#a287175fd5089ba826858b85cfacae5c8" title="Handles a monster event." alt="" coords="342,1647,482,1674"/>
+<area shape="poly" id="edge52_Node000040_Node000041" title=" " alt="" coords="218,1924,389,1685,394,1688,223,1927"/>
+<area shape="rect" id="Node000069" href="$class_event.html#a1b0a578a40e989443e49822fec5ef8d5" title="Advances to the next floor." alt="" coords="353,2205,470,2231"/>
+<area shape="poly" id="edge99_Node000040_Node000069" title=" " alt="" coords="223,1952,394,2190,389,2193,218,1955"/>
+<area shape="rect" id="Node000086" href="$class_event.html#a1c185e479c0fb3003cee32c68f89c69c" title="Handles a treasure event." alt="" coords="340,2002,483,2029"/>
+<area shape="poly" id="edge117_Node000040_Node000086" title=" " alt="" coords="248,1951,360,1993,358,1998,246,1956"/>
+<area shape="poly" id="edge77_Node000041_Node000005" title=" " alt="" coords="473,1672,535,1683,686,1703,839,1709,1071,1709,1236,1704,1399,1685,1466,1674,1467,1679,1400,1690,1236,1709,1072,1714,839,1714,686,1709,534,1689,472,1677"/>
+<area shape="poly" id="edge73_Node000041_Node000009" title=" " alt="" coords="410,1647,411,1569,415,1511,424,1445,439,1376,461,1306,491,1238,532,1178,568,1145,622,1110,697,1073,794,1032,1063,934,1447,805,1471,797,1472,803,1448,810,1065,939,796,1037,699,1078,625,1115,571,1149,536,1181,496,1241,466,1307,444,1377,429,1446,421,1511,416,1569,415,1647"/>
+<area shape="poly" id="edge75_Node000041_Node000011" title=" " alt="" coords="415,1646,429,1611,454,1565,488,1518,509,1498,533,1481,575,1460,612,1448,646,1443,680,1442,751,1450,839,1455,1071,1455,1293,1451,1475,1442,1475,1447,1294,1456,1072,1461,839,1461,750,1455,680,1448,647,1448,613,1453,577,1465,536,1486,513,1502,492,1522,458,1568,434,1613,420,1648"/>
+<area shape="poly" id="edge76_Node000041_Node000016" title=" " alt="" coords="414,1646,427,1606,451,1551,485,1493,507,1467,533,1444,586,1418,679,1388,943,1318,1234,1251,1462,1201,1463,1206,1235,1256,944,1323,681,1393,588,1423,536,1448,511,1471,490,1497,455,1554,432,1608,419,1648"/>
+<area shape="rect" id="Node000042" href="$class_player.html#a9d417707b34a9388942cf618b8cb7e48" title="Adds gold to the player&#39;s current amount." alt="" coords="560,1799,677,1826"/>
+<area shape="poly" id="edge53_Node000041_Node000042" title=" " alt="" coords="426,1673,470,1723,502,1753,536,1778,559,1791,556,1795,533,1783,498,1757,467,1727,422,1676"/>
+<area shape="rect" id="Node000043" href="$class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="566,2154,671,2181"/>
+<area shape="poly" id="edge54_Node000041_Node000043" title=" " alt="" coords="418,1674,465,1879,501,2003,519,2054,537,2090,560,2119,586,2142,583,2146,556,2122,532,2093,514,2056,496,2005,460,1880,413,1675"/>
+<area shape="rect" id="Node000045" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="795,2057,886,2083"/>
+<area shape="poly" id="edge56_Node000041_Node000045" title=" " alt="" coords="436,1672,481,1699,535,1727,584,1742,625,1747,664,1757,684,1768,705,1785,720,1804,729,1823,736,1858,740,1895,753,1938,787,1996,821,2043,816,2046,782,1998,748,1940,735,1896,731,1859,724,1824,715,1807,701,1789,681,1772,662,1762,624,1752,583,1747,533,1732,478,1704,433,1677"/>
+<area shape="rect" id="Node000047" href="$class_input_handler.html#a44653efb390004321f72000e66d13df1" title="Handles user input during battles." alt="" coords="563,989,674,1015"/>
+<area shape="poly" id="edge58_Node000041_Node000047" title=" " alt="" coords="411,1646,421,1529,443,1346,459,1248,479,1159,503,1084,517,1055,532,1032,548,1019,551,1023,536,1036,522,1057,508,1086,484,1160,464,1250,448,1346,426,1530,417,1647"/>
+<area shape="rect" id="Node000051" href="$class_battle_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the battle UI." alt="" coords="782,1191,899,1218"/>
+<area shape="poly" id="edge85_Node000041_Node000051" title=" " alt="" coords="412,1647,420,1591,440,1509,456,1463,476,1418,502,1375,532,1336,558,1312,586,1292,648,1258,710,1233,767,1217,768,1222,712,1238,650,1263,589,1296,561,1317,536,1340,506,1378,481,1420,461,1465,445,1510,426,1592,417,1647"/>
+<area shape="rect" id="Node000053" href="$class_event.html#a57684dfbd3dd46292af83cd970dffd2a" title="Handles the game over event." alt="" coords="557,1191,680,1218"/>
+<area shape="poly" id="edge69_Node000041_Node000053" title=" " alt="" coords="410,1647,413,1576,428,1467,443,1406,464,1344,494,1286,532,1235,545,1224,549,1228,536,1238,498,1289,469,1347,448,1407,433,1468,418,1576,415,1647"/>
+<area shape="rect" id="Node000054" href="$class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="566,1850,671,1877"/>
+<area shape="poly" id="edge74_Node000041_Node000054" title=" " alt="" coords="421,1673,436,1707,461,1751,495,1796,536,1836,553,1846,551,1850,533,1840,490,1800,457,1753,432,1709,416,1676"/>
+<area shape="rect" id="Node000055" href="$class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="562,2205,675,2231"/>
+<area shape="poly" id="edge78_Node000041_Node000055" title=" " alt="" coords="419,1674,483,1962,537,2191,549,2201,546,2205,532,2194,478,1963,413,1675"/>
+<area shape="rect" id="Node000056" href="$class_event.html#a211184245970de6c1b3eaff28b66f32c" title="Handles a monster attack event." alt="" coords="545,1495,692,1522"/>
+<area shape="poly" id="edge79_Node000041_Node000056" title=" " alt="" coords="430,1645,585,1529,588,1533,433,1649"/>
+<area shape="poly" id="edge86_Node000041_Node000060" title=" " alt="" coords="423,1673,489,1793,501,1821,508,1845,517,1865,536,1887,550,1896,547,1900,533,1891,512,1868,503,1846,496,1823,484,1795,419,1676"/>
+<area shape="rect" id="Node000067" href="$class_battle_u_i.html#a9ca94355bb561fbfe402db52c0f8d2c2" title="Renders the graphics for the battle UI." alt="" coords="534,1597,703,1623"/>
+<area shape="poly" id="edge97_Node000041_Node000067" title=" " alt="" coords="469,1644,546,1625,547,1630,470,1649"/>
+<area shape="rect" id="Node000068" href="$class_entity.html#a9889ff479c68e1a1495881f23d10dfe2" title="Sets the current health points attribute of the entity." alt="" coords="568,1647,669,1674"/>
+<area shape="poly" id="edge98_Node000041_Node000068" title=" " alt="" coords="482,1658,552,1658,552,1663,482,1663"/>
+<area shape="rect" id="Node000044" href="$class_player.html#ad6dda931e17895069ecfbfbb4101f5b0" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="785,2154,896,2181"/>
+<area shape="poly" id="edge55_Node000043_Node000044" title=" " alt="" coords="672,2165,769,2165,769,2170,672,2170"/>
+<area shape="rect" id="Node000046" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="978,2049,1162,2091"/>
+<area shape="poly" id="edge57_Node000045_Node000046" title=" " alt="" coords="886,2067,962,2067,962,2073,886,2073"/>
+<area shape="poly" id="edge60_Node000047_Node000033" title=" " alt="" coords="673,992,688,985,701,975,719,951,728,927,731,904,730,880,730,830,735,802,748,773,770,744,794,720,798,724,774,747,753,775,741,804,735,830,736,880,736,904,733,928,723,953,705,978,691,989,675,997"/>
+<area shape="rect" id="Node000048" href="$class_game_state.html#a39bbab7a6b0c13bc227d484bba071d1c" title=" " alt="" coords="752,938,929,965"/>
+<area shape="poly" id="edge59_Node000047_Node000048" title=" " alt="" coords="673,987,763,966,764,971,675,992"/>
+<area shape="rect" id="Node000049" href="$class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="751,837,930,863"/>
+<area shape="poly" id="edge61_Node000047_Node000049" title=" " alt="" coords="673,987,701,974,716,963,726,951,749,924,808,871,812,875,753,928,730,955,720,967,704,979,675,992"/>
+<area shape="poly" id="edge63_Node000047_Node000051" title=" " alt="" coords="636,1014,752,1127,813,1179,809,1183,749,1131,632,1018"/>
+<area shape="rect" id="Node000050" href="$class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="1002,837,1138,863"/>
+<area shape="poly" id="edge62_Node000049_Node000050" title=" " alt="" coords="930,847,986,847,986,853,930,853"/>
+<area shape="rect" id="Node000052" href="$class_battle_u_i.html#ac28f355d831cf2da6849142a8c5d6a27" title="Renders the HP bars for the player and the monster." alt="" coords="1224,1174,1386,1201"/>
+<area shape="poly" id="edge64_Node000051_Node000052" title=" " alt="" coords="899,1200,1209,1188,1209,1194,899,1205"/>
+<area shape="poly" id="edge65_Node000052_Node000007" title=" " alt="" coords="1370,1171,1466,1150,1468,1155,1372,1176"/>
+<area shape="poly" id="edge67_Node000052_Node000011" title=" " alt="" coords="1326,1199,1364,1233,1402,1279,1412,1299,1418,1318,1422,1351,1428,1383,1436,1398,1449,1413,1477,1429,1474,1434,1446,1417,1431,1401,1423,1384,1416,1352,1412,1319,1407,1301,1397,1282,1360,1237,1323,1203"/>
+<area shape="poly" id="edge68_Node000052_Node000016" title=" " alt="" coords="1386,1185,1462,1185,1462,1190,1386,1190"/>
+<area shape="poly" id="edge66_Node000052_Node000029" title=" " alt="" coords="1359,1171,1380,1159,1398,1143,1414,1117,1424,1092,1430,1068,1432,1043,1427,995,1417,948,1407,901,1404,853,1407,829,1415,804,1427,780,1446,755,1448,753,1452,756,1450,758,1432,783,1420,806,1412,830,1409,853,1412,900,1422,947,1433,995,1437,1043,1435,1068,1429,1094,1418,1120,1402,1146,1384,1164,1362,1176"/>
+<area shape="poly" id="edge70_Node000053_Node000002" title=" " alt="" coords="662,1188,701,1170,725,1152,749,1133,777,1120,779,1125,752,1138,728,1156,704,1175,664,1193"/>
+<area shape="poly" id="edge72_Node000053_Node000010" title=" " alt="" coords="681,1216,913,1267,1211,1329,1470,1375,1469,1381,1210,1334,912,1272,679,1221"/>
+<area shape="poly" id="edge71_Node000053_Node000029" title=" " alt="" coords="680,1189,828,1155,893,1139,929,1126,944,1115,953,1103,976,1076,1099,971,1197,893,1303,826,1447,754,1463,748,1465,753,1449,759,1306,831,1200,898,1102,976,980,1080,957,1107,947,1119,931,1131,894,1144,829,1161,681,1194"/>
+<area shape="poly" id="edge84_Node000056_Node000005" title=" " alt="" coords="674,1520,704,1539,715,1551,722,1564,727,1590,734,1613,741,1623,752,1633,777,1646,809,1656,888,1671,983,1679,1087,1682,1297,1677,1466,1665,1466,1670,1298,1682,1087,1688,982,1685,887,1676,807,1661,775,1651,749,1638,737,1627,729,1615,722,1591,717,1566,711,1554,701,1543,672,1525"/>
+<area shape="poly" id="edge83_Node000056_Node000011" title=" " alt="" coords="692,1508,824,1509,1001,1506,1199,1496,1399,1474,1481,1456,1482,1461,1400,1479,1200,1501,1001,1512,824,1515,692,1513"/>
+<area shape="poly" id="edge82_Node000056_Node000029" title=" " alt="" coords="638,1493,1161,1127,1184,1108,1209,1092,1238,1081,1265,1077,1312,1076,1334,1075,1356,1071,1376,1060,1398,1042,1421,1006,1429,971,1428,936,1421,901,1415,865,1413,828,1422,791,1446,755,1448,752,1452,756,1450,758,1427,794,1418,829,1420,864,1426,900,1433,936,1434,972,1426,1009,1402,1045,1379,1065,1357,1076,1335,1080,1313,1081,1265,1082,1239,1086,1212,1096,1187,1112,1164,1131,641,1497"/>
+<area shape="poly" id="edge80_Node000056_Node000045" title=" " alt="" coords="681,1520,705,1539,736,1590,750,1638,752,1685,747,1730,740,1777,735,1826,738,1880,753,1938,767,1968,783,1996,818,2043,814,2046,779,1999,762,1970,748,1940,733,1880,730,1826,734,1776,742,1730,747,1685,745,1639,731,1592,701,1542,678,1525"/>
+<area shape="rect" id="Node000057" href="$class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="783,1597,898,1623"/>
+<area shape="poly" id="edge81_Node000056_Node000057" title=" " alt="" coords="664,1520,704,1538,728,1557,752,1576,779,1588,777,1593,749,1580,725,1561,701,1543,662,1525"/>
+<area shape="rect" id="Node000061" href="$class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="772,1901,909,1927"/>
+<area shape="poly" id="edge87_Node000060_Node000061" title=" " alt="" coords="674,1911,756,1911,756,1917,674,1917"/>
+<area shape="rect" id="Node000062" href="$class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="991,2762,1150,2789"/>
+<area shape="poly" id="edge88_Node000061_Node000062" title=" " alt="" coords="856,1926,894,1976,915,2008,932,2044,969,2144,998,2249,1022,2354,1039,2455,1061,2631,1070,2747,1065,2747,1056,2632,1034,2456,1016,2355,993,2250,964,2146,928,2046,910,2011,890,1979,852,1929"/>
+<area shape="rect" id="Node000066" href="$class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="1228,1293,1382,1319"/>
+<area shape="poly" id="edge90_Node000061_Node000066" title=" " alt="" coords="850,1899,1282,1330,1287,1333,854,1902"/>
+<area shape="rect" id="Node000065" href="$class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="1234,2787,1376,2814"/>
+<area shape="poly" id="edge89_Node000062_Node000065" title=" " alt="" coords="1150,2781,1218,2789,1218,2794,1150,2787"/>
+<area shape="poly" id="edge91_Node000066_Node000010" title=" " alt="" coords="1353,1317,1401,1336,1425,1349,1449,1362,1471,1370,1469,1375,1447,1367,1422,1354,1399,1340,1351,1322"/>
+<area shape="poly" id="edge92_Node000066_Node000011" title=" " alt="" coords="1322,1318,1375,1364,1411,1390,1449,1413,1477,1424,1475,1429,1446,1418,1408,1395,1372,1369,1319,1322"/>
+<area shape="poly" id="edge93_Node000066_Node000014" title=" " alt="" coords="1351,1289,1447,1261,1473,1253,1474,1259,1448,1266,1352,1295"/>
+<area shape="poly" id="edge94_Node000066_Node000016" title=" " alt="" coords="1362,1290,1398,1272,1413,1257,1421,1242,1430,1226,1446,1210,1462,1202,1465,1206,1449,1215,1434,1229,1426,1244,1417,1260,1401,1276,1365,1295"/>
+<area shape="poly" id="edge95_Node000066_Node000017" title=" " alt="" coords="1382,1314,1449,1324,1449,1329,1381,1319"/>
+<area shape="poly" id="edge96_Node000066_Node000022" title=" " alt="" coords="1382,1298,1474,1291,1475,1296,1382,1303"/>
+<area shape="poly" id="edge114_Node000069_Node000005" title=" " alt="" coords="437,2229,481,2252,535,2270,610,2273,741,2272,930,2266,1012,2237,1081,2208,1140,2178,1192,2144,1240,2105,1288,2058,1398,1936,1444,1872,1482,1802,1510,1738,1529,1687,1534,1689,1515,1740,1487,1805,1449,1875,1402,1940,1292,2062,1243,2109,1195,2148,1143,2182,1083,2213,1014,2242,930,2271,741,2278,610,2279,534,2275,479,2257,434,2234"/>
+<area shape="poly" id="edge100_Node000069_Node000043" title=" " alt="" coords="469,2201,550,2181,551,2186,470,2207"/>
+<area shape="poly" id="edge101_Node000069_Node000045" title=" " alt="" coords="444,2229,497,2248,564,2263,600,2266,635,2264,669,2256,701,2241,714,2231,721,2221,728,2197,734,2170,748,2140,775,2113,803,2090,806,2094,779,2117,753,2144,739,2171,734,2198,726,2223,717,2235,704,2246,671,2261,636,2269,599,2271,563,2268,495,2253,442,2234"/>
+<area shape="poly" id="edge113_Node000069_Node000054" title=" " alt="" coords="417,2203,447,2134,484,2040,494,1995,498,1958,507,1923,517,1905,533,1887,551,1874,554,1878,536,1891,521,1908,511,1925,503,1959,500,1996,489,2041,452,2136,422,2205"/>
+<area shape="poly" id="edge115_Node000069_Node000055" title=" " alt="" coords="471,2215,547,2215,547,2221,471,2221"/>
+<area shape="poly" id="edge116_Node000069_Node000060" title=" " alt="" coords="416,2203,458,2110,492,2048,532,1988,558,1960,585,1935,589,1939,562,1963,536,1992,497,2051,463,2112,421,2205"/>
+<area shape="rect" id="Node000070" href="$class_math_functions.html#aeee63f83fa137b620c87128de40ce5b5" title="Calculates the nth Fibonacci number starting from a and b." alt="" coords="552,2559,685,2586"/>
+<area shape="poly" id="edge102_Node000069_Node000070" title=" " alt="" coords="417,2232,423,2289,442,2374,457,2420,478,2465,504,2508,536,2545,541,2549,537,2553,532,2549,500,2511,473,2468,452,2422,437,2375,418,2290,411,2232"/>
+<area shape="rect" id="Node000071" href="$class_map.html#abb1cffdc01f22addfa498ef7e0c68aa1" title="Generates the game map." alt="" coords="552,2509,685,2535"/>
+<area shape="poly" id="edge103_Node000069_Node000071" title=" " alt="" coords="425,2230,602,2494,597,2497,420,2233"/>
+<area shape="rect" id="Node000072" href="$class_map.html#abf37cc9e93169041de1b6ac194d54491" title="Creates an exit in the map." alt="" coords="783,2407,898,2434"/>
+<area shape="poly" id="edge104_Node000071_Node000072" title=" " alt="" coords="638,2506,688,2475,750,2444,767,2437,769,2442,752,2448,690,2480,641,2510"/>
+<area shape="rect" id="Node000073" href="$class_map.html#a969a424f35e755c3ed6b52aed95a4ceb" title="Creates monsters in the map." alt="" coords="767,2458,914,2485"/>
+<area shape="poly" id="edge105_Node000071_Node000073" title=" " alt="" coords="680,2505,763,2486,765,2491,681,2511"/>
+<area shape="rect" id="Node000076" href="$class_map.html#a45cf0a2090c294f88d6903a30df72387" title="Places the player in the map." alt="" coords="776,2509,905,2535"/>
+<area shape="poly" id="edge106_Node000071_Node000076" title=" " alt="" coords="685,2519,760,2519,760,2525,685,2525"/>
+<area shape="rect" id="Node000077" href="$class_map.html#a8b4d03874979faeffba526c9f3c567e3" title="Creates treasures in the map." alt="" coords="769,2559,912,2586"/>
+<area shape="poly" id="edge107_Node000071_Node000077" title=" " alt="" coords="681,2533,765,2553,763,2558,680,2539"/>
+<area shape="rect" id="Node000078" href="$class_map.html#acea78826f7e1fccb5aae1475017ee964" title="Gets the renderer object." alt="" coords="777,2230,904,2257"/>
+<area shape="poly" id="edge108_Node000071_Node000078" title=" " alt="" coords="629,2506,817,2267,821,2271,633,2510"/>
+<area shape="rect" id="Node000079" href="$class_map.html#a98b1050f09da390896f964fb7a892391" title="Initializes the map." alt="" coords="790,2610,891,2637"/>
+<area shape="poly" id="edge109_Node000071_Node000079" title=" " alt="" coords="680,2534,704,2545,720,2558,729,2571,738,2584,752,2596,776,2607,774,2612,749,2600,734,2587,724,2574,716,2562,701,2550,678,2538"/>
+<area shape="rect" id="Node000082" href="$class_renderer.html#a7c7362ce31d3531ee864a8c3faea1f14" title="Sets the X coordinate of the game map chunk." alt="" coords="768,2661,913,2687"/>
+<area shape="poly" id="edge110_Node000071_Node000082" title=" " alt="" coords="686,2534,704,2545,716,2558,723,2571,729,2597,735,2623,741,2635,752,2647,757,2650,754,2654,749,2651,737,2638,730,2625,724,2599,718,2573,712,2561,701,2549,683,2538"/>
+<area shape="rect" id="Node000083" href="$class_renderer.html#aa86947851a399d267505cbf0ae584614" title="Sets the Y coordinate of the game map chunk." alt="" coords="767,2711,914,2738"/>
+<area shape="poly" id="edge111_Node000071_Node000083" title=" " alt="" coords="687,2533,705,2545,719,2565,727,2585,729,2623,731,2661,738,2679,753,2697,756,2701,753,2705,749,2701,734,2682,726,2662,724,2624,722,2586,715,2567,701,2549,684,2537"/>
+<area shape="rect" id="Node000084" href="$class_map.html#a5cf4c6dc1a425ebef86d0ebadd43ccb4" title="Sets the player&#39;s x&#45;coordinate." alt="" coords="781,2762,900,2789"/>
+<area shape="poly" id="edge112_Node000071_Node000084" title=" " alt="" coords="687,2532,705,2545,723,2571,731,2598,731,2624,729,2649,727,2674,728,2699,735,2724,753,2748,769,2760,765,2764,749,2752,730,2726,722,2700,721,2674,724,2649,726,2623,725,2598,718,2574,701,2549,684,2537"/>
+<area shape="poly" id="edge124_Node000086_Node000005" title=" " alt="" coords="472,1999,534,1987,686,1967,839,1962,1071,1962,1109,1960,1146,1953,1218,1929,1286,1894,1349,1851,1404,1804,1452,1759,1519,1684,1523,1688,1456,1762,1408,1808,1352,1855,1289,1898,1220,1934,1148,1958,1110,1965,1072,1967,839,1967,686,1973,535,1993,473,2004"/>
+<area shape="poly" id="edge123_Node000086_Node000024" title=" " alt="" coords="419,2028,431,2070,454,2128,488,2190,510,2217,536,2241,575,2269,610,2289,643,2303,676,2311,748,2317,839,2317,1306,2317,1361,2313,1407,2302,1445,2284,1476,2261,1501,2231,1521,2197,1537,2158,1550,2115,1568,2018,1584,1911,1603,1799,1633,1685,1658,1604,1678,1519,1708,1354,1726,1211,1734,1115,1739,1115,1731,1212,1713,1354,1684,1520,1663,1605,1639,1687,1608,1800,1589,1912,1574,2019,1555,2116,1542,2160,1526,2199,1505,2235,1479,2265,1447,2289,1408,2307,1362,2318,1306,2322,839,2322,748,2322,675,2316,641,2308,608,2294,572,2273,533,2245,506,2221,484,2192,449,2131,426,2072,414,2030"/>
+<area shape="poly" id="edge118_Node000086_Node000042" title=" " alt="" coords="416,2000,432,1967,457,1923,490,1876,533,1836,545,1828,548,1833,536,1840,495,1879,461,1925,436,1969,421,2003"/>
+<area shape="poly" id="edge120_Node000086_Node000045" title=" " alt="" coords="430,2027,475,2060,504,2077,535,2089,599,2100,665,2100,727,2093,780,2083,781,2089,727,2099,665,2106,599,2105,534,2094,502,2081,472,2065,427,2031"/>
+<area shape="poly" id="edge122_Node000086_Node000054" title=" " alt="" coords="420,2000,464,1945,497,1914,533,1886,550,1877,553,1882,536,1891,500,1918,468,1949,424,2003"/>
+<area shape="poly" id="edge125_Node000086_Node000055" title=" " alt="" coords="421,2028,436,2061,461,2105,495,2151,536,2191,549,2199,547,2203,533,2195,490,2155,457,2108,432,2064,416,2030"/>
+<area shape="rect" id="Node000087" href="$class_player.html#ad6d899bfa608f328449654508d57b018" title="Adds an item to the player&#39;s inventory." alt="" coords="561,2002,676,2029"/>
+<area shape="poly" id="edge119_Node000086_Node000087" title=" " alt="" coords="484,2013,546,2013,546,2018,484,2018"/>
+<area shape="rect" id="Node000088" href="$class_item.html#a0a7c0a20b9af2c57d2a57455ec3e711e" title="Static method to generate an item based on the given level." alt="" coords="552,2053,685,2079"/>
+<area shape="poly" id="edge121_Node000086_Node000088" title=" " alt="" coords="470,2027,547,2046,546,2051,469,2032"/>
+<area shape="poly" id="edge128_Node000090_Node000009" title=" " alt="" coords="1317,414,1356,487,1402,588,1410,614,1414,637,1416,679,1423,717,1433,735,1450,755,1461,764,1458,768,1446,759,1429,738,1418,718,1411,680,1409,638,1405,615,1397,590,1351,489,1312,417"/>
+<area shape="poly" id="edge130_Node000090_Node000015" title=" " alt="" coords="1363,409,1384,418,1402,432,1421,461,1428,490,1429,518,1425,546,1422,573,1423,600,1431,627,1450,653,1471,668,1468,672,1446,657,1426,629,1418,601,1417,573,1420,545,1423,518,1423,490,1416,463,1398,436,1381,422,1361,413"/>
+<area shape="poly" id="edge131_Node000090_Node000016" title=" " alt="" coords="1318,414,1360,486,1384,536,1402,588,1411,644,1413,716,1409,885,1408,970,1413,1048,1426,1113,1436,1139,1450,1160,1466,1173,1463,1177,1446,1164,1432,1142,1421,1115,1408,1049,1403,970,1403,885,1408,716,1406,645,1397,589,1379,538,1355,489,1313,417"/>
+<area shape="poly" id="edge132_Node000090_Node000019" title=" " alt="" coords="1363,410,1383,419,1401,432,1414,448,1421,463,1426,494,1430,524,1437,538,1450,552,1456,557,1452,561,1446,556,1433,541,1425,525,1421,495,1416,465,1410,450,1398,436,1381,424,1361,415"/>
+<area shape="poly" id="edge133_Node000090_Node000020" title=" " alt="" coords="1363,409,1384,418,1402,432,1417,454,1425,477,1426,520,1427,562,1434,582,1450,603,1463,613,1459,617,1446,607,1429,585,1422,563,1420,520,1420,477,1413,457,1398,436,1381,423,1361,414"/>
+<area shape="poly" id="edge129_Node000090_Node000029" title=" " alt="" coords="1363,408,1384,418,1402,432,1424,468,1432,503,1431,537,1425,571,1420,605,1419,638,1428,671,1450,704,1452,707,1448,710,1446,708,1423,673,1414,639,1415,604,1420,571,1425,537,1427,503,1419,470,1398,436,1381,422,1361,413"/>
+<area shape="rect" id="Node000092" href="$class_renderer.html#a0cb985d0dad864b96ee375dd64d50cb4" title="Renders the player position on the console." alt="" coords="756,2813,925,2839"/>
+<area shape="poly" id="edge136_Node000091_Node000092" title=" " alt="" coords="227,2407,301,2476,424,2581,499,2639,580,2696,665,2751,752,2798,766,2805,764,2809,749,2803,662,2755,577,2701,496,2643,421,2585,297,2480,223,2411"/>
+<area shape="poly" id="edge137_Node000092_Node000062" title=" " alt="" coords="904,2809,991,2790,992,2795,905,2815"/>
+<area shape="poly" id="edge138_Node000092_Node000065" title=" " alt="" coords="925,2819,1218,2803,1219,2808,925,2824"/>
+<area shape="poly" id="edge140_Node000093_Node000066" title=" " alt="" coords="273,1279,1213,1301,1213,1307,273,1285"/>
+<area shape="poly" id="edge142_Node000094_Node000004" title=" " alt="" coords="210,1089,233,985,255,908,287,822,330,733,384,649,416,610,452,575,490,544,533,518,580,497,622,487,643,487,663,493,683,503,704,519,724,539,737,560,745,581,748,603,745,648,734,694,723,739,718,785,720,807,725,829,736,852,752,873,802,888,918,917,1198,983,1196,988,917,923,801,894,749,877,732,854,720,831,714,808,712,785,718,738,729,692,740,647,743,604,740,583,732,562,720,542,701,523,681,507,661,498,642,493,623,492,582,502,536,523,494,548,455,579,420,614,388,652,335,736,292,824,260,909,238,987,215,1090"/>
+<area shape="poly" id="edge143_Node000094_Node000005" title=" " alt="" coords="245,1115,1495,1639,1493,1643,243,1120"/>
+<area shape="poly" id="edge156_Node000094_Node000006" title=" " alt="" coords="289,1090,450,1072,667,1057,788,1054,914,1055,1040,1062,1163,1075,1210,1085,1253,1098,1252,1103,1208,1090,1162,1081,1039,1067,913,1061,788,1059,667,1063,450,1077,290,1095"/>
+<area shape="rect" id="Node000095" href="$class_game_saver.html#a6768977ea7b120f804dd1da52dcd5282" title="Saves the map object to the output stream." alt="" coords="337,811,486,838"/>
+<area shape="poly" id="edge144_Node000094_Node000095" title=" " alt="" coords="218,1088,389,849,394,852,223,1091"/>
+<area shape="poly" id="edge147_Node000095_Node000054" title=" " alt="" coords="417,838,468,1367,505,1681,522,1788,537,1836,553,1849,550,1854,532,1839,517,1789,500,1682,463,1368,412,839"/>
+<area shape="poly" id="edge153_Node000095_Node000078" title=" " alt="" coords="416,838,423,969,442,1178,457,1289,478,1391,504,1475,519,1508,536,1532,556,1548,576,1555,619,1556,642,1555,664,1557,685,1565,705,1583,719,1606,729,1636,739,1708,739,1793,734,1885,729,1978,727,2064,734,2137,742,2167,753,2191,767,2207,785,2220,782,2225,764,2211,748,2194,737,2169,729,2138,722,2064,723,1978,729,1885,733,1793,733,1708,724,1637,714,1609,701,1586,682,1570,662,1562,641,1560,620,1561,575,1561,553,1553,532,1536,515,1510,499,1477,473,1392,452,1290,436,1179,417,969,411,838"/>
+<area shape="rect" id="Node000096" href="$class_renderer.html#a711d8730ce215aecc5509712e988fae5" title="Gets the X coordinate of the game map chunk." alt="" coords="545,786,692,813"/>
+<area shape="poly" id="edge145_Node000095_Node000096" title=" " alt="" coords="486,813,530,807,530,813,487,818"/>
+<area shape="rect" id="Node000097" href="$class_renderer.html#a77da2e589b87f722158fe874d743c16d" title="Gets the Y coordinate of the game map chunk." alt="" coords="544,837,693,863"/>
+<area shape="poly" id="edge146_Node000095_Node000097" title=" " alt="" coords="487,831,529,836,529,842,486,836"/>
+<area shape="rect" id="Node000098" href="$class_map.html#a74a7e6e6ffe6c7ce293fe572f6334542" title="Gets the height of the map." alt="" coords="562,887,675,914"/>
+<area shape="poly" id="edge148_Node000095_Node000098" title=" " alt="" coords="445,836,535,873,555,880,553,885,533,878,443,841"/>
+<area shape="rect" id="Node000099" href="$class_map.html#aac69a4a239b9ecdf76248f1b5364b5cf" title="Gets the map matrix." alt="" coords="563,938,674,965"/>
+<area shape="poly" id="edge149_Node000095_Node000099" title=" " alt="" coords="428,837,473,879,503,903,536,924,550,930,547,935,533,928,500,907,470,883,424,840"/>
+<area shape="rect" id="Node000100" href="$class_map.html#ac5ba19a257ffbe13f127f2d6ed46772e" title="Gets the number of monsters in the map." alt="" coords="540,533,697,559"/>
+<area shape="poly" id="edge150_Node000095_Node000100" title=" " alt="" coords="413,810,424,764,446,699,482,630,505,597,533,569,538,565,541,569,536,573,509,601,486,633,451,701,429,766,418,811"/>
+<area shape="rect" id="Node000101" href="$class_map.html#a7a4173371a47b1d903db7755c57d40cb" title="Gets the player&#39;s x&#45;coordinate." alt="" coords="559,583,678,610"/>
+<area shape="poly" id="edge151_Node000095_Node000101" title=" " alt="" coords="415,810,429,772,453,721,487,667,509,642,533,620,543,613,546,617,536,624,513,645,492,670,458,724,434,774,420,812"/>
+<area shape="rect" id="Node000102" href="$class_map.html#a752c07693312472d1e0a8eada3f2f811" title="Gets the player&#39;s y&#45;coordinate." alt="" coords="558,634,679,661"/>
+<area shape="poly" id="edge152_Node000095_Node000102" title=" " alt="" coords="418,810,460,743,493,704,533,670,542,665,545,669,536,675,497,708,465,746,422,812"/>
+<area shape="rect" id="Node000103" href="$class_map.html#a0cabbaa2f7d307887225778beb269d14" title="Gets the number of treasures in the map." alt="" coords="539,685,698,711"/>
+<area shape="poly" id="edge154_Node000095_Node000103" title=" " alt="" coords="424,809,470,766,500,742,533,721,546,715,548,720,536,726,503,746,473,770,428,813"/>
+<area shape="rect" id="Node000104" href="$class_map.html#aa3b0e805be2744e606a48587d125a6e8" title="Gets the width of the map." alt="" coords="564,735,673,762"/>
+<area shape="poly" id="edge155_Node000095_Node000104" title=" " alt="" coords="443,808,533,771,553,765,555,770,535,776,445,813"/>
+<area shape="poly" id="edge162_Node000105_Node000029" title=" " alt="" coords="640,321,689,353,752,383,797,393,874,402,1081,424,1286,450,1360,466,1385,474,1401,484,1422,511,1431,539,1431,567,1428,595,1424,623,1424,650,1431,677,1450,704,1453,707,1449,711,1446,708,1426,680,1419,651,1419,622,1423,594,1426,566,1426,539,1417,513,1398,488,1383,479,1359,471,1285,455,1081,429,873,407,796,398,750,388,686,358,637,326"/>
+<area shape="poly" id="edge164_Node000105_Node000033" title=" " alt="" coords="652,322,680,340,705,367,724,408,730,446,729,482,724,517,720,551,721,584,730,619,753,655,754,657,750,660,749,658,725,621,715,585,715,550,719,516,724,481,725,446,719,409,700,370,677,345,649,326"/>
+<area shape="poly" id="edge165_Node000105_Node000049" title=" " alt="" coords="653,322,681,340,705,367,719,410,725,466,724,600,723,669,725,733,734,786,742,806,753,823,754,825,750,828,749,826,738,809,729,787,720,733,718,669,719,600,720,466,714,411,700,370,678,344,650,326"/>
+<area shape="poly" id="edge166_Node000105_Node000090" title=" " alt="" coords="656,321,701,337,751,350,884,372,1016,386,1233,398,1233,403,1016,391,883,377,750,355,699,342,654,326"/>
+<area shape="rect" id="Node000106" href="$class_player.html#ad380a42bcd94d21b10bb4b4811a201ba" title="Increases the player&#39;s dexterity attribute." alt="" coords="770,111,911,138"/>
+<area shape="poly" id="edge158_Node000105_Node000106" title=" " alt="" coords="625,295,671,225,707,183,749,148,758,142,761,147,752,152,710,187,675,228,630,297"/>
+<area shape="rect" id="Node000107" href="$class_player.html#a0cd60ff12405a9258ad15013ed8d9ce8" title="Increases the player&#39;s maximum HP attribute." alt="" coords="787,162,894,189"/>
+<area shape="poly" id="edge159_Node000105_Node000107" title=" " alt="" coords="631,294,680,247,713,221,749,198,771,189,773,194,752,203,716,225,683,251,634,298"/>
+<area shape="rect" id="Node000108" href="$class_player.html#a576eae4adeab184913133a70f2a4fe79" title="Increases the player&#39;s mana attribute." alt="" coords="780,213,901,239"/>
+<area shape="poly" id="edge160_Node000105_Node000108" title=" " alt="" coords="646,294,750,249,771,242,772,247,752,254,648,299"/>
+<area shape="rect" id="Node000109" href="$class_player.html#afec7049003183289f73ab89afd5a78a2" title="Increases the player&#39;s strength attribute." alt="" coords="771,263,910,290"/>
+<area shape="poly" id="edge161_Node000105_Node000109" title=" " alt="" coords="672,299,756,287,756,292,673,305"/>
+<area shape="rect" id="Node000110" href="$class_selection_u_i.html#ac0c77f1c80b4996a3ef68668567f939a" title="Gets the option at the specified selection index." alt="" coords="763,61,918,87"/>
+<area shape="poly" id="edge163_Node000105_Node000110" title=" " alt="" coords="622,295,637,256,663,203,701,146,723,120,749,97,756,92,759,97,752,101,727,124,705,149,668,205,642,258,627,297"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="NextFloor" name="NextFloor">
+<area shape="rect" id="Node000001" title="Advances to the next floor." alt="" coords="605,31,683,57"/>
+<area shape="rect" id="Node000002" href="$class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,31,557,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="590,47,558,47,558,41,590,41"/>
+<area shape="rect" id="Node000003" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,47,388,47,388,41,420,41"/>
+<area shape="rect" id="Node000004" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" id="Node000005" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
+</map>

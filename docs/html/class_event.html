@@ -92,28 +92,10 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_event.html" title="The Event class represents an event in the game.">Event</a> class represents an event in the game.  
+<p>Represents an event in the game.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="event_handler_8h_source.html">eventHandler.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for Event:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_event__coll__graph.png" border="0" usemap="#a_event_coll__map" alt="Collaboration graph"/></div>
-<map name="a_event_coll__map" id="a_event_coll__map">
-<area shape="rect" title="The Event class represents an event in the game." alt="" coords="58,309,111,336"/>
-<area shape="rect" href="class_map.html" title="Represents the game map." alt="" coords="62,219,108,245"/>
-<area shape="poly" title=" " alt="" coords="87,261,87,309,82,309,82,261"/>
-<area shape="rect" href="class_renderer.html" title="The Renderer class is responsible for rendering the game map and player statistics on the console." alt="" coords="5,128,79,155"/>
-<area shape="poly" title=" " alt="" coords="44,170,49,193,69,217,65,220,45,196,38,171"/>
-<area shape="rect" href="class_player.html" title="Represents a player entity in the game." alt="" coords="102,128,161,155"/>
-<area shape="poly" title=" " alt="" coords="120,170,94,219,89,217,115,168"/>
-<area shape="rect" href="class_entity.html" title="Represents an entity in the game." alt="" coords="66,5,122,32"/>
-<area shape="poly" title=" " alt="" coords="105,46,130,127,125,128,100,48"/>
-<area shape="rect" href="class_item.html" title="Represents an item in the game." alt="" coords="146,5,192,32"/>
-<area shape="poly" title=" " alt="" coords="163,48,138,128,133,127,158,46"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -122,33 +104,99 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_event.html" title="The Event class represents an event in the game.">Event</a> class represents an event in the game. </p>
-<p>Represents an event in the game.</p>
-<p>This class handles various events such as treasure events, monster events, and advancing to the next floor.</p>
-<p>The <a class="el" href="class_event.html" title="The Event class represents an event in the game.">Event</a> class is responsible for handling various events that can occur in the game. These events include treasure events, monster events, and advancing to the next floor. </p>
+<div class="textblock"><p>Represents an event in the game. </p>
+<p>The <a class="el" href="class_event.html" title="Represents an event in the game.">Event</a> class is responsible for handling various events that can occur in the game. These events include treasure events, monster events, and advancing to the next floor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac71eea4ff26059a0fb846d998d175720" name="ac71eea4ff26059a0fb846d998d175720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac71eea4ff26059a0fb846d998d175720">&#9670;&#160;</a></span>Event()</h2>
+<a id="a57ce5b8a7b1209776fe58fc815ada530" name="a57ce5b8a7b1209776fe58fc815ada530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57ce5b8a7b1209776fe58fc815ada530">&#9670;&#160;</a></span>Event() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_event.html">Event</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_map.html">Map</a>*</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructs a new <a class="el" href="class_event.html" title="The Event class represents an event in the game.">Event</a> object. </p>
+<p>Constructs a new <a class="el" href="class_event.html" title="Represents an event in the game.">Event</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">map</td><td>Pointer to the game map </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6d3ecbf75302fb7002cf11ef9a54b1c1" name="a6d3ecbf75302fb7002cf11ef9a54b1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d3ecbf75302fb7002cf11ef9a54b1c1">&#9670;&#160;</a></span>Event() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_event.html">Event</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_event.html">Event</a>&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor is deleted. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The <a class="el" href="class_event.html" title="Represents an event in the game.">Event</a> object to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf025d5fc303fc56ae899cd240cf7d49" name="aaf025d5fc303fc56ae899cd240cf7d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf025d5fc303fc56ae899cd240cf7d49">&#9670;&#160;</a></span>~Event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_event.html">Event</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default destructor. </p>
 
 </div>
 </div>
@@ -175,60 +223,60 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_event_a57684dfbd3dd46292af83cd970dffd2a_cgraph.png" border="0" usemap="#aclass_event_a57684dfbd3dd46292af83cd970dffd2a_cgraph" alt=""/></div>
 <map name="aclass_event_a57684dfbd3dd46292af83cd970dffd2a_cgraph" id="aclass_event_a57684dfbd3dd46292af83cd970dffd2a_cgraph">
 <area shape="rect" title="Handles the game over event." alt="" coords="5,697,88,724"/>
-<area shape="rect" href="class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="136,556,289,583"/>
-<area shape="poly" title=" " alt="" coords="62,695,182,591,185,595,65,699"/>
-<area shape="rect" href="class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="827,867,941,893"/>
-<area shape="poly" title=" " alt="" coords="88,711,181,719,289,733,440,763,588,798,821,859,819,865,587,803,439,768,289,739,180,724,88,716"/>
-<area shape="rect" href="class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="156,748,269,775"/>
-<area shape="poly" title=" " alt="" coords="89,721,153,740,151,745,87,726"/>
-<area shape="rect" href="class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="337,465,519,492"/>
-<area shape="poly" title=" " alt="" coords="245,553,379,496,381,501,248,558"/>
-<area shape="rect" href="class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="567,487,754,529"/>
-<area shape="poly" title=" " alt="" coords="520,488,552,492,551,497,519,493"/>
-<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="823,5,945,32"/>
-<area shape="poly" title=" " alt="" coords="435,464,480,390,561,276,612,213,670,151,733,93,800,42,809,37,812,41,803,46,736,97,673,155,616,217,565,279,485,393,440,466"/>
-<area shape="rect" href="class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="580,436,741,463"/>
-<area shape="poly" title=" " alt="" coords="519,465,564,459,565,464,520,470"/>
-<area shape="poly" title=" " alt="" coords="666,435,704,348,751,227,758,199,762,174,763,129,771,86,782,65,800,42,808,35,811,39,804,46,786,68,776,88,769,129,767,174,764,200,756,229,709,350,671,437"/>
-<area shape="rect" href="class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="824,208,944,235"/>
-<area shape="poly" title=" " alt="" coords="665,435,683,397,711,346,751,292,774,266,800,245,809,239,812,243,803,249,778,270,755,295,716,349,687,399,670,437"/>
-<area shape="rect" href="class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="806,259,962,285"/>
-<area shape="poly" title=" " alt="" coords="668,434,719,368,757,329,800,295,810,290,812,294,803,300,760,333,723,372,673,437"/>
-<area shape="rect" href="class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="816,309,952,336"/>
-<area shape="poly" title=" " alt="" coords="675,434,729,391,763,367,800,346,814,339,816,344,803,350,766,371,732,395,679,438"/>
-<area shape="poly" title=" " alt="" coords="742,461,756,473,774,497,786,522,793,546,795,570,792,617,781,665,771,711,766,758,769,782,775,805,787,829,804,853,815,863,811,867,800,856,782,832,770,807,764,783,761,758,765,711,776,663,786,617,790,570,788,547,781,524,769,500,752,476,738,465"/>
-<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="833,360,935,387"/>
-<area shape="poly" title=" " alt="" coords="698,433,801,396,822,389,823,394,803,401,700,438"/>
-<area shape="rect" href="class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="815,411,953,437"/>
-<area shape="poly" title=" " alt="" coords="741,438,799,431,800,436,742,443"/>
-<area shape="rect" href="class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="802,461,966,488"/>
-<area shape="poly" title=" " alt="" coords="742,456,787,461,786,466,741,461"/>
-<area shape="rect" href="class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="826,512,942,539"/>
-<area shape="poly" title=" " alt="" coords="721,461,755,472,803,498,820,504,818,509,801,502,753,477,719,466"/>
-<area shape="rect" href="class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="826,563,942,589"/>
-<area shape="poly" title=" " alt="" coords="734,461,755,473,773,492,780,511,788,530,803,549,813,555,810,559,800,553,783,533,775,513,768,495,752,477,732,465"/>
-<area shape="rect" href="class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="820,613,948,640"/>
-<area shape="poly" title=" " alt="" coords="738,461,755,473,769,489,776,505,781,537,785,569,791,584,804,599,809,604,805,608,800,603,787,587,779,571,775,538,771,506,764,491,752,477,735,465"/>
-<area shape="rect" href="class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="807,664,961,691"/>
-<area shape="poly" title=" " alt="" coords="740,461,756,473,772,495,780,518,781,563,781,607,788,629,804,650,807,653,803,657,800,654,783,631,776,608,775,563,775,519,768,498,752,477,737,465"/>
-<area shape="rect" href="class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="826,715,942,741"/>
-<area shape="poly" title=" " alt="" coords="740,461,756,473,776,502,784,531,784,560,781,589,777,617,777,645,785,673,804,701,814,709,810,713,800,704,780,675,772,646,772,617,776,588,779,560,779,532,771,504,752,477,737,465"/>
-<area shape="rect" href="class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="810,765,958,792"/>
-<area shape="poly" title=" " alt="" coords="741,461,756,473,779,508,788,544,787,579,781,614,775,648,774,683,782,717,804,752,806,754,802,757,800,755,777,719,768,683,770,648,776,613,781,579,782,544,774,511,752,476,738,465"/>
-<area shape="rect" href="class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="817,816,951,843"/>
-<area shape="poly" title=" " alt="" coords="741,461,756,473,772,494,782,515,792,557,789,598,781,639,773,680,770,720,779,761,789,782,804,802,807,805,803,809,800,806,784,784,774,763,765,721,767,679,776,638,784,598,786,557,777,517,767,497,752,477,738,465"/>
-<area shape="rect" href="class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="816,56,952,83"/>
-<area shape="poly" title=" " alt="" coords="665,434,751,227,762,188,767,155,776,124,800,93,804,89,807,93,804,96,781,127,772,156,767,189,756,229,670,436"/>
-<area shape="rect" href="class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="832,107,936,133"/>
-<area shape="poly" title=" " alt="" coords="665,434,732,276,771,190,800,143,816,132,819,137,804,147,776,193,737,278,670,436"/>
-<area shape="rect" href="class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="809,157,959,184"/>
-<area shape="poly" title=" " alt="" coords="663,435,678,389,705,324,745,254,771,222,800,194,806,190,809,194,803,198,775,226,749,257,710,326,683,390,668,436"/>
-<area shape="rect" href="class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1015,107,1124,133"/>
-<area shape="poly" title=" " alt="" coords="935,154,1003,135,1004,140,936,159"/>
-<area shape="rect" href="class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1014,157,1125,184"/>
-<area shape="poly" title=" " alt="" coords="959,168,998,168,998,173,959,173"/>
-<area shape="rect" href="class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1018,208,1121,235"/>
-<area shape="poly" title=" " alt="" coords="936,182,1004,201,1003,206,935,187"/>
+<area shape="rect" href="class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="153,556,307,583"/>
+<area shape="poly" title=" " alt="" coords="64,695,198,590,201,594,67,699"/>
+<area shape="rect" href="class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="862,867,976,893"/>
+<area shape="poly" title=" " alt="" coords="89,710,196,718,324,733,476,763,624,797,857,859,855,864,623,802,475,768,324,739,195,723,88,715"/>
+<area shape="rect" href="class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="136,748,324,775"/>
+<area shape="poly" title=" " alt="" coords="89,719,165,741,164,746,87,724"/>
+<area shape="rect" href="class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="372,465,554,492"/>
+<area shape="poly" title=" " alt="" coords="266,553,411,496,413,501,268,558"/>
+<area shape="rect" href="class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="602,487,789,529"/>
+<area shape="poly" title=" " alt="" coords="555,488,587,492,586,497,554,493"/>
+<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="858,5,980,32"/>
+<area shape="poly" title=" " alt="" coords="470,464,515,390,596,276,647,213,705,151,768,93,835,42,844,37,847,41,838,46,771,97,708,155,651,217,600,279,520,393,475,466"/>
+<area shape="rect" href="class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="615,436,776,463"/>
+<area shape="poly" title=" " alt="" coords="554,465,599,459,600,464,555,470"/>
+<area shape="poly" title=" " alt="" coords="701,435,739,348,786,227,793,199,797,174,798,129,806,86,817,65,835,42,843,35,846,39,839,46,821,68,811,88,804,129,802,174,799,200,791,229,744,350,706,437"/>
+<area shape="rect" href="class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="859,208,979,235"/>
+<area shape="poly" title=" " alt="" coords="700,435,718,397,746,346,786,292,809,266,835,245,844,239,847,243,838,249,813,270,790,295,751,349,722,399,705,437"/>
+<area shape="rect" href="class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="841,259,997,285"/>
+<area shape="poly" title=" " alt="" coords="703,434,754,368,792,329,835,295,845,290,847,294,838,300,795,333,758,372,708,437"/>
+<area shape="rect" href="class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="851,309,987,336"/>
+<area shape="poly" title=" " alt="" coords="710,434,764,391,798,367,835,346,849,339,851,344,838,350,801,371,767,395,714,438"/>
+<area shape="poly" title=" " alt="" coords="777,461,791,473,809,497,821,522,828,546,830,570,827,617,816,665,806,711,801,758,804,782,810,805,822,829,839,853,850,863,846,867,835,856,817,832,805,807,799,783,796,758,800,711,811,663,821,617,825,570,823,547,816,524,804,500,787,476,773,465"/>
+<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="868,360,970,387"/>
+<area shape="poly" title=" " alt="" coords="733,433,836,396,857,389,858,394,838,401,735,438"/>
+<area shape="rect" href="class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="850,411,988,437"/>
+<area shape="poly" title=" " alt="" coords="776,438,834,431,835,436,777,443"/>
+<area shape="rect" href="class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="837,461,1001,488"/>
+<area shape="poly" title=" " alt="" coords="777,456,822,461,821,466,776,461"/>
+<area shape="rect" href="class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="861,512,977,539"/>
+<area shape="poly" title=" " alt="" coords="756,461,790,472,838,498,855,504,853,509,836,502,788,477,754,466"/>
+<area shape="rect" href="class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="861,563,977,589"/>
+<area shape="poly" title=" " alt="" coords="769,461,790,473,808,492,815,511,823,530,838,549,848,555,845,559,835,553,818,533,810,513,803,495,787,477,767,465"/>
+<area shape="rect" href="class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="855,613,983,640"/>
+<area shape="poly" title=" " alt="" coords="773,461,790,473,804,489,811,505,816,537,820,569,826,584,839,599,844,604,840,608,835,603,822,587,814,571,810,538,806,506,799,491,787,477,770,465"/>
+<area shape="rect" href="class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="842,664,996,691"/>
+<area shape="poly" title=" " alt="" coords="775,461,791,473,807,495,815,518,816,563,816,607,823,629,839,650,842,653,838,657,835,654,818,631,811,608,810,563,810,519,803,498,787,477,772,465"/>
+<area shape="rect" href="class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="861,715,977,741"/>
+<area shape="poly" title=" " alt="" coords="775,461,791,473,811,502,819,531,819,560,816,589,812,617,812,645,820,673,839,701,849,709,845,713,835,704,815,675,807,646,807,617,811,588,814,560,814,532,806,504,787,477,772,465"/>
+<area shape="rect" href="class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="845,765,993,792"/>
+<area shape="poly" title=" " alt="" coords="776,461,791,473,814,508,823,544,822,579,816,614,810,648,809,683,817,717,839,752,841,754,837,757,835,755,812,719,803,683,805,648,811,613,816,579,817,544,809,511,787,476,773,465"/>
+<area shape="rect" href="class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="852,816,986,843"/>
+<area shape="poly" title=" " alt="" coords="776,461,791,473,807,494,817,515,827,557,824,598,816,639,808,680,805,720,814,761,824,782,839,802,842,805,838,809,835,806,819,784,809,763,800,721,802,679,811,638,819,598,821,557,812,517,802,497,787,477,773,465"/>
+<area shape="rect" href="class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="851,56,987,83"/>
+<area shape="poly" title=" " alt="" coords="700,434,786,227,797,188,802,155,811,124,835,93,839,89,842,93,839,96,816,127,807,156,802,189,791,229,705,436"/>
+<area shape="rect" href="class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="867,107,971,133"/>
+<area shape="poly" title=" " alt="" coords="700,434,767,276,806,190,835,143,851,132,854,137,839,147,811,193,772,278,705,436"/>
+<area shape="rect" href="class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="844,157,994,184"/>
+<area shape="poly" title=" " alt="" coords="698,435,713,389,740,324,780,254,806,222,835,194,841,190,844,194,838,198,810,226,784,257,745,326,718,390,703,436"/>
+<area shape="rect" href="class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1050,107,1159,133"/>
+<area shape="poly" title=" " alt="" coords="970,154,1038,135,1039,140,971,159"/>
+<area shape="rect" href="class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1049,157,1160,184"/>
+<area shape="poly" title=" " alt="" coords="994,168,1033,168,1033,173,994,173"/>
+<area shape="rect" href="class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1053,208,1156,235"/>
+<area shape="poly" title=" " alt="" coords="971,182,1039,201,1038,206,970,187"/>
 </map>
 </div>
 <div class="dynheader">
@@ -236,16 +284,24 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_event_a57684dfbd3dd46292af83cd970dffd2a_icgraph.png" border="0" usemap="#aclass_event_a57684dfbd3dd46292af83cd970dffd2a_icgraph" alt=""/></div>
 <map name="aclass_event_a57684dfbd3dd46292af83cd970dffd2a_icgraph" id="aclass_event_a57684dfbd3dd46292af83cd970dffd2a_icgraph">
-<area shape="rect" title="Handles the game over event." alt="" coords="154,5,236,32"/>
-<area shape="rect" href="class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,5,106,32"/>
-<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+<area shape="rect" title="Handles the game over event." alt="" coords="754,31,836,57"/>
+<area shape="rect" href="class_event.html#a287175fd5089ba826858b85cfacae5c8" title="Handles a monster event." alt="" coords="605,31,706,57"/>
+<area shape="poly" title=" " alt="" coords="738,47,706,47,706,41,738,41"/>
+<area shape="rect" href="class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,31,557,57"/>
+<area shape="poly" title=" " alt="" coords="590,47,557,47,557,41,590,41"/>
+<area shape="rect" href="class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" title=" " alt="" coords="420,47,388,47,388,41,420,41"/>
+<area shape="rect" href="class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" href="class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a7a92f6a9c25d635dbf0546746b1bc6ca" name="a7a92f6a9c25d635dbf0546746b1bc6ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a92f6a9c25d635dbf0546746b1bc6ca">&#9670;&#160;</a></span>MonsterAttack()</h2>
+<a id="a211184245970de6c1b3eaff28b66f32c" name="a211184245970de6c1b3eaff28b66f32c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211184245970de6c1b3eaff28b66f32c">&#9670;&#160;</a></span>MonsterAttack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,11 +309,6 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void MonsterAttack </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_player.html">Player</a>*</td>          <td class="paramname"><span class="paramname"><em>player</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="class_monster.html">Monster</a>*</td>          <td class="paramname"><span class="paramname"><em>monster</em></span>, </td>
         </tr>
         <tr>
@@ -271,7 +322,6 @@ Here is the caller graph for this function:</div>
 <p>Handles a monster attack event. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">player</td><td>Pointer to the player object </td></tr>
     <tr><td class="paramname">monster</td><td>Pointer to the monster object </td></tr>
     <tr><td class="paramname">playerIsDead</td><td>Reference to a boolean indicating if the player is dead </td></tr>
   </table>
@@ -280,40 +330,54 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_a7a92f6a9c25d635dbf0546746b1bc6ca_cgraph.png" border="0" usemap="#aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_cgraph" alt=""/></div>
-<map name="aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_cgraph" id="aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_cgraph">
-<area shape="rect" title="Handles a monster attack event." alt="" coords="5,97,112,124"/>
-<area shape="rect" href="class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="175,17,266,44"/>
-<area shape="poly" title=" " alt="" coords="86,94,158,58,176,49,178,54,161,62,88,99"/>
-<area shape="rect" href="class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="163,72,278,99"/>
-<area shape="poly" title=" " alt="" coords="112,100,147,94,148,99,112,105"/>
-<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="169,123,272,149"/>
-<area shape="poly" title=" " alt="" coords="112,116,154,123,154,128,112,122"/>
-<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="160,173,281,200"/>
-<area shape="poly" title=" " alt="" coords="87,122,161,159,173,164,171,169,159,164,85,127"/>
-<area shape="rect" href="class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="329,5,513,48"/>
-<area shape="poly" title=" " alt="" coords="266,27,313,26,313,31,266,32"/>
-<area shape="rect" href="class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="342,72,500,99"/>
-<area shape="poly" title=" " alt="" coords="278,83,326,83,326,88,278,88"/>
-<area shape="rect" href="class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="368,123,475,149"/>
-<area shape="poly" title=" " alt="" coords="277,97,353,116,352,121,276,102"/>
+<div class="center"><img src="class_event_a211184245970de6c1b3eaff28b66f32c_cgraph.png" border="0" usemap="#aclass_event_a211184245970de6c1b3eaff28b66f32c_cgraph" alt=""/></div>
+<map name="aclass_event_a211184245970de6c1b3eaff28b66f32c_cgraph" id="aclass_event_a211184245970de6c1b3eaff28b66f32c_cgraph">
+<area shape="rect" title="Handles a monster attack event." alt="" coords="5,123,112,149"/>
+<area shape="rect" href="class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="209,17,299,44"/>
+<area shape="poly" title=" " alt="" coords="73,120,110,89,158,58,193,43,195,48,161,62,113,94,76,124"/>
+<area shape="rect" href="class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="197,72,311,99"/>
+<area shape="poly" title=" " alt="" coords="111,120,184,101,185,106,113,125"/>
+<area shape="rect" href="class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="160,123,348,149"/>
+<area shape="poly" title=" " alt="" coords="112,133,144,133,144,139,112,139"/>
+<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="203,173,305,200"/>
+<area shape="poly" title=" " alt="" coords="113,147,188,167,187,172,111,152"/>
+<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="193,224,315,251"/>
+<area shape="poly" title=" " alt="" coords="76,148,113,179,161,210,180,218,177,222,158,214,110,183,72,152"/>
+<area shape="rect" href="class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="396,5,580,48"/>
+<area shape="poly" title=" " alt="" coords="299,27,380,26,380,31,299,33"/>
+<area shape="rect" href="class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="409,72,567,99"/>
+<area shape="poly" title=" " alt="" coords="311,83,393,83,393,88,311,88"/>
+<area shape="rect" href="class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="435,123,542,149"/>
+<area shape="poly" title=" " alt="" coords="312,95,420,119,419,124,311,100"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_a7a92f6a9c25d635dbf0546746b1bc6ca_icgraph.png" border="0" usemap="#aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_icgraph" alt=""/></div>
-<map name="aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_icgraph" id="aclass_event_a7a92f6a9c25d635dbf0546746b1bc6ca_icgraph">
-<area shape="rect" title="Handles a monster attack event." alt="" coords="154,5,260,32"/>
-<area shape="rect" href="class_event.html#a9663bcf4148a9e78384ac597f6bca412" title="Handles a monster event." alt="" coords="5,5,106,32"/>
-<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+<div class="center"><img src="class_event_a211184245970de6c1b3eaff28b66f32c_icgraph.png" border="0" usemap="#aclass_event_a211184245970de6c1b3eaff28b66f32c_icgraph" alt=""/></div>
+<map name="aclass_event_a211184245970de6c1b3eaff28b66f32c_icgraph" id="aclass_event_a211184245970de6c1b3eaff28b66f32c_icgraph">
+<area shape="rect" title="Handles a monster attack event." alt="" coords="842,80,948,107"/>
+<area shape="rect" href="class_combat_events.html#a80e48b8777f2ae9a8dc6f556cb351d72" title="Handles a melee attack in combat." alt="" coords="605,5,794,48"/>
+<area shape="poly" title=" " alt="" coords="838,77,763,51,765,46,840,72"/>
+<area shape="rect" href="class_combat_events.html#a0e759b390007fd54e875c3696991dd08" title="Handles a spell attack in combat." alt="" coords="608,72,791,115"/>
+<area shape="poly" title=" " alt="" coords="826,96,791,96,791,91,826,91"/>
+<area shape="rect" href="class_event.html#a287175fd5089ba826858b85cfacae5c8" title="Handles a monster event." alt="" coords="649,139,750,165"/>
+<area shape="poly" title=" " alt="" coords="840,115,794,129,751,142,749,137,793,124,838,110"/>
+<area shape="rect" href="class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,139,557,165"/>
+<area shape="poly" title=" " alt="" coords="634,155,558,155,558,149,634,149"/>
+<area shape="rect" href="class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,139,388,165"/>
+<area shape="poly" title=" " alt="" coords="420,155,388,155,388,149,420,149"/>
+<area shape="rect" href="class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,113,184,140"/>
+<area shape="poly" title=" " alt="" coords="216,144,184,140,185,135,216,138"/>
+<area shape="rect" href="class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,164,182,191"/>
+<area shape="poly" title=" " alt="" coords="216,166,183,170,182,164,216,160"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a9663bcf4148a9e78384ac597f6bca412" name="a9663bcf4148a9e78384ac597f6bca412"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9663bcf4148a9e78384ac597f6bca412">&#9670;&#160;</a></span>MonsterEvent()</h2>
+<a id="a287175fd5089ba826858b85cfacae5c8" name="a287175fd5089ba826858b85cfacae5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287175fd5089ba826858b85cfacae5c8">&#9670;&#160;</a></span>MonsterEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +385,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void MonsterEvent </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_map.html">Map</a>*</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -331,142 +395,161 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_a9663bcf4148a9e78384ac597f6bca412_cgraph.png" border="0" usemap="#aclass_event_a9663bcf4148a9e78384ac597f6bca412_cgraph" alt=""/></div>
-<map name="aclass_event_a9663bcf4148a9e78384ac597f6bca412_cgraph" id="aclass_event_a9663bcf4148a9e78384ac597f6bca412_cgraph">
-<area shape="rect" title="Handles a monster event." alt="" coords="5,537,106,564"/>
-<area shape="rect" href="class_player.html#a9d417707b34a9388942cf618b8cb7e48" title="Adds gold to the player&#39;s current amount." alt="" coords="180,81,296,108"/>
-<area shape="poly" title=" " alt="" coords="55,537,65,452,84,327,97,262,112,202,131,152,152,118,164,108,168,112,156,122,135,155,117,203,102,263,89,328,70,453,61,537"/>
-<area shape="rect" href="class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="185,132,291,159"/>
-<area shape="poly" title=" " alt="" coords="54,537,54,473,65,378,77,324,94,271,119,221,152,175,169,161,173,166,156,179,124,223,99,273,82,326,70,379,60,474,59,537"/>
-<area shape="rect" href="class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="415,56,505,83"/>
-<area shape="poly" title=" " alt="" coords="54,537,56,479,68,394,80,348,97,301,121,258,152,219,173,203,194,194,235,190,276,188,298,181,320,169,336,152,344,135,352,117,368,99,398,82,401,87,372,103,356,120,349,137,340,155,324,173,300,186,277,193,235,195,195,199,175,207,156,223,125,261,102,303,85,349,73,395,61,480,59,537"/>
-<area shape="rect" href="class_input_handler.html#a44653efb390004321f72000e66d13df1" title="Handles user input during battles." alt="" coords="157,759,319,801"/>
-<area shape="poly" title=" " alt="" coords="63,563,95,640,121,688,156,731,176,748,172,752,152,735,117,691,90,643,59,565"/>
-<area shape="rect" href="class_battle_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the battle UI." alt="" coords="402,563,518,589"/>
-<area shape="poly" title=" " alt="" coords="106,551,386,569,386,574,106,556"/>
-<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="1108,259,1210,285"/>
-<area shape="poly" title=" " alt="" coords="56,536,64,497,81,444,109,390,129,366,152,346,186,327,229,312,337,288,465,272,606,263,749,260,884,260,1092,266,1092,271,884,265,749,265,606,268,466,277,337,293,231,317,188,332,155,350,133,370,114,393,86,446,69,498,61,537"/>
-<area shape="rect" href="class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="1095,411,1222,437"/>
-<area shape="poly" title=" " alt="" coords="81,534,145,503,237,466,345,434,402,425,458,421,691,421,1080,421,1080,427,691,427,458,427,402,430,346,440,238,471,147,508,83,539"/>
-<area shape="rect" href="class_event.html#a57684dfbd3dd46292af83cd970dffd2a" title="Handles the game over event." alt="" coords="197,639,279,665"/>
-<area shape="poly" title=" " alt="" coords="83,562,200,629,198,633,80,567"/>
-<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="1098,461,1219,488"/>
-<area shape="poly" title=" " alt="" coords="106,545,1082,477,1083,482,106,550"/>
-<area shape="rect" href="class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="1091,1171,1227,1197"/>
-<area shape="poly" title=" " alt="" coords="61,564,67,610,83,676,111,748,131,782,155,811,203,836,306,879,605,992,1065,1156,1089,1163,1087,1169,1063,1161,603,997,304,884,200,841,152,815,127,785,106,751,78,678,62,611,55,565"/>
-<area shape="rect" href="class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="404,715,516,741"/>
-<area shape="poly" title=" " alt="" coords="65,563,98,619,124,650,155,675,212,701,274,717,334,725,388,728,388,733,334,731,273,722,210,706,152,680,120,654,94,622,61,566"/>
-<area shape="rect" href="class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="186,904,290,931"/>
-<area shape="poly" title=" " alt="" coords="59,564,62,622,75,707,87,754,104,800,126,844,156,883,173,897,170,902,152,887,122,847,99,802,81,755,69,708,57,622,54,565"/>
-<area shape="rect" href="class_event.html#a7a92f6a9c25d635dbf0546746b1bc6ca" title="Handles a monster attack event." alt="" coords="185,233,291,260"/>
-<area shape="poly" title=" " alt="" coords="57,536,66,494,84,433,112,366,130,333,152,302,171,282,194,266,197,271,175,286,156,306,135,336,117,368,89,435,71,495,62,538"/>
-<area shape="rect" href="class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="183,360,293,387"/>
-<area shape="poly" title=" " alt="" coords="60,536,93,473,119,436,152,403,171,391,173,396,155,407,124,439,98,476,65,538"/>
-<area shape="rect" href="class_battle_u_i.html#a9ca94355bb561fbfe402db52c0f8d2c2" title="Renders the graphics for the battle UI." alt="" coords="154,955,322,981"/>
-<area shape="poly" title=" " alt="" coords="61,564,71,642,91,755,120,867,137,911,156,941,158,944,155,947,152,944,132,914,114,869,86,756,66,642,56,565"/>
-<area shape="rect" href="class_entity.html#a9889ff479c68e1a1495881f23d10dfe2" title="Sets the current health points attribute of the entity." alt="" coords="187,1005,289,1032"/>
-<area shape="poly" title=" " alt="" coords="61,564,70,650,88,779,101,846,117,907,135,958,156,992,174,1005,171,1009,152,995,130,960,112,909,96,847,83,780,64,651,55,565"/>
-<area shape="rect" href="class_player.html#ad6dda931e17895069ecfbfbb4101f5b0" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="404,5,515,32"/>
-<area shape="poly" title=" " alt="" coords="290,133,320,118,336,100,343,81,351,61,368,42,388,31,391,35,372,46,356,64,348,83,341,103,324,122,292,138"/>
-<area shape="rect" href="class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="597,40,782,83"/>
-<area shape="poly" title=" " alt="" coords="505,65,582,62,582,68,505,70"/>
-<area shape="rect" href="class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="375,765,545,808"/>
-<area shape="poly" title=" " alt="" coords="320,780,359,781,359,786,319,785"/>
-<area shape="rect" href="class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="370,832,549,859"/>
-<area shape="poly" title=" " alt="" coords="311,799,371,817,395,825,394,830,369,823,309,804"/>
-<area shape="poly" title=" " alt="" coords="259,756,368,650,428,598,432,602,372,654,262,760"/>
-<area shape="rect" href="class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="621,832,758,859"/>
-<area shape="poly" title=" " alt="" coords="549,843,606,843,606,848,549,848"/>
-<area shape="rect" href="class_battle_u_i.html#ac28f355d831cf2da6849142a8c5d6a27" title="Renders the HP bars for the player and the monster." alt="" coords="842,309,1004,336"/>
-<area shape="poly" title=" " alt="" coords="485,560,882,341,885,346,488,564"/>
-<area shape="rect" href="class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="1099,360,1218,387"/>
-<area shape="poly" title=" " alt="" coords="989,334,1084,355,1083,360,988,339"/>
-<area shape="rect" href="class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="1065,309,1253,336"/>
-<area shape="poly" title=" " alt="" coords="1004,320,1049,320,1049,325,1004,325"/>
-<area shape="poly" title=" " alt="" coords="988,306,1091,284,1093,289,989,311"/>
-<area shape="poly" title=" " alt="" coords="977,334,1017,352,1032,364,1042,375,1051,386,1065,396,1081,404,1079,409,1063,401,1047,390,1038,379,1029,368,1015,357,975,339"/>
-<area shape="rect" href="class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="383,664,536,691"/>
-<area shape="poly" title=" " alt="" coords="280,654,368,664,367,669,279,659"/>
-<area shape="rect" href="class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="1102,613,1216,640"/>
-<area shape="poly" title=" " alt="" coords="279,648,1086,626,1086,631,279,654"/>
-<area shape="poly" title=" " alt="" coords="274,663,371,700,393,707,391,712,369,705,272,668"/>
-<area shape="rect" href="class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="598,668,781,695"/>
-<area shape="poly" title=" " alt="" coords="537,676,583,677,583,682,537,681"/>
-<area shape="rect" href="class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="830,664,1016,707"/>
-<area shape="poly" title=" " alt="" coords="781,680,814,681,814,686,781,686"/>
-<area shape="poly" title=" " alt="" coords="699,666,750,608,787,576,828,548,875,531,941,513,1082,485,1083,490,942,518,877,536,831,553,790,580,754,612,703,669"/>
-<area shape="rect" href="class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="842,731,1004,757"/>
-<area shape="poly" title=" " alt="" coords="743,693,856,724,855,729,741,698"/>
-<area shape="poly" title=" " alt="" coords="1000,728,1014,717,1029,697,1039,678,1048,638,1045,599,1037,559,1029,519,1027,479,1036,438,1046,417,1062,397,1083,381,1087,386,1066,401,1051,420,1041,440,1032,479,1035,518,1043,558,1051,598,1053,639,1044,679,1033,700,1018,721,1004,732"/>
-<area shape="poly" title=" " alt="" coords="1001,728,1014,717,1033,691,1046,664,1053,638,1055,613,1050,561,1037,509,1025,456,1019,403,1022,377,1029,350,1042,323,1062,296,1076,284,1092,276,1094,281,1079,288,1066,299,1047,325,1034,352,1027,378,1025,403,1030,455,1042,507,1055,560,1061,613,1058,639,1051,666,1038,693,1018,720,1004,732"/>
-<area shape="poly" title=" " alt="" coords="1000,728,1014,717,1036,684,1044,651,1043,618,1037,584,1032,551,1031,516,1039,482,1062,448,1079,434,1083,439,1066,451,1044,484,1036,517,1037,550,1043,583,1048,617,1049,652,1041,686,1018,720,1003,732"/>
-<area shape="poly" title=" " alt="" coords="999,728,1014,717,1032,690,1040,664,1041,637,1037,610,1034,582,1035,554,1043,526,1062,498,1082,484,1085,488,1066,502,1047,528,1040,555,1039,582,1043,609,1046,637,1045,665,1037,693,1018,721,1003,732"/>
-<area shape="rect" href="class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="1081,917,1236,944"/>
-<area shape="poly" title=" " alt="" coords="934,756,983,827,1021,868,1065,903,1075,908,1072,913,1063,908,1018,872,979,830,930,759"/>
-<area shape="poly" title=" " alt="" coords="939,756,979,807,1001,840,1018,876,1031,919,1034,958,1029,1027,1027,1059,1030,1091,1042,1123,1066,1157,1079,1167,1075,1171,1062,1160,1037,1126,1025,1092,1021,1059,1023,1027,1029,958,1026,920,1014,878,996,843,975,810,935,760"/>
-<area shape="poly" title=" " alt="" coords="993,728,1014,717,1030,701,1038,684,1046,667,1062,650,1086,638,1089,642,1066,654,1050,670,1042,686,1034,704,1018,721,995,733"/>
-<area shape="rect" href="class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="1090,968,1228,995"/>
-<area shape="poly" title=" " alt="" coords="936,756,1018,876,1031,900,1038,919,1048,937,1066,954,1077,961,1074,965,1062,958,1044,940,1034,921,1026,902,1014,879,932,759"/>
-<area shape="rect" href="class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="1077,1019,1241,1045"/>
-<area shape="poly" title=" " alt="" coords="937,756,976,807,1018,876,1032,914,1036,946,1044,976,1052,990,1066,1005,1070,1008,1066,1012,1062,1009,1048,993,1039,978,1031,947,1026,915,1014,878,971,810,933,759"/>
-<area shape="rect" href="class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="1101,512,1217,539"/>
-<area shape="poly" title=" " alt="" coords="999,728,1014,717,1029,697,1036,677,1037,635,1038,592,1046,570,1062,549,1085,534,1088,538,1066,553,1051,573,1044,593,1043,635,1042,678,1034,699,1018,721,1002,732"/>
-<area shape="rect" href="class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="1101,1069,1217,1096"/>
-<area shape="poly" title=" " alt="" coords="938,756,977,807,999,841,1018,876,1028,904,1033,929,1034,973,1039,1014,1049,1034,1066,1055,1087,1070,1084,1074,1062,1059,1044,1037,1034,1016,1028,974,1027,929,1023,905,1014,878,995,843,973,810,934,759"/>
-<area shape="rect" href="class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="1082,563,1236,589"/>
-<area shape="poly" title=" " alt="" coords="997,728,1014,717,1026,703,1033,689,1037,660,1042,629,1049,614,1062,599,1067,596,1070,600,1066,603,1054,617,1047,631,1043,660,1038,691,1031,706,1018,721,1000,732"/>
-<area shape="rect" href="class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="1101,1120,1217,1147"/>
-<area shape="poly" title=" " alt="" coords="938,756,978,807,1000,840,1018,876,1030,911,1033,943,1031,1000,1031,1027,1035,1053,1045,1079,1066,1106,1087,1121,1084,1125,1062,1110,1041,1081,1029,1054,1025,1027,1026,1000,1028,943,1024,912,1014,878,995,843,974,810,934,759"/>
-<area shape="rect" href="class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="1085,715,1233,741"/>
-<area shape="poly" title=" " alt="" coords="1004,736,1069,731,1069,737,1004,741"/>
-<area shape="rect" href="class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="1092,765,1225,792"/>
-<area shape="poly" title=" " alt="" coords="1004,753,1077,764,1076,769,1003,758"/>
-<area shape="rect" href="class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="1091,816,1226,843"/>
-<area shape="poly" title=" " alt="" coords="954,755,1065,801,1087,809,1086,814,1063,807,952,760"/>
-<area shape="rect" href="class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="1107,664,1210,691"/>
-<area shape="poly" title=" " alt="" coords="976,727,1015,716,1063,700,1091,692,1093,697,1065,705,1017,721,977,733"/>
-<area shape="rect" href="class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="1084,867,1233,893"/>
-<area shape="poly" title=" " alt="" coords="939,756,992,803,1027,830,1065,852,1079,859,1077,863,1063,857,1024,834,988,807,936,760"/>
-<area shape="rect" href="class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1302,816,1412,843"/>
-<area shape="poly" title=" " alt="" coords="1213,863,1287,844,1288,850,1215,869"/>
-<area shape="rect" href="class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1301,867,1413,893"/>
-<area shape="poly" title=" " alt="" coords="1234,877,1286,877,1286,883,1234,883"/>
-<area shape="rect" href="class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1305,917,1409,944"/>
-<area shape="poly" title=" " alt="" coords="1215,891,1291,911,1290,916,1213,897"/>
-<area shape="poly" title=" " alt="" coords="290,231,320,213,331,199,338,185,343,157,349,129,356,114,368,99,398,81,401,85,372,103,360,117,354,130,348,158,343,187,336,202,324,217,293,236"/>
-<area shape="poly" title=" " alt="" coords="290,234,321,224,345,209,369,194,480,152,526,138,571,130,616,127,665,128,782,143,877,164,969,192,1114,250,1113,254,967,197,876,169,781,148,664,133,616,132,572,136,528,144,481,157,371,198,347,214,323,229,292,239"/>
-<area shape="poly" title=" " alt="" coords="292,251,507,285,645,312,782,345,863,370,924,394,985,419,1065,447,1090,454,1088,459,1063,452,983,424,922,399,861,375,781,351,643,318,506,290,291,256"/>
-<area shape="rect" href="class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="403,208,517,235"/>
-<area shape="poly" title=" " alt="" coords="291,238,387,227,388,232,292,243"/>
-<area shape="rect" href="class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="610,157,769,184"/>
-<area shape="poly" title=" " alt="" coords="517,206,610,185,611,191,518,211"/>
-<area shape="rect" href="class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="636,208,743,235"/>
-<area shape="poly" title=" " alt="" coords="517,219,620,219,620,224,517,224"/>
-<area shape="rect" href="class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="621,360,758,387"/>
-<area shape="poly" title=" " alt="" coords="293,371,605,371,605,376,293,376"/>
-<area shape="rect" href="class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="843,56,1003,83"/>
-<area shape="poly" title=" " alt="" coords="699,358,900,94,904,97,703,361"/>
-<area shape="rect" href="class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="846,563,1000,589"/>
-<area shape="poly" title=" " alt="" coords="708,385,897,551,893,555,705,389"/>
-<area shape="rect" href="class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f" title="Clears the specified lines on the console." alt="" coords="1064,56,1253,83"/>
-<area shape="poly" title=" " alt="" coords="1003,67,1048,67,1048,72,1003,72"/>
-<area shape="rect" href="class_math_functions.html#a8b4c499ff6cb50ad02707797b00e67d5" title="Returns the minimum of two unsigned integers." alt="" coords="1091,107,1227,133"/>
-<area shape="poly" title=" " alt="" coords="989,81,1079,100,1078,105,988,86"/>
-<area shape="rect" href="class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="1088,5,1230,32"/>
-<area shape="poly" title=" " alt="" coords="988,53,1078,33,1079,38,989,58"/>
-<area shape="poly" title=" " alt="" coords="924,562,937,512,963,440,981,400,1004,362,1031,326,1062,295,1091,280,1094,284,1066,299,1035,330,1008,365,986,403,968,442,942,513,929,563"/>
-<area shape="poly" title=" " alt="" coords="933,560,985,505,1022,474,1063,447,1079,439,1081,444,1065,452,1025,478,989,509,937,564"/>
-<area shape="poly" title=" " alt="" coords="989,587,1087,609,1086,614,988,593"/>
-<area shape="poly" title=" " alt="" coords="988,559,1085,538,1086,544,989,565"/>
-<area shape="poly" title=" " alt="" coords="1000,573,1066,573,1066,579,1000,579"/>
-<area shape="poly" title=" " alt="" coords="947,587,1000,618,1065,650,1093,659,1091,664,1063,654,997,623,944,592"/>
+<div class="center"><img src="class_event_a287175fd5089ba826858b85cfacae5c8_cgraph.png" border="0" usemap="#aclass_event_a287175fd5089ba826858b85cfacae5c8_cgraph" alt=""/></div>
+<map name="aclass_event_a287175fd5089ba826858b85cfacae5c8_cgraph" id="aclass_event_a287175fd5089ba826858b85cfacae5c8_cgraph">
+<area shape="rect" title="Handles a monster event." alt="" coords="5,857,106,884"/>
+<area shape="rect" href="class_player.html#a9d417707b34a9388942cf618b8cb7e48" title="Adds gold to the player&#39;s current amount." alt="" coords="180,25,296,52"/>
+<area shape="poly" title=" " alt="" coords="54,857,53,711,62,472,73,345,91,228,116,130,133,92,152,62,164,52,167,56,156,66,137,94,121,131,96,229,78,346,67,473,59,711,59,857"/>
+<area shape="rect" href="class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="185,76,291,103"/>
+<area shape="poly" title=" " alt="" coords="54,857,56,721,67,500,79,383,96,274,120,183,135,147,152,120,169,104,173,108,156,123,139,150,125,185,101,275,84,383,72,500,61,721,59,857"/>
+<area shape="rect" href="class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="1112,21,1202,48"/>
+<area shape="poly" title=" " alt="" coords="55,857,62,748,78,578,91,489,107,406,127,337,151,288,184,246,216,213,248,187,282,167,319,153,359,144,405,139,458,137,690,137,754,127,864,103,1096,47,1097,52,865,108,755,133,690,143,458,143,406,144,360,149,320,158,284,172,251,191,220,217,188,250,156,291,132,339,112,407,96,490,83,579,67,748,60,857"/>
+<area shape="rect" href="class_input_handler.html#a44653efb390004321f72000e66d13df1" title="Handles user input during battles." alt="" coords="157,933,319,976"/>
+<area shape="poly" title=" " alt="" coords="88,882,177,924,175,929,85,887"/>
+<area shape="rect" href="class_battle_u_i.html#afb84e76887456dc2561d27887fd854ed" title="Renders the battle UI." alt="" coords="402,832,518,859"/>
+<area shape="poly" title=" " alt="" coords="106,865,386,847,386,853,106,870"/>
+<area shape="rect" href="class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="1106,731,1208,757"/>
+<area shape="poly" title=" " alt="" coords="81,854,145,823,237,786,345,754,402,745,458,741,690,741,1090,741,1090,747,690,747,458,747,402,750,346,760,238,791,147,828,83,859"/>
+<area shape="rect" href="class_entity.html#ad8cf067afd1cb11fe33bb440e15ac5eb" title="Gets the maximum health points attribute of the entity." alt="" coords="1093,933,1220,960"/>
+<area shape="poly" title=" " alt="" coords="106,873,263,886,458,893,690,893,796,897,901,906,1078,930,1078,936,901,912,795,902,690,899,458,899,263,891,106,878"/>
+<area shape="rect" href="class_event.html#a57684dfbd3dd46292af83cd970dffd2a" title="Handles the game over event." alt="" coords="197,655,279,681"/>
+<area shape="poly" title=" " alt="" coords="61,856,96,795,122,758,152,723,197,688,200,692,156,727,126,761,101,798,66,858"/>
+<area shape="rect" href="class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="1096,123,1217,149"/>
+<area shape="poly" title=" " alt="" coords="58,856,94,748,127,671,170,588,225,509,256,474,291,442,328,416,368,396,412,383,458,379,690,379,745,376,790,367,829,353,863,334,931,282,1012,214,1026,200,1035,186,1045,173,1061,159,1080,149,1083,154,1063,164,1048,176,1040,189,1030,203,1016,218,934,286,866,338,831,358,791,372,745,381,690,384,458,384,413,388,370,401,331,421,294,447,260,478,229,513,175,591,132,673,99,750,63,858"/>
+<area shape="rect" href="class_entity.html#a79eb2e599dac72d1cc256fed74c2a37f" title="Gets the dexterity attribute of the entity." alt="" coords="1089,1068,1225,1095"/>
+<area shape="poly" title=" " alt="" coords="63,884,74,917,92,960,119,1005,155,1043,177,1057,197,1064,236,1068,277,1070,299,1076,323,1087,339,1100,348,1115,356,1127,371,1138,420,1156,471,1169,523,1179,576,1184,682,1186,786,1176,883,1160,972,1139,1104,1098,1106,1103,973,1144,885,1165,786,1182,682,1191,575,1190,522,1184,470,1175,418,1161,369,1142,352,1131,343,1117,335,1104,321,1092,297,1081,276,1075,236,1073,196,1069,175,1062,152,1047,115,1008,87,962,69,918,58,885"/>
+<area shape="rect" href="class_map.html#ad6b23bcbee4d2702fcb5a2d290985144" title="Gets the current floor level." alt="" coords="186,1101,290,1128"/>
+<area shape="poly" title=" " alt="" coords="62,884,71,922,89,975,116,1031,134,1057,155,1081,173,1093,170,1098,152,1085,130,1061,112,1034,84,977,66,923,57,885"/>
+<area shape="rect" href="class_map.html#a2973c69a6e4e84b2f8853e6cbf1a2d27" title="Gets the player object." alt="" coords="182,1152,294,1179"/>
+<area shape="poly" title=" " alt="" coords="60,884,66,932,81,1000,93,1037,109,1074,130,1108,155,1138,169,1148,166,1152,152,1142,125,1111,104,1076,88,1039,75,1002,60,933,55,884"/>
+<area shape="rect" href="class_event.html#a211184245970de6c1b3eaff28b66f32c" title="Handles a monster attack event." alt="" coords="868,177,974,204"/>
+<area shape="poly" title=" " alt="" coords="55,857,61,759,78,609,90,531,106,460,127,401,139,378,152,361,189,326,230,296,274,270,321,248,418,214,517,193,615,181,707,177,787,177,852,181,852,186,787,183,707,182,616,186,518,198,419,220,323,253,277,275,233,301,193,330,156,364,143,381,132,403,112,461,95,533,83,610,67,759,60,857"/>
+<area shape="rect" href="class_map.html#a6af90c9fb71b61b7431bd76caf869e90" title="Renders all elements of the map." alt="" coords="405,1101,515,1128"/>
+<area shape="poly" title=" " alt="" coords="67,883,101,933,126,961,155,986,178,999,199,1008,237,1016,277,1023,323,1043,338,1055,348,1066,357,1077,371,1087,391,1096,389,1101,369,1092,354,1081,344,1069,335,1058,321,1048,275,1028,236,1021,197,1013,176,1004,152,990,122,965,97,936,62,886"/>
+<area shape="rect" href="class_battle_u_i.html#a9ca94355bb561fbfe402db52c0f8d2c2" title="Renders the graphics for the battle UI." alt="" coords="154,1203,322,1229"/>
+<area shape="poly" title=" " alt="" coords="59,884,62,940,75,1022,87,1067,103,1111,126,1152,156,1189,159,1192,155,1196,152,1192,122,1155,99,1113,81,1068,69,1023,57,941,54,885"/>
+<area shape="rect" href="class_entity.html#a9889ff479c68e1a1495881f23d10dfe2" title="Sets the current health points attribute of the entity." alt="" coords="187,1253,289,1280"/>
+<area shape="poly" title=" " alt="" coords="61,884,72,958,93,1065,121,1171,138,1212,156,1239,174,1253,171,1257,152,1243,133,1214,116,1172,87,1066,67,959,56,885"/>
+<area shape="rect" href="class_player.html#ad6dda931e17895069ecfbfbb4101f5b0" title="Increases the player&#39;s level and updates their attributes accordingly." alt="" coords="404,76,515,103"/>
+<area shape="poly" title=" " alt="" coords="291,87,389,87,389,92,291,92"/>
+<area shape="rect" href="class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="1299,5,1484,48"/>
+<area shape="poly" title=" " alt="" coords="1202,30,1284,28,1284,33,1202,36"/>
+<area shape="rect" href="class_game_state.html#a39bbab7a6b0c13bc227d484bba071d1c" title=" " alt="" coords="372,933,548,960"/>
+<area shape="poly" title=" " alt="" coords="319,949,356,948,356,953,320,954"/>
+<area shape="rect" href="class_selection_u_i.html#a54f207b4fd22f7e36498949884b18bb2" title="Gets the index of the currently selected option." alt="" coords="375,984,545,1027"/>
+<area shape="poly" title=" " alt="" coords="320,971,360,980,358,985,319,976"/>
+<area shape="rect" href="class_selection_u_i.html#adaee86ad7e1f6d13123096c229fa7ac3" title="Moves the selection up or down based on the specified direction." alt="" coords="370,1051,549,1077"/>
+<area shape="poly" title=" " alt="" coords="292,974,324,993,347,1016,357,1026,371,1036,383,1042,381,1047,369,1041,353,1030,344,1019,320,997,289,979"/>
+<area shape="poly" title=" " alt="" coords="282,930,416,864,418,868,284,935"/>
+<area shape="rect" href="class_selection_u_i.html#a87c49cf933ed01f6c373b20114ef5b0c" title="Renders the selection UI on the console." alt="" coords="620,1051,757,1077"/>
+<area shape="poly" title=" " alt="" coords="550,1061,604,1061,604,1067,550,1067"/>
+<area shape="rect" href="class_battle_u_i.html#ac28f355d831cf2da6849142a8c5d6a27" title="Renders the HP bars for the player and the monster." alt="" coords="840,680,1002,707"/>
+<area shape="poly" title=" " alt="" coords="502,829,863,709,865,714,504,834"/>
+<area shape="rect" href="class_entity.html#a399a12d96efe62662a41cd069a537a1d" title="Gets the armor attribute of the entity." alt="" coords="1097,680,1216,707"/>
+<area shape="poly" title=" " alt="" coords="1002,691,1081,691,1081,696,1002,696"/>
+<area shape="rect" href="class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="1063,173,1251,200"/>
+<area shape="poly" title=" " alt="" coords="978,677,997,666,1012,652,1030,623,1042,594,1048,566,1050,538,1044,484,1031,430,1019,376,1014,322,1017,294,1025,267,1039,239,1060,210,1062,208,1066,212,1064,214,1044,241,1030,268,1023,295,1020,322,1024,375,1036,429,1049,483,1055,538,1053,567,1047,596,1035,625,1016,655,1000,671,980,682"/>
+<area shape="poly" title=" " alt="" coords="987,705,1091,727,1089,732,986,710"/>
+<area shape="poly" title=" " alt="" coords="947,705,983,731,1016,768,1028,790,1034,811,1036,849,1041,884,1049,902,1064,919,1080,931,1077,935,1060,923,1045,905,1036,886,1031,849,1028,811,1023,792,1012,771,979,735,944,709"/>
+<area shape="poly" title=" " alt="" coords="272,652,369,613,470,583,561,567,721,549,794,536,865,510,901,491,937,466,974,436,1012,398,1028,375,1035,352,1036,329,1035,306,1033,282,1035,258,1043,234,1060,210,1063,207,1067,211,1064,214,1047,236,1040,259,1038,282,1040,305,1042,329,1040,353,1033,377,1016,402,978,440,941,471,904,495,868,515,795,541,722,555,562,572,471,589,371,619,274,657"/>
+<area shape="rect" href="class_game_state.html#a28b06b89ad80a380106a17dc2992b555" title=" " alt="" coords="383,628,536,655"/>
+<area shape="poly" title=" " alt="" coords="279,660,367,650,368,655,280,666"/>
+<area shape="rect" href="class_player.html#ae4281279a82273ee4c55f6bd59f3b3d7" title="Gets the amount of gold the player has." alt="" coords="1100,984,1214,1011"/>
+<area shape="poly" title=" " alt="" coords="274,679,594,804,824,889,1063,969,1087,977,1085,982,1061,975,823,894,592,809,272,684"/>
+<area shape="rect" href="class_game_saver.html#ac59562cd7aa410a5678a5e12add3ecff" title="Saves the player&#39;s highscore to a specified directory." alt="" coords="597,600,780,627"/>
+<area shape="poly" title=" " alt="" coords="537,629,582,624,582,629,537,635"/>
+<area shape="rect" href="class_game_saver.html#a67e99996a8f4c6160d8adb4cd0116c7a" title="Gets the current date and time as a string." alt="" coords="828,548,1014,591"/>
+<area shape="poly" title=" " alt="" coords="762,597,812,587,813,592,763,602"/>
+<area shape="poly" title=" " alt="" coords="712,597,881,493,967,436,1012,398,1028,366,1034,336,1034,306,1030,277,1028,248,1029,219,1039,189,1060,159,1080,145,1083,149,1064,163,1044,192,1034,220,1033,248,1036,276,1039,306,1039,336,1033,368,1016,402,970,440,884,497,714,602"/>
+<area shape="rect" href="class_game_saver.html#ae6b2d95816f81fd2bb13a2f5d26a23f3" title="Saves the player object to the output stream." alt="" coords="840,615,1002,641"/>
+<area shape="poly" title=" " alt="" coords="780,616,825,619,824,625,780,622"/>
+<area shape="poly" title=" " alt="" coords="971,639,1063,665,1090,673,1089,678,1061,671,969,644"/>
+<area shape="poly" title=" " alt="" coords="965,639,1016,666,1030,679,1040,692,1049,705,1063,716,1092,729,1089,734,1061,721,1045,708,1035,696,1026,683,1012,670,962,644"/>
+<area shape="poly" title=" " alt="" coords="978,639,999,651,1016,666,1036,700,1043,733,1043,766,1038,797,1034,828,1034,858,1043,889,1064,919,1081,932,1077,936,1060,923,1038,891,1029,859,1029,828,1033,796,1037,765,1038,734,1031,702,1012,670,996,655,976,644"/>
+<area shape="poly" title=" " alt="" coords="999,612,1012,601,1032,573,1045,546,1052,519,1055,491,1049,437,1035,383,1022,328,1016,272,1018,244,1026,216,1039,188,1060,159,1080,144,1083,149,1064,163,1044,191,1031,218,1024,245,1021,272,1027,327,1040,381,1054,436,1060,491,1058,519,1050,548,1036,576,1016,604,1002,616"/>
+<area shape="rect" href="class_player.html#ad65bf605efd8212d06a05f0e3050694b" title="Gets the player&#39;s equipped armor piece." alt="" coords="1079,275,1234,301"/>
+<area shape="poly" title=" " alt="" coords="998,612,1012,601,1035,565,1043,530,1042,494,1035,458,1029,422,1027,385,1036,349,1060,312,1064,307,1068,311,1064,315,1041,351,1033,386,1034,422,1041,457,1047,494,1049,530,1040,567,1016,604,1001,616"/>
+<area shape="poly" title=" " alt="" coords="980,640,1000,651,1016,666,1043,713,1053,758,1051,801,1044,843,1037,885,1034,929,1042,973,1064,1021,1083,1042,1107,1058,1104,1063,1080,1046,1060,1024,1037,975,1029,929,1032,885,1039,842,1046,800,1047,758,1038,715,1012,670,996,655,977,644"/>
+<area shape="poly" title=" " alt="" coords="979,640,999,651,1016,666,1039,707,1047,747,1045,785,1038,823,1031,860,1030,896,1040,933,1064,970,1087,986,1084,990,1060,974,1035,935,1025,897,1026,859,1033,822,1039,785,1041,747,1034,709,1012,670,996,655,976,644"/>
+<area shape="rect" href="class_player.html#a13882d458539b240569f96c4e8084ff4" title="Gets the player&#39;s inventory." alt="" coords="1088,325,1226,352"/>
+<area shape="poly" title=" " alt="" coords="998,612,1012,601,1032,572,1040,543,1039,513,1035,484,1031,454,1031,423,1039,393,1060,362,1072,352,1075,356,1064,366,1044,395,1036,424,1036,453,1041,483,1045,513,1045,543,1037,574,1016,604,1001,616"/>
+<area shape="rect" href="class_player.html#afe532be8261ffc45c72598d4c1673f3c" title="Gets the size of the player&#39;s inventory." alt="" coords="1075,376,1239,403"/>
+<area shape="poly" title=" " alt="" coords="997,612,1012,601,1029,578,1036,555,1037,532,1035,509,1033,485,1035,461,1043,437,1060,413,1063,410,1067,414,1064,416,1047,439,1040,462,1039,485,1041,508,1042,532,1041,556,1033,581,1016,605,1000,616"/>
+<area shape="rect" href="class_player.html#a1e553050d189202dec0cdb5e8f5ee3ba" title="Gets the player&#39;s current level." alt="" coords="1099,781,1215,808"/>
+<area shape="poly" title=" " alt="" coords="973,640,995,651,1016,666,1034,693,1040,719,1046,744,1053,756,1064,767,1085,780,1082,785,1060,771,1048,759,1041,746,1034,720,1029,695,1012,670,992,655,970,644"/>
+<area shape="rect" href="class_entity.html#a2b8b26caf53f1af7fb7838b8b40e9efa" title="Gets the mana attribute of the entity." alt="" coords="1099,427,1215,453"/>
+<area shape="poly" title=" " alt="" coords="996,612,1012,601,1025,585,1032,568,1035,534,1039,499,1046,481,1060,463,1083,449,1086,454,1064,467,1051,483,1044,500,1041,534,1037,569,1030,587,1016,605,999,616"/>
+<area shape="rect" href="class_player.html#a74487908d7d57ec03e124acd88df8f11" title="Gets the required XP for the player to level up." alt="" coords="1080,832,1234,859"/>
+<area shape="poly" title=" " alt="" coords="976,640,997,651,1016,666,1030,686,1037,707,1039,745,1042,782,1050,800,1064,818,1068,822,1065,826,1060,822,1045,803,1037,784,1034,746,1032,708,1025,689,1012,670,994,655,973,644"/>
+<area shape="rect" href="class_player.html#aef662654a29e1f65d19e68890b1a6bff" title="Gets the player&#39;s equipped spell." alt="" coords="1099,477,1215,504"/>
+<area shape="poly" title=" " alt="" coords="993,612,1012,601,1029,580,1035,559,1042,536,1060,514,1083,501,1085,506,1064,518,1047,538,1041,560,1034,583,1016,605,996,616"/>
+<area shape="rect" href="class_player.html#ae812e458ca7ee0774c08a83b525fd0f4" title="Gets the number of stat points the player has." alt="" coords="1083,528,1231,555"/>
+<area shape="poly" title=" " alt="" coords="984,612,1013,600,1036,583,1061,564,1076,558,1078,563,1063,569,1040,587,1015,605,986,617"/>
+<area shape="rect" href="class_entity.html#a3ec8cb43aa22eeb2125471c6ea9c2567" title="Gets the strength attribute of the entity." alt="" coords="1090,579,1223,605"/>
+<area shape="poly" title=" " alt="" coords="1001,613,1074,602,1075,607,1002,618"/>
+<area shape="rect" href="class_player.html#a79d2d305424fffdd85998c201037f21e" title="Gets the player&#39;s equipped weapon." alt="" coords="1089,629,1224,656"/>
+<area shape="poly" title=" " alt="" coords="1002,630,1074,635,1073,640,1002,636"/>
+<area shape="rect" href="class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611" title="Gets the player&#39;s current XP." alt="" coords="1105,883,1208,909"/>
+<area shape="poly" title=" " alt="" coords="977,640,998,651,1016,666,1033,693,1040,720,1041,746,1039,771,1037,796,1038,820,1046,845,1064,869,1076,879,1091,886,1089,890,1074,883,1060,873,1042,847,1033,821,1032,796,1033,771,1036,746,1035,721,1028,695,1012,670,995,655,975,644"/>
+<area shape="rect" href="class_game_saver.html#aeda494833a687c882b896174fa04457a" title="Saves the item object to the output stream." alt="" coords="1082,224,1231,251"/>
+<area shape="poly" title=" " alt="" coords="998,612,1012,601,1028,580,1038,559,1047,517,1044,475,1035,433,1026,391,1023,348,1033,305,1044,283,1060,261,1067,254,1070,258,1064,264,1048,285,1038,306,1029,348,1032,390,1041,432,1049,475,1052,517,1043,561,1032,583,1016,605,1002,616"/>
+<area shape="rect" href="class_item.html#ae17b09a83810b399c21b5b9df33ed65b" title="Getter for the name of the item." alt="" coords="1337,224,1446,251"/>
+<area shape="poly" title=" " alt="" coords="1231,235,1321,235,1321,240,1231,240"/>
+<area shape="rect" href="class_item.html#ac4259dc62727342a9c530373a818065c" title="Getter for the power of the item." alt="" coords="1336,275,1447,301"/>
+<area shape="poly" title=" " alt="" coords="1223,249,1321,270,1320,275,1221,254"/>
+<area shape="rect" href="class_item.html#a1c9bcc377303c989e2b40bc6ba438f56" title="Getter for the type of the item." alt="" coords="1340,173,1443,200"/>
+<area shape="poly" title=" " alt="" coords="1221,221,1324,198,1325,204,1223,226"/>
+<area shape="poly" title=" " alt="" coords="974,178,994,169,1012,157,1023,145,1029,133,1035,108,1041,83,1049,70,1060,58,1077,47,1095,40,1097,45,1079,52,1064,62,1053,73,1046,85,1040,109,1034,135,1027,148,1016,161,997,174,976,183"/>
+<area shape="poly" title=" " alt="" coords="974,187,1047,186,1047,191,975,192"/>
+<area shape="poly" title=" " alt="" coords="928,204,1017,535,1025,590,1027,635,1035,675,1046,696,1064,717,1077,726,1091,733,1089,738,1074,731,1060,721,1042,699,1030,677,1021,636,1020,591,1011,537,923,205"/>
+<area shape="poly" title=" " alt="" coords="974,176,1081,151,1082,156,975,181"/>
+<area shape="rect" href="class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="1100,72,1214,99"/>
+<area shape="poly" title=" " alt="" coords="973,175,1013,156,1027,145,1036,133,1045,120,1061,108,1084,98,1086,103,1063,113,1049,124,1040,136,1031,148,1015,161,976,179"/>
+<area shape="rect" href="class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="1312,72,1471,99"/>
+<area shape="poly" title=" " alt="" coords="1214,83,1296,83,1296,88,1214,88"/>
+<area shape="rect" href="class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="1338,123,1445,149"/>
+<area shape="poly" title=" " alt="" coords="1215,95,1323,119,1322,124,1214,100"/>
+<area shape="rect" href="class_renderer.html#a1abcc0278b386bdcd4ecca802446a16a" title="Renders the entire game map and player position on the console." alt="" coords="620,1101,757,1128"/>
+<area shape="poly" title=" " alt="" coords="515,1112,604,1112,604,1117,515,1117"/>
+<area shape="rect" href="class_renderer.html#ad5f2b64f9e703c2d593b5d4cfc5f7e96" title="Renders a single chunk of the game map on the console." alt="" coords="841,1203,1001,1229"/>
+<area shape="poly" title=" " alt="" coords="722,1126,875,1194,873,1198,720,1131"/>
+<area shape="rect" href="class_renderer.html#ac9dd995e2c7ca21fb536c33876e050b7" title="Renders the player statistics on the console." alt="" coords="844,781,998,808"/>
+<area shape="poly" title=" " alt="" coords="756,1100,778,1087,807,1058,833,1024,854,988,872,950,897,879,912,823,917,824,902,880,877,953,859,990,837,1027,811,1061,781,1091,759,1105"/>
+<area shape="rect" href="class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f" title="Clears the specified lines on the console." alt="" coords="1062,1253,1251,1280"/>
+<area shape="poly" title=" " alt="" coords="987,1227,1077,1247,1076,1252,986,1233"/>
+<area shape="rect" href="class_math_functions.html#a8b4c499ff6cb50ad02707797b00e67d5" title="Returns the minimum of two unsigned integers." alt="" coords="1089,1152,1225,1179"/>
+<area shape="poly" title=" " alt="" coords="986,1199,1076,1180,1077,1185,987,1205"/>
+<area shape="rect" href="class_renderer.html#a5910609b8ff79255ed94fafe329c38ee" title="Renders a single tile on the console." alt="" coords="1086,1203,1228,1229"/>
+<area shape="poly" title=" " alt="" coords="1001,1213,1070,1213,1070,1219,1001,1219"/>
+<area shape="poly" title=" " alt="" coords="986,778,1089,756,1091,761,987,783"/>
+<area shape="poly" title=" " alt="" coords="984,806,1016,825,1034,849,1040,874,1046,897,1064,919,1080,929,1077,934,1060,923,1042,900,1035,875,1029,852,1012,829,982,811"/>
+<area shape="poly" title=" " alt="" coords="988,806,1016,825,1030,844,1037,863,1040,900,1043,936,1050,953,1064,970,1086,984,1083,989,1060,974,1045,956,1038,937,1035,900,1032,864,1025,846,1012,829,985,811"/>
+<area shape="poly" title=" " alt="" coords="998,792,1083,792,1083,797,998,797"/>
+<area shape="poly" title=" " alt="" coords="987,806,1077,826,1076,831,986,811"/>
+<area shape="poly" title=" " alt="" coords="975,806,1015,824,1030,836,1040,847,1049,858,1063,868,1091,880,1089,885,1061,873,1045,862,1036,851,1027,840,1013,829,973,811"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_event_a287175fd5089ba826858b85cfacae5c8_icgraph.png" border="0" usemap="#aclass_event_a287175fd5089ba826858b85cfacae5c8_icgraph" alt=""/></div>
+<map name="aclass_event_a287175fd5089ba826858b85cfacae5c8_icgraph" id="aclass_event_a287175fd5089ba826858b85cfacae5c8_icgraph">
+<area shape="rect" title="Handles a monster event." alt="" coords="605,31,706,57"/>
+<area shape="rect" href="class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,31,557,57"/>
+<area shape="poly" title=" " alt="" coords="590,47,557,47,557,41,590,41"/>
+<area shape="rect" href="class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" title=" " alt="" coords="420,47,388,47,388,41,420,41"/>
+<area shape="rect" href="class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" href="class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="adf51076ed987241d25a5567439836afe" name="adf51076ed987241d25a5567439836afe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf51076ed987241d25a5567439836afe">&#9670;&#160;</a></span>NextFloor()</h2>
+<a id="a1b0a578a40e989443e49822fec5ef8d5" name="a1b0a578a40e989443e49822fec5ef8d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0a578a40e989443e49822fec5ef8d5">&#9670;&#160;</a></span>NextFloor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,7 +557,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void NextFloor </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_map.html">Map</a>*</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -484,8 +567,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_adf51076ed987241d25a5567439836afe_cgraph.png" border="0" usemap="#aclass_event_adf51076ed987241d25a5567439836afe_cgraph" alt=""/></div>
-<map name="aclass_event_adf51076ed987241d25a5567439836afe_cgraph" id="aclass_event_adf51076ed987241d25a5567439836afe_cgraph">
+<div class="center"><img src="class_event_a1b0a578a40e989443e49822fec5ef8d5_cgraph.png" border="0" usemap="#aclass_event_a1b0a578a40e989443e49822fec5ef8d5_cgraph" alt=""/></div>
+<map name="aclass_event_a1b0a578a40e989443e49822fec5ef8d5_cgraph" id="aclass_event_a1b0a578a40e989443e49822fec5ef8d5_cgraph">
 <area shape="rect" title="Advances to the next floor." alt="" coords="5,351,83,377"/>
 <area shape="rect" href="class_player.html#ad531b568e152fb818950fb5daaea5694" title="Adds experience points to the player&#39;s current XP." alt="" coords="145,49,250,76"/>
 <area shape="poly" title=" " alt="" coords="46,349,73,254,97,192,128,131,147,106,166,85,170,89,151,110,133,133,102,194,78,256,51,351"/>
@@ -564,11 +647,52 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="637,761,683,816,716,847,753,874,781,886,778,891,750,878,713,851,679,820,633,765"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_event_a1b0a578a40e989443e49822fec5ef8d5_icgraph.png" border="0" usemap="#aclass_event_a1b0a578a40e989443e49822fec5ef8d5_icgraph" alt=""/></div>
+<map name="aclass_event_a1b0a578a40e989443e49822fec5ef8d5_icgraph" id="aclass_event_a1b0a578a40e989443e49822fec5ef8d5_icgraph">
+<area shape="rect" title="Advances to the next floor." alt="" coords="605,31,683,57"/>
+<area shape="rect" href="class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,31,557,57"/>
+<area shape="poly" title=" " alt="" coords="590,47,558,47,558,41,590,41"/>
+<area shape="rect" href="class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" title=" " alt="" coords="420,47,388,47,388,41,420,41"/>
+<area shape="rect" href="class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" href="class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ae29a33485b2a77932276ccc460f909e5" name="ae29a33485b2a77932276ccc460f909e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae29a33485b2a77932276ccc460f909e5">&#9670;&#160;</a></span>TreasureEvent()</h2>
+<a id="afd70eed6285deadd1fc5c9e86ed4bb13" name="afd70eed6285deadd1fc5c9e86ed4bb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd70eed6285deadd1fc5c9e86ed4bb13">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_event.html">Event</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_event.html">Event</a>&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c185e479c0fb3003cee32c68f89c69c" name="a1c185e479c0fb3003cee32c68f89c69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c185e479c0fb3003cee32c68f89c69c">&#9670;&#160;</a></span>TreasureEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -576,7 +700,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void TreasureEvent </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_map.html">Map</a>*</td>          <td class="paramname"><span class="paramname"><em>map</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -586,8 +710,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_event_ae29a33485b2a77932276ccc460f909e5_cgraph.png" border="0" usemap="#aclass_event_ae29a33485b2a77932276ccc460f909e5_cgraph" alt=""/></div>
-<map name="aclass_event_ae29a33485b2a77932276ccc460f909e5_cgraph" id="aclass_event_ae29a33485b2a77932276ccc460f909e5_cgraph">
+<div class="center"><img src="class_event_a1c185e479c0fb3003cee32c68f89c69c_cgraph.png" border="0" usemap="#aclass_event_a1c185e479c0fb3003cee32c68f89c69c_cgraph" alt=""/></div>
+<map name="aclass_event_a1c185e479c0fb3003cee32c68f89c69c_cgraph" id="aclass_event_a1c185e479c0fb3003cee32c68f89c69c_cgraph">
 <area shape="rect" title="Handles a treasure event." alt="" coords="5,183,109,209"/>
 <area shape="rect" href="class_player.html#a9d417707b34a9388942cf618b8cb7e48" title="Adds gold to the player&#39;s current amount." alt="" coords="165,5,281,32"/>
 <area shape="poly" title=" " alt="" coords="61,181,94,115,121,76,155,42,160,38,164,42,158,46,126,80,99,118,66,183"/>
@@ -611,12 +735,28 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="289,169,374,171,374,176,289,175"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_event_a1c185e479c0fb3003cee32c68f89c69c_icgraph.png" border="0" usemap="#aclass_event_a1c185e479c0fb3003cee32c68f89c69c_icgraph" alt=""/></div>
+<map name="aclass_event_a1c185e479c0fb3003cee32c68f89c69c_icgraph" id="aclass_event_a1c185e479c0fb3003cee32c68f89c69c_icgraph">
+<area shape="rect" title="Handles a treasure event." alt="" coords="605,31,709,57"/>
+<area shape="rect" href="class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,31,557,57"/>
+<area shape="poly" title=" " alt="" coords="590,47,557,47,557,41,590,41"/>
+<area shape="rect" href="class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,31,388,57"/>
+<area shape="poly" title=" " alt="" coords="420,47,388,47,388,41,420,41"/>
+<area shape="rect" href="class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,5,184,32"/>
+<area shape="poly" title=" " alt="" coords="216,36,184,32,185,27,216,30"/>
+<area shape="rect" href="class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,56,182,83"/>
+<area shape="poly" title=" " alt="" coords="216,58,183,62,182,56,216,52"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a7bdaf8655b48f0d7994eb54ec1da4981" name="a7bdaf8655b48f0d7994eb54ec1da4981"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bdaf8655b48f0d7994eb54ec1da4981">&#9670;&#160;</a></span>map</h2>
+<a id="ad78221131889a4311414f037208edd5a" name="ad78221131889a4311414f037208edd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78221131889a4311414f037208edd5a">&#9670;&#160;</a></span>baseXP</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -625,7 +765,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_map.html">Map</a>* map</td>
+          <td class="memname">const unsigned baseXP = 25</td>
         </tr>
       </table>
   </td>
@@ -634,7 +774,76 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Pointer to the game map </p>
+<p>The base experience points gained from the event. </p>
+
+</div>
+</div>
+<a id="a31fb49edabac3b2fffa3dc5b197d75a1" name="a31fb49edabac3b2fffa3dc5b197d75a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31fb49edabac3b2fffa3dc5b197d75a1">&#9670;&#160;</a></span>bonusXP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned bonusXP = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The bonus experience points gained from the event. </p>
+
+</div>
+</div>
+<a id="a42951c7a996ef3cad8ea38093af3fe06" name="a42951c7a996ef3cad8ea38093af3fe06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42951c7a996ef3cad8ea38093af3fe06">&#9670;&#160;</a></span>goldDrop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned goldDrop = 5 + <a class="el" href="class_game_state.html#a39bbab7a6b0c13bc227d484bba071d1c">GameState::GetGameMap</a>()-&gt;GetFloor()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The amount of gold dropped from the event. </p>
+
+</div>
+</div>
+<a id="a5f09e3d415fbb132db416639bc47c338" name="a5f09e3d415fbb132db416639bc47c338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f09e3d415fbb132db416639bc47c338">&#9670;&#160;</a></span>XPDrop</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned XPDrop = <a class="el" href="#ad78221131889a4311414f037208edd5a">baseXP</a> + <a class="el" href="class_game_state.html#a39bbab7a6b0c13bc227d484bba071d1c">GameState::GetGameMap</a>()-&gt;GetFloor() * <a class="el" href="#a31fb49edabac3b2fffa3dc5b197d75a1">bonusXP</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The total experience points dropped from the event. </p>
 
 </div>
 </div>

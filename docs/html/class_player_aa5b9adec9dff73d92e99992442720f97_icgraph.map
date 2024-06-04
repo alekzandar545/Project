@@ -1,5 +1,5 @@
 <map id="SpellAttack" name="SpellAttack">
 <area shape="rect" id="Node000001" title="Performs a spell attack on a monster." alt="" coords="236,13,324,40"/>
-<area shape="rect" id="Node000002" href="$class_combat_events.html#ad7e9f4f25e863bb3582f6a344b3ff2ba" title="Handles a spell attack in combat." alt="" coords="5,5,188,48"/>
+<area shape="rect" id="Node000002" href="$class_combat_events.html#a0e759b390007fd54e875c3696991dd08" title="Handles a spell attack in combat." alt="" coords="5,5,188,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,29,188,29,188,24,220,24"/>
 </map>

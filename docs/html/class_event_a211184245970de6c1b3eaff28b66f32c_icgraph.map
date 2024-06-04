@@ -1,0 +1,17 @@
+<map id="MonsterAttack" name="MonsterAttack">
+<area shape="rect" id="Node000001" title="Handles a monster attack event." alt="" coords="842,80,948,107"/>
+<area shape="rect" id="Node000002" href="$class_combat_events.html#a80e48b8777f2ae9a8dc6f556cb351d72" title="Handles a melee attack in combat." alt="" coords="605,5,794,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="838,77,763,51,765,46,840,72"/>
+<area shape="rect" id="Node000003" href="$class_combat_events.html#a0e759b390007fd54e875c3696991dd08" title="Handles a spell attack in combat." alt="" coords="608,72,791,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="826,96,791,96,791,91,826,91"/>
+<area shape="rect" id="Node000004" href="$class_event.html#a287175fd5089ba826858b85cfacae5c8" title="Handles a monster event." alt="" coords="649,139,750,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="840,115,794,129,751,142,749,137,793,124,838,110"/>
+<area shape="rect" id="Node000005" href="$class_map.html#a59f3221cf61a2d077b90afdccf69453c" title="Moves the player to a new position." alt="" coords="436,139,557,165"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="634,155,558,155,558,149,634,149"/>
+<area shape="rect" id="Node000006" href="$class_input_handler.html#a1c082054c00a209a9079a8e9b8ab3adc" title="Handles user input for map navigation." alt="" coords="232,139,388,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="420,155,388,155,388,149,420,149"/>
+<area shape="rect" id="Node000007" href="$class_game_initializer.html#abc78fe656b7fc4d739173533157ed639" title="Loads a saved game from the specified directory." alt="" coords="5,113,184,140"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="216,144,184,140,185,135,216,138"/>
+<area shape="rect" id="Node000008" href="$class_game_initializer.html#adfe34532a9f16b809ce5752fe143dddc" title="Starts a new game." alt="" coords="7,164,182,191"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="216,166,183,170,182,164,216,160"/>
+</map>

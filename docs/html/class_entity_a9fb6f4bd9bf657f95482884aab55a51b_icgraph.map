@@ -6,7 +6,7 @@
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1062,108,1029,115,1028,109,1061,103"/>
 <area shape="rect" id="Node000003" href="$class_player.html#a51b68f7c3df099f6a241eef7ebcd9ec3" title="Equips an item from the player&#39;s inventory." alt="" coords="696,31,821,57"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="886,65,821,55,822,50,887,60"/>
-<area shape="rect" id="Node000008" href="$class_combat_events.html#a0ce6966c3cd30c695e0cc3be8c43ea54" title="Handles the usage of a potion in combat." alt="" coords="663,81,854,124"/>
+<area shape="rect" id="Node000008" href="$class_combat_events.html#a860fbb2c76b9b2ae384aaac9f8e63e0b" title="Handles the usage of a potion in combat." alt="" coords="663,81,854,124"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="887,87,855,92,854,86,886,82"/>
 <area shape="rect" id="Node000004" href="$class_input_handler.html#a882995d6451ced9684db6d342572d464" title="Handles user input for inventory management." alt="" coords="436,23,615,65"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="681,47,616,47,616,41,681,41"/>

@@ -55,5 +55,8 @@ var searchData=
   ['getweapon_52',['GetWeapon',['../class_player.html#a79d2d305424fffdd85998c201037f21e',1,'Player']]],
   ['getwidth_53',['GetWidth',['../class_map.html#aa3b0e805be2744e606a48587d125a6e8',1,'Map']]],
   ['getxp_54',['GetXP',['../class_player.html#a2eadbfcfe94cd5d4a6fa4d4aaf5f5611',1,'Player']]],
-  ['gold_55',['gold',['../class_player.html#a98e9e7f6fefc09c16d5b18a060a6ee32',1,'Player']]]
+  ['gold_55',['gold',['../class_player.html#a98e9e7f6fefc09c16d5b18a060a6ee32',1,'Player']]],
+  ['golddrop_56',['goldDrop',['../class_event.html#a42951c7a996ef3cad8ea38093af3fe06',1,'Event']]],
+  ['green_57',['GREEN',['../class_constants.html#acd126f7aebe59911179179494e3cf220',1,'Constants']]],
+  ['grey_58',['GREY',['../class_constants.html#a7a9b3cfc21d69e7e407848d91598cad4',1,'Constants']]]
 ];

@@ -1,0 +1,19 @@
+<map id="MonsterAttack" name="MonsterAttack">
+<area shape="rect" id="Node000001" title="Handles a monster attack event." alt="" coords="5,123,112,149"/>
+<area shape="rect" id="Node000002" href="$class_alerts.html#a2917fdce2cac9e2ce32ab92bf0ac9465" title="Displays a general alert message." alt="" coords="209,17,299,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,120,110,89,158,58,193,43,195,48,161,62,113,94,76,124"/>
+<area shape="rect" id="Node000004" href="$class_monster.html#a73c20d0a40628522fcbd70599fde519c" title="Performs an attack on another entity." alt="" coords="197,72,311,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="111,120,184,101,185,106,113,125"/>
+<area shape="rect" id="Node000007" href="$class_game_state.html#aa7b93442b8c75c7afa22171f45710ec7" title=" " alt="" coords="160,123,348,149"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="112,133,144,133,144,139,112,139"/>
+<area shape="rect" id="Node000008" href="$class_entity.html#a326a03351037cefc6564103e7ba4ceee" title="Gets the current health points attribute of the entity." alt="" coords="203,173,305,200"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="113,147,188,167,187,172,111,152"/>
+<area shape="rect" id="Node000009" href="$class_player.html#ae17b09a83810b399c21b5b9df33ed65b" title="Gets the name of the player." alt="" coords="193,224,315,251"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="76,148,113,179,161,210,180,218,177,222,158,214,110,183,72,152"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html#a5df136cc152bc2b72f7580f4cd568c23" title=" " alt="" coords="396,5,580,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="299,27,380,26,380,31,299,33"/>
+<area shape="rect" id="Node000005" href="$class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde" title="Chooses an attack for the monster." alt="" coords="409,72,567,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="311,83,393,83,393,88,311,88"/>
+<area shape="rect" id="Node000006" href="$class_entity.html#a9393e7f06e8979d4d5967579f044f0d3" title="Takes a hit with the specified damage." alt="" coords="435,123,542,149"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="312,95,420,119,419,124,311,100"/>
+</map>

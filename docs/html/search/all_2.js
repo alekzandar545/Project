@@ -6,7 +6,7 @@ var searchData=
   ['chunk_5fcoords_3',['CHUNK_COORDS',['../class_renderer.html#ad9c2b40ff7b58d847edda6daaf2a986d',1,'Renderer']]],
   ['chunk_5fsize_4',['CHUNK_SIZE',['../class_constants.html#a2ce01fc1d09b1faca64acdb6172157b0',1,'Constants']]],
   ['clearconsolelines_5',['ClearConsoleLines',['../class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f',1,'Renderer']]],
-  ['combatevents_6',['CombatEvents',['../class_combat_events.html',1,'CombatEvents'],['../class_combat_events.html#a3f56645f30fc9038b414f3995c97236a',1,'CombatEvents::CombatEvents()']]],
+  ['combatevents_6',['CombatEvents',['../class_combat_events.html',1,'CombatEvents'],['../class_combat_events.html#a41974381ba5bd7a016855409ce44fe2a',1,'CombatEvents::CombatEvents() = default'],['../class_combat_events.html#a83bbf9a03c5e8b08b5c458f781f8175d',1,'CombatEvents::CombatEvents(const CombatEvents&amp; other) = default']]],
   ['combatevents_2ecpp_7',['combatEvents.cpp',['../combat_events_8cpp.html',1,'']]],
   ['combatevents_2eh_8',['combatEvents.h',['../combat_events_8h.html',1,'']]],
   ['console_5fcoords_9',['CONSOLE_COORDS',['../class_selection_u_i.html#a9f0a7b355fa1680b668c650839eb4e8b',1,'SelectionUI']]],

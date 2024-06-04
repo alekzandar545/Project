@@ -3,7 +3,7 @@ var searchData=
   ['checkselection_0',['CheckSelection',['../class_inventory_u_i.html#abb51ba47b083bf45d0c28385ee5492d7',1,'InventoryUI']]],
   ['chooseattack_1',['ChooseAttack',['../class_monster.html#a9014f2c70eb0ff00b2dbac5b72595cde',1,'Monster']]],
   ['clearconsolelines_2',['ClearConsoleLines',['../class_renderer.html#a90c0fbe5943bc1b2e3fc6bbf198d144f',1,'Renderer']]],
-  ['combatevents_3',['CombatEvents',['../class_combat_events.html#a3f56645f30fc9038b414f3995c97236a',1,'CombatEvents']]],
+  ['combatevents_3',['CombatEvents',['../class_combat_events.html#a41974381ba5bd7a016855409ce44fe2a',1,'CombatEvents::CombatEvents() = default'],['../class_combat_events.html#a83bbf9a03c5e8b08b5c458f781f8175d',1,'CombatEvents::CombatEvents(const CombatEvents&amp; other) = default']]],
   ['copy_4',['copy',['../class_player.html#a75876e85cb6a851598e13cf47ad8d210',1,'Player']]],
   ['countvisitedneighbor_5',['countVisitedNeighbor',['../class_map.html#a4ddbb5e8380e4a999827460f5f80b8b2',1,'Map']]],
   ['createexit_6',['CreateExit',['../class_map.html#abf37cc9e93169041de1b6ac194d54491',1,'Map']]],
