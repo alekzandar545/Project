@@ -82,7 +82,7 @@ void BattleUI::RenderHPBars() const {
     << "     ";
     SetConsoleTextAttribute(CURR_HANDLE, Constants::BLUE);
     std::cout << "Armor: " << GameState::GetGamePlayer()->GetArmor() << '%' << Constants::padding; //add some padding for shrinking numbers
-    SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::RED);
     SetConsoleCursorPosition(CURR_HANDLE, {MONSTER_HP_OFFSET, (short)(dragonArt.size())});
     std::cout << "HP: " << monster->GetHP() << '/' << monster->GetMaxHP() << "     ";
     SetConsoleTextAttribute(CURR_HANDLE, Constants::BLUE);

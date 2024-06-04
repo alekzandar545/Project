@@ -8,6 +8,7 @@
  * This class provides functionality for managing an entity's attributes such as strength, mana, health points, armor, and dexterity.
  * It also includes methods for taking hits, healing, and accessing the entity's attributes.
  */
+
 class Entity {
 public:
     /**
@@ -15,10 +16,22 @@ public:
      */
     Entity();
     
+    /**
+     * @brief Copy constructor for Entity.
+     * @param other The entity to be copied.
+     */
     Entity(const Entity& other) = default;
 
+    /**
+     * @brief Assignment operator for Entity.
+     * @param other The entity to be assigned.
+     * @return A reference to the assigned entity.
+     */
     Entity& operator=(const Entity& other) = default;
 
+    /**
+     * @brief Virtual destructor for Entity.
+     */
     virtual ~Entity() = default;
 
     /**
