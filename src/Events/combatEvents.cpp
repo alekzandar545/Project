@@ -7,38 +7,43 @@
 #include "alerts.h"
 #include "eventHandler.h"
 
-//construction
-CombatEvents::CombatEvents(Map* map) : map(map) {}
-
 //handling cases
-void CombatEvents::HandleMeleeAttack(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead) {
+void CombatEvents::HandleMeleeAttack(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, Map* map) {
     std::ostringstream msg;
     if (map->GetPlayer()->MeleeAttack(*ui.getMonster())) {
         ui.Render();
-        msg << map->GetPlayer()->GetName() << " has slain the dragon and earned " << std::to_string(5 + map->GetFloor()) 
-            << " gold and " << std::to_string(25 + map->GetFloor() * 3) << " xp";
+        const unsigned baseXP = 25;
+        const unsigned bonusXP = 3;
+        const unsigned XPDrop = baseXP + map->GetFloor() * bonusXP;
+        const unsigned goldDrop = 5 + map->GetFloor();
+        msg << map->GetPlayer()->GetName() << " has slain the dragon and earned " << std::to_string(goldDrop) 
+            << " gold and " << std::to_string(XPDrop) << " xp";
         Alerts::Alert(msg);
         DropPotion(*map->GetPlayer());
         monsterIsDead = true;
     } 
     else {
         ui.Render();
-        msg << map->GetPlayer()->GetName() << " hit the dragon with their " << map->GetPlayer()->GetWeapon().GetName();
+        msg << map->GetPlayer()->GetName() << " hit the dragon with their " << GameState::GetGamePlayer()->GetWeapon().GetName();
         Alerts::BattleAlert(msg);
-        Event event(map);
-        event.MonsterAttack(map->GetPlayer(), ui.getMonster(), playerIsDead);
+        Event event;
+        event.MonsterAttack(ui.getMonster(), playerIsDead);
         system("cls");
         ui.RenderGraphics();
         ui.Render();
     }
 }
 
-void CombatEvents::HandleSpellAttack(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead) {
+void CombatEvents::HandleSpellAttack(BattleUI& ui, bool& playerIsDead, bool& monsterIsDead, Map* map) {
     std::ostringstream msg;
     if (map->GetPlayer()->SpellAttack(*ui.getMonster())) {
         ui.Render();
-        msg << map->GetPlayer()->GetName() << " has slain the dragon and earned " << std::to_string(5 + map->GetFloor()) 
-            << " gold and " << std::to_string(25 + map->GetFloor() * 3) << " xp";
+        const unsigned baseXP = 25;
+        const unsigned bonusXP = 3;
+        const unsigned XPDrop = baseXP + map->GetFloor() * bonusXP;
+        const unsigned goldDrop = 5 + map->GetFloor();
+        msg << map->GetPlayer()->GetName() << " has slain the dragon and earned " << std::to_string(goldDrop) 
+            << " gold and " << std::to_string(XPDrop) << " xp";
         Alerts::Alert(msg);
         DropPotion(*map->GetPlayer());
         monsterIsDead = true;
@@ -47,15 +52,15 @@ void CombatEvents::HandleSpellAttack(BattleUI& ui, bool& playerIsDead, bool& mon
         ui.Render();
         msg << map->GetPlayer()->GetName() << " cast a " << map->GetPlayer()->GetSpell().GetName() << " on the dragon!";
         Alerts::BattleAlert(msg);
-        Event event(map);
-        event.MonsterAttack(map->GetPlayer(), ui.getMonster(), playerIsDead);
+        Event event;
+        event.MonsterAttack(ui.getMonster(), playerIsDead);
         system("cls");
         ui.RenderGraphics();
         ui.Render();
     }
 }
 
-void CombatEvents::HandlePotionUsage(BattleUI& ui) {
+void CombatEvents::HandlePotionUsage(BattleUI& ui, Map* map) {
     std::ostringstream msg;
     if(!map->GetPlayer()->UsePotion()){
         msg << map->GetPlayer()->GetName() << " has no potions!";
@@ -73,7 +78,7 @@ void CombatEvents::HandlePotionUsage(BattleUI& ui) {
 void CombatEvents::HandleFlee(BattleUI& ui, bool& fled) {
     fled = true;
     std::ostringstream msg;
-    msg << map->GetPlayer()->GetName() << " has fled!";
+    msg << GameState::GetGamePlayer()->GetName() << " has fled!";
     Alerts::Alert(msg);
 }
 //mob womp womp potion

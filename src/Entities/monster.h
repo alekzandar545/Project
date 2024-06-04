@@ -39,6 +39,12 @@ public:
      */
     Monster(unsigned level);
     
+    Monster(const Monster& other) = default;
+
+    Monster& operator=(const Monster& other) = default;
+
+    ~Monster() override = default;
+
     /**
      * @brief Chooses an attack for the monster.
      * @param attack The chosen attack will be stored in this parameter.

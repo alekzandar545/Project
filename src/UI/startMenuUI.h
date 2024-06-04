@@ -24,10 +24,12 @@ public:
      */
     StartMenuUI(const StartMenuUI& other) = default;
 
+    StartMenuUI& operator=(const StartMenuUI& other) = default;
+
     /**
      * @brief Default destructor for StartMenuUI.
      */
-    ~StartMenuUI() = default;
+    ~StartMenuUI() override = default;
 
     /**
      * @brief Renders the art for the start menu.

@@ -220,17 +220,17 @@ void Map::MovePlayer(int x, int y){
         return; 
     }
     else if(matrix[newY][newX] == Constants::TREASURE){
-        Event event(this);
-        event.TreasureEvent();
+        Event event;
+        event.TreasureEvent(this);
     }
     else if(matrix[newY][newX] == Constants::MONSTER)
     {
-        Event event(this);
-        event.MonsterEvent();
+        Event event;
+        event.MonsterEvent(this);
     }
     else if(matrix[newY][newX] == Constants::EXIT){
-        Event event(this);
-        event.NextFloor(); return;
+        Event event;
+        event.NextFloor(this); return;
     }
     else if(matrix[newY][newX] != Constants::PATH){
         throw std::runtime_error("Encountered an unexpected symbol while moving player.");

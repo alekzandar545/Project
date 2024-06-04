@@ -32,8 +32,8 @@ public:
         const unsigned statPoints, const unsigned level, const unsigned xp, const unsigned requiredXp, const unsigned gold,
         const std::vector<Item> inventory, const Item& weapon, const Item& spell, const Item& armorPiece); /**< Constructor with all parameters */
     Player(const Player& other); /**< Copy constructor */
-    ~Player(); /**< Destructor */
     Player& operator=(const Player& other); /**< Assignment operator */
+    ~Player() override; /**< Destructor */
 
     // Leveling
     /**

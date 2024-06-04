@@ -13,11 +13,11 @@ void InventoryUI::Render() const {
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, (short)(CONSOLE_COORDS.Y + i + ConsoleYOffset)});
         //need to know if item is selected
         if (i == selectionIndex) {
-            SetConsoleTextAttribute(CURR_HANDLE, 22);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::SELECTED_COLOR);
         }
         DisplayItem(GameState::GetGamePlayer()->GetInventory()[i]);
         if (i == selectionIndex) {
-            SetConsoleTextAttribute(CURR_HANDLE, 8);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
         }
     }
     std::cout << "\nPress E to equip item\nPress X to sell item";

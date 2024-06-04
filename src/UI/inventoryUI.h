@@ -27,10 +27,12 @@ public:
      */
     InventoryUI(const InventoryUI& other) = default;
 
+    InventoryUI& operator=(const InventoryUI& other) = default;
+
     /**
      * @brief Default destructor for the InventoryUI class.
      */
-    ~InventoryUI() = default;
+    ~InventoryUI() override = default;
 
     /**
      * @brief Renders the inventory UI.

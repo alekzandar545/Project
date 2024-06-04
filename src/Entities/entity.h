@@ -15,6 +15,12 @@ public:
      */
     Entity();
     
+    Entity(const Entity& other) = default;
+
+    Entity& operator=(const Entity& other) = default;
+
+    virtual ~Entity() = default;
+
     /**
      * @brief Takes a hit with the specified damage.
      * @param dmg The amount of damage to be taken.

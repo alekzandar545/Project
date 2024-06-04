@@ -27,6 +27,10 @@ public:
      */
     BattleUI(Monster* monster);
 
+    BattleUI(const BattleUI& other) = default;
+
+    BattleUI& operator=(const BattleUI& other) = default;
+
     /**
      * @brief Destructor for the BattleUI class.
      * 

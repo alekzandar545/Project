@@ -65,9 +65,9 @@ void BattleUI::Render() const {
     for (size_t i = 0; i < options.size(); i++) {
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, (short)(CONSOLE_COORDS.Y + i)});
         if (i == selectionIndex) {
-            SetConsoleTextAttribute(CURR_HANDLE, 22);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::SELECTED_COLOR);
             std::cout << options[i] << '\n';
-            SetConsoleTextAttribute(CURR_HANDLE, 8);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
             continue;
         }
         std::cout << options[i] << '\n';
@@ -76,13 +76,18 @@ void BattleUI::Render() const {
 }
 
 void BattleUI::RenderHPBars() const {
-    SetConsoleTextAttribute(CURR_HANDLE, 12);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::RED);
     SetConsoleCursorPosition(CURR_HANDLE, {PLAYER_HP_OFFSET, (short)(dragonArt.size())});
     std::cout << "HP: " << GameState::GetGamePlayer()->GetHP() << '/' << GameState::GetGamePlayer()->GetMaxHP() 
-    << "     " << "Armor: " << GameState::GetGamePlayer()->GetArmor() << '%' << Constants::padding; //add some padding for shrinking numbers
+    << "     ";
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::BLUE);
+    std::cout << "Armor: " << GameState::GetGamePlayer()->GetArmor() << '%' << Constants::padding; //add some padding for shrinking numbers
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
     SetConsoleCursorPosition(CURR_HANDLE, {MONSTER_HP_OFFSET, (short)(dragonArt.size())});
-    std::cout << "HP: " << monster->GetHP() << '/' << monster->GetMaxHP() << "     " << "Armor: " << monster->GetArmor() << '%' << Constants::padding << '\n';
-    SetConsoleTextAttribute(CURR_HANDLE, 8);
+    std::cout << "HP: " << monster->GetHP() << '/' << monster->GetMaxHP() << "     ";
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::BLUE);
+    std::cout << "Armor: " << monster->GetArmor() << '%' << Constants::padding << '\n';
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
 }
 
 Monster* BattleUI::getMonster() const {

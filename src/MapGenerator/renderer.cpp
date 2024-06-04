@@ -40,29 +40,29 @@ void Renderer::ClearConsoleLines(int startLine, int endLine) {
 void Renderer::RenderTile(char c) const{
     switch(c){
     case Constants::WALL:
-        SetConsoleTextAttribute(CURR_HANDLE, 8);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::GREY);
         break;
     case Constants::PATH:
-        SetConsoleTextAttribute(CURR_HANDLE, 8); 
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::GREY); 
         break;
     case Constants::PLAYER:
-        SetConsoleTextAttribute(CURR_HANDLE, 3);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::BLUE);
         break;
     case Constants::EXIT:
-        SetConsoleTextAttribute(CURR_HANDLE, 10);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::GREEN);
         break;
     case Constants::TREASURE:
-        SetConsoleTextAttribute(CURR_HANDLE, 6);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::YELLOW);
         break; 
     case Constants::MONSTER:
-        SetConsoleTextAttribute(CURR_HANDLE, 12);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::RED);
         break;                                  
     default:
-        SetConsoleTextAttribute(CURR_HANDLE, 15);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
         break;
     }
     std::cout << c;
-    SetConsoleTextAttribute(CURR_HANDLE, 8);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
 }
 
 void Renderer::RenderChunk(const unsigned height, const unsigned width, const std::vector<std::vector<char>> matrix) const{ //should drop the parameter probably
@@ -153,7 +153,7 @@ void Renderer::RenderMap(const unsigned height, const unsigned width, const std:
     //clear the console
     system("cls");
     //print top border
-    SetConsoleTextAttribute(CURR_HANDLE, 8);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::GREY);
     for (size_t i = 0; i < width + 2; i++)
         std::cout << Constants::BORDER_TOP;
     std::cout << '\n';     
@@ -242,14 +242,14 @@ void Renderer::RenderAll(const unsigned height, const unsigned width, const std:
 
 void Renderer::RenderStats(const unsigned height, const unsigned width, Player* player) const{
     SetConsoleCursorPosition(CURR_HANDLE, {0,0});
-    SetConsoleTextAttribute(CURR_HANDLE, 6);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::YELLOW);
     std::cout << "Gold: " << player->GetGold() << "   ";
-    SetConsoleTextAttribute(CURR_HANDLE, 2);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::GREEN);
     std::cout << "Level: " << player->GetLevel() << "    ";
     std::cout << "XP: " << player->GetXP() << '/' << player->GetRequiredXP() << "   ";
-    SetConsoleTextAttribute(CURR_HANDLE, 12);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::RED);
     std::cout << "HP: " << player->GetHP() << '/' << player->GetMaxHP() << Constants::padding << '\n';
-    SetConsoleTextAttribute(CURR_HANDLE, 8);
+    SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
     //SetConsoleCursorPosition(CURR_HANDLE, {(short)width,(short)(height+1)});
 }
 

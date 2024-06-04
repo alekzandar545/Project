@@ -24,6 +24,8 @@ public:
      */
     SelectionUI(const SelectionUI& other) = default;
 
+    SelectionUI& operator=(const SelectionUI& other) = default;
+
     /**
      * @brief Default destructor.
      */

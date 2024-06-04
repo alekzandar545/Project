@@ -25,10 +25,12 @@ public:
      */
     LoadGameUI(const LoadGameUI& other) = default;
 
+    LoadGameUI& operator=(const LoadGameUI& other) = default;
+
     /**
      * @brief Default destructor.
      */
-    ~LoadGameUI() = default;
+    ~LoadGameUI() override = default;
 
 private:
     /**

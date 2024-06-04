@@ -33,4 +33,11 @@ public:
     static const std::string padding;
 
     // Colors
+    static const unsigned DEFAULT_COLOR = 8;
+    static const unsigned GREY = 8;
+    static const unsigned BLUE = 3;
+    static const unsigned GREEN = 10;
+    static const unsigned YELLOW = 6;
+    static const unsigned RED = 12;
+    static const unsigned SELECTED_COLOR = 22;
 };

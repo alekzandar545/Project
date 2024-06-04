@@ -44,7 +44,7 @@ public:
      * @param other The item to be assigned.
      * @return A reference to the assigned item.
      */
-    Item &operator=(const Item &other);
+    Item& operator=(const Item &other);
 
     /**
      * @brief Destructor for Item.

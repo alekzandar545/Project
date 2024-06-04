@@ -96,59 +96,16 @@ public:
     ~Map();
 
     /**
-     * @brief Initializes the map.
-     */
-    void Initialize();
-
-    /**
-     * @brief Creates a path starting from a given position.
-     * @param i Row index.
-     * @param j Column index.
-     */
-    void CreatePath(const int i, const int j);
-
-    /**
-     * @brief Counts visited neighbors of a cell.
-     * @param i Row index.
-     * @param j Column index.
-     * @return Number of visited neighbors.
-     */
-    int countVisitedNeighbor(const int i, const int j) const;
-
-    /**
      * @brief Generates the game map.
      */
     void GenerateMap();
 
-    /**
-     * @brief Creates treasures in the map.
-     */
-    void CreateTreasure();
-
-    /**
-     * @brief Creates monsters in the map.
-     */
-    void CreateMonsters();
-
-    /**
-     * @brief Places the player in the map.
-     */
-    void CreatePlayer();
-
-    /**
-     * @brief Creates an exit in the map.
-     */
-    void CreateExit();
 
     /**
      * @brief Renders all elements of the map.
      */
     void RenderAll() const;
 
-    /**
-     * @brief Renders player stats.
-     */
-    void RenderStats() const;
 
     /**
      * @brief Renders the entire map.
@@ -156,20 +113,14 @@ public:
     void RenderMap() const;
 
     /**
-     * @brief Renders a chunk of the map.
-     */
-    void RenderChunk() const;
-
-    /**
      * @brief Renders the player's position.
      */
     void RenderPosition();
 
     /**
-     * @brief Renders a single tile.
-     * @param c Character representing the tile.
+     * @brief Renders player stats.
      */
-    void RenderTile(char c) const;
+    void RenderStats() const;
 
     /**
      * @brief Moves the player to a new position.
@@ -283,4 +234,54 @@ private:
     unsigned floor;                         ///< Current floor level.
     std::vector<std::vector<char>> matrix;  ///< 2D matrix representing the map layout.
     Player* player;                         ///< Pointer to the player object.
+    /**
+     * @brief Renders a chunk of the map.
+     */
+    void RenderChunk() const;
+
+    /**
+     * @brief Renders a single tile.
+     * @param c Character representing the tile.
+     */
+    void RenderTile(char c) const;
+
+    /**
+     * @brief Creates treasures in the map.
+     */
+    void CreateTreasure();
+
+    /**
+     * @brief Creates monsters in the map.
+     */
+    void CreateMonsters();
+
+    /**
+     * @brief Places the player in the map.
+     */
+    void CreatePlayer();
+
+    /**
+     * @brief Creates an exit in the map.
+     */
+    void CreateExit();
+
+    /**
+     * @brief Initializes the map.
+     */
+    void Initialize();
+
+    /**
+     * @brief Creates a path starting from a given position.
+     * @param i Row index.
+     * @param j Column index.
+     */
+    void CreatePath(const int i, const int j);
+
+    /**
+     * @brief Counts visited neighbors of a cell.
+     * @param i Row index.
+     * @param j Column index.
+     * @return Number of visited neighbors.
+     */
+    int countVisitedNeighbor(const int i, const int j) const;
 };

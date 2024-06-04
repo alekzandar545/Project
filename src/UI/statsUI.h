@@ -18,7 +18,8 @@ public:
     //constructors
     StatsUI();
     StatsUI(const StatsUI& other) = default;
-    ~StatsUI() = default;
+    StatsUI& operator=(const StatsUI& other) = default;
+    ~StatsUI() override = default;
     //shouldn't delete pointer to player, because UI only displays it, dosnt really own it
 
     /**

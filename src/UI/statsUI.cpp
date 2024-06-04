@@ -14,7 +14,7 @@ void StatsUI::Render() const {
     for (size_t i = 0; i < options.size(); i++) {
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, (short)(CONSOLE_COORDS.Y + i + offsetY)});
         if(i == selectionIndex)
-            SetConsoleTextAttribute(CURR_HANDLE, 22);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::SELECTED_COLOR);
         std::cout << '+' << options[i];
         if(options[i] == "Strength")
             std::cout << " - " << GameState::GetGamePlayer()->GetStrength();
@@ -25,7 +25,7 @@ void StatsUI::Render() const {
         else if(options[i] == "Dexterity")
             std::cout << " - " << GameState::GetGamePlayer()->GetDexterity();
         std::cout << '\n';
-        SetConsoleTextAttribute(CURR_HANDLE, 8);
+        SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
     }
     std::cout << "\nSpare points: " << GameState::GetGamePlayer()->GetStatPoints() << Constants::padding;
 }

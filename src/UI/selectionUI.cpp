@@ -1,5 +1,6 @@
 #include "SelectionUI.h"
 #include <iostream>
+#include "../Utils/constants.h"
 
 SelectionUI::SelectionUI(COORD coords) : CONSOLE_COORDS(coords), selectionIndex(0) {
     CURR_HANDLE = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -17,9 +18,9 @@ void SelectionUI::Render() const {
     for (size_t i = 0; i < options.size(); i++) {
         SetConsoleCursorPosition(CURR_HANDLE, {CONSOLE_COORDS.X, static_cast<SHORT>(CONSOLE_COORDS.Y + i)});
         if (i == selectionIndex) {
-            SetConsoleTextAttribute(CURR_HANDLE, 22);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::SELECTED_COLOR);
             std::cout << options[i] << '\n';
-            SetConsoleTextAttribute(CURR_HANDLE, 8);
+            SetConsoleTextAttribute(CURR_HANDLE, Constants::DEFAULT_COLOR);
             continue;
         }
         std::cout << options[i] << '\n';

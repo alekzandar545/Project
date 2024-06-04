@@ -257,13 +257,13 @@ void InputHandler::BattleUserInput(CombatEvents* event, BattleUI& ui, bool& play
             case 'e':
                 switch (ui.GetSelectionIndex()) {
                     case 0:
-                        event->HandleMeleeAttack(ui, playerIsDead, monsterIsDead);
+                        event->HandleMeleeAttack(ui, playerIsDead, monsterIsDead, GameState::GetGameMap());
                         break;
                     case 1:
-                        event->HandleSpellAttack(ui, playerIsDead, monsterIsDead);
+                        event->HandleSpellAttack(ui, playerIsDead, monsterIsDead, GameState::GetGameMap());
                         break;
                     case 2:
-                        event->HandlePotionUsage(ui);
+                        event->HandlePotionUsage(ui, GameState::GetGameMap());
                         break;
                     case 3:
                         event->HandleFlee(ui, fled);
