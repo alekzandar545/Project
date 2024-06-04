@@ -30,9 +30,9 @@ public:
     Entity& operator=(const Entity& other) = default;
 
     /**
-     * @brief Virtual destructor for Entity.
+     * @brief Virtual destructor for Entity. Is pure abstract function, so no objects of this class can be created.
      */
-    virtual ~Entity() = default;
+    virtual ~Entity() = 0;
 
     /**
      * @brief Takes a hit with the specified damage.

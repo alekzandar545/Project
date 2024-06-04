@@ -9,6 +9,8 @@ Entity::Entity(){
     HP = maxHP;
 }
 
+Entity::~Entity() = default;
+
 bool Entity::TakeHit(const unsigned dmg) {
     HP -= (dmg - dmg * armor / 100);
     if (HP <= 0) {
